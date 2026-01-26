@@ -1,0 +1,60 @@
+﻿= xamCategoryChart - Property Reference
+
+=== Purpose
+
+This topic provides reference information about the inspectable test object properties of the  _xamCategoryChart_™ control.
+
+[[_Ref337672876]]
+
+=== Properties reference chart
+
+The table below summarizes the control’s test method parameters and tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+| _link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamcategorychartproxy~legend.html[Legend]_
+|A string value representing the legend item titles.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| _link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamcategorychartproxy~seriescount.html[SeriesCount]_
+|The number of series in the _xamCategoryChart_ .
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| _link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamcategorychartproxy~datapoints.html[DataPoints]_
+|A Comma-Separated list of data points in the following format: 
+
+[Series Name], [Series Title], [Series Index], [Series Tooltip], [Data point Value(s)]
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+|_Table verify_
+|A representation of the _xamCategoryChart_ data points in tabular form.
+|image::images/spy.png[]
+
+| _link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamcategorychartproxy~title.html[Title]_ 
+|A string value representing the chart title.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| _link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamcategorychartproxy~subtitle.html[Subtitle]_ 
+|A string value representing the chart subtitle.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| _link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamcategorychartproxy~axistitles.html[AxisTitles]_ 
+|A delimited string value representing the Axis titles of the chart.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+|====

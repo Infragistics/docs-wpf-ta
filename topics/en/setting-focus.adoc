@@ -1,0 +1,72 @@
+﻿////
+
+|metadata|
+{
+    "name": "setting-focus",
+    "controlName": [],
+    "tags": [],
+    "guid": "44840711-627f-4a1f-b342-6ffe9bcb3ffe",  
+    "buildFlags": [],
+    "createdOn": "2012-06-28T14:29:45.9648207Z"
+}
+|metadata|
+////
+
+= Setting the Focus of the Application
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the methods for setting the application’s focus directly on a control (without emulating any mouse or key actions).
+
+== Introduction
+
+=== Setting the focus summary
+
+Test Automation supports two approaches to setting the focus in your application:
+
+* by emulating the respective user actions that set the focus (user mouse and keyboard actions)
+* by setting the focus directly to the desired object. This is done with a special method called  _SetFocus_  . (See <<_Ref328660175,SetFocus Method>>).
+
+[[_Ref328660175]]
+== _SetFocus_   Method
+
+=== Description
+
+The  _SetFocus_   method sets the focus of the application to the specified control.
+
+=== Supported controls
+
+All Infragistics controls.
+
+=== Parameters
+
+No parameters are passed to this method.
+
+=== Example
+
+Setting application focus on an instance of the  _xamDataGrid_  control named MyGrid:
+
+WpfWindow("MainWindow").XamDataGrid("MyGrid").SetFocus
+
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:accessing-controls-properties.html[Accessing Controls' Properties]
+|This topic provides reference information about the methods for accessing the properties and sub-properties of Infragistics controls.
+
+| link:panning-and-zooming.html[Panning and Zooming]
+|This topic provides reference information about the methods for emulating of panning and zooming actions on Infragistics controls.
+
+| link:emulating-the-mouse.html[Emulating the Mouse]
+|This topic provides reference information about the methods for mouse action emulation on Infragistics controls.
+
+|====

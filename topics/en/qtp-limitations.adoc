@@ -1,0 +1,70 @@
+﻿////
+|metadata|
+{
+    "name": "qtp-limitations",
+    "controlName": [],
+    "tags": [],
+    "guid": "899fda8a-14a1-4f76-8095-832c03503a5f",
+    "buildFlags": [],
+    "createdOn": "2012-11-04T01:50:58.7062855Z"
+}
+|metadata|
+////
+
+= QTP Limitations
+
+[[_Ref337132271]]
+== Recording Session Restart
+
+=== Overview
+
+The QuickTest Professional Product (QTP) requires that you restart the recording sessions whenever you enable or disable the `RecordBaseClick` feature in the settings utility.
+
+Any setting that begins with Record such as `RecordBaseClick` affects the behavior of Test Automation with QTP while recording. Settings that affect the recording behavior, changed while recording, remain unapplied until you start a new recording session.
+
+To start a new recording session you need to ensure the following:
+
+* The current recording session is stopped (F4 – keyboard shortcut).
+
+image::images/QTP_Limitations_1.png[]
+* A new recording session is Started (F3 – keyboard shortcut).
+
+image::images/QTP_Limitations_2.png[]
+
+== QTP  _TableVerify_   Behavior with Large Data
+
+Table verification of QTP exhibits a particular behavior, outlined below, when the control is bound to large amounts of data. QTP uses the following formula to compute the actual number of displayed rows:
+
+`SuppliedRowNumber – (Floor (SuppliedRowNumber/65536) $$*$$ 65536)`.
+
+When the number of rows in the control is less than or equal to 65,535, which is `(2^16)-1`, all of the rows display correctly; however, for data larger than 65,535, the actual number of rows displayed will be computed using the above formula.
+
+Examples:
+
+[cols="a"]
+|====
+|If the supplied number of rows to QTP’s  _TableVerify_   is 35000
+
+|35000 – (Floor(35000/65536) $$*$$ 65536) 
+
+=35000 – (Floor(0.534) $$*$$ 65536) 
+
+=35000 – (0 $$*$$ 65536) 
+
+=35000
+
+|====
+
+[cols="a"]
+|====
+|If the supplied number of rows to QTP’s  _TableVerify_   is 65535
+
+|65535 – (Floor(65535 /65536) $$*$$ 65536) 
+
+=65535 – (Floor(0.99998) $$*$$ 65536) 
+
+=65535 – (0 $$*$$ 65536) 
+
+=65535
+
+|====

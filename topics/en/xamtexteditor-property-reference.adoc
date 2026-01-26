@@ -1,0 +1,80 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamtexteditor-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "080ace28-0e1a-4f5a-9970-33c589b82a09",  
+    "buildFlags": [],
+    "createdOn": "2012-01-26T13:10:20.698823Z"
+}
+|metadata|
+////
+
+= xamTextEditor - Properties Reference
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the inspectable test object properties of the xamTextEditor™ control.
+
+== xamTextEditor Test Object Properties Reference
+
+=== Properties reference chart
+
+The table below summarizes the control’s test object properties and the tools with which you can inspect them.
+
+[options="header", cols="a,a,a,a,a"]
+|====
+|Property Name|Returns …|Visible in Object Spy?|Verifiable with Checkpoints?|Accessible in the code?
+
+|_selectedtext_
+|the currently selected text. If nothing is selected then returns empty string.
+|
+|
+|
+
+|_selectionlength_
+|the length of the currently selected text. If nothing is selected then returns _0_ .
+|
+|
+|
+
+|_selectionstart_
+|the starting location of the current text selection. If nothing is selected, it returns the location of the caret.
+|
+|
+|
+
+|_textlength_
+|the length of the current text in the editor.
+|
+|
+|
+
+|====
+
+== Related Topics
+
+=== Related topics summary chart
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+|xamComboEditor Testable User Actions and Objects
+|[Describe the topic purpose as stated in the topic overview.]
+
+|xamComboEditor Recordable Methods Reference
+|[Describe the topic purpose as stated in the topic overview.]
+
+|[[_Hlk300234890]] 
+
+xamComboEditorProxy API Reference
+|[Describe the topic purpose as stated in the topic overview.]
+
+|====

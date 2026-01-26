@@ -1,0 +1,57 @@
+﻿= xamCategoryChart - Recordable Methods
+
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods for testing the  _XamCategoryChart_™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref314227548,XamCategoryChart Recordable Methods>>
+
+** <<_Ref314227549, _GetDataPointCount_  >>
+** <<_Ref316310433, _GetSeriesCount_  >>
+
+* <<_Ref316310433,Related Topics>>
+
+[[_Ref314227548]]
+== xamCategoryChart Recordable Methods
+
+=== Recordable methods summary chart
+
+The following table briefly explains the recordable methods for testing the control.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|*Description*
+
+|_GetDataPointCount_
+|Gets the number of data points in a series.
+
+|_GetSeriesCount_
+|Gets the number of series in the xamCategoryChart control.
+
+|====
+
+[[_Ref316310433]]
+== Related Topics
+
+
+The topic contained in this section covers reference information about the  _xamCategoryChart™_   control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamcategorychart-testable-user-actions-and-elements.html[xamCategoryChart - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamCategoryChart_ control which you can test and the elements you can inspect.
+
+| link:xamcategorychart-property-reference.html[xamCategoryChart - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the _xamCategoryChart_ control.
+
+| link:xamcategorychart-api.html[xamCategoryChart - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamCategoryChart_ control in Micro Focus Unified Functional Testing software.
+
+|====

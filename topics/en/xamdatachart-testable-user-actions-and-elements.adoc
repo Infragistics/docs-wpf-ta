@@ -1,0 +1,103 @@
+﻿////
+|metadata|
+{
+    "name": "xamdatachart-testable-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "23798bc7-6a32-4a4f-bcee-abf3d644f8bb",
+    "buildFlags": [],
+    "createdOn": "2012-01-26T08:33:33.1472856Z"
+}
+|metadata|
+////
+
+= xamDataChart - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the user actions of the xamDataChart™ control which you can test and the elements you can inspect.
+
+== _xamDataChart_   Testable User Actions
+
+=== Testable user actions chart
+
+The table below lists the testable user actions of the control and maps them to recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|*User action*|*Method*
+
+|Clicking on the control.
+|link:{ApiPlatform}test.shared~infragisticswpf.test.shared.recordreplayproxybase~clickcontrol.html[ClickControl]
+
+|Right clicking on the control.
+|link:{ApiPlatform}test.shared~infragisticswpf.test.shared.recordreplayproxybase~rightclickcontrol.html[RightClickControl]
+
+|Get the number of series in a _xamDataChart_ .
+|link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamdatachartproxy~getseriescount.html[GetSeriesCount]
+
+|Get the number of data points in a series.
+|link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamdatachartproxy~getdatapointcount.html[GetDataPointCount]
+
+|====
+
+== xamDataChart Testable Elements
+
+=== Testable elements summary chart
+
+The following table lists the elements in the control that you can test, the information you can retrieve about them, and the properties and methods that manage the retrieve operations.
+
+[options="header", cols="a,a,a,a,a"]
+|====
+|*Test element*|*Test deliverable*|*Member type*|*Test object member*|*Accessibility*
+
+|Data point
+|All data points in a tabular form in a xamDataChart
+|verifiable table content
+|
+|image:images/checkpoint.png[]
+
+|
+|A comma-separated list of data points in the following format:
+
+$$[$$Series Name], [Series Title], [Series Index], [Series Tooltip], [Data point Value(s)]
+
+|property
+
+|_link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamdatachartproxy~datapoints.html[DataPoints]_
+|image::images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|The number of data points in a series.
+|method
+|link:infragisticswpf.test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamdatachartproxy~getdatapointcount.html[GetDataPointCount]
+|image::images/script.png[]
+
+|====
+
+== Related Topics
+
+=== Related topics summary chart
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamdatachart-recordable-methods.html[xamDataChart - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamDataChart™ control.
+
+| link:xamdatachart-replay-only-methods.html[xamDataChart - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the xamDataChart™ control.
+
+| link:xamdatachart-property-reference.html[xamDataChart - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamDataChart™ control.
+
+| link:xamdatachart-api.html[xamDataChart - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamDataChart™ control in Micro Focus Unified Functional Testing software.
+
+|====

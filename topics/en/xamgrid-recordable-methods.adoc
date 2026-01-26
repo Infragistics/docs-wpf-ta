@@ -1,0 +1,168 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamgrid-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "6fc55f00-6ac0-4161-8e7b-08fc074eab35",  
+    "buildFlags": [],
+    "createdOn": "2012-04-14T09:47:06.5806766Z"
+}
+|metadata|
+////
+
+= xamGrid - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods for testing the  _xamGrid_™ control.
+
+[[_Ref321405602]]
+== xamGrid Test Object Recordable User Actions Summary
+
+[[_Ref322452221]]
+
+=== Recordable user actions summary chart
+
+The following table briefly explains the recordable methods for testing the control. Detailed information about a particular method can be found in the Recordable Methods Reference topic for the respective User action type.
+
+[options="header", cols="a,a,a"]
+|====
+|User action type|User action|Method
+
+| link:xamgrid-display.html[Display]
+|Hide a column.
+| link:xamgrid-display.html#_HideColumn[HideColumn]
+
+|
+|Move a column.
+| link:xamgrid-display.html#_MoveColumn[MoveColumn]
+
+|
+|Open the Hidden Columns Menu.
+| link:xamgrid-display.html#_OpenHiddenColsMenu[OpenHiddenColsMenu]
+
+|
+|Resize a column.
+| link:xamgrid-display.html#_ResizeColumn[ResizeColumn]
+
+| link:xamgrid-editing.html[Editing]
+|Exiting Edit mode.
+| link:xamgrid-editing.html#_ExitEditMode[ExitEditMode]
+
+|
+|Copy to clipboard.
+| link:xamgrid-editing.html#_CopyToClipboard[CopyToClipboard]
+
+|
+|Paste from clipboard.
+| link:xamgrid-editing.html#_PasteFromClipboard[PasteFromClipboard]
+
+|
+|Switching the row to Edit mode.
+| link:xamgrid-editing.html#_RowEnterEditMode[RowEnterEditMode]
+
+|
+|Setting the provided value to the specified xamGrid cell.
+| link:xamgrid-editing.html#_SetCellData[SetCellData]
+
+| link:xamgrid-filtering.html[Filtering]
+|Clearing the filter value in the specified cell.
+| link:xamgrid-filtering.html#_ClearFilterCell[ClearFilterCell]
+
+|
+|Closing the xamGrid filter menu drop-down.
+| link:xamgrid-filtering.html#_CloseFilterMenu[CloseFilterMenu]
+
+|
+|Opening the xamGrid filter menu drop-down.
+| link:xamgrid-filtering.html#_OpenFilterMenu[OpenFilterMenu]
+
+|
+|Setting a comparison operator for a specified filter cell.
+| link:xamgrid-filtering.html#_SetFilterCellCompOperator[SetFilterCellCompOperator]
+
+| link:xamgrid-navigating-and-selecting.html[Navigating and selecting]
+|Activating the specified cell.
+| link:xamgrid-navigating-and-selecting.html#_ActivateCell[ActivateCell]
+
+|
+|Expanding the specified row.
+| link:xamgrid-navigating-and-selecting.html#_ExpandRow[ExpandRow]
+
+|
+|Collapsing the specified row.
+| link:xamgrid-navigating-and-selecting.html#_CollapseRow[CollapseRow]
+
+|
+|Selecting a specified xamGrid item (column, row, or cell).
+| link:xamgrid-navigating-and-selecting.html#_Select[Select]
+
+|
+|Adding one or more xamGrid items of a specified type (column, row, or cell) to an existing collection.
+| link:xamgrid-navigating-and-selecting.html#_SelectionAdded[SelectionAdded]
+
+|
+|Changing an existing collection by adding and removing one or more xamGrid items of a specified type (column, row, or cell)l.
+| link:xamgrid-navigating-and-selecting.html#_SelectionChanged[SelectionChanged]
+
+|
+|Removing one or more xamGrid items of a specified type (column, row, or cell) from an existing collection.
+| link:xamgrid-navigating-and-selecting.html#_SelectionRemoved[SelectionRemoved]
+
+|
+|Fixing a specified column.
+| link:xamgrid-navigating-and-selecting.html#_SetFixedColumn[SetFixedColumn]
+
+| link:xamgrid-sorting-and-grouping.html[Sorting and grouping]
+|Sorting a specified column.
+| link:xamgrid-sorting-and-grouping.html#_SortColumn[SortColumn]
+
+|
+|Grouping the data by the specified column.
+| link:xamgrid-sorting-and-grouping.html#_GroupByColumn[GroupByColumn]
+
+|
+|Ungrouping the data by the specified column.
+| link:xamgrid-sorting-and-grouping.html#_UnGroupColumn[UnGroupColumn]
+
+| link:xamgrid-summaries.html[Summaries]
+|Closing the summaries menu.
+| link:xamgrid-summaries.html#_CloseSummaryMenu[CloseSummaryMenu]
+
+|
+|Opening the summaries menu.
+| link:xamgrid-summaries.html#_OpenSummaryMenu[OpenSummaryMenu]
+
+|====
+
+[[_Ref322526013]]
+== Related Content
+
+=== Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamgrid-testable-user-actions-and-elements.html[xamGrid - Testable User Actions and Elements]
+|This topic provides information about the user actions of the xamGrid control which you can test and the elements you can inspect.
+
+| link:xamgrid-replayonly-methods.html[xamGrid - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the xamGrid control.
+
+| link:xamgrid-enumeration-reference.html[xamGrid - Enumeration Reference]
+|This topic provides reference information about the common enumerations used for testing the xamGrid control.
+
+| link:xamgrid-property-reference.html[xamGrid - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamGrid control.
+
+| link:xamgrid-api.html[xamGrid - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamGrid control in Micro Focus Unified Functional Testing software.
+
+|====

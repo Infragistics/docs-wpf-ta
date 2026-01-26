@@ -1,0 +1,417 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamdiagram-recordable-actions",
+    "controlName": [],
+    "tags": [],
+    "guid": "5f7c4235-3e6e-46c8-93ca-1369638f21a7",  
+    "buildFlags": [],
+    "createdOn": "2014-11-07T11:45:38.3757396Z"
+}
+|metadata|
+////
+
+= xamDiagram - Recordable Actions
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about recordable actions for testing the  _XamDiagram_   __™__  control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref386530129, _XamDiagram_   Recordable Actions>>
+** <<_Ref386530130, _DropOn_  >>
+** <<_Ref386530131, _Select_  >>
+** <<_Ref386530132, _ClearSelection_  >>
+** <<_Ref386530133, _Deselect_  >>
+** <<_Ref386530134, _SelectRange_  >>
+** <<_Ref386530135, _CopySelection_  >>
+** <<_Ref386530136, _MoveSelection_  >>
+** <<_Ref386530137, _MoveConnectionEnd_  >>
+** <<_Ref386530138, _ConnectToNode_  >>
+** <<_Ref386530139, _OpenOptionsPane_  >>
+** <<_Ref386530140, _RenameItem_  >>
+** <<_Ref386530141, _ResizeNode_  >>
+** <<_Ref386530142, _PerformCommand_  >>
+
+* <<_Ref337132389,Related Content>>
+
+[[_Ref386530129]]
+== _XamDiagram_   Recordable Actions
+
+[[_Ref386530130]]
+== _DropOn_
+
+=== Description
+
+Complete a drag operation by dropping the dragged object on to a specific point in the XamDiagram.
+
+.Note:
+[NOTE]
+====
+This will not record if it is the first interaction with the Diagram, while recording prior to dragging on an item, click in the XamDiagram.
+====
+
+.Note:
+[NOTE]
+====
+This will also potentially trigger the recording of a ZoomArea and PanArea, if neither were recorded during this record session, this is to make sure the placing is as expected.
+====
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _dX_ 
+|A double value representing the X location
+
+| _dY_ 
+|A double value representing the Y location
+
+|====
+
+=== Possible exceptions
+
+* Cannot perform a drop action because the mouse is not currently dragging.
+
+[[_Ref386530131]]
+== _Select_
+
+=== Description
+
+Select, or add to the existing selection of selected diagram items
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+|oItemArg
+|_Integer index, string Content Text, or an array of two double values representing X,Y coordinates representing a DiagramConnection or DiagramNode_
+
+|bAdd
+|Optional boolean parameter if the item is to be added to the existing selection. The default value is false.
+
+|====
+
+=== Possible exceptions
+
+* Selection is not currently enabled.
+* Multi-Selection is not currently enabled.
+* Argument [*oItemArg* ] is not formatted correctly, format must be [Index, Array of X,Y coords, or string Content]
+* The specified DiagramItem index [*oItemArg* ] is out of range
+* The following item [*oItemArg* ] was not found.
+* The following DiagramItem [*oItemArg* ] key was not found.
+
+[[_Ref386530132]]
+== _ClearSelection_
+
+=== Description
+
+Clear the collection of selected items
+
+[[_Ref386530133]]
+== _Deselect_
+
+Deselects the identified item
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+|oItemArg
+|_Integer index, string Content Text, or an array of two double values representing X,Y coordinates representing a DiagramConnection or DiagramNode_
+
+|====
+
+=== Possible exceptions
+
+* Argument [*oItemArg* ] is not formatted correctly, format must be [Index, Array of X,Y coords, or string Content]
+* The specified DiagramItem index [*oItemArg* ] is out of range
+* The following item [*oItemArg* ] was not found.
+* The following DiagramItem [*oItemArg* ] key was not found.
+
+[[_Ref386530134]]
+== _SelectRange_
+
+=== Description
+
+Select all the diagram items inside a rectangle range
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+|dXLeft
+|_A double value representing the left position_
+
+|dYTop
+|_A double value representing the top position_
+
+|dXWidth
+|_A double value representing a width value_
+
+|dYHeight
+|_A double value representing a height value_
+
+|====
+
+=== Possible exceptions
+
+* Selection is not currently enabled.
+
+[[_Ref386530135]]
+== _CopySelection_
+
+=== Description
+
+Copy the currently selected diagram items to the supplied location offset
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+|dXOffset
+|_A double value representing the X offset from its current location_
+
+|dYOffset
+|_A double value representing the_ _Y offset from its current location_
+
+|====
+
+=== Possible exceptions
+
+* No DiagramItems are currently selected.
+
+[[_Ref386530136]]
+== _MoveSelection_
+
+=== Description
+
+Move the currently selected diagram items to the supplied location offset
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+|dXOffset
+|_A double value representing the X offset from its current location_
+
+|dYOffset
+|_A double value representing the Y offset from its current location_
+
+|====
+
+=== Possible exceptions
+
+* No DiagramItems are currently selected.
+
+[[_Ref386530137]]
+== _MoveConnectionEnd_
+
+=== Description
+
+Move the currently selected diagram connection end to the supplied location offset
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+|oeStartEnd
+|_An enumerated value, string name, or integer value representing a value from the prpgCommandType enumeration._
+
+|dXOffset
+|_A double value representing the X offset from its current location_
+
+|dYOffset
+|_A double value representing the Y offset from its current location_
+
+|====
+
+=== Possible exceptions
+
+* The DiagramItem [*selected* ] is not a DiagramConnector.
+* The option supplied is not one of the valid options, valid options are [{0}]
+
+[[_Ref386530138]]
+== _ConnectToNode_
+
+=== Description
+
+Connect one end of the selected connector to an identified node
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+|oeStartEnd
+|_An enumerated value, string name, or integer value representing a value from the prpgCommandType enumeration._
+
+| __oNodeArg__ 
+|_Integer index, string Content Text, or an array of two double values representing X,Y coordinates representing a DiagramNode_
+
+|oConnPoint
+|_Optional parameter integer index or string name identifying the connection point. Default value is null, which connect generically to the node not to a specific point._
+
+|====
+
+=== Possible exceptions
+
+* The DiagramItem [*selected* ] is not a DiagramConnector.
+* The option supplied is not one of the valid options, valid options are [{0}]
+* The specified DiagramItem index [*oNodeArg* ] is out of range
+* The following DiagramItem [*oNodeArg* ] key was not found.
+* The specified DiagramConnection Point index [*oConnPoint* ] is out of range
+* The following DiagramConnection Point [*oConnPoint* ] key was not found.
+
+[[_Ref386530139]]
+== _OpenOptionsPane_
+
+=== Description
+
+Open the options pane for the currently selected DiagramItem
+
+=== Possible exceptions
+
+* No DiagramItems are currently selected.
+* DiagramItem OptionsPane is not visible
+
+[[_Ref386530140]]
+== _RenameItem_
+
+=== Description
+
+Renames the selected item
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+|sNewName
+|_An enumerated value, string name, or integer value representing a value from the prpgCommandType enumeration._
+
+|====
+
+=== Possible exceptions
+
+* One and only one item must be selected to perform this operation.
+
+[[_Ref386530141]]
+== _ResizeNode_
+
+=== Description
+
+Resizes the selected DiagramNode
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+|dXLeft
+|_A double value representing the left position_
+
+|dYTop
+|_A double value representing the top position_
+
+|dWidth
+|_A double value representing a width value_
+
+|dHeight
+|_A double value representing a height value_
+
+|====
+
+=== Possible exceptions
+
+* One and only one item must be selected to perform this operation.
+* The DiagramItem [*selected* ] is not a DiagramNode.
+
+[[_Ref386530142]]
+== _PerformCommand_
+
+=== Description
+
+Perform the supplied command
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+|oeCommand
+|_An enumerated value, string name, or integer value representing a value from the prpgCommandType enumeration._
+
+|====
+
+=== Possible exceptions
+
+* No DiagramItems are currently selected.
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamdiagram-replay-only-actions.html[xamDiagram - Replay-Only Actions]
+|This topic provides information about replay-only actions for testing the _XamDiagram_™ control.
+
+| link:xamdiagram-properties-reference.html[xamDiagram - Properties Reference]
+|This topic provides reference information about the _XamDiagram_™ control’s test object properties.
+
+| link:xamdiagram-enumerations-reference.html[xamDiagram - Enumerations Reference]
+|This topic provides reference material on the common enumerations used for testing the _XamDiagram_™ control.
+
+|====

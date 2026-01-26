@@ -1,0 +1,49 @@
+﻿////
+|metadata|
+{
+    "name": "xamdatapresenter",
+    "controlName": [],
+    "tags": [],
+    "guid": "20a28b06-18ac-4a61-bfaf-10d0b3f51945",
+    "buildFlags": [],
+    "createdOn": "2012-01-23T07:20:46.0993189Z"
+}
+|metadata|
+////
+
+= xamDataPresenter
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter.xamdatapresenterproxy.html[XamDataPresenterProxy] object in {ProductName}.
+
+=== Topics
+
+The topics contained in this section cover implementing action elements, methods and properties within the  _xamDataPresenter™_   control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamdatapresenter-testable-user-actions-and-elements.html[xamDataPresenter - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamDataPresenter_ controls which you can test and the elements you can inspect.
+
+| link:xamdatapresenter-recordable-methods.html[xamDataPresenter - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamDataPresenter_ controls.
+
+| link:xamdatapresenter-replay-only-methods.html[xamDataPresenter - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the _xamDataPresenter_ controls.
+
+| link:xamdatapresenter-enumeration-reference.html[xamDataPresenter - Enumeration Reference]
+|This topic provides reference information about the common enumerations used for testing the _xamDataPresenter_ controls.
+
+| link:xamdatapresenter-property-reference.html[xamDataPresenter - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the _xamDataPresenter_ controls.
+
+| link:xamdatapresenter-excel-style-filtering.html[xamDataPresenter - Excel Style Filtering]
+|This topic provides reference information about the excel style filtering.
+
+| link:xamdatapresenter-api.html[xamDataPresenter - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamDataPresenter_ controls in Micro Focus Unified Functional Testing software.
+
+|====

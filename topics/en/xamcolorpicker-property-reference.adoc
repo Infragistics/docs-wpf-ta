@@ -1,0 +1,42 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamcolorpicker-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "3abb450a-4038-4771-946f-63c0cadf4bcb",  
+    "buildFlags": [],
+    "createdOn": "2012-01-20T11:40:03.0845483Z"
+}
+|metadata|
+////
+
+= xamColorPicker - Property Reference
+
+== _xamColorPicker_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the inspectable test object properties of the  _xamColorPicker_™ control.
+
+=== Properties reference chart
+
+The table below summarizes the control’s test object properties and the tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+|_ link:{ApiPlatform}test.editors.xamcolorpicker~infragisticswpf.test.editors.colorpicker.xamcolorpickerproxy~selectedcolor.html[SelectedColor]_
+|the selected color as a string. 
+
+Example: _#FF8064A2_
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====

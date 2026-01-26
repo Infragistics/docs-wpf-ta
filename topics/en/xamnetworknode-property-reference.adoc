@@ -1,0 +1,91 @@
+﻿////
+|metadata|
+{
+    "name": "xamnetworknode-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "9f07c9bc-0464-412b-aad0-0d95e3e89635",
+    "buildFlags": [],
+    "createdOn": "2012-10-29T18:39:39.6961315Z"
+}
+|metadata|
+////
+
+= xamNetworkNode - Property Reference
+
+== _xamNetworkNode_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the  _xamNetworkNode_™ control’s test object properties.
+
+=== Properties reference chart
+
+The table below summarizes the control’s test object properties and tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+|_ActiveNodeId_
+|Returns the _xamNetworkNode_ control’s active node identifier. 
+
+*Default value* = null.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_NodesCount_
+|Returns the count of all the _xamNetworkNode_ control’s visible nodes. 
+
+*Default value* = zero.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_ConnectionsCount_
+|Returns the count of all the _XamNetworkNode_ control’s visible node connections. 
+
+*Default value* = zero.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_SelectedNodes_
+|Returns a delimited string (default delimiter = new line) of labels of all the _xamNetworkNode_ control’s visible selected nodes. 
+
+*Default value* = empty string.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_SelectedNodesCount_
+|Returns the count of the _xamNetworkNode_ control’s all visible selected nodes. 
+
+*Default value* = zero.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_SelectedNodeIndices_
+|Returns a delimited string (default delimiter = new line) of indices of all the visible selected nodes of the _xamNetworkNode_ control. 
+
+*Default value* = empty string.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====

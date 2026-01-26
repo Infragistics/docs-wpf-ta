@@ -1,0 +1,110 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamdiagram-replay-only-actions",
+    "controlName": [],
+    "tags": [],
+    "guid": "86aa628b-cb32-4704-8060-40a29de492e4",  
+    "buildFlags": [],
+    "createdOn": "2014-11-18T12:46:40.7160694Z"
+}
+|metadata|
+////
+
+= xamDiagram - Replay-Only Actions
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about replay-only actions for testing the  _XamDiagram_   __™__  control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref399748361, _XamDiagram_  Replay-only Actions>>
+** <<_Ref401823409, _CopySelectionTo_  >>
+** <<_Ref401823410, _MoveSelectionTo_  >>
+
+* <<_Ref337132389,Related Content>>
+
+[[_Ref399748361]]
+== _XamDiagram_   Replay-only Actions
+
+[[_Ref401823409]]
+== _CopySelectionTo_
+
+=== Description
+
+Copy the currently selected diagram items to the supplied location.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _dX_ 
+|A double value representing the X location.
+
+| _dY_ 
+|A double value representing the Y location.
+
+|====
+
+=== Possible exceptions
+
+No DiagramItems are currently selected.
+
+[[_Ref401823410]]
+== _MoveSelectionTo_
+
+=== Description
+
+Move the currently selected diagram items to the supplied location.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _dX_ 
+|A double value representing the X location.
+
+| _dY_ 
+|A double value representing the Y location.
+
+|====
+
+=== Possible exceptions
+
+No DiagramItems are currently selected.
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamdiagram-recordable-actions.html[xamDiagram - Recordable Actions]
+|This topic provides information about the recordable user actions for testing the _XamDiagram_™ control.
+
+| link:xamdiagram-properties-reference.html[xamDiagram - Properties Reference]
+|This topic provides reference information about the _XamDiagram_™ control’s test object properties.
+
+| link:xamdiagram-enumerations-reference.html[xamDiagram - Enumerations Reference]
+|This topic provides reference material on the common enumerations used for testing the _XamDiagram_™ control.
+
+|====

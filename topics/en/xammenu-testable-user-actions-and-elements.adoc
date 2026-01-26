@@ -1,0 +1,131 @@
+﻿////
+|metadata|
+{
+    "name": "xammenu-testable-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "232c983f-cc71-4dbc-9098-405aead57319",
+    "buildFlags": [],
+    "createdOn": "2012-01-31T21:27:33.9621196Z"
+}
+|metadata|
+////
+
+= xamMenu - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the user actions of the xamMenu™ control which you can test and the elements you can inspect.
+
+== xamMenu Testable User Actions
+
+=== Testable user actions chart
+
+The table below lists the testable user actions of the control and maps them to recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|*User action*|*Method*
+
+|[[_Hlk300329001]] 
+
+[[_Hlk312173770]] 
+
+Checking the menu item checkbox
+|link:xamcontextmenu-recordable-methods.html#_CheckMenuItem[CheckMenuItem]
+
+|Collapsing the submenu
+|link:xamcontextmenu-replay-only-methods.html#_CloseUp[CloseUp]
+
+|Expanding the submenu
+|link:xamcontextmenu-replay-only-methods.html#_DropDown[DropDown]
+
+|Selecting a menu item
+|link:xamcontextmenu-recordable-methods.html#_SelectMenuItem[SelectMenuItem]
+
+|Unchecking the menu item checkbox
+|link:xamcontextmenu-recordable-methods.html#_UnCheckMenuItem[UnCheckMenuItem]
+
+|====
+
+== xamMenu Testable Elements
+
+=== Testable elements summary chart
+
+The following table lists the elements in the control that you can test, the information you can retrieve about them, and the properties and methods that manage the retrieve operations.
+
+Legend:
+
+image:images/spy.png[]
+– Identification property (Visible in object spy)
+
+image:images/checkpoint.png[]
+– Checkpoint property (Visible with checkpoints)
+
+image:images/script.png[]
+– Accessible in script
+
+[options="header", cols="a,a,a,a,a"]
+|====
+|*Tested element*|*Test deliverable*|*Member type*|*Test object member*|*Accessibility*
+
+|Sub-menu items
+|A list of headers of the sub-menu items of the selected menu item
+|property
+|childmenuitems
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|
+|method
+|GetChildrenOfMenuItem
+|image:images/script.png[]
+
+|
+|The number of visible sub-menu items of the selected menu item
+|property
+|childmenuitemscount
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|
+|method
+|_GetChildrenCountOfMenuItem_
+|image::images/script.png[]
+
+|Menu item
+|Menu expansion on mouse hover setting (menu expansion enabled/disabled)
+|property
+|_expandonhover_
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|====
+
+== Related Content
+
+=== Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xammenu-recordable-methods.html[xamMenu - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamMenu™ control.
+
+| link:xammenu-replay-only-methods.html[xamMenu - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the xamMenu™ control.
+
+| link:xammenu-property-reference.html[xamMenu - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamMenu™ control.
+
+| link:xammenu-api.html[xamMenu - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamMenu™ control in Micro Focus Unified Functional Testing software.
+
+|====

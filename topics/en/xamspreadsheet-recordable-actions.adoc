@@ -1,0 +1,373 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamspreadsheet-recordable-actions",
+    "controlName": [],
+    "tags": [],
+    "guid": "00e02584-8eb2-44fc-bf75-37e839784c5b",  
+    "buildFlags": [],
+    "createdOn": "2014-11-17T13:02:30.2191529Z"
+}
+|metadata|
+////
+
+= xamSpreadsheet - Recordable Actions
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about recordable actions for testing the  _XamSpreadsheet_   __™__  control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref386530129, _XamSpreadsheet_   Recordable Actions>>
+** <<_Ref386530130, _SelectCells_  >>
+** <<_Ref386530131, _SetCellData_  >>
+** <<_Ref386530132, _AddSheet_  >>
+** <<_Ref386530133, _RenameSheet_  >>
+** <<_Ref386530134, _ActivateSheet_  >>
+** <<_Ref386530135, _SelectSheet_  >>
+** <<_Ref386530136, _DeselectSheet_  >>
+** <<_Ref386530137, _SetZoomLevel_  >>
+** <<_Ref386530138, _PerformCommand_  >>
+** <<_Ref386530139, _NameSelection_  >>
+** <<OpenCellHyperlink, _OpenCellHyperlink_  >>
+
+* <<_Ref337132389,Related Content>>
+
+[[_Ref386530129]]
+== _XamSpreadsheet_   Recordable Actions
+
+[[_Ref386530130]]
+== _SelectCells_
+
+=== Description
+
+Select the identified propertygrid item
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sSelectionString_ 
+|A string representing the items to be selected. Examples: "A1" "D5:G15" "D:F" "MyNamedReference" "C14:D20,G1"
+
+|====
+
+=== Possible exceptions
+
+The following is the only possible exception to this action and the likely reason causing them.
+
+* The selection string provided [sSelectionString] was invalid.
+
+[[_Ref386530131]]
+== _SetCellData_
+
+=== Description
+
+Set the value for the supplied cell
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sCellArg_ 
+|string identifier for the cell.
+
+| _oNewValue_ 
+|object value or formula string to be set to the cell
+
+| _oeEditType_ 
+|Optional parameter, string, integer index or enumerated value representing a value from sshtExitEditType, on how the value should be applied to the selected cells. The default value sshtUpdateActiveCellOnly
+
+|====
+
+=== Possible exceptions
+
+The possible exceptions to this action and the likely reason causing it is:
+
+* Object [Workbook] is null or has been disposed.
+* The following SpreadsheetCell [*sCellArg* ] was not found.
+* Unable to enter edit mode
+
+[[_Ref386530132]]
+== _AddSheet_
+
+=== Description
+
+Adds a new sheet to the xamSpreadsheet workbook
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this action and the likely reason causing them.
+
+* The point required to perform the operation is not visible.
+* The [AddNew Worksheet button] is not enabled.
+
+[[_Ref386530133]]
+== _ActivateSheet_
+
+=== Description
+
+Activates the identified sheet
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _oSheetArg_ 
+|Zero based integer index or string name to identify the worksheet
+
+|====
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this action and the likely reason causing them.
+
+* Object [Workbook] is null or has been disposed.
+* The specified Worksheet index [*oSheetArg* ] is out of range
+* The following Worksheet [*oSheetArg* ] key was not found.
+* The following Worksheet [*oSheetArg* ] was not found.
+
+[[_Ref386530134]]
+== _RenameSheet_
+
+=== Description
+
+Renames the identified sheet
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _oSheetArg_ 
+|Zero based integer index or string name to identify the worksheet
+
+| _sNewName_ 
+|New string name for the worksheet
+
+|====
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this action and the likely reason causing them.
+
+* Object [Workbook] is null or has been disposed.
+* The specified Worksheet index [*oSheetArg* ] is out of range
+* The following Worksheet [*oSheetArg* ] key was not found.
+* The following Worksheet [*oSheetArg* ] was not found.
+
+[[_Ref386530135]]
+== _SelectSheet_
+
+=== Description
+
+Selects the identified sheet
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _oSheetArg_ 
+|Zero based integer index or string name to identify the worksheet
+
+| _bSelectTo_ 
+|Optional parameter, if false selects only that new sheet, if true selects all the sheets to this sheet from the currently active sheet. The default value is false.
+
+|====
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this action and the likely reason causing them.
+
+* Object [Workbook] is null or has been disposed.
+* The specified Worksheet index [*oSheetArg* ] is out of range
+* The following Worksheet [*oSheetArg* ] key was not found.
+* The following Worksheet [*oSheetArg* ] was not found.
+
+[[_Ref386530136]]
+== _DeselectSheet_
+
+=== Description
+
+Deselects the identified sheet
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _oSheetArg_ 
+|Zero based integer index or string name to identify the worksheet
+
+|====
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this action and the likely reason causing them.
+
+* Object [Workbook] is null or has been disposed.
+* The specified Worksheet index [*oSheetArg* ] is out of range
+* The following Worksheet [*oSheetArg* ] key was not found.
+* The following Worksheet [*oSheetArg* ] was not found.
+* Cannot deselect the currently active sheet.
+
+[[_Ref386530137]]
+== _SetZoomLevel_
+
+=== Description
+
+Sets the level of zoom
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _iZoomLevel_ 
+|Optional Integer value representing the level of zoom from 10-400, 100 being the default zoom level.
+
+|====
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this action and the likely reason causing them.
+
+* The specified value [*iZoomLevel* ] is out of range.
+
+[[_Ref386530138]]
+== _PerformCommand_
+
+=== Description
+
+Perform the supplied command.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _oeCommand_ 
+|An enumerated value, string name, or integer representing a value from the _sshtCommandType_ type enumeration.
+
+|====
+
+=== Possible exceptions
+
+The only possible exception to this action and the likely reason causing it is:
+
+* The option supplied is not one of the valid options, valid options are [sshtCommandType values]
+
+[[_Ref386530139]]
+== _NameSelection_
+
+=== Description
+
+Types a name into the FormulaNameBox, which either selects the named reference, selects the cells identified by the string, or names the currently selected cells.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sNewSelectionName_ 
+|string to send to the NameBox
+
+|====
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this action and the likely reason causing them.
+
+* The [FormulaBar NameBox] is not enabled.
+* FormulaBar is not visible
+* This action cannot be performed while in edit mode.
+
+[[OpenCellHyperlink]]
+== _OpenCellHyperlink_
+
+=== Description
+
+Visit the hyperlink in the supplied cell.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sCellArg_ 
+|string identifier for the cell
+
+|====
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this action and the likely reason causing them.
+
+* Object [Workbook] is null or has been disposed.
+* The following SpreadsheetCell [sCellArg] was not found.
+* There was no Hyperlink found in the supplied cell.
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamspreadsheet-replay-only-actions.html[xamSpreadsheet - Replay-Only Actions]
+|This topic provides information about the replay only user actions for testing the _XamSpreadsheet_™ control.
+
+| link:xamspreadsheet-custom-properties-reference.html[Custom Properties - xamSpreadsheet]
+|This topic provides reference information about the _xamSpreadsheet's_ custom properties embedded to objects of the identified types via the Control Property Access methods.
+
+| link:xamspreadsheet-properties-reference.html[xamSpreadsheet - Properties Reference]
+|This topic provides reference information about the _XamSpreadsheet_™ control’s test object properties.
+
+| link:xamspreadsheet-enumerations-reference.html[xamSpreadsheet - Enumerations Reference]
+|This topic provides reference material on the common enumerations used for testing the _XamSpreadsheet_™ control.
+
+|====

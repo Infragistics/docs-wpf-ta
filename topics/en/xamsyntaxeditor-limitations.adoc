@@ -1,0 +1,34 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamsyntaxeditor-limitations",
+    "controlName": [],
+    "tags": [],
+    "guid": "97c8b247-6e30-4eb5-bf55-63c6264466a9",  
+    "buildFlags": [],
+    "createdOn": "2014-05-03T23:14:19.797891Z"
+}
+|metadata|
+////
+
+= xamSyntaxEditor - Limitations
+
+[[_Ref339124585]]
+== _xamSyntaxEditor_   Limitations
+
+=== Limitations
+
+The following table summarizes the  _xamSyntaxEditor_  ’s limitations. The current enhancements do not support these features; however; there are workarounds available for each feature listed below.
+
+[options="header", cols="a,a"]
+|====
+|Limitations|Workaround
+
+|Dragging the selected text, or dropping other selection within the text _._
+|Record as `DeleteXCharacters` and `SendString` to manipulate the selected text.
+
+|Altering the `ZoomLevel` on _xamSyntaxEditor_
+|Can replay using `SetNAProperty` method passing a string argument of “`ZoomLevel`” and value of 0.2 (within a range of values from 0.2 to 4.0 representing 20% - 400%).
+
+|====

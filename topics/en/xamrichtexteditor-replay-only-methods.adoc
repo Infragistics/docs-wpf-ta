@@ -1,0 +1,347 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamrichtexteditor-replay-only-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "a62425f2-4843-405c-828c-679ea7b9c903",  
+    "buildFlags": [],
+    "createdOn": "2013-11-22T19:24:49.2192652Z"
+}
+|metadata|
+////
+
+= xamRichTextEditor - Replay-Only Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the  _xamRichTextEditor_™ control’s testable user replay-only methods.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref338277350, _XamRichTextEditor_   Replay-Only Methods>>
+
+** <<_Ref338277352, _SetUpdateMode_  >>
+** <<_Ref372582260, _FindNextInstanceOfText_  >>
+** <<_Ref372582274, _SelectAllInstancesOfText_  >>
+** <<_Ref372735244, _ReplaceNextInstanceOfText_  >>
+** <<_Ref372735255, _ReplaceAllInstancesOfText_  >>
+
+* <<_Ref337132389,Related Content>>
+
+[[_Ref338277350]]
+== _XamRichTextEditor_   Replay-Only Methods
+
+[[_Ref338277352]]
+== _SetUpdateMode_
+
+=== Description
+
+Sets the update mode for the  _xamRichTextEditor_  .
+
+=== Parameters
+
+The following table describes the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_oeUpdateMode_
+|Validates if the _xamRichTextEditor_ has a document and editable.
+
+|====
+
+=== Example
+
+To change the current update mode from Insert to Overwrite.
+
+[source,csharp]
+----
+…XamRichTextEditor("Identifier").SetUpdateMode igOverwrite
+----
+
+=== Possible exceptions
+
+The following is the list of possible exceptions to the method and the likely reason causing them.
+
+==== Exception reasons
+
+* The option supplied is not one of the valid options, valid options are [igInsert|igOverwrite]
+* The operation cannot be performed because the  _xamRichTextEditor_   does not have a document loaded
+* Editing is not allowed
+
+[[_Ref372582260]]
+== _FindNextInstanceOfText_
+
+=== Description
+
+Finds the next instance of the supplied text, starting from the current caret location and moving the caret to the start of the next occurrence of that text moving towards the end of the document.
+
+=== Parameters
+
+The following table describes the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_sTextToFind_
+|String value representing the text to be found.
+
+|_iSkipCount_
+|Represents integer value representing the number of text instances to be skipped, default value is 0.
+
+|_bCaseSensitive_
+|Represents Boolean value representing search criteria – if case sensitive, default is true.
+
+|_bAllowWildCards_
+|Represents Boolean value representing search criteria – if used with wildcards, default is false. 
+
+Wildcard logic is identical the Visual Basic link:http://msdn.microsoft.com/en-us/library/swf8kaxw.aspx[Like] operator.
+
+|====
+
+=== Example
+
+To find the next instance of “ *word* ” from the current caret position.
+
+[source,csharp]
+----
+…XamRichTextEditor("Identifier").FindNextInstanceOfText “word”
+----
+
+To find the sixth instance of “ *WoRd* ” from the current caret position, case insensitively.
+
+[source,csharp]
+----
+…XamRichTextEditor("Identifier").FindNextInstanceOfText “WoRd”, 5, false
+----
+
+To find the next instance of “ *w?rd* ” from the current caret position. The following example will pick up word, “ *wOrd* ”, “ *ward* ”, etc. The wildcard ( *?* ) is identical to the Visual Basic Like operator.
+
+[source,csharp]
+----
+…XamRichTextEditor("Identifier").FindNextInstanceOfText “WoRd”, 0, false, true
+----
+
+=== Possible exceptions
+
+There was an error finding the text: [ _sTextToFind_  ]
+
+[[_Ref372582274]]
+== _SelectAllInstancesOfText_
+
+=== Description
+
+Finds and selects all instances of the supplied text moving towards the end of the document. If nothing is found, no text is selected.
+
+=== Parameters
+
+The following table describes the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_sTextToFind_
+|String value representing the text to be found.
+
+|_bCaseSensitive_
+|Represents Boolean value representing search criteria – if case sensitive, default is true.
+
+|_bAllowWildCards_
+|Represents Boolean value representing search criteria – if used with wildcards, default is false. 
+
+Wildcard logic is identical the Visual Basic link:http://msdn.microsoft.com/en-us/library/swf8kaxw.aspx[Like] operator.
+
+|====
+
+=== Example
+
+To find and select all instances of “ *word* ” from the current caret position.
+
+[source,csharp]
+----
+…XamRichTextEditor("Identifier").SelectAlltInstanceOfText “Word”
+----
+
+To find and select all instances of “ *WoRd* ” case insensitively.
+
+[source,csharp]
+----
+…XamRichTextEditor("Identifier").SelectAllInstancesOfText “WoRd”, false
+----
+
+To find all instances of “ *w?rd* ”. This will pick up “ *word* ”, “ *wOrd* ”, “ *ward* ”, etc. The wildcard ( *?* ) is identical to the Visual Basic Like operator.
+
+[source,csharp]
+----
+…XamRichTextEditor("Identifier").SelectAllInstancesOfText “w?rd”, false, true
+----
+
+=== Possible exceptions
+
+There was an error finding the text: [ _sTextToFind_  ]
+
+[[_Ref372735244]]
+== _ReplaceNextInstanceOfText_
+
+=== Description
+
+Replaces the next instance of the supplied text, starting from the current caret location and moving the caret to the next start of that text moving towards the end of the document.
+
+=== Parameters
+
+The following table describes the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_sTextToFind_
+|String value representing the text to be found.
+
+|_sNewText_
+|String value representing the new text to replace the existing text.
+
+|_iSkipCount_
+|Represents integer value representing the number of text instances to be skipped, default value is 0.
+
+|_bCaseSensitive_
+|Represents Boolean value representing search criteria – if case sensitive, default is true.
+
+|_bAllowWildCards_
+|Represents Boolean value representing search criteria – if used with wildcards, default is false.
+
+|====
+
+=== Example
+
+To find the next instance of “ *word* ” from the current caret position and replace it with “ *NewWord* ”.
+
+[source,csharp]
+----
+…XamRichTextEditor("Identifier").ReplaceNextInstanceOfText “word”, “NewWord”
+----
+
+To find the sixth instance of “ *WoRd* ” from the current caret position, case insensitively and replace it with “ *NewWord* ”.
+
+[source,csharp]
+----
+…XamRichTextEditor("Identifier").ReplaceNextInstanceOfText “WoRd”, “NewWord”, 5, false
+----
+
+To find the next instance of “ *w?rd* ” from the current caret position. This will pick up “ *word* ”, “ *wOrd* ”, “ *ward* ”, etc. The wildcard ( *?* ) is identical to the Visual Basic `Like` operator.
+
+[source,csharp]
+----
+…XamRichTextEditor("Identifier").ReplaceNextInstanceOfText “w?rd”, “”, 0, false, true
+----
+
+=== Possible exceptions
+
+The following is the list of possible exceptions to the method and the likely reason causing them.
+
+==== Exception reasons
+
+* The following item [sTextToFind] was not found
+* There was an error in finding the text: [sTextToFind]
+
+[[_Ref372735255]]
+== _ReplaceAllInstancesOfText_
+
+=== Description
+
+Finds and replaces all instances of the supplied text.
+
+=== Parameters
+
+The following table describes the method’s parameter followed by code examples.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_sTextToFind_
+|String value representing the text to be found.
+
+|_sNewText_
+|String value representing the new text to replace the existing text.
+
+|_bCaseSensitive_
+|Represents Boolean value representing search criteria – if case sensitive, default is true.
+
+|_bAllowWildCards_
+|Represents Boolean value representing search criteria – if used with wildcards, default is false.
+
+|====
+
+=== Example
+
+To find and remove all instances of “ *word* ”.
+
+[source,csharp]
+----
+…XamRichTextEditor("Identifier").ReplaceAllInstancesOfText “word”
+----
+
+To find and replace all instances of “ *word* ” with “ *NewWord* ”.
+
+[source,csharp]
+----
+…XamRichTextEditor("Identifier").ReplaceAllInstancesOfText “word”, “NewWord”
+----
+
+To find and select all instances of “ *WoRd* ” case insensitively and replace it with “ *NewWord* ”.
+
+[source,csharp]
+----
+…XamRichTextEditor("Identifier").ReplaceAllInstancesOfText “WoRd”, “NewWord”, false
+----
+
+To find all instances of “ *w?rd* ”. This will pick up “ *word* ”, “ *wOrd* ”, “ *ward* ”, etc. The wildcard ( *?* ) is identical to the Visual Basic `Like` operator. It replaces all found instances of the text with “ *NewWord* ”.
+
+[source,csharp]
+----
+…XamRichTextEditor("Identifier").ReplaceAllInstancesOfText “w?rd”, “NewWord”, false, true
+----
+
+=== Possible exceptions
+
+The following is the list of possible exceptions to the method and the likely reason causing them.
+
+==== Exception reasons
+
+* The following item [sTextToFind] was not found
+* There was an error in finding the text: [sTextToFind]
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamrichtexteditor-user-actions.html[xamRichTextEditor - User Actions]
+|This topic provides information about the _xamRichTextEditor_ control’s testable user actions and elements.
+
+| link:xamrichtexteditor-recordable-methods.html[xamRichTextEditor - Recordable Methods]
+|This topic provides information about recording and replaying actions using the _xamRichTextEditor_ control’s testable user methods.
+
+| link:xamrichtexteditor-property-reference.html[xamRichTextEditor - Property Reference]
+|This topic provides reference information about the _xamRichTextEditor_ control’s test object properties.
+
+| link:xamrichtexteditor-enumeration-reference.html[xamRichTextEditor - Enumeration Reference]
+|This topic provides reference material on the common enumerations used for testing the _xamRichTextEditor_ control.
+
+|====

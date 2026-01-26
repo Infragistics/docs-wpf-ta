@@ -1,0 +1,44 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamtabcontrol",
+    "controlName": [],
+    "tags": [],
+    "guid": "d32a9e91-c808-48a4-9ffd-d689c29b90c2",  
+    "buildFlags": [],
+    "createdOn": "2012-01-22T18:35:04.1732085Z"
+}
+|metadata|
+////
+
+= xamTabControl
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test~infragisticswpf.test.controls.xamtabcontrolproxy.html[XamTabControlProxy] object in {ProductName}.
+
+=== Topics
+
+The topics contained in this section cover implementing action elements, methods and properties within the  _xamTabControl™_   control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamtabcontrol-testable-user-actions-and-elements.html[xamTabControl - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamTabControl_ which you can test and the elements you can inspect.
+
+| link:xamtabcontrol-recordable-methods.html[xamTabControl - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamTabControl_ .
+
+| link:xamtabcontrol-replay-only-methods.html[xamTabControl - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the _xamTabControl_ .
+
+| link:xamtabcontrol-property-reference.html[xamTabControl - Properties Reference]
+|This topic provides reference information about the inspectable test object properties of the _xamTabControl_ .
+
+| link:xamtabcontrol-api.html[xamTabControl - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamTabControl_ in Micro Focus Unified Functional Testing software.
+
+|====

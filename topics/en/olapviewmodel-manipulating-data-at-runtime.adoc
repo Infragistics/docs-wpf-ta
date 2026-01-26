@@ -1,0 +1,468 @@
+﻿////
+
+|metadata|
+{
+    "name": "olapviewmodel-manipulating-data-at-runtime",
+    "controlName": [],
+    "tags": [],
+    "guid": "6575cd34-d6d3-4d52-a5a5-ee93ae568405",  
+    "buildFlags": [],
+    "createdOn": "2012-10-29T21:24:40.769123Z"
+}
+|metadata|
+////
+
+= OlapViewModel - Manipulating Data at Runtime
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides a conceptual overview of how to manipulate data at runtime for those controls using the OlapViewModel.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref339548765, OlapViewModel Limitations >>
+* <<_Ref338265452, OlapViewModel Recordable and   Replayable   Methods Summary >>
+
+** <<_Ref338271984, _AddPivotItem_   method>>
+** <<_Ref338277352, _MovePivotItem_   method>>
+** <<_Ref338679928, _RemovePivotItem_   method>>
+** <<_Ref338794040, _OpenFilterDialog_   method>>
+** <<_Ref338794055, _CloseFilterDialog_   method>>
+
+* <<_Ref337132389, Related Content >>
+
+[[_Ref339548765]]
+== _OlapViewModel_   Limitations
+
+[[_Ref338010008]]
+
+=== Limitations
+
+To record  _AddPivotItem_   action on the  _OlapViewModel_  , first you need to interact with one of the following four control areas :
+
+* Measures
+* Rows
+* Columns
+* Filters
+
+Recording the  _AddPivotItem_   action is always from the  _xamPivotDataSelector_   even if adding the item to another control for instance,  _xamPivotGrid_  . Hence, you need to ensure that you click on any of the four areas mentioned above so that you are able to record `AddPivotItem` action.
+
+[[_Ref338265452]]
+== _OlapViewModel_  Recordable and Replayable Methods Summary
+
+=== Methods summary chart
+
+The following table briefly explains the recordable and replayable methods for testing the control. Additional information about each method is available following the table.
+
+*Legend:*
+
+image::images/record.png[]
+
+ – Record in UFT (default)
+
+image::images/replay.png[]
+
+ – Replay in UFT (using script)
+
+[options="header", cols="a,a,a"]
+|====
+|Method|Action|Description
+
+|_ link:{ApiPlatform}test.controls.grids.xampivotgrid~infragisticswpf.test.controls.grids.olapviewmodelproxy~addpivotitem.html[AddPivotItem]_
+|image::images/record.png[]
+|Adds the pivot item from the _xamPivotDataSelector_ ’s dimensions tree to the control’s target area.
+
+|
+|image::images/replay.png[]
+|Obtains the pivot item (tree node) from its identifier and the target area from its name, and then adds the pivot item at the specified target index, to the target area. 
+
+If the target index is not specified, the item is added to the end of the target area’s existing collection.
+
+|_ link:{ApiPlatform}test.controls.grids.xampivotgrid~infragisticswpf.test.controls.grids.olapviewmodelproxy~movepivotitem.html[MovePivotItem]_
+|image::images/record.png[]
+|Moves the pivot items in the control, for example, exchanging columns and rows.
+
+|
+|image::images/replay.png[]
+|Obtains: 
+
+* The source area using its name 
+
+* The pivot item from the source via its identifier 
+
+* The target area from its name. 
+
+Then moves the pivot item to the target area at the specified target index (if any). If the target index is not specified, the item is moved to the end of the existing target area collection.
+
+|_ link:{ApiPlatform}test.controls.grids.xampivotgrid~infragisticswpf.test.controls.grids.olapviewmodelproxy~removepivotitem.html[RemovePivotItem]_
+|image::images/record.png[]
+|Removes the pivot items from the _control_ by dragging the item using the left mouse button and dropping outside of the item’s area or by closing them using the close button.
+
+|
+|image::images/replay.png[]
+|Obtains the source area from its name, the pivot item from the source via its identifier and then removes the item.
+
+|_ link:{ApiPlatform}test.controls.grids.xampivotgrid~infragisticswpf.test.controls.grids.olapviewmodelproxy~openfilterdialog.html[OpenFilterDialog]_
+|image::images/record.png[]
+|Opens the pivot item’s filter dialog in the control’s source area.
+
+|
+|image::images/replay.png[]
+|Obtains the source area from its name, the pivot item from the source via its identifier and then opens that item’s filter dialog.
+
+| _link:{ApiPlatform}test.controls.grids.xampivotgrid~infragisticswpf.test.controls.grids.olapviewmodelproxy~closefilterdialog.html[CloseFilterDialog]_ 
+|image::images/record.png[]
+|Closes the pivot item’s filter dialog in the control’s source area.
+
+|
+|image::images/replay.png[]
+|Obtains the source area from its name, the pivot item from the source via its identifier and then closes that item’s filter dialog.
+
+|====
+
+[[_Ref338271984]]
+== _AddPivotItem_   method
+
+=== Description
+
+Storing a pivot item’s identifier that is added (Tree node identifier), the target area name and the target index where the item is added.
+
+=== Parameters
+
+The following table explains the method’s parameters followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_oPivotItemId_
+|Identifier of the `IOlapViewModel’s` pivot item. This can be the `IOlapViewModel’s` pivot item header caption, index, array of headers, and indices (Dimensions tree node).
+
+| _oTargetPivotAreaName_ 
+|Identifies the name of the `IOlapViewModel’s` target area where the pivot item needs to be added or moved.
+
+| _iTargetIndex_ 
+|Index of the `IOlapViewModel’s` target area where the pivot item needs to be added.
+
+|====
+
+=== Example
+
+The following example demonstrates how to add a tree node with `header = “Child1”` under the root node with `header = “Root”` to the target area with rows at target index of 1.
+
+[source,csharp]
+----
+XamPivotGrid("xamPivotGrid1").AddPivotItem Array(“Root”, “Child1”), pvtRows, 1
+----
+
+The following example demonstrates how to add a child tree node at index 2 under the root node at index 0 to the target area with measures at target index of 0.
+
+[source,csharp]
+----
+XamPivotGrid("xamPivotGrid1").AddPivotItem Array(0,2), pvtMeasures, 0
+----
+
+The following example demonstrates how to add a root tree node at index 2 to the target area with filters at target index of 2.
+
+[source,csharp]
+----
+XamPivotGrid("xamPivotGrid1").AddPivotItem 2, pvtFilters, 2
+----
+
+The following example demonstrates how to add a root tree node with `header=”Root2”` to the target area with columns at the end of the existing collection.
+
+[source,csharp]
+----
+XamPivotGrid("xamPivotGrid1").AddPivotItem “Root2”, pvtColumns
+----
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a"]
+|====
+|Exception name|Possible reason
+
+|Incorrect item format
+|The pivot item ID is not of the correct format.
+
+|Item not found
+|Cannot find the pivot item (tree node).
+
+|Invalid target
+|The target area is not one of the valid options (Filters, Rows, Columns or Measures).
+
+|Invalid operation
+|Cannot add the pivot item to the specified target area since you can only add certain items to certain areas.
+
+|Index is out of range
+|The target index is out of range.
+
+|====
+
+[[_Ref338277352]]
+== _MovePivotItem_   method
+
+=== Description
+
+Storing the moved pivot item’s source area name and identifier, along with the target area name and the target index where the item is moved.
+
+=== Parameters
+
+The following table explains the method’s parameters followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_oSourcePivotAreaName_
+|Identifies the `IOlapViewModel` source area’s name where the pivot item needs removing.
+
+|_oPivotItemId_
+|Identifies the `IOlapViewModel’s` pivot item. This can be the pivot item’s header caption or index within the `IOlapViewModel` source area.
+
+|_oTargetPivotAreaName_
+|Identifies the `IOlapViewModel` target area’s name where the pivot item needs inserting.
+
+|_iTargetIndex_
+|Index of the `IOlapViewMode` target area where the pivot item needs inserting.
+
+|====
+
+=== Example
+
+The following example shows how to move the, “Sales” pivot item from the source area (Columns) to target area (Rows) at a target index of 1.
+
+[source,csharp]
+----
+XamPivotGrid("xamPivotGrid1").MovePivotItem  pvtColumns, “Sales”, pvtRows, 1
+----
+
+The following example shows how to move the, “Sales measures” pivot item from the source area (Measures) to target area (Measures) within the same area at a target index of 2.
+
+[source,csharp]
+----
+XamPivotGrid("xamPivotGrid1").MovePivotItem  pvtMeasures, “Sales measures”, pvtMeasures, 2
+----
+
+The following example shows how to move the pivot item at index 3 from the source area (Rows) to target area (Filters) at a target index of 2.
+
+[source,csharp]
+----
+XamPivotGrid("xamPivotGrid1").MovePivotItem  pvtRows, 3, pvtFilters, 2
+----
+
+=== Default setting
+
+N/A
+
+=== Possible exception
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a"]
+|====
+|Exception name|Possible reason
+
+|Incorrect item format
+|The pivot item ID is not of the correct format.
+
+|Item not found
+|Cannot find the pivot item (tree node).
+
+|Invalid target
+|The target area is not one of the valid options (Filters, Rows, Columns or Measures).
+
+|Invalid operation
+|Cannot add the pivot item to the specified target area since you can only add certain items to certain areas.
+
+|Index is out of range
+|The target index is out of range.
+
+|====
+
+[[_Ref338679928]]
+== _RemovePivotItem_   method
+
+=== Description
+
+Stores the pivot item, to be removed, source area’s name and identifier.
+
+=== Parameters
+
+The following table explains the method’s parameters followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_oSourcePivotAreaName_
+|Identifies the `IOlapViewModel` source area’s name where the pivot item needs to be removed.
+
+|_oPivotItemId_
+|Identifies the `IOlapViewModel’s` pivot item. This can be the pivot item’s header caption or index within the `IOlapViewModel’s` source area.
+
+|====
+
+=== Example
+
+The following example demonstrates an action for removing the pivot item, “Sales” from the source area: Columns.
+
+[source,csharp]
+----
+XamPivotGrid("xamPivotGrid1").RemovePivotItem  pvtColumns, “Sales”
+----
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a"]
+|====
+|Exception name|Possible reason
+
+|Invalid option.
+|The source area is not one of the valid options (Filters, Rows, Columns or Measures).
+
+|Incorrect item format.
+|The pivot item ID is not of the correct format.
+
+|Item not found.
+|Cannot find the pivot item in the source area.
+
+|====
+
+[[_Ref338794040]]
+== _OpenFilterDialog_   method
+
+=== Description
+
+Stores the pivot item source area’s name and identifier whose filter dialog is opened or closed.
+
+=== Parameters
+
+The following table explains the method’s parameters followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_oSourcePivotAreaName_
+|Identifies the `IOlapViewModel` source area’s name containing the pivot item whose filter dialog needs to be opened.
+
+|_oPivotItemId_
+|Identifies the `IOlapViewModel’s` pivot item. This can be the pivot item’s header caption or index within the `IOlapViewModel’s` source area.
+
+|====
+
+=== Example
+
+Demonstrates opening of the  _xamPivotDataSelector_   control’s, “Products” item in the “Columns” area filter dialog.
+
+[source,csharp]
+----
+XamPivotDataSelector("dataSelector").OpenFilterDialog pvtColumns, "Product"
+----
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a"]
+|====
+|Exception name|Possible reason
+
+|Invalid option.
+|The source area is not one of the valid options (Filters, Rows, Columns or Measures).
+
+|Incorrect item format.
+|The pivot item ID is not of the correct format.
+
+|Item not found.
+|Cannot find the pivot item in the source area.
+
+|Invalid operation.
+|The action is not valid if the pivot item does not contain a filter dialog.
+
+|====
+
+[[_Ref338794055]]
+== _CloseFilterDialog_   method
+
+=== Description
+
+Stores the pivot item source area’s name and identifier whose filter dialog is closed.
+
+=== Parameters
+
+The following table explains the method’s parameters followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_oSourcePivotAreaName_
+|Identifies the `IOlapViewModel` source area’s name containing the pivot item whose filter dialog needs closing.
+
+|_oPivotItemId_
+|Identifies the `IOlapViewModel’s` pivot item. This can be the pivot item’s header caption or index within the `IOlapViewModel’s` source area.
+
+|====
+
+=== Example
+
+Demonstrates closing of the, “Products” item in the, “Columns” area filter dialog of the  _xamPivotDataSelector_   control.
+
+[source,csharp]
+----
+XamPivotDataSelector("dataSelector").CloseFilterDialog pvtColumns, "Product"
+----
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a"]
+|====
+|Exception name|Possible reason
+
+|Invalid option.
+|The source area is not one of the valid options (Filters, Rows, Columns or Measures).
+
+|Incorrect item format.
+|The pivot item ID is not of the correct format.
+
+|Item not found.
+|Cannot find the pivot item in the source area.
+
+|Invalid operation.
+|The action is not valid if the pivot item does not contain a filter dialog.
+
+|====
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:olapviewmodel-testable-user-actions-and-elements.html[OlapViewModel - Testable User Actions and Elements]
+|This topic provides information about the testable user actions and elements of the controls that use _OlapViewModel_ .
+
+| link:olapviewmodel-property-refreence.html[OlapViewModel - Property Reference]
+|This topic provides reference information about the test object properties of the controls that use _OlapViewModel_ .
+
+| link:olapviewmodel-enumeration-reference.html[OlapViewModel - Enumeration Reference]
+|This topic provides reference information about the common enumerations in the _OlapViewModel_ proxy.
+
+|====

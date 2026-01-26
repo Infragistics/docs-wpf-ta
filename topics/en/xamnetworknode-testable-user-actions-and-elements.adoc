@@ -1,0 +1,197 @@
+﻿////
+|metadata|
+{
+    "name": "xamnetworknode-testable-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "89a66831-9a3c-4478-8caf-20763fb60c6d",
+    "buildFlags": [],
+    "createdOn": "2012-10-29T20:51:25.315123Z"
+}
+|metadata|
+////
+
+= xamNetworkNode - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the  _XamNetworkNode_™ control’s testable user actions and elements.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref338260068, xamNetworkNode Testable User Actions >>
+* <<_Ref338260076, xamNetworkNode Testable Elements >>
+* <<_Ref337132389, Related Content >>
+
+[[_Ref338260068]]
+== _xamNetworkNode_  Testable User Actions
+
+=== Testable user action chart
+
+The following table summarizes the control’s user actions and maps them to the recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|User action|Method
+
+|Clicking on a node.
+| link:xamnetworknode-recordable-methods.html#_Ref338271984[ActivateNode]
+
+|Clearing the selection such that no node is selected.
+| link:xamnetworknode-recordable-methods.html#_Ref338277352[ClearSelection]
+
+|Clicking on the node’s expansion indicator (minus sign).
+| link:xamnetworknode-recordable-methods.html#_Ref338277363[CollapseNode]
+
+|Clicking on the node’s expansion indicator (plus sign).
+| link:xamnetworknode-recordable-methods.html#_Ref338277374[ExpandNode]
+
+|Retrieving all incoming and outgoing nodes connections for a specified node.
+| link:xamnetworknode-replay-only-methods.html#_Ref338271984[GetConnectedNodes]
+
+|Selecting a single node 
+
+Pressing down on the keyboard’s `ctrl` or `shift` key, and clicking the nodes to select them in multiple or extended selection mode 
+
+| link:xamnetworknode-recordable-methods.html#_Ref338277386[SelectNodes]
+
+|====
+
+[[_Ref338260076]]
+== _xamNetworkNode_  Testable Elements
+
+=== Testable elements summary chart
+
+The following table lists the elements in the control that you can test, the information you can retrieve about them, along with the properties and methods that manage the retrieval operations.
+
+*Legend:*
+
+image::images/spy.png[]
+
+ – Identification property (Visible in object spy)
+
+image::images/checkpoint.png[]
+
+ – Checkpoint property (Visible with checkpoints)
+
+image::images/script.png[]
+
+ – Accessible in script
+
+[options="header", cols="a,a,a,a,a"]
+|====
+|Testable elements|Test deliverable|Member type|Test object member|Accessibility
+
+|Active node
+|Activates a single node of the _xamNetworkNode_ control.
+|Property
+|ActiveNodeId
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|Visible Nodes
+|Returns the count of all the _xamNetworkNode_ control’s nodes.
+|Property
+|NodesCount
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|Selected nodes
+|Selects a single node or an array of nodes obtained from the _xamNetworkNode_ control.
+|Property
+|SelectedNodes
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|
+|Returns the count of all the _xamNetworkNode_ control’s selected nodes.
+|Property
+|SelectedNodesCount
+|image::images/script.png[]
+
+|
+|Returns the indices of all the visible selected nodes of the _xamNetworkNode_ control.
+|Property
+|SelectedNodeIndices
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|Connected nodes
+|Returns a string of all incoming and outgoing node identifiers of the _xamNetworkNode_ control’s specified node(s).
+|Method
+|GetConnectedNodes
+|image::images/script.png[]
+
+|
+|Returns the count of all the _xamNetworkNode_ control’s visible node connections.
+|Property
+|ConnectionsCount
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|Data
+|Verifiable table content of all nodes: 
+
+* NodeData 
+
+* NodeIndex 
+
+* NodeVisibleIndex 
+
+* NodeVisibility 
+
+* IncomingConnectionsCount 
+
+* OutgoingConnectionsCount 
+
+* ConnectedNodesCount 
+
+|Verifiable table content
+|
+|image::images/script.png[]
+
+|====
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamnetworknode-recordable-methods.html[xamNetworkNode Test Object Recordable Methods Reference]
+|This topic provides information about the _XamNetworkNode_ control’s testable user recordable methods.
+
+| link:xamnetworknode-replay-only-methods.html[xamNetworkNode Test Object Replay-Only Methods Reference]
+|This topic provides information about the _XamNetworkNode_ control’s testable user replay-only methods.
+
+| link:xamnetworknode-property-reference.html[xamNetworkNode Test Object Properties Reference]
+|This topic provides reference information about the _XamNetworkNode_ control’s test object properties.
+
+| link:xamnetworknode-enumeration-reference.html[xamNetworkNode Test Object Enumerations Reference]
+|This topic provides reference information about the common enumerations used in testing the _xamNetworkNode_ control.
+
+|====

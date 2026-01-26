@@ -1,0 +1,41 @@
+﻿////
+|metadata|
+{
+    "name": "installing-configuring-removing-ta-wpf",
+    "controlName": [],
+    "tags": [],
+    "guid": "00cb8af6-6a67-4ba0-8f12-d35cd7b7d07a",
+    "buildFlags": [],
+    "createdOn": "2012-01-25T13:03:17.6988632Z"
+}
+|metadata|
+////
+
+= Installing, Configuring and Removing {ProductName}
+
+=== Introduction
+
+This section contains information about:
+
+* How to install and configure the {ProductName} product
+* How to switch between different CLR versions and different product versions
+* How to remove the {ProductName} product
+
+=== Topics
+
+The information you need to get started with {ProductName} is covered in the following topics:
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:installing-and-configuring-ta-wpf.html[Installing and Configuring {ProductName}]
+|This topic provides instructions about the installation {ProductName} Unified Functional Testing.
+
+| link:switching-ta-clr-versions.html[Switching Test Automation / CLR Versions]
+|This topic explains how to switch between the {ProductName} product volumes and the CLR versions.
+
+| link:removing-ta-from-hp-qtp.html[Removing Test Automation from Micro Focus Unified Functional Testing]
+|This topic explains how to disable the WPF Test Automation from Micro Focus Unified Functional Testing software.
+
+|====

@@ -1,0 +1,88 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamradialmenulistbox-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "99c19f02-3723-418b-8d22-8ebc18469c81",  
+    "buildFlags": [],
+    "createdOn": "2014-04-30T19:21:04.2392265Z"
+}
+|metadata|
+////
+
+= xamRadialMenuListBox - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the recordable methods for testing the  _XamRadialMenuListBox_™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref386530129, _XamRadialMenuListBox_   Recordable Methods>>
+
+** <<_Ref386546901, _Select_  >>
+** <<_Ref386546910, _Close_  >>
+
+* <<_Ref337132389,Related Content>>
+
+[[_Ref386530129]]
+== _XamRadialMenuListBox_   Recordable Methods
+
+[[_Ref386546901]]
+== _Select_
+
+=== Description
+
+Selects a RadialMenu list item when the user clicks on an item from the dropdown list.
+
+=== Parameters
+
+The following table summarizes the method’s parameters.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _oListItemArg_ 
+|Contains string Item name or an integer index of the item.
+
+|====
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this method and their likely causes.
+
+* The specified index [ _oListItemArg_  ] is out of range
+* The following item [ _oListItemArg_  ] was not found
+
+[[_Ref386546910]]
+== _Close_
+
+=== Description
+
+Closes the RadialMenu list box when the user clicks outside the list box or presses the `Esc` key on the keyboard.
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamradialmenulistbox-user-actions.html[xamRadialMenuListBox - User Actions]
+|This topic provides information about the _XamRadialMenu_ _ListBox_ control’s user actions represented by XamRadialMenuListBoxProxy object.
+
+| link:xamradialmenulistbox-property-reference.html[xamRadialMenuListBox - Property Reference]
+|This topic provides reference information about the _XamRadialMenuListBox_ control’s test object properties.
+
+|====

@@ -1,0 +1,364 @@
+﻿////
+|metadata|
+{
+    "name": "xamgrid-sorting-and-grouping",
+    "controlName": [],
+    "tags": [],
+    "guid": "986592d5-cba1-43f3-a959-b7727f257fb9",
+    "buildFlags": [],
+    "createdOn": "2012-04-14T09:49:54.9045073Z"
+}
+|metadata|
+////
+
+= Sorting and Grouping
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods related to the testing of the sorting and grouping in the  _xamGrid_™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref322532424,Recordable Methods>>
+
+** <<_GroupByColumn, _GroupByColumn_  >>
+** <<_SortColumn, _SortColumn_  >>
+** <<_UnGroupColumn, _UnGroupColumn_  >>
+
+* <<_Ref322531692,Related Content>>
+
+[[_Ref322532424]]
+== Recordable Methods
+
+=== Methods reference summary chart
+
+The following table summarizes the purpose and functionality of the recordable methods for testing the sorting and grouping in the xamGrid control.
+
+[options="header", cols="a,a"]
+|====
+|Method|Description
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~groupbycolumn.html[GroupByColumn]_
+|Groups the data by a specified column.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~sortcolumn.html[SortColumn]_
+|Sorts the data by a specified column.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~ungroupcolumn.html[UnGroupColumn]_
+|Ungroups the data by a specified column.
+
+|====
+
+[[_GroupByColumn]]
+== _GroupByColumn_
+
+=== Description
+
+The  _GroupByColumn_   method records and replays the grouping of data by a specified column.
+
+=== Details
+
+The GroupByColumn method is recorded in a test when:
+
+[start=1]
+. The xamGrid data is grouped by a column.
+[start=2]
+. Multiple-column grouping is performed by dragging column headers to other positions in the  _group_   _B_   _y_   area.
+
+When replaying the method:
+
+[start=1]
+. The specified column header is verified.
+[start=2]
+. A check is performed to verify that grouping is allowed for the specified column.
+[start=3]
+. A check is performed to verify that the groupBy area is visible.
+[start=4]
+. The specified groupBy column header position in the groupBy area is verified.
+[start=5]
+. The grouping is performed.
+
+The method accepts as parameters the column header name or the column header index in the groupBy area when multiple columns grouping is performed.
+
+=== Parameters
+
+The following table maps the desired configuration to its parameters’ settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the grouping column by name
+|sHeaderArg
+|The column header name
+
+|Specify the position of the grouping column
+|iPosition
+|The position of the header (integer)
+
+|====
+
+=== Example
+
+Grouping data in the xamGrid by the  _Company_   column.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").GroupByColumn "[Company]", 0
+----
+
+[[_Hlk322530508]]
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|[[_Hlk322530567]] 
+
+The argument is malformed.
+|The parameter’s format is incorrect.
+|The method’s parameter is not in a valid format.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|The element is not visible.
+|The item is not visible and replaying the method fails.
+|The item on which the action is performed either doesn’t exist or is hidden.
+
+|The grouping position is out of range.
+|The specified position is not valid and replaying the method fails.
+|The specified position index is not in the valid range.
+
+|_GroupBy_ support is not enabled.
+|The _groupBy_ feature is not enabled and replaying the method fails.
+|The groupBy feature is not allowed, either for the entire grid or for the specified column.
+
+|====
+
+[[_SortColumn]]
+== _SortColumn_
+
+=== Description
+
+The  _SortColumn_   method records and replays the sorting of data by a specified column.
+
+=== Details
+
+The SortColumn method is recorded in a test when the column header is clicked and sorting is performed.
+
+When replaying the method:
+
+[start=1]
+. The specified column header is verified.
+[start=2]
+. The specified sorting direction is verified.
+[start=3]
+. A check is performed to verify that checked if sorting is enabled.
+[start=4]
+. Sorting is performed.
+
+The method accepts as parameters the column header name, the sorting direction, and a boolean parameter that indicates whether multiple-column sorting is performed.
+
+The sorting direction options are listed in the link:xamgrid-enumeration-reference.html[xamGrid - Enumeration Reference] topic.
+
+=== Parameters
+
+The following table maps the desired configuration to its parameters’ settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the sort column
+|oColumn
+|The column header
+
+|Specify the sorting direction
+|oSortDirection
+|
+* igAscending 
+
+* igDescending 
+
+* igNotSorted 
+
+|Specify the sorting type (single-column or multiple-column)
+|bExtendSort
+|
+* True 
+
+* False 
+
+* Empty (by default) 
+
+|====
+
+=== Example
+
+Performing multiple xamGrid data sorting – first (primary) sorting by the  _CustomerID_   column and then sorting of the  _Company_   and  _ContactName_   columns.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SortColumn "[CustomerID]",igAscending  
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SortColumn "[Company]",igAscending, True  
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SortColumn "[ContactName]",igAscending, True
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter’s format is incorrect.
+|The method’s parameter is not in a valid format.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|Sorting not enabled for the supplied column.
+|Sorting is not enabled for the specified column and replaying the method fails.
+|Sorting is disabled for the specified column.
+
+|The option supplied is not one of the valid options.
+|One or more of the supplied parameters is not valid and replaying the method fails.
+|One or more of the supplied parameters is not valid.
+
+|Extended sorting is not allowed for the supplied column.
+|Multiple column sorting is not enabled and replaying the method fails.
+|The multiple column sorting is not enabled for the grid.
+
+|The element is not visible.
+|The item is not visible and replaying the method fails.
+|The item on which the action is performed either doesn’t exist or is hidden.
+
+|The point required to perform the operation is not visible.
+|The point required to perform the operation is not visible and replaying the method fails.
+|The point required to perform the operation is not visible.
+
+|====
+
+[[_UnGroupColumn]]
+== _UnGroupColumn_
+
+=== Description
+
+The  _UnGroupColumn_   method records and replays the ungrouping of data by a specified column if grouping action by this column has been previously performed.
+
+=== Details
+
+When replaying the method:
+
+[start=1]
+. The specified column header is verified.
+[start=2]
+. A check is performed to verify that grouping is allowed for the specified column.
+[start=3]
+. A check is performed to verify that the groupBy area is visible.
+[start=4]
+. Ungrouping is performed.
+
+The method accepts as a parameter the column header.
+
+=== Parameters
+
+The following table maps the desired configuration to parameters settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the ungrouping column by name
+|sHeaderArg
+|The column header
+
+|====
+
+=== Example
+
+Ungrouping data in the xamGrid by the  _Company_   column.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").UnGroupColumn "[Company]"
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter’s format is incorrect.
+|The method’s parameter is not in a valid format.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|The element is not visible.
+|The item is not visible and replaying the method fails.
+|The item on which the action is performed either doesn’t exist or is hidden.
+
+|_GroupBy_ support is not enabled.
+|The _groupBy_ feature is not enabled and replaying the method fails.
+|The groupBy feature is not allowed, either for the entire grid or for the specified column.
+
+|====
+
+[[_Ref322531692]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamgrid-display.html[Display]
+|This topic provides reference information about the recordable user methods related to the testing of the display features in the xamGrid control.
+
+| link:xamgrid-editing.html[Editing]
+|This topic provides reference information about the recordable user methods related to the testing of the editing in the xamGrid control.
+
+| link:xamgrid-filtering.html[Filtering]
+|This topic provides reference information about the recordable user methods related to the testing of the filtering in the xamGrid control.
+
+| link:xamgrid-navigating-and-selecting.html[Navigating and Selecting]
+|This topic provides reference information about the recordable user methods related to the testing of the navigation and selection in the xamGrid control.
+
+| link:xamgrid-summaries.html[Summaries]
+|This topic provides reference information about the recordable user methods related to the testing of the summaries in the xamGrid control.
+
+|====

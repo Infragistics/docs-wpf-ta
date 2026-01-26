@@ -1,0 +1,183 @@
+﻿////
+|metadata|
+{
+    "name": "xamdatachart-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "a6665581-9761-4143-99cd-cb4214327295",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T14:38:04.9851997Z"
+}
+|metadata|
+////
+
+= xamDataChart - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods for testing the  _xamDataChart_™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref314227548,xamDataChart Recordable Methods>>
+
+** <<_Ref314227549, _ClickControl_  >>
+** <<_Ref316310433, _RightClickControl_  >>
+
+* <<_Ref316310433,Related Content>>
+
+[[_Ref314227548]]
+== xamDataChart Recordable Methods
+
+=== Recordable methods summary chart
+
+The following table briefly explains the recordable methods for testing the control. Detailed information about the methods is provided in the text blocks following the table.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|*Description*
+
+|_ClickControl_
+|Clicks on the control.
+
+|_RightClickControl_
+|Right click on the control.
+
+|====
+
+[[_Ref314227549]]
+== _ClickControl_
+
+=== Description
+
+The  _ClickControl_  method performs a click action on the control.
+
+=== Details
+
+The method accepts as first parameter region that may has one of the following values:
+
+* igTopLeft,
+* igTopCenter,
+* igTopRight,
+* igMidLeft,
+* igMidCenter,
+* igMidRight,
+* igBottomLeft,
+* igBottomCenter,
+* igBottomRight,
+* igAt,
+* igPercent
+
+=== Parameters
+
+The following table explains the method’s parameters together with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameters*|*Description*
+
+|
+* IGRectRegion 
+
+* X 
+
+* Y 
+
+|*Example* 
+
+Click at the following x and y coordinates on the xamDataChart: 
+
+WpfWindow("MainWindow").XamDataChart("columnDataChart").ClickControl igAt, 100, 156
+
+|====
+
+=== Default setting
+
+The click action is recorded with a specified region and the coordinates of a point as parameters.
+
+=== Possible exceptions
+
+No known exceptions.
+
+[[_Ref316310433]]
+== _RightClickControl_
+
+=== Description
+
+The  _RightClickControl_  method performs a right click action on the control.
+
+=== Details
+
+The method accepts as first parameter region that may has one of the following values:
+
+* igTopLeft,
+* igTopCenter,
+* igTopRight,
+* igMidLeft,
+* igMidCenter,
+* igMidRight,
+* igBottomLeft,
+* igBottomCenter,
+* igBottomRight,
+* igAt,
+* igPercent
+
+=== Parameters
+
+The following table explains the method’s parameters together with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameters*|*Description*
+
+|
+* IGRectRegion 
+
+* X 
+
+* Y 
+
+|*Example* 
+
+Right click at the following x and y coordinates on the xamDataChart: 
+
+WpfWindow("MainWindow").XamDataChart("columnDataChart").RightClickControl igAt, 305, 506
+
+|====
+
+=== Default setting
+
+The right click action is recorded with a specified region and the coordinates of a point as parameters.
+
+=== Possible exceptions
+
+No known exceptions.
+
+[[_Ref316310433]]
+== Related Content
+
+=== Topics
+
+The following table lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamdatachart-testable-user-actions-and-elements.html[xamDataChart - Testable User Actions and Elements]
+|This topic provides information about the user actions of the xamDataChart™ control which you can test and the elements you can inspect.
+
+| link:xamdatachart-replay-only-methods.html[xamDataChart - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the xamDataChart™ control.
+
+| link:xamdatachart-property-reference.html[xamDataChart - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamDataChart™ control.
+
+| link:xamdatachart-api.html[xamDataChart - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamDataChart™ control in Micro Focus Unified Functional Testing software.
+
+|====

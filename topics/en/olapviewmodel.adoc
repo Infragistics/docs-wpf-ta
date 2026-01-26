@@ -1,0 +1,41 @@
+﻿////
+
+|metadata|
+{
+    "name": "olapviewmodel",
+    "controlName": [],
+    "tags": [],
+    "guid": "ceecc8f5-9ec9-48f0-88b8-a6a1e8b7b938",  
+    "buildFlags": [],
+    "createdOn": "2012-10-29T21:18:31.107123Z"
+}
+|metadata|
+////
+
+= OlapViewModel
+
+=== Introduction
+
+The topics in this group explain the changes in the link:{ApiPlatform}test.controls.grids.xampivotgrid~infragisticswpf.test.controls.grids.xampivotgridproxy.html[OlapViewModelProxy] for the  _{ProductName}_   2012 Volume 2 release.
+
+=== Topics
+
+This section contains topics covering the implementation of action elements, methods and properties in  _OlapViewModelProxy_  .
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:olapviewmodel-testable-user-actions-and-elements.html[OlapViewModel - Testable User Actions and Elements]
+|This topic provides information about the testable user actions and elements of the controls that use _OlapViewModel_ .
+
+| link:olapviewmodel-manipulating-data-at-runtime.html[OlapViewModel - Manipulating Data at Runtime]
+|This topic provides conceptual overview on how the controls that use _OlapViewModel_, manipulate data at runtime.
+
+| link:olapviewmodel-property-refreence.html[OlapViewModel - Property Reference]
+|This topic provides reference information about the test object properties of the controls that use _OlapViewModel_ .
+
+| link:olapviewmodel-enumeration-reference.html[OlapViewModel - Enumeration Reference]
+|This topic provides reference information about the common enumerations in the _OlapViewModel_ proxy.
+
+|====

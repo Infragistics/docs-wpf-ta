@@ -1,0 +1,222 @@
+﻿////
+|metadata|
+{
+    "name": "xamgrid-summaries",
+    "controlName": [],
+    "tags": [],
+    "guid": "66e973c1-380a-4326-af74-9938a4dc293f",
+    "buildFlags": [],
+    "createdOn": "2012-04-14T09:52:12.775293Z"
+}
+|metadata|
+////
+
+= Summaries
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods related to the testing of the summaries in the  _xamGrid_™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref322528391,Recordable Methods>>
+
+** <<_CloseSummaryMenu, _CloseSummaryMenu_  >>
+** <<_OpenSummaryMenu, _OpenSummaryMenu_  >>
+
+* <<_Ref322528461,Related Content>>
+
+[[_Ref322528391]]
+== Recordable Methods
+
+=== Recordable methods summary chart
+
+The following table summarizes the purpose and functionality of the recordable methods for testing the summaries in the xamGrid control.
+
+[options="header", cols="a,a"]
+|====
+|Method|Description
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~closesummarymenu.html[CloseSummaryMenu]_
+|Closes a xamGrid column summary menu.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~opensummarymenu.html[OpenSummaryMenu]_
+|Opens a xamGrid column summary menu.
+
+|====
+
+[[_CloseSummaryMenu]]
+== _CloseSummaryMenu_
+
+=== Description
+
+The `CloseSummaryMenu` method is recorded in a test when a summary menu is closed for a specified xamGrid column.
+
+=== Details
+
+When replaying the method :
+
+[start=1]
+. The specified column header is verified.
+[start=2]
+. A check is performed to verify that summaries are allowed.
+[start=3]
+. The summary menu closes.
+
+This method takes the column header as a parameter.
+
+=== Parameters
+
+The following table maps the desired configuration to its parameters’ settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the column the summary menu of which is to be closed
+|sHeaderArg
+|The column header key
+
+|====
+
+=== Example
+
+Closing a summary menu for the  _ContactName_   xamGrid column.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").CloseSummaryMenu "[ContactName]"
+----
+
+[[_Hlk322527509]]
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|[[_Hlk322527605]] 
+
+The argument is malformed.
+|The parameter’s format is incorrect.
+|The method’s parameter is not in a valid format.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|The element is not visible.
+|The item is not visible and replaying the method fails.
+|The item on which the action is performed either doesn’t exist or is hidden.
+
+|====
+
+[[_OpenSummaryMenu]]
+== _OpenSummaryMenu_
+
+=== Description
+
+The `OpenSummaryMenu` method is recorded in a test when a summary menu is opened for a specified xamGrid column.
+
+=== Details
+
+When replaying the method :
+
+[start=2]
+. The specified column header is verified.
+[start=2]
+. A check is performed to verify that summaries are allowed.
+[start=3]
+. The summary menu opens.
+
+This method takes the column header as a parameter.
+
+=== Parameters
+
+The following table maps the desired configuration to its parameters’ settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the column which summaries menu is opened
+|sHeaderArg
+|To a column header
+
+|====
+
+=== Example
+
+Opening a summary menu for the  _ContactName_   xamGrid column.
+
+*In XML:*
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").OpenSummaryMenu "[ContactName]"
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter’s format is incorrect.
+|The method’s parameter is not in a valid format.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|The element is not visible.
+|The item is not visible and replaying the method fails.
+|The item on which the action is performed either doesn’t exist or is hidden.
+
+|====
+
+[[_Ref322528461]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamgrid-display.html[Display]
+|This topic provides reference information about the recordable user methods related to the testing of the display features in the xamGrid control.
+
+| link:xamgrid-editing.html[Editing]
+|This topic provides reference information about the recordable user methods related to the testing of the editing in the xamGrid control.
+
+| link:xamgrid-filtering.html[Filtering]
+|This topic provides reference information about the recordable user methods related to the testing of the filtering in the xamGrid control.
+
+| link:xamgrid-navigating-and-selecting.html[Navigating and Selecting]
+|This topic provides reference information about the recordable user methods related to the testing of the navigation and selection in the xamGrid control.
+
+| link:xamgrid-sorting-and-grouping.html[Sorting and Grouping]
+|This topic provides reference information about the recordable user methods related to the testing of the sorting and grouping in the xamGrid control.
+
+|====

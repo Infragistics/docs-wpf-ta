@@ -1,0 +1,149 @@
+﻿////
+|metadata|
+{
+    "name": "xamnetworknode-replay-only-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "d18ed659-3ab3-4153-9412-23e5d98fbf4d",
+    "buildFlags": [],
+    "createdOn": "2012-10-29T20:55:42.297123Z"
+}
+|metadata|
+////
+
+= xamNetworkNode - Replay-Only Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the  _xamNetworkNode_™ control’s testable user replay-only methods.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref338265452, xamNetworkNode Test Object Replay-Only Methods Summary >>
+* <<_Ref338271984, GetConnectedNodes method >>
+* <<_Ref337132389, Related Content >>
+
+[[_Ref338265452]]
+== _xamNetworkNode_  Test Object Replay-Only Methods Summary
+
+=== Replay-Only methods summary chart
+
+The following table briefly explains the replay-only method for testing the control and provides detailed information about the method.
+
+[options="header", cols="a,a"]
+|====
+|Method|Description
+
+| _<<Ref338271984, GetConnectedNodes >>_ 
+|Returns a string of all the incoming and outgoing node identifiers of the _xamNetworkNode_ control’s specified nodes.
+
+|====
+
+[[_Ref338271984]]
+== _GetConnectedNodes_   method
+
+=== Description
+
+This method obtains the `oNodeIdentifiers` nodes collection of from returning a string of all incoming and outgoing node identifiers for each node in the collection.
+
+=== Parameters
+
+The following table lists the code examples included in this topic.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oNodeIdentifiers`
+|Unique identifier of the _XamNetworkNode_ control’s node. This identifier can be either the node’s label or visible index. 
+
+* If the identifier represents a single node, it can be either the node’s label or visible index 
+
+* If this identifier represents multiple nodes, it will be an array of each node’s label or the visible index. 
+
+|====
+
+=== Example
+
+Retrieves all incoming and outgoing nodes label “Node0”.
+
+[source,csharp]
+----
+XamNetworkNode("xamNetworkNode1").GetConnectedNodes "Node0"
+----
+
+Retrieves all incoming and outgoing node-to-node connections using the node index.
+
+[source,csharp]
+----
+XamNetworkNode("xamNetworkNode1").GetConnectedNodes 3
+----
+
+Retrieves all incoming and outgoing nodes falling within a range of nodes specified in the array.
+
+[source,csharp]
+----
+XamNetworkNode("xamNetworkNode1").GetConnectedNodes ARRAY ("Node0", "Node1")
+----
+
+Posts all incoming and outgoing nodes within a range of nodes, specified in the array using indices. The following example, retrieves all the nodes that are connected (incoming and outgoing) to nodes 3 and 7.
+
+[source,csharp]
+----
+XamNetworkNode("xamNetworkNode1").GetConnectedNodes ARRAY (3, 7)
+----
+
+=== Default settings
+
+N/A
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|Exception name|Description|Possible reason
+
+|Item is not found.
+|Cannot display the node.
+|The node visibility is hidden or collapsed.
+
+|Item is not found.
+|Cannot identify the node header.
+|The node header is not found among the existing nodes collection.
+
+|Index out of range.
+|The specified index cannot be identified.
+|Index of the node is out of range.
+
+|====
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamnetworknode-testable-user-actions-and-elements.html[xamNetworkNode Testable User Actions and Elements]
+|This topic provides information about the _xamNetworkNode_ control’s testable user actions and elements.
+
+| link:xamnetworknode-recordable-methods.html[xamNetworkNode Test Object Recordable Methods Reference]
+|This topic provides information about the _xamNetworkNode_ control’s testable user recordable methods.
+
+| link:xamnetworknode-property-reference.html[xamNetworkNode Test Object Properties Reference]
+|This topic provides reference information about the _xamNetworkNode_ control’s test object properties.
+
+| link:xamnetworknode-enumeration-reference.html[xamNetworkNode Test Object Enumerations Reference]
+|This topic provides reference information about the common enumerations used in testing the _xamNetworkNode_ control.
+
+|====

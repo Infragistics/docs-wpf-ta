@@ -1,0 +1,228 @@
+﻿////
+|metadata|
+{
+    "name": "xamdatapresenter-excel-style-filtering",
+    "controlName": [],
+    "tags": [],
+    "guid": "d59721d9-85f1-439d-9b2c-03ed22b51402",
+    "buildFlags": [],
+    "createdOn": "2015-04-06T20:19:50.2003388Z"
+}
+|metadata|
+////
+
+= xamDataPresenter - Excel Style Filtering
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about recordable actions for testing the Excel Style Filtering with the xamDataPresenter.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref337132389,XamDataPresenter>>
+
+** <<OpenFilterDropDown,OpenFilterDropDown>>
+** <<CloseFilterDropDown,CloseFilterDropDown>>
+** <<FilterMenuNavigation,FilterMenuNavigation>>
+** <<FilterTreeSearch,FilterTreeSearch>>
+** <<FilterTreeItemExpand,FilterTreeItemExpand>>
+** <<FilterTreeItemCollapse,FilterTreeItemCollapse>>
+** <<FilterTreeItemCheck,FilterTreeItemCheck>>
+** <<FilterTreeItemUncheck,FilterTreeItemUncheck>>
+** <<FilterTreeAccept,FilterTreeAccept>>
+** <<FilterTreeCancel,FilterTreeCancel>>
+
+[[_Ref386530129]]
+
+== _XamDataPresenter_   Recordable Actions
+
+[[OpenFilterDropDown]]
+== _OpenFilterDropDown_
+
+=== Description
+
+Opens the filter drop down for the supplied header
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sHeaderArg_ 
+|string text path to the header containing the filter button
+
+|====
+
+=== Possible exceptions
+
+* This action can only be used with the FilterUI Type [LabelIcon]
+* {sHeaderArg | LabelIcon} is not visible
+
+[[CloseFilterDropDown]]
+== _CloseFilterDropDown_
+
+=== Description
+
+Close the filter drop down for the supplied header
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sHeaderArg_ 
+|string text path to the header containing the filter button
+
+|====
+
+=== Possible exceptions
+
+* This action can only be used with the FilterUI Type [LabelIcon]
+* {sHeaderArg | LabelIcon} is not visible
+
+[[FilterMenuNavigation]]
+== _FilterMenuNavigation_
+
+=== Description
+
+Open the filter drop down for the supplied header if not already open, and navigate to the supplied FilterMenuItem and click on it.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sHeaderArg_ 
+|string text path to the header containing the filter button
+
+| _oItemArg_ 
+|Menu item path to the desired menu item.
+
+|====
+
+=== Possible exceptions
+
+* This action can only be used with the FilterUI Type [LabelIcon]
+* {sHeaderArg | LabelIcon} is not visible
+* DropDown Button is not dropped down.
+* The specified index [oItemArg] is out of range
+
+[[_Ref401822817]]
+[[_Ref401822817]]
+[[_Ref401822817]]
+[[_Ref401822817]]
+== _FilterTreeItemExpand_   _FilterTreeItemCollapse_   _FilterTreeItemCheck_   _FilterTreeItemUnCheck_
+
+=== Description
+
+Set the state for the identified filter tree item accordingly
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sHeaderArg_ 
+|string text path to the header containing the filter button
+
+|====
+
+=== Possible exceptions
+
+* This action can only be used with the FilterUI Type [LabelIcon]
+* {sHeaderArg | LabelIcon} is not visible
+* The specified index [oItemArg] is out of range
+
+[[FilterTreeAccept]]
+== _FilterTreeAccept_
+
+=== Description
+
+Clicks OK on the Excel style Filter Menu, accepting the changes to the filter.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sHeaderArg_ 
+|string text path to the header containing the filter button
+
+|====
+
+=== Possible exceptions
+
+* This action can only be used with the FilterUI Type [LabelIcon]
+* {sHeaderArg | LabelIcon} is not visible
+
+[[FilterTreeCancel]]
+== _FilterTreeCancel_
+
+=== Description
+
+Clicks Cancel on the Excel style Filter Menu, accepting the changes to the filter.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sHeaderArg_ 
+|string text path to the header containing the filter button
+
+|====
+
+=== Possible exceptions
+
+* This action can only be used with the FilterUI Type [LabelIcon]
+* {sHeaderArg | LabelIcon} is not visible
+
+[[FilterTreeSearch]]
+== _FilterTreeSearch_
+
+=== Description
+
+Set the search criteria for the tree in the Excel Style Filtering filter drop down.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sHeaderArg_ 
+|string text path to the header containing the filter button
+
+|sSearchText
+|_String of text to enter into the Excel style filter search textbox._
+
+|====
+
+=== Possible exceptions
+
+* This action can only be used with the FilterUI Type [LabelIcon]
+* {sHeaderArg | LabelIcon} is not visible

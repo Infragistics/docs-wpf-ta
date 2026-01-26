@@ -1,0 +1,77 @@
+﻿////
+|metadata|
+{
+    "name": "xamtabcontrol-testable-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "4191c641-94ae-4421-a060-7941eb4b5ba1",
+    "buildFlags": [],
+    "createdOn": "2012-01-20T12:49:05.2455483Z"
+}
+|metadata|
+////
+
+= xamTabControl - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the user actions of the xamTabControl™ which you can test and the elements you can inspect.
+
+== _xamTabControl_   Testable User Actions
+
+=== Testable user actions chart
+
+The table below lists the testable user actions of the control and maps them to recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|*User action*|*Method*
+
+|Selecting the tab
+| link:{ApiPlatform}test~infragisticswpf.test.controls.xamtabcontrolproxy~select.html[Select]
+
+|Closing the tab
+| link:{ApiPlatform}test~infragisticswpf.test.controls.xamtabcontrolproxy~closetab.html[CloseTab]
+
+|Gets a list of the header texts of all visible tabs.
+| link:{ApiPlatform}test~infragisticswpf.test.controls.xamtabcontrolproxy~getcontent.html[GetContent]
+
+|Gets the header text of the selected tab as a string value.
+| link:{ApiPlatform}test~infragisticswpf.test.controls.xamtabcontrolproxy~getselection.html[GetSelection]
+
+|Gets the header text of the specified tab as a string value.
+| link:{ApiPlatform}test~infragisticswpf.test.controls.xamtabcontrolproxy~getitem.html[GetItem]
+
+|Gets the total count of the visible tabs.
+| link:{ApiPlatform}test~infragisticswpf.test.controls.xamtabcontrolproxy~getitemscount.html[GetItemsCount]
+
+|Gets the total count of the visible tabs.
+| link:{ApiPlatform}test~infragisticswpf.test.controls.xamtabcontrolproxy~istabenabled.html[IsItemEnabled]
+
+|====
+
+== Related Content
+
+=== Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamtabcontrol-recordable-methods.html[xamTabControl - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamTabControl™.
+
+| link:xamtabcontrol-replay-only-methods.html[xamTabControl - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the XamTabControl™.
+
+| link:xamtabcontrol-property-reference.html[xamTabControl - Properties Reference]
+|This topic provides reference information about the inspectable test object properties of the xamTabControl™.
+
+| link:xamtabcontrol-api.html[xamTabControl - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamTabControl™ in Micro Focus Unified Functional Testing software.
+
+|====

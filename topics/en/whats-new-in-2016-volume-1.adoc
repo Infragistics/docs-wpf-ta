@@ -1,0 +1,78 @@
+﻿////
+|metadata|
+{
+    "name": "whats-new-in-2016-volume-1",
+    "controlName": [],
+    "tags": [],
+    "guid": "9e137cf7-da1b-496d-8c25-9d0f1e969cc5",
+    "buildFlags": [],
+    "createdOn": "2016-03-21T12:26:48.1003223Z"
+}
+|metadata|
+////
+
+= What's New in 2016 Volume 1
+
+== Topic Overview
+
+=== Purpose
+
+This topic presents control proxies of the new and enhanced features for the Infragistics® Test Automation for WPF (Unified Functional Testing) for 2016 Volume 1 release.
+
+== What’s New Summary
+
+=== What’s new summary chart
+
+The following table summarizes the new features in Infragistics 2016 Volume 1 controls suite that are now supported in Infragistics Test Automation.
+
+==== xamDataPresenter
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|Field Moving Support
+|The xamDataPresenter family of controls now supports a new method ( _MoveField_ ) for setting a field's position. 
+
+==== Related topic: 
+
+link:xamdatapresenter-navigatingselecting.html[Navigating and Selecting]
+
+|Field Groups Expanding and Collapsing Support
+|The xamDataPresenter family of controls now supports new methods for expanding ( _ExpandGroupField_ ) and collapsing ( _CollapseGroupField_ ) of a field group. 
+
+==== Related topic: 
+
+link:xamdatapresenter-sorting-grouping.html[Sorting and Grouping]
+
+|====
+
+==== xamTabControl
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|Tab Moving Support
+|The xamTabControl's proxy now supports a new method ( _MoveTab_ ) for moving (reordering) of a tab item. 
+
+==== Related topic: 
+
+link:xamtabcontrol-recordable-methods.html[xamTabControl - Recordable Methods]
+
+|====
+
+==== xamSurfaceChart3D
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|New Control
+|{ProductName} supports the xamSurfaceChart3D control as part of the Ultimate UI for WPF product in the 2016.1 release. 
+
+==== Related topic: 
+
+link:xamsurfacechart-xamsurfacechart.html[xamSurfaceChart3D]
+
+|====

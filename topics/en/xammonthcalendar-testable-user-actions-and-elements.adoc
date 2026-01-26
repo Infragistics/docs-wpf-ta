@@ -1,0 +1,132 @@
+﻿////
+|metadata|
+{
+    "name": "xammonthcalendar-testable-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "8a5f40fc-a219-4f35-9a09-8e689a8633fc",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T15:58:16.061278Z"
+}
+|metadata|
+////
+
+= xamMonthCalendar - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the user actions of the xamMonthCalendar™ control which you can test and the elements you can inspect.
+
+== xamMonthCalendar Testable User Actions
+
+=== Testable user actions chart
+
+The table below lists the testable user actions of the control and maps them to recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|*User action*|*Method*
+
+|Scrolling to a specified date to make it visible
+|_link:xammonthcalendar-recordable-methods.html#_ScrollToDate[ScrollToDate]_
+
+|Selecting dates
+|_link:xammonthcalendar-recordable-methods.html#_AddSelectedDates[AddSelectedDates]_
+
+|Removing dates from existing selection
+|_link:xammonthcalendar-recordable-methods.html#_RemoveSelectedDates[RemoveSelectedDates]_
+
+|Changing a selection of dates
+|_link:xammonthcalendar-recordable-methods.html#_ChangeSelectedDates[ChangeSelectedDates]_
+
+|====
+
+== xamMonthCalendar Testable Elements
+
+=== Testable elements summary chart
+
+The following table lists the elements in the control that you can test, the information you can retrieve about them, and the properties and methods that manage the retrieve operations.
+
+Legend:
+
+image::images/spy.png[]
+
+ – Identification property
+
+image::images/checkpoint.png[]
+
+ – Checkpoint property
+
+image::images/script.png[]
+
+ – Accessible in script
+
+[options="header", cols="a,a,a,a,a"]
+|====
+|*Test element*|*Test deliverable*|*Member type*|*Test object member*|*Accessibility*
+
+|Active date
+|The current active date.
+|property
+|_link:xammonthcalendar-property-reference.html#_propRef[activedate]_
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|Current mode
+|A string representation of the current visible unit of time in the xamMonthCalendar.
+|property
+|_link:xammonthcalendar-property-reference.html#_propRef[currentcalendarmode]_
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+|Header text
+|The current header text in the xamMonthCalendar.
+|property
+|_link:xammonthcalendar-property-reference.html#_propRef[headertext]_
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|Selected dates
+|A delimited string with selected dates in the format: _#mm/dd/yyyy#_
+|property
+|_link:xammonthcalendar-property-reference.html#_propRef[selecteddates]_
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====
+
+== Related Topics
+
+=== Related topics summary chart
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xammonthcalendar-recordable-methods.html[xamMonthCalendar - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamMonthCalendar™ control.
+
+| link:xammonthcalendar-replay-only-methods.html[xamMonthCalendar - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the xamMonthCalendar™ control.
+
+| link:xammonthcalendar-property-reference.html[xamMonthCalendar - Properties Reference]
+|This topic provides reference information about the inspectable test object properties of the xamMonthCalendar™ control.
+
+| link:xammonthcalendar-api.html[xamMonthCalendar - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamMonthCalendar™ control in Micro Focus Unified Functional Testing software.
+
+|====

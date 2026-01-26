@@ -1,0 +1,45 @@
+﻿////
+|metadata|
+{
+    "name": "xamsurfacechart-api",
+    "controlName": [],
+    "tags": [],
+    "guid": "1cd8d522-5f00-458f-8545-e26863ef8569",
+    "buildFlags": [],
+    "createdOn": "2016-04-14T17:08:11.963886Z"
+}
+|metadata|
+////
+
+= xamSurfaceChart3D - API Reference
+
+== _XamSurfaceChart3D_   Test Object API Reference
+
+=== Introduction
+
+This topic provides reference information about the proxy class that supports the testing of the  _XamSurfaceChart3D_™ control in Micro Focus Unified Functional Testing software.
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|*Proxy Class Name*|*Namespace*|*Inherits From*|*Additional Notes*
+
+| link:{ApiPlatform}test.controls.charts.xamsurfacechart3d~infragisticswpf.test.charts.xamsurfacechart3d.xamscattersurface3dproxy.html[ _XamScatterSurface3DProxy_ ]
+| 
+
+InfragisticsWPF.Test.Charts.XamSurfaceChart3D
+|
+* _RecordReplayProxyBase_ 
+
+* _IXamScatterSurface3DIDProps_ 
+
+* _IXamScatterSurface3DReplay_ 
+
+* _TableVerifyBase_ 
+
+|This proxy class implements _TableVerifyBase_ so you can add checkpoint to verify the xamSurfaceChart3D data points
+
+|====

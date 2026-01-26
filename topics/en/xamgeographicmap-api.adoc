@@ -1,0 +1,47 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamgeographicmap-api",
+    "controlName": [],
+    "tags": [],
+    "guid": "aa0b546f-becd-4b3a-9586-372857253582",  
+    "buildFlags": [],
+    "createdOn": "2012-06-26T15:18:43.3032228Z"
+}
+|metadata|
+////
+
+= xamGeographicMap - API Referencce
+
+[[_Ref326580262]]
+== _xamGeographicMap_   Test Object API Reference
+
+=== Introduction
+
+This topic provides reference information about the proxy class that supports the testing of the  _xamGeographicMap_™ control in Micro Focus Unified Functional Testing software.
+
+[[_Ref328415400]]
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|Proxy Class Name|Namespace|Inherits From|Additional Notes
+
+| link:{ApiPlatform}test.geographicmap~infragisticswpf.test.geomap.xamgeographicmapproxy.html[XamGeographicMapProxy]
+|InfragisticsWPF.Test.GeoMap
+|
+* ViewerBaseProxy 
+
+* IXamGeographicMapReplay 
+
+* IXamGeographicMapControlIDProps 
+
+* ITableVerify (UFT Namespace) 
+
+|This proxy class implements ITableVerify so a checkpoint can be added to verify the data points in a table view.
+
+|====

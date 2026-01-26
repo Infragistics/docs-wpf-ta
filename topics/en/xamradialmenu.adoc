@@ -1,0 +1,42 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamradialmenu",
+    "controlName": [],
+    "tags": [],
+    "guid": "10a523d6-ea04-403a-81db-9817b516761f",  
+    "buildFlags": [],
+    "createdOn": "2014-04-30T19:08:15.9454048Z"
+}
+|metadata|
+////
+
+= xamRadialMenu
+
+=== Introduction
+
+The topics in this group explain the link:{ApiPlatform}test.controls.menus.xamradialmenu~infragisticswpf.test.controls.menus.xamradialmenuproxy.html[XamRadialMenuProxy] object and its use. This is the result of adding the  _XamRadialMenu_™ control to Infragistics® {ProductName} (Unified Functional Testing) supported controls list.
+
+=== Topics
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamradialmenu-user-actions.html[xamRadialMenu - User Actions]
+|This topic provides information about the _XamRadialMenu_ control’s user actions represented by XamRadialMenuProxy object.
+
+| link:xamradialmenu-recordable-methods.html[xamRadialMenu - Recordable Methods]
+|This topic provides information about the recordable methods for testing the _XamRadialMenu_ control.
+
+| link:xamradialmenu-property-reference.html[xamRadialMenu - Property Reference]
+|This topic provides reference information about the _XamRadialMenu_ control’s test object properties.
+
+| link:xamradialmenu-enumeration-reference.html[xamRadialMenu - Enumeration Reference]
+|This topic provides reference material on the common enumerations used for testing the _XamRadialMenu_ control.
+
+| link:xamradialmenulistbox.html[xamRadialMenuListBox]
+|The topics in this group describe the XamRadialMenuListBoxProxy object and its use, following the introduction of the _XamRadialMenuListBox_ control to Infragistics® {ProductName} (Unified Functional Testing) supported controls list.
+
+|====

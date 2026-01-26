@@ -1,0 +1,56 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamtagcloud-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "284e42a1-7bf7-4510-884a-49c19b5ad339",  
+    "buildFlags": [],
+    "createdOn": "2012-01-27T07:27:45.0275677Z"
+}
+|metadata|
+////
+
+= xamTagCloud - Property Reference
+
+== _xamRadialGauge_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the inspectable test object properties of the xamTagCloud™ control.
+
+[[_Ref337672876]]
+
+=== Properties reference chart
+
+The table below summarizes the control’s test method parameters and the tools for inspecting them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+| _link:{ApiPlatform}test.tagcloud~infragisticswpf.test.tagcloud.xamtagcloudproxy~clouditems.html[CloudItems]_ 
+|A new-line-delimited list with all visible tag items with their weight. 
+
+*Example* : 
+
+[Item1 Text], [Item1 Weight] 
+
+[Item2 Text], [Item2 Weight]
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.tagcloud~infragisticswpf.test.tagcloud.xamtagcloudproxy~clouditemscount.html[CloudItemsCount]_ 
+|The number of the visible tag items
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====

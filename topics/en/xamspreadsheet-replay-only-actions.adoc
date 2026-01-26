@@ -1,0 +1,203 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamspreadsheet-replay-only-actions",
+    "controlName": [],
+    "tags": [],
+    "guid": "607d6b5e-6157-4be8-92fd-3d5faa8de1ac",  
+    "buildFlags": [],
+    "createdOn": "2014-11-17T13:15:37.5311451Z"
+}
+|metadata|
+////
+
+= xamSpreadsheet - Replay-Only Actions
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about replay-only actions for testing the  _XamSpreadsheet_   __™__  control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref399748361, _XamSpreadsheet_   Replay-only Actions>>
+** <<_Ref399748362, _GetCellData_  >>
+** <<_Ref399748363, _ActivateCell_  >>
+** <<_Ref399748364, _CellEnterEditMode_  >>
+** <<_Ref399748365, _CellExitEditMode_  >>
+** <<_Ref399748366, _AppendCellText_  >>
+
+* <<_Ref337132389,Related Content>>
+
+[[_Ref399748361]]
+== _XamSpreadsheet_   Replay-only Actions
+
+[[_Ref399748362]]
+== _GetCellData_
+
+=== Description
+
+Returns data for the identified cell.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sCellArg_ 
+|String identifier for the cell.
+
+| _oeValueType_ 
+|Optional parameter string, integer index or enumerated value representing the type of data retrieved, the default is its value.
+
+|====
+
+=== Possible exceptions
+
+The possible exceptions to this action and the likely reason causing it is:
+
+Object [Workbook] is null or has been disposed.
+
+The following  _SpreadsheetCell_  [*sCellArg* ] was not found.
+
+The option supplied is not one of the valid options, valid options are [ _sshtCellTypeValue_  _,_   _sshtCellTypeFormula_  _,_   _sshtCellTypeText_ ]
+
+[[_Ref399748363]]
+== _ActivateCell_
+
+=== Description
+
+Activate the identified cell
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sCellArg_ 
+|String identifier for the cell.
+
+|====
+
+=== Possible exceptions
+
+The possible exceptions to this action and the likely reason causing it is:
+
+* Object [Workbook] is null or has been disposed.
+* The following SpreadsheetCell [*sCellArg* ] was not found.
+
+[[_Ref399748364]]
+== _CellEnterEditMode_
+
+=== Description
+
+Puts the identified cell into edit mode
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sCellArg_ 
+|String identifier for the cell.
+
+| _bClearFirst_ 
+|Optional boolean parameter, of if the cell value should be cleared first.
+
+|====
+
+=== Possible exceptions
+
+The possible exceptions to this action and the likely reason causing it is:
+
+Object [Workbook] is null or has been disposed.
+
+The following  _SpreadsheetCell_  [*sCe**llArg* ] was not found.
+
+[[_Ref399748365]]
+== _CellExitEditMode_
+
+=== Description
+
+If an editor is in editmode, exit edit mode by the supplied mode
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _oeEditType_ 
+|Optional string, integer index or enumerated value representing who the value should be applied to the selected cells, default behavior is to only update the current cell.
+
+|====
+
+=== Possible exceptions
+
+The only possible exception to this action and the likely reason causing it is:
+
+The option supplied is not one of the valid options, valid options are [ _sshtUpdateSelectedCells_  _,_   _sshtCreateArrayFormula_  _,_   _sshtUpdateActiveCellOnly_  _,_   _sshtDiscardChanges_ ]
+
+[[_Ref399748366]]
+== _AppendCellText_
+
+=== Description
+
+Appends the supplied text to the cell currently in edit mode
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sAddedText_ 
+|String of text to add to the current cell.
+
+|====
+
+=== Possible exceptions
+
+None
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamspreadsheet-recordable-actions.html[xamSpreadsheet - Recordable Actions]
+|This topic provides information about the recordable user actions for testing the _XamSpreadsheet_™ control.
+
+| link:xamspreadsheet-custom-properties-reference.html[Custom Properties - xamSpreadsheet]
+|This topic provides reference information about the _xamSpreadsheet's_ custom properties embedded to objects of the identified types via the Control Property Access methods.
+
+| link:xamspreadsheet-properties-reference.html[xamSpreadsheet - Properties Reference]
+|This topic provides reference information about the _XamSpreadsheet_™ control’s test object properties.
+
+| link:xamspreadsheet-enumerations-reference.html[xamSpreadsheet - Enumerations Reference]
+|This topic provides reference material on the common enumerations used for testing the _XamSpreadsheet_™ control.
+
+|====

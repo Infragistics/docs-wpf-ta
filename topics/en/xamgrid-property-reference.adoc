@@ -1,0 +1,96 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamgrid-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "0b881fba-06a6-40d4-a2f2-f26803ae84eb",  
+    "buildFlags": [],
+    "createdOn": "2012-04-18T07:51:46.3402267Z"
+}
+|metadata|
+////
+
+= xamGrid - Property Reference
+
+== _xamGrid_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the inspectable test object properties of the  _xamGrid_™ control.
+
+=== Properties reference chart
+
+The table below summarizes the control’s test object properties and the tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+| link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~activecell.html[ActiveCell]
+|A string path identifier representing the current active cell in the following format: 
+
+*{ROW} [COLUMN]*Example:*
+
+First column layout, first row and column named _Title_ : 
+
+{0}{0}[Title]
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~activerow.html[ActiveRow]
+|A string path identifier representing the current active row in the following format: 
+
+*{COLUMN LAYOUT}{ROW}*Example:*
+
+First column layout, first row: 
+
+{0}{0}
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~allcolumncount.html[AllColumnCount]
+|A count of all columns in the current active area.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~allcolumns.html[AllColumns]
+|A delimited string that represents all column paths in the currently active area.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~columncount.html[ColumnCount]
+|The count of the visible columns in the currently active area.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~columns.html[Columns]
+|A delimited string that represents the visible column paths in the currently active area.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~rowcount.html[RowCount]
+|The count of the visible rows in the currently active area.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====

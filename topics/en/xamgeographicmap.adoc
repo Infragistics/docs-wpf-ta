@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamgeographicmap",
+    "controlName": [],
+    "tags": [],
+    "guid": "8ab8c70e-0979-4c5f-b309-c5f1f244b2b5",  
+    "buildFlags": [],
+    "createdOn": "2012-06-26T13:39:09.6508374Z"
+}
+|metadata|
+////
+
+= xamGeographicMap
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test.geographicmap~infragisticswpf.test.geomap.xamgeographicmapproxy.html[XamGeographicMapProxy] object in {ProductName}.
+
+=== Topics
+
+This section contains topics covering  _xamGeographicMap_™ control testing and API reference.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamgeographicmap-testable-user-actions-elements.html[xamGeographicMap - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamGeographicMap_ control which you can test and the elements you can inspect.
+
+| link:xamgeographicmap-api.html[xamGeographicMap - Test Object API Referencce]
+|This topic provides reference information about the proxy class that supports the testing of the _xamGeographicMap_ control in Micro Focus Unified Functional Testing software.
+
+|====

@@ -1,0 +1,88 @@
+﻿////
+
+|metadata|
+{
+    "name": "xampropertygrid-replay-only-actions",
+    "controlName": [],
+    "tags": [],
+    "guid": "fb48373c-4258-408e-8798-65a6b01b3da2",  
+    "buildFlags": [],
+    "createdOn": "2014-10-23T20:14:21.3539635Z"
+}
+|metadata|
+////
+
+= xamPropertyGrid - Replay-Only Actions
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about replay-only actions for testing the  _XamPropertyGrid_™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref399748361, _XamPropertyGrid_   Replay-only Actions>>
+** <<_Ref401823409, _GetPropertyValue_  >>
+
+* <<_Ref337132389,Related Content>>
+
+[[_Ref399748361]]
+[[_Ref399515964]]
+== _XamPropertyGrid_   Replay-only Actions
+
+[[_Ref401823409]]
+== _GetPropertyValue_
+
+=== Description
+
+* Returns the value of the identified property.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sPropString_ 
+|String path of the display names to the property grid item.
+
+|====
+
+=== Possible exceptions
+
+The only possible exception to this action and the likely reason causing it is:
+
+The specified value [sItemString] not a XamPropertyGridPropertyItem.
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xampropertygrid-recordable-actions.html[xamPropertyGrid - Recordable Actions]
+|This topic provides information about recordable actions for testing the _XamPropertyGrid_™ control.
+
+| link:xampropertygrid-brusheditor-actions.html[xamPropertyGrid - BrushEditor Actions]
+|This topic provides information about BrushEditor actions of the _XamPropertyGrid_™ control.
+
+| link:xampropertygrid-enumeration-reference.html[xamPropertyGrid - Enumeration Reference]
+|This topic provides reference material on the common enumerations used for testing the _XamPropertyGrid_™ control.
+
+| link:xampropertygrid-properties-reference.html[xamPropertyGrid - Properties Reference]
+|This topic provides reference information about the inspectable test object properties of the _XamPropertyGrid_™ control.
+
+| link:xampropertygrid-custom-properties-reference.html[xamPropertyGrid - Custom Properties Reference]
+|This topic provides reference information about the _XamPropertyGrid_™ proxy base custom properties.
+
+|====

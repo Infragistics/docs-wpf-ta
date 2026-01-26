@@ -1,0 +1,492 @@
+﻿////
+|metadata|
+{
+    "name": "xamsyntaxeditor-recordable--methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "14360e12-2e17-4dd8-b7a1-9f954316aad4",
+    "buildFlags": [],
+    "createdOn": "2012-10-29T21:00:51.204123Z"
+}
+|metadata|
+////
+
+= xamSyntaxEditor - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the  _xamSyntaxEditor_™ control’s testable user recordable methods.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref338265452, _xamSyntaxEditor_   Test Object Recordable Methods>>
+
+** <<_Ref338939091, _BackspaceXCharacters_  >>
+** <<_Ref338271984, _DeleteXCharacters_  >>
+** <<_Ref352172238, _ExecuteCommand_  >>
+** <<_Ref338522515, _SelectToLocation_  >>
+** <<_Ref338522530, _SendString_  >>
+** <<_Ref338522541, _SetActiveView_  >>
+** <<_Ref338522555, _SetCaretLocation_  >>
+** <<_Ref338522570, _SetSplitter_  >>
+** <<_Ref338522583, _SetUpdateMode_  >>
+
+* <<_Ref337132389, Related Content >>
+
+[[_Ref338265452]]
+== _xamSyntaxEditor_  Test Object Recordable Methods
+
+=== Recordable methods summary chart
+
+The following table lists the code examples included in this topic.
+
+[options="header", cols="a,a"]
+|====
+|Method|Description
+
+| _<<Ref338939091, BackspaceXCharacters >>_ 
+|Sends a number of `Backspace` characters to the _xamSyntaxEditor's_ current caret location.
+
+| _<<Ref338271984, DeleteXCharacters >>_ 
+|Sends a number of `Delete` keys to the x _amSyntaxEditor_ 's current caret location.
+
+| _<<Ref352172238, ExecuteCommand >>_ 
+|Executes keyboard commands such as: `Ctrl+``C`(Copy), `Ctrl+X`(Cut) or `Ctrl+V`(Paste), or _SyntaxEditor_ command such as: `seydCopy`, `seydCut` or `seydPaste`.
+
+| _<<Ref338522515, SelectToLocation >>_ 
+|Selects all the text from the current caret position to the location supplied.
+
+| _<<Ref338522530, SendString >>_ 
+|Sends a string of characters to the current caret position.
+
+| _<<Ref338522541, SetActiveView >>_ 
+|Sets the active view of the _xamSyntaxEditor_ .
+
+| _<<Ref338522555, SetCaretLocation >>_ 
+|Sets the cursor location by moving its position via either mouse or the keyboard arrow keys.
+
+| _<<Ref338522570, SetSplitter >>_ 
+|Splits the view, or set the location of the splitter, or both.
+
+| _<<Ref338522583, SetUpdateMode >>_ 
+|Sets the update mode for the x _amSyntaxEditor_ .
+
+|====
+
+[[_Ref338939091]]
+== _BackspaceXCharacters_
+
+=== Description
+
+Allows you to update the text in  _xamSyntaxEditor_   view by pressing the `Backspace` key any number of times erases individual characters and moves the caret one character at a time towards the beginning of the string. If you have some selected text, the backspace operation will erase the text at once and record as `BackspaceXCharacter 1`, for each strike of the key.
+
+=== Parameters
+
+The following table briefly explains the recordable methods for testing the control. Detailed information about the methods follows the table.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_iNumBackSpaces_
+|Pressing `Backspace` key the specified number of times, erasing the currently selected text.
+
+|====
+
+=== Recording scenarios
+
+The backspace operation will queue to record if at any time, since the last recorded action, the amount of characters is less than what started with no additions. It will record after a few seconds since your last keystroke, or if you trigger a different action.
+
+==== Recording Scenarios:
+
+* Selecting a text or a series of texts, then pressing the `Backspace` key and typing some text
+* Pressing the Backspace key any number of times without typing
+* Preforming text-cutting operation of the selected text
+* Recording does not occur when you select 10 characters, and type a single character. However, it will record it as a  _SendString_   action even if the total characters are less than the selected characters.
+* Typing a series of keystrokes, then pressing the `Backspace` key erases some of the characters, but not more than what you added. This only records the  _SendString_   action for the characters last added.
+
+=== Example
+
+Demonstrates how to delete five characters back from the current caret position using the keyboard’s `Backspace` key.
+
+[source,csharp]
+----
+XamSyntaxEditor("xamSyntaxEditor1"). BackspaceXCharacters 5
+----
+
+=== Possible exceptions
+
+There is no document currently loaded in the  _xamSyntaxEditor;_   required to perform this operation.
+
+[[_Ref338271984]]
+== _DeleteXCharacters_
+
+=== Description
+
+Allows updating the text in  _xamSyntaxEditor_   view by pressing the `Delete` key any number of times erasing the currently selected text and advancing the caret location migration to the right of the cursor.
+
+=== Parameters
+
+The following table briefly explains about the recordable methods for testing the control. Detailed information about the methods follows the table.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_iNumDeletes_
+|Pressing `Delete` key any number of times, erasing the currently selected text.
+
+|====
+
+=== Recording scenarios
+
+The delete operation will queue to record if, at any time since the last recorded action, the amount of characters are less than what you started with, and no additions. The recording will commence after a few seconds since your last keystroke, or if you trigger a different action.
+
+==== Recording Scenarios:
+
+* Selecting a text or a series of texts, then pressing the `Delete` key and typing some text
+* Pressing the `Delete` key any number of times without typing
+* It will not record when you select 10 characters, and type a single character. It will record it as  _SendString_   action even though the total characters are less than the selected characters.
+
+=== Example
+
+Demonstrates how to delete five characters from the current caret position using the keyboard’s Delete key.
+
+[source,csharp]
+----
+XamSyntaxEditor("xamSyntaxEditor1").DeleteXCharacters 5
+----
+
+=== Possible exceptions
+
+There is no document currently loaded in the  _xamSyntaxEditor;_   required to perform this operation.
+
+[[_Ref352172238]]
+== _ExecuteCommand_
+
+=== Description
+
+The  _ExecuteCommand_   replay action featured in 13.1 release for xamSyntaxEditor now provides not only Cut, Copy and Paste operations, but also allows you to use any of the Infragistics ( _SyntaxEditorCommandType_  ) commands via the Test Automation ( _syedCommandType_  ) enumeration.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oeCommandId`
+|Command name or the enumerated value representing the command name, for example: `seydCopy` as the command name, or `1` as the enumerated value.
+
+|====
+
+=== Example
+
+To copy the selected text to the clipboard.
+
+[source,csharp]
+----
+XamSyntaxEditor("Identifier").ExecuteCommand syedCopy
+----
+
+To cut the selected text to the clipboard.
+
+[source,csharp]
+----
+XamSyntaxEditor("Identifier").ExecuteCommand syedCut
+----
+
+To paste the text from the clipboard.
+
+[source,csharp]
+----
+XamSyntaxEditor("Identifier").ExecuteCommand syedPaste
+----
+
+=== Possible exceptions
+
+The reason an exception returns from this action is that the supplied option is an invalid option; the only valid option is [{0}].
+
+[[_Ref338522515]]
+== _SelectToLocation_
+
+=== Description
+
+Allows manipulating the text editor’s cursor location and selection.
+
+=== Parameters
+
+The following table explains the method’s parameters followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_oLocationOrOffset_
+|Selects all the text from the current caret position to the supplied location. It accepts either `aryLocation` or `iOffset`.
+
+|====
+
+=== Example
+
+Selects text, starting from the current caret position and extending to the location of the caret to line number 3, and between the first and second characters, as specified in the code.
+
+[source,csharp]
+----
+XamSyntaxEditor("xamSyntaxEditor1").SelectToLocation Array(2, 1)
+----
+
+Selecting from the current caret position to between the 25th and 26th overall characters.
+
+[source,csharp]
+----
+XamSyntaxEditor("xamSyntaxEditor1").SelectToLocation 25
+----
+
+=== Possible exceptions
+
+There is no document currently loaded in the  _xamSyntaxEditor;_   required to perform this operation.
+
+Another possibility is that the TextLocation argument [{0}] is malformed the correct format should be
+
+`:\``n iOffsetLocation | ARRAY(iLineIndex, iCharIndex).`
+
+[[_Ref338522530]]
+== _SendString_
+
+=== Description
+
+Allows typing or pasting in a series of characters in the  _xamSyntaxEditor_   view.
+
+=== Parameters
+
+The following table explains the method’s parameters followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_sToType_
+|Sends a string to the syntax editor’s current caret position. 
+
+.Note: 
+
+[NOTE] 
+
+==== 
+
+It can and does use custom UFT character representations such as `vbTab` to represent tabs, and `vbCRLF` to represent carriage return line feed. 
+
+====
+
+|====
+
+=== Example
+
+This example shows how to send a string “ _Hello_  ” to the current caret position.
+
+[source,csharp]
+----
+XamSyntaxEditor("xamSyntaxEditor1").SendString “Hello”
+----
+
+This example shows how to send a string “ _Hi_  ,” to the tab followed by a return, with “ _Bob_  ” on the following line.
+
+[source,csharp]
+----
+XamSyntaxEditor("xamSyntaxEditor1").SendString vbTab + “Hi,” + vbCRLF + “Bob”
+----
+
+=== Possible exceptions
+
+Sending the supplied text fails because it contained a tab that the  _xamSyntaxEditor_   does not accept. There is no document currently loaded in the  _xamSyntaxEditor;_   required to perform this operation.
+
+[[_Ref338522541]]
+== _SetActiveView_
+
+=== Description
+
+Sets the active view of the  _xamSyntaxEditor_   by clicking on the area outside of the text area.
+
+=== Parameters
+
+The following table explains the method’s parameters followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_oeViewLocation_
+|A string or enumerated value of type `syedViewLocation` representing the new active view location.
+
+|====
+
+=== Example
+
+The following example demonstrates how to change the active view to upper or left view location.
+
+[source,csharp]
+----
+XamSyntaxEditor("xamSyntaxEditor1").SetActiveView syedUpperOrLeft
+----
+
+=== Possible exceptions
+
+You have not split the  _xamSyntaxEditor_   view, a requirement for setting the specified view.
+
+[[_Ref338522555]]
+== _SetCaretLocation_
+
+=== Description
+
+Allows manipulating the cursor location and selection on the  _xamSyntaxEditor_   view.
+
+=== Parameters
+
+The following table explains the method’s parameters followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_oLocationOrOffset_
+|Will accept either aryLocation or iOffset
+
+|====
+
+=== Example
+
+The following example demonstrates an action for setting the location of the caret to line number 3, indicating the first argument of the Array (zero-based), and between the first and second characters, indicating the second argument of the Array.
+
+[source,csharp]
+----
+XamSyntaxEditor("xamSyntaxEditor1").SetCaretLocation Array(2, 1)
+----
+
+This example demonstrates an action for setting the location of the caret to be between the 25th and 26th overall characters.
+
+[source,csharp]
+----
+XamSyntaxEditor("xamSyntaxEditor1").SetCaretLocation 25
+----
+
+=== Possible exceptions
+
+There is no document currently loaded in the  _xamSyntaxEditor;_   required to perform this operation. Another possibility is that the TextLocation argument [{0}] is malformed, format should be
+
+`:\``n iOffsetLocation | ARRAY(iLineIndex, iCharIndex)`.
+
+[[_Ref338522570]]
+== _SetSplitter_
+
+=== Description
+
+Allows manipulating the text editor’s environment such as adding or removing a splitter, used to divide the view vertically or horizontally. Use this method to create duplicate views with the same text content in both views.
+
+=== Parameters
+
+The following table explains the method’s parameters followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_oeOrientation_
+|Specifies the splitter mode to be either horizontal or vertical. Failure to supply an `oeOrientation` parameter, results in the removal of the splitter, regardless of the splitter’s orientation (vertical or horizontal). 
+
+* Default value is _NotSplit_ . 
+
+|_iSplitterPosition_
+|If iPosition is not used, a value of 0 will be used removing the splitter of the provided orientation. 
+
+* Default value is 0 (measured by pixels). 
+
+|====
+
+=== Example
+
+Setting the splitter orientation to vertical in a position of 314 pixels.
+
+[source,csharp]
+----
+XamSyntaxEditor("xamSyntaxEditor1").SetSplitter igVertical, 314
+----
+
+Setting the splitter orientation to horizontal in a position of 25 pixels.
+
+[source,csharp]
+----
+XamSyntaxEditor("xamSyntaxEditor1").SetSplitter igHorizontal, 25
+----
+
+=== Possible exceptions
+
+Cannot set the  _Vertical_   splitter orientation, whenever the  _Horizontal_   splitter is visible.
+
+Attempting to set a vertical position while in the horizontal mode will cause an exception. The same is true when attempting to set horizontal position while the mode is vertical.
+
+[[_Ref338522583]]
+== _SetUpdateMode_
+
+=== Description
+
+Allows for updating text in the  _xamSyntaxEditor_   view, permitting modifications to the text.
+
+=== Parameters
+
+The following table explains the method’s parameters followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|_oeUpdateMode_
+|Used for setting the update mode for the _xamSyntaxEditor._ A string or enumerated value of type `IGEditorUpdateMode` representing the new text update mode.
+
+|====
+
+=== Example
+
+The following example demonstrates how to change the current update mode from  _Insert_   to  _Overwrite._
+
+[source,csharp]
+----
+XamSyntaxEditor("xamSyntaxEditor1").SetUpdateMode igOverwrite
+----
+
+=== Possible exceptions
+
+The following list contains the possible exception for the method and the reason that is likely to be causing them.
+
+* There is no document currently loaded in the  _xamSyntaxEditor;_   required to perform this operation loaded
+* Editing is disabled
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamsyntaxeditor-testable-user-actions-and-elements.html[xamSyntaxEditor - Testable User Actions and Elements]
+|This topic provides information about the _xamSyntaxEditor_ control’s testable user actions and elements.
+
+| link:xamsyntaxeditor-replay-only-methods.html[xamSyntaxEditor - Replay-Only Methods]
+|This topic provides information about the xamSyntaxEditor control’s testable user replay-only methods.
+
+| link:xamsyntaxeditor-property-reference.html[xamSyntaxEditor - Property Reference]
+|This topic provides reference information about the _xamSyntaxEditor_ control’s test object properties.
+
+| link:xamsyntaxeditor-enumeration-reference.html[xamSyntaxEditor - Enumeration Reference]
+|This topic provides reference information about the common enumerations used in testing the _xamSyntaxEditor_ control.
+
+|====

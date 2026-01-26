@@ -1,0 +1,44 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamoutlookbar",
+    "controlName": [],
+    "tags": [],
+    "guid": "e2629b52-737c-41d6-a828-f64fdb2dcd99",  
+    "buildFlags": [],
+    "createdOn": "2012-01-23T07:29:56.0393074Z"
+}
+|metadata|
+////
+
+= xamOutlookBar
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test.outlookbar~infragisticswpf.test.outlookbar.xamoutlookbarproxy.html[XamOutlookBarProxy] object in {ProductName}.
+
+=== Topics
+
+The topics contained in this section cover implementing action elements, methods and properties within the  _xamOutlookBar™_   control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamoutlookbar-testable-user-actions-and-elements.html[xamOutlookBar - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamOutlookBar_ control which you can test and the elements you can inspect.
+
+| link:xamoutlookbar-recordable-methods.html[xamOutlookBar - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamOutlookBar_ control.
+
+| link:xamoutlookbar-replay-only-methods.html[xamOutlookBar - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the _xamOutlookBar_ control.
+
+| link:xamoutlookbar-property-reference.html[xamOutlookBar - Properties Reference]
+|This topic provides reference information about the test object properties of the _xamOutlookBar_ control that can be inspected.
+
+| link:xamoutlookbar-api.html[xamOutlookBar - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamOutlookBar_ control in Micro Focus Unified Functional Testing software.
+
+|====

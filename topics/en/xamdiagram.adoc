@@ -1,0 +1,41 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamdiagram",
+    "controlName": [],
+    "tags": [],
+    "guid": "71edce8a-7e77-4c9a-b70e-fd07c7e2e8ca",  
+    "buildFlags": [],
+    "createdOn": "2014-11-07T11:38:16.2020703Z"
+}
+|metadata|
+////
+
+= xamDiagram
+
+== In This Group of Topics
+
+=== Introduction
+
+The topics in this group explain the XamDiagramProxy object and its use. This is the result of adding the  _XamDiagram_™ control to Infragistics® {ProductName} (Unified Functional Testing) supported controls list.
+
+=== Topics
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamdiagram-recordable-actions.html[xamDiagram - Recordable Actions]
+|This topic provides information about recordable actions for testing the _XamDiagram_ __™__ control.
+
+| link:xamdiagram-replay-only-actions.html[xamDiagram - Replay-Only Actions]
+|This topic provides information about replay-only actions for testing the _XamDiagram_ __™__ control.
+
+| link:xamdiagram-enumerations-reference.html[xamDiagram - Enumerations Reference]
+|This topic provides reference material on the common enumerations used for testing the _XamDiagram_™ control.
+
+| link:xamdiagram-properties-reference.html[xamDiagram - Properties Reference]
+|This topic provides reference information about the inspectable test object properties of the _XamDiagram_™ control.
+
+|====

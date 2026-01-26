@@ -1,0 +1,70 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamlineargauge-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "0ff519bf-7cce-47d2-9a9b-5642c275ac0f",  
+    "buildFlags": [],
+    "createdOn": "2013-11-20T21:19:19.2498829Z"
+}
+|metadata|
+////
+
+= xamLinearGauge - Property Reference
+
+== _xamLinearGauge_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the  _xamLinearGauge_   _™_  control’s test object properties.
+
+[[_Ref337672876]]
+
+=== Properties reference chart
+
+The table below summarizes the control’s test method parameters and tools for inspecting them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+| _Value_ 
+|This property is a recordable setter double value representing the test object. Changing the value of the control via a key press or mouse interaction records the new value.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _MinimumValue_ 
+|A double data type, whose value represents the minimum value.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _MaximumValue_ 
+|A double data type, whose value represents the maximum value.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _Title_ 
+|A string data type, whose value represents the title.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| _SubTitle_ 
+|A string data type, whose value represents the subtitle.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+|====

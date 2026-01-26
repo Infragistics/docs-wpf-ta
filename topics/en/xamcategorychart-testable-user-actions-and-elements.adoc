@@ -1,0 +1,89 @@
+﻿= xamCategoryChart - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the user actions of the xamCategoryChart™ control which you can test and the elements you can inspect.
+
+== _xamCategoryChart_   Testable User Actions
+
+=== Testable user actions chart
+
+The table below lists the testable user actions of the control and maps them to recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|*User action*|*Method*
+
+|Clicking on the control.
+|link:{ApiPlatform}test.shared~infragisticswpf.test.shared.recordreplayproxybase~clickcontrol.html[ClickControl]
+
+|Right clicking on the control.
+|link:{ApiPlatform}test.shared~infragisticswpf.test.shared.recordreplayproxybase~rightclickcontrol.html[RightClickControl]
+
+|Get the number of series in a _xamCategoryChart_ .
+|link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamcategorychartproxy~getseriescount.html[GetSeriesCount]
+
+|Get the number of data points in a series.
+|link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamcategorychartproxy~getdatapointcount.html[GetDataPointCount]
+
+|====
+
+== xamCategoryChart Testable Elements
+
+=== Testable elements summary chart
+
+The following table lists the elements in the control that you can test, the information you can retrieve about them, and the properties and methods that manage the retrieve operations.
+
+[options="header", cols="a,a,a,a,a"]
+|====
+|*Test element*|*Test deliverable*|*Member type*|*Test object member*|*Accessibility*
+
+|Data point
+|All data points in a tabular form in a xamCategoryChart
+|verifiable table content
+|
+|image:images/checkpoint.png[]
+
+|
+|A comma-separated list of data points in the following format:
+
+$$[$$Series Name], [Series Title], [Series Index], [Series Tooltip], [Data point Value(s)]
+
+|property
+
+
+|link:{ApiPlatform}.test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamcategorychartproxy~datapoints.html[DataPoints]
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|The number of data points in a series.
+|method
+|link:infragisticswpf.test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamcategorychartproxy~getdatapointcount.html[GetDataPointCount]
+|image::images/script.png[]
+
+|====
+
+== Related Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamcategorychart-recordable-methods.html[xamCategoryChart - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamCategoryChart™ control.
+
+| link:xamcategorychart-replay-only-methods.html[xamCategoryChart - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the xamCategoryChart™ control.
+
+| link:xamcategorychart-property-reference.html[xamCategoryChart - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamCategoryChart™ control.
+
+| link:xamcategorychart-api.html[xamCategoryChart - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamCategoryChart™ control in Micro Focus Unified Functional Testing software.
+
+|====

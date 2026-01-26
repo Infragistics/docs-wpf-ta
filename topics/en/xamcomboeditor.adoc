@@ -1,0 +1,40 @@
+﻿////
+|metadata|
+{
+    "name": "xamcomboeditor",
+    "controlName": [],
+    "tags": [],
+    "guid": "8adb5451-8aad-4e66-a436-9862288b941e",
+    "buildFlags": [],
+    "createdOn": "2012-01-26T12:45:01.5339217Z"
+}
+|metadata|
+////
+
+= xamComboEditor
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test.editors.xamcomboeditor~infragisticswpf.test.editors.comboeditor.xamcomboeditorproxy.html[XamComboEditorProxy] object in {ProductName}.
+
+=== Topics
+
+The topics contained in this section cover implementing action elements, methods and properties within the  _xamComboEditor™_   control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamcomboeditor-testable-user-actions-and-elements.html[xamComboEditor - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamComboEditor_ control which you can test and the elements you can inspect.
+
+| link:xamcomboeditor-recordable-methods.html[xamComboEditor - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamComboEditor_ control.
+
+| link:xamcomboeditor-property-reference.html[xamComboEditor - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the _xamComboEditor_ control.
+
+| link:xamcomboeditor-api.html[xamComboEditor - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamComboEditor_ control in Micro Focus Unified Functional Testing software.
+
+|====

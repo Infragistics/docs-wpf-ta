@@ -1,0 +1,249 @@
+﻿////
+|metadata|
+{
+    "name": "whats-new-in-2010-volume-3",
+    "controlName": [],
+    "tags": [],
+    "guid": "d0427ffb-5de1-4e60-9fea-c804fa2e6fa8",
+    "buildFlags": [],
+    "createdOn": "2012-02-06T16:44:04.5599617Z"
+}
+|metadata|
+////
+
+= What's New in 2010 Volume 3
+
+== Topic Overview
+
+'''
+
+=== Purpose
+
+This topic lists the newly supported Infragistics controls introduced with the Ultimate UI for {ProductName} Unified Functional Testing 2010 Volume 3 Release.
+
+'''
+
+=== In this topic
+
+This document contains the following sections:
+
+* <<_new_supported_controls,New Supported Ultimate UI for WPF controls>>
+* <<_Related,Related Topics>>
+
+'''
+
+[[_new_supported_controls]]
+== Supported Ultimate UI for WPF controls
+
+=== Supported controls chart
+
+The table below briefly explains the new supported controls of the Ultimate UI for {ProductName} 2010 Volume 3 Release.
+
+.Note:
+[NOTE]
+====
+Deprecated controls can no longer link to the namespace, as they have been retired from support.
+====
+
+[options="header", cols="a,a,a"]
+|====
+|Product|Supported control|Corresponding namespace
+
+|Ultimate UI for WPF Data Visualization
+|xamBarcode™
+| link:{ApiPlatform}test.controls.barcodes~infragisticswpf.test.controls.barcodes-namespace.html[InfragisticsWPF.Test.Controls.Barcodes]
+
+|
+|xamBulletGraph™
+| link:{ApiPlatform}test.gauge~infragisticswpf.test.gauge-namespace.html[InfragisticsWPF.Test.Gauge]
+
+|
+|xamChart™
+|InfragisticsWPF.Test.Chart
+
+|
+|xamDataChart™
+| link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart-namespace.html[InfragisticsWPF.Test.Charts.DataChart]
+
+|
+|xamGauge™
+| link:{ApiPlatform}test.gauge~infragisticswpf.test.gauge-namespace.html[InfragisticsWPF.Test.Gauge]
+
+|
+|xamMap™
+| link:{ApiPlatform}test.map~infragisticswpf.test.map-namespace.html[InfragisticsWPF.Test.Map]
+
+|
+|xamPivotGrid™
+| link:{ApiPlatform}test.controls.grids.xampivotgrid~infragisticswpf.test.controls.grids-namespace.html[InfragisticsWPF.Test.Controls.Grids]
+
+|
+|xamTimeline™
+| link:{ApiPlatform}test.timeline~infragisticswpf.test.timeline-namespace.html[InfragisticsWPF.Test.Timeline]
+
+|
+|xamTreemap™
+| link:{ApiPlatform}test.treemap~infragisticswpf.test.treemap-namespace.html[InfragisticsWPF.Test.Treemap]
+
+|
+|xamZoombar™
+| link:{ApiPlatform}test.datavisualization~infragisticswpf.test.zoombar-namespace.html[InfragisticsWPF.Test.Zoombar]
+
+|Ultimate UI for WPF
+|xamCarouselListBox™
+| link:{ApiPlatform}test~infragisticswpf.test.controls-namespace.html[InfragisticsWPF.Test.Controls]
+
+|
+|xamCarouselPanel™
+| link:{ApiPlatform}test~infragisticswpf.test.controls-namespace.html[InfragisticsWPF.Test.Controls]
+
+|
+|xamCheckEditor™
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors-namespace.html[InfragisticsWPF.Test.Editors]
+
+|
+|xamColorPicker™
+| link:{ApiPlatform}test.editors.xamcolorpicker~infragisticswpf.test.editors.colorpicker-namespace.html[InfragisticsWPF.Test.Editors.ColorPicker]
+
+|
+|xamComboEditor™
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors-namespace.html[{ApiPlatform}Test.Editors]
+
+|
+|xamContextMenu™
+| link:{ApiPlatform}test.menu~infragisticswpf.test.menu-namespace.html[InfragisticsWPF.Test.Menu]
+
+|
+|xamCurrencyEditor™
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors-namespace.html[InfragisticsWPF.Test.Editors]
+
+|
+|xamDataCards™
+| link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter-namespace.html[InfragisticsWPF.Test.DataPresenter]
+
+|
+|xamDataCarousel™
+| link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter-namespace.html[InfragisticsWPF.Test.DataPresenter]
+
+|
+|xamDataGrid™
+| link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter-namespace.html[InfragisticsWPF.Test.DataPresenter]
+
+|
+|xamDataPresenter™
+| link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter-namespace.html[InfragisticsWPF.Test.DataPresenter]
+
+|
+|xamDataTree™
+| link:{ApiPlatform}test.datatree~infragisticswpf.test.datatree-namespace.html[InfragisticsWPF.Test.DataTree]
+
+|
+|xamDateTimeEditor™
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors-namespace.html[InfragisticsWPF.Test.Editors]
+
+|
+|xamDialogWindow™
+| link:{ApiPlatform}test.dialogwindow~infragisticswpf.test.dialogwindow-namespace.html[InfragisticsWPF.Test.DialogWindow]
+
+|
+|xamDockManager™
+| link:{ApiPlatform}test.dockmanager~infragisticswpf.test.dockmanager-namespace.html[InfragisticsWPF.Test.DockManager]
+
+|
+|xamMaskedEditor™
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors-namespace.html[InfragisticsWPF.Test.Editors]
+
+|
+|xamMenu™
+| link:{ApiPlatform}test.menu~infragisticswpf.test.menu-namespace.html[InfragisticsWPF.Test.Menu]
+
+|
+|xamMonthCalendar™
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors-namespace.html[InfragisticsWPF.Test.Editors]
+
+|
+|xamNumericEditor™
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors-namespace.html[InfragisticsWPF.Test.Editors]
+
+|
+|xamOutlookBar™
+| link:{ApiPlatform}test.outlookbar~infragisticswpf.test.outlookbar-namespace.html[InfragisticsWPF.Test.OutlookBar]
+
+|
+|xamReportPreview™
+| link:{ApiPlatform}test.reporting~infragisticswpf.test.reporting-namespace.html[InfragisticsWPF.Test.Reporting]
+
+|
+|xamRibbon™
+| link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon-namespace.html[InfragisticsWPF.Test.Ribbon]
+
+|
+|xamSchedule™
+| link:{ApiPlatform}test.schedules~infragisticswpf.test.schedules-namespace.html[InfragisticsWPF.Test.Schedules]
+
+|
+|xamSlider™
+| link:{ApiPlatform}test.editors.xamslider~infragisticswpf.test.editors.xamslider-namespace.html[InfragisticsWPF.Test.Editors.XamSlider]
+
+|
+|xamTabControl™
+| link:{ApiPlatform}test~infragisticswpf.test.controls-namespace.html[InfragisticsWPF.Test.Controls]
+
+|
+|xamTagCloud™
+| link:{ApiPlatform}test.tagcloud~infragisticswpf.test.tagcloud-namespace.html[InfragisticsWPF.Test.TagCloud]
+
+|
+|xamTextEditor™
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors-namespace.html[InfragisticsWPF.Test.Editors]
+
+|
+|xamTilesControl™
+|InfragisticsWPF.Test.TilesControl
+
+|====
+
+'''
+
+[[_Related]]
+== Related Topics
+
+=== Related topics chart
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:introduction.html[Introduction]
+|Before you start using Ultimate UI for {ProductName} Unified Functional Testing, be sure to read through the topics in this section to ensure that you are getting the most of out of the product. This section contains information about: 
+
+* The product’s main characteristics 
+
+* The supported Ultimate UI for WPF controls 
+
+* Instructions about getting started with the product – installation, configuration and removal 
+
+* The now issues and limitations 
+
+* Reference content related to testing of the Ultimate UI for WPF controls 
+
+| link:getting-started.html[Getting Started]
+|This is a starting point for getting acquainted with {ProductName}. This section contains information about: 
+
+* The prerequisites for the product 
+
+* The installing, configuring and removing the product 
+
+* The location of sample test applications and scripts 
+
+* Getting help for the product 
+
+| link:known-issues-and-breaking-changes.html[Known Issues and Breaking Changes]
+|This topic provides information on the currently known issues and limitations related to {ProductName} Unified Functional Testing. These issues will be addressed in future releases of the product.
+
+| link:test-automation-for-infragistics-controls.html[Test Automation for Infragistics Controls]
+|The topics below provide reference information about the verifiable properties and the recordable and replay-only methods for testing the Ultimate UI for WPF controls.
+
+|====

@@ -1,0 +1,41 @@
+﻿////
+|metadata|
+{
+    "name": "xamcomboeditor-api",
+    "controlName": [],
+    "tags": [],
+    "guid": "3f6d9d9a-1992-4818-a754-dd65b20567d0",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T16:54:23.9160486Z"
+}
+|metadata|
+////
+
+= xamComboEditor - API Reference
+
+== _xamComboEditor_   Test Object API Reference
+
+=== Introduction
+
+This topic provides reference information about the proxy class that supports the testing of the xamComboEditor™ control in Micro Focus Unified Functional Testing software.
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|*Proxy Class Name*|*Namespace*|*Inherits From*|*Additional Notes*
+
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors.xamcomboeditorproxy.html[ _XamComboEditorProxy_ ]
+|InfragisticsWPF.Test.Editors
+|
+* _RecordReplayProxyBase_ 
+
+* _TextEditorBaseProxy_ 
+
+* _ValueEditorBaseProxy_ 
+
+|N/A
+
+|====

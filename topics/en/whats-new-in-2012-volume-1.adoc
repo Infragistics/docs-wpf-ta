@@ -1,0 +1,141 @@
+﻿////
+
+|metadata|
+{
+    "name": "whats-new-in-2012-volume-1",
+    "controlName": [],
+    "tags": [],
+    "guid": "ad0fd3aa-f709-415a-ac50-35bc86430874",  
+    "buildFlags": [],
+    "createdOn": "2012-05-23T13:18:13.7325989Z"
+}
+|metadata|
+////
+
+= What's New in 2012 Volume 1
+
+== Topic Overview
+
+=== Purpose
+
+This topic lists the newly supported Infragistics controls introduced with the Ultimate UI for {ProductName} Unified Functional Testing 2012 Volume 1 Release.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref321908365, Supported Ultimate UI for WPF controls >>
+* <<_Ref321908368, Supported Ultimate UI for WPF control features >>
+* <<_Ref321908370, Related Content >>
+
+[[_Ref321908365]]
+== Supported Ultimate UI for WPF controls
+
+=== Supported controls summary
+
+The following table summarizes the new supported controls of the {ProductName} 2012 Volume 1 Release.
+
+[options="header", cols="a,a,a"]
+|====
+|Product|Supported control|Corresponding namespace
+
+|Ultimate UI for WPF
+|xamGeographicMap™
+| link:{ApiPlatform}test.geographicmap.html[InfragisticsWPF.Test.GeoMap]
+
+|
+|xamSparkline™
+| link:{ApiPlatform}test.sparkline.html[InfragisticsWPF.Test.Sparkline]
+
+|====
+
+[[_Ref321908368]]
+== Supported Ultimate UI for WPF control features
+
+=== Supported control features summary
+
+The following table summarizes the newly supported control features of the {ProductName} 2012 Volume 1 Release.
+
+[options="header", cols="a,a,a"]
+|====
+|Control|Feature|Description
+
+|xamGrid™
+|Copy/Paste
+|Added new testable actions: 
+
+* CopyToClipboard 
+
+* PasteFromClipboard 
+
+|
+|Column moving and resizing
+|Added new testable actions: 
+
+* ResizeColumn 
+
+* MoveColumn 
+
+|
+|Custom Filter Dialog
+|Interaction with the new dialog is supported.
+
+|
+|Column types: 
+
+* DateTimeColumn 
+
+* SparklineColumn 
+
+|Interaction with these column types is now supported.
+
+|
+|Column hiding, Column chooser dialog
+|Added new testable actions: 
+
+* HideColumn 
+
+* ShowColumn (replay only) 
+
+* OpenHiddenColsMenu 
+
+* CloseHiddenColsMenu 
+
+* GetCheckState (applicable to the GridSortableListBox, a sub-control used by the Column Chooser Dialog) 
+
+* SetCheckState (applicable to the GridSortableListBox, a sub-control used by the Column Chooser Dialog) 
+
+|xamDataChart™
+|Point Series
+|Interaction with charts of this series type is now supported.
+
+|xamPieChart™
+|data slices
+|The new tesable action _ClickSlice_ was added.
+
+|====
+
+[[_Ref321908370]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:introduction.html[Introduction]
+|This topic introduces the {ProductName} Unified Functional Testing software.
+
+| link:getting-started.html[Getting Started]
+|This is a starting point for getting acquainted with {ProductName} Unified Functional Testing software.
+
+| link:known-issues-and-breaking-changes.html[Known Issues and Breaking Changes]
+|This topic provides information on the currently known issues and limitations related to {ProductName} Unified Functional Testing.
+
+| link:test-automation-for-infragistics-controls.html[Test Automation for Infragistics Controls]
+|The topics below provide reference information about the verifiable properties; recordable and replay-only methods for testing the Ultimate UI for WPF controls.
+
+|====

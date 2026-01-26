@@ -1,0 +1,24 @@
+﻿////
+
+|metadata|
+{
+    "name": "shared-legend",
+    "controlName": [],
+    "tags": [],
+    "guid": "801387d3-6ef4-47a4-8628-fffa90812758",  
+    "buildFlags": [],
+    "createdOn": "2014-05-01T21:16:05.7418396Z"
+}
+|metadata|
+////
+
+*Legend:*
+
+image:images/spy.png[]
+– Identification property (Visible in object spy)
+
+image:images/checkpoint.png[]
+– Checkpoint property (Visible with checkpoints)
+
+image:images/script.png[]
+– Accessible in script

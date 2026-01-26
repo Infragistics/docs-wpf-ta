@@ -1,0 +1,50 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamdialogwindow-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "0a9dcf49-e582-4be8-b5a5-cad017a956aa",  
+    "buildFlags": [],
+    "createdOn": "2012-01-27T13:45:14.1181306Z"
+}
+|metadata|
+////
+
+= xamDialogWindow - Property Reference
+
+== _xamDialogWindow_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the inspectable test object properties of the xamDialogWindow™ control.
+
+[[_xamDialogPropRef]]
+
+=== Properties reference chart
+
+The table below summarizes the control’s test object properties and the tools with which they can be inspected.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+| _link:infragisticswpf.test.dialogwindow~infragisticswpf.test.dialogwindow.xamdialogwindowproxy~content.html[Content]_ 
+|The content of the xamDialogWindow control as a string.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:infragisticswpf.test.dialogwindow~infragisticswpf.test.dialogwindow.xamdialogwindowproxy~header.html[Header]_ 
+|The header of the xamDialogWindow control.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====

@@ -1,0 +1,130 @@
+﻿////
+|metadata|
+{
+    "name": "xamcomboeditor-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "bbef8ce4-01c3-4689-8601-adb518cb32c7",
+    "buildFlags": [],
+    "createdOn": "2012-01-26T12:34:21.1858933Z"
+}
+|metadata|
+////
+
+= xamComboEditor - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods for testing the xamComboEditor™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref314227548,xamComboEditor Test Object Recordable Methods Summary>>
+
+** <<_Ref314227549, _SelectItem_   Method>>
+
+* <<_ref1,Related Topics>>
+
+[[_Ref314227548]]
+== xamComboEditor Test Object Recordable Methods Summary
+
+=== Recordable methods summary chart
+
+The following table briefly explains the recordable methods for testing the control. Detailed information about the methods is provided in the text blocks following the table.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|* Description*
+
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors.xamcomboeditorproxy~selectitem.html[ _SelectItem_ ]
+|Selects an item from the xamComboEditor drop down list.
+
+|====
+
+[[_Ref314227549]]
+== _SelectItem_  Method
+
+=== Description
+
+The  _SelectItem_  method records and replays the xamComboEditor’s item selection from the drop down list.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameter*|*Description*
+
+|Displayed text of the item to be selected 
+
+_(default)_
+|The method is using the displayed text to select the xamComboEditor item. 
+
+*Example*
+
+Selecting the xamComboEditor item “Item 2”: 
+
+WpfWindow("MainWindow").XamComboEditor("xamComboEditor1").SelectItem “Item 2”
+
+|Index of the item to be selected
+|The method is using the integer index to select the xamComboEditor item. 
+
+*Example*
+
+Selecting the xamComboEditor item with index 5: 
+
+WpfWindow("MainWindow").XamComboEditor("xamComboEditor1").SelectItem 5
+
+|====
+
+=== Default Setting
+
+The item selection action is recorded with the displayed text passed as a parameter.
+
+=== Possible Exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception* *name*|*Exception description*|*Possible reasons*
+
+|IndexOutOfRange
+|The index that is specified is not in the valid range.
+|The method parameter is not valid.
+
+|====
+
+[[_ref1]]
+== Related Topics
+
+=== Related topics summary chart
+
+The following table lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamcomboeditor-testable-user-actions-and-elements.html[xamComboEditor - Testable User Actions and Elements]
+|This topic provides information about the user actions of the xamComboEditor™ control which you can test and the elements you can inspect.
+
+| link:xamcomboeditor-property-reference.html[xamComboEditor - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamComboEditor™ control.
+
+| link:xamcomboeditor-api.html[xamComboEditor - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamComboEditor™ control in Micro Focus Unified Functional Testing software.
+
+| link:xameditors-recordable-methods.html[xamEditors - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamComboEditor™ control.
+
+|====

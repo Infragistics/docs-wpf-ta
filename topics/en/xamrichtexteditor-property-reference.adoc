@@ -1,0 +1,54 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamrichtexteditor-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "a28da88d-8e93-4ae6-aae0-d89a95f8a7ef",  
+    "buildFlags": [],
+    "createdOn": "2013-11-22T19:20:34.1727631Z"
+}
+|metadata|
+////
+
+= xamRichTextEditor - Property Reference
+
+== _xamRichTextEditor_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the  _xamRichTextEditor™_   control’s test object properties.
+
+[[_Ref337672876]]
+
+=== Properties reference chart
+
+The table below summarizes the control’s test method parameters and tools with which they can be inspected.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+| _link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.xamrichtexteditorproxy~selectedtext.html[SelectedText]_ 
+|
+* Returns the string of selected text 
+
+* Returns an empty string if no text is selected 
+
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.xamrichtexteditorproxy~caretlocation.html[CaretLocation]_ 
+|A settable integer value representing the character offset of the current caret location.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====

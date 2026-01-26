@@ -1,0 +1,105 @@
+﻿////
+|metadata|
+{
+    "name": "switching-ta-clr-versions",
+    "controlName": [],
+    "tags": [],
+    "guid": "5a289e7d-3180-40f6-8d4c-343330b4c748",
+    "buildFlags": [],
+    "createdOn": "2012-01-25T07:31:01.7398327Z"
+}
+|metadata|
+////
+
+= Switching Test Automation / CLR Versions
+
+== Topic Overview
+
+=== Purpose
+
+This topic explains how to switch between the {ProductName} product volumes and the CLR versions.
+
+=== In this topic
+
+This document contains the following sections:
+
+* <<_Ref315104323,Switching Test Automation/CLR Versions Using the Version Utility’s Graphical Interface>>
+
+** <<_Introduction,Introduction>>
+** <<_Overview,Overview>>
+** <<_Steps,Steps>>
+
+* <<_Ref315104329,Related Content>>
+
+'''
+
+[[_Ref315104323]]
+== Switching Test Automation/CLR Versions Using the Version Utility’s Graphical Interface
+
+[[_Introduction]]
+
+=== Introduction
+
+You can switch between the {ProductName} product volumes without having to install and uninstall manually the product when your testing environment is changed. Test Automation has a special tool called "Version Utility" that enables you to do this.
+
+The following procedure describes how you change Test Automation/CLR Versions using the Version Utility’s Graphical Interface.
+
+'''
+
+[[_Overview]]
+
+=== Overview
+
+Following is a conceptual overview of the process:
+
+[start=1]
+. <<step1,Starting the Version Utility tool>>
+[start=2]
+. <<step2,Switching to the desired Test Automation/CLR Versions>>
+
+'''
+
+[[_Steps]]
+
+=== Steps
+
+The table below describes the procedure in detail.
+
+=== 1. Start the Version Utility tool.
+
+Start the user interface of the Version Utility in either of the following ways:
+
+• From the Windows Start Menu shortcut *Infragistics>{ProductVersion}>{ProductName}>Tools*
+
+• From the Version Utility executable file residing in *<**WPF Test Automation Installation Folder>\Tools\Version Utility** \InfragisticsWPF.Test.VersionUtility.UI.exe*
+
+The Test Automation Version Utility dialog appears.
+
+=== 2. Switch to the desired Test Automation/CLR Versions.
+
+1. From the drop-down, choose the *Test Automation/CLR version combination* to suite your testing environment.
+
+2. Click *Apply* to commit the change.
+
+3. Click *Quit* to close the Version Utility.
+
+[[_Ref315104329]]
+== Related Content
+
+'''
+
+=== Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:installing-and-configuring-ta-wpf.html[Installing and Configuring {ProductName}]
+|This topic provides instructions about the installation {ProductName} Unified Functional Testing.
+
+| link:removing-ta-from-hp-qtp.html[Removing Test Automation from Unified Functional Testing]
+|This topic explains how to disable the {ProductName} Unified Functional Testing software.
+
+|====

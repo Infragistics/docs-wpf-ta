@@ -1,0 +1,59 @@
+﻿////
+|metadata|
+{
+    "name": "xamsurfacechart-testable-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "95961abc-547b-4f79-88a1-9f1c189f7307",
+    "buildFlags": [],
+    "createdOn": "2016-04-25T15:23:56.3331027Z"
+}
+|metadata|
+////
+
+= xamSurfaceChart3D - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the user actions of the  _XamSurfaceChart3D_™ control which you can test and the elements you can inspect.
+
+== _xamSurfaceChart_   Testable User Actions
+
+=== Testable user actions chart
+
+The table below lists some of the testable user actions of the control and maps them to recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|*User action*|*Method*
+
+|Rotate the chart.
+|_link:{ApiPlatform}test.controls.charts.xamsurfacechart3d~infragisticswpf.test.charts.xamsurfacechart3d.xamscattersurface3dproxy~rotate.html[Rotate]_
+
+|Set the view scale of the chart.
+|_link:{ApiPlatform}test.controls.charts.xamsurfacechart3d~infragisticswpf.test.charts.xamsurfacechart3d.xamscattersurface3dproxy~setscale.html[SetScale]_
+
+|====
+
+== Related Topics
+
+=== Related topics summary chart
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamsurfacechart-recordable-methods.html[xamSurfaceChart3D - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamSurfaceChart_ control.
+
+| link:xamsurfacechart-property-reference.html[xamSurfaceChart3D - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the _xamSurfaceChart_ control.
+
+| link:xamsurfacechart-api.html[xamSurfaceChart3D - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamSurfaceChart_ control in Micro Focus Unified Functional Testing software.
+
+|====

@@ -1,0 +1,39 @@
+﻿////
+|metadata|
+{
+    "name": "xammonthcalendar-api",
+    "controlName": [],
+    "tags": [],
+    "guid": "2532622a-e628-4a3b-9348-7f07bc89a425",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T16:11:51.4008038Z"
+}
+|metadata|
+////
+
+= xamMonthCalendar - API Reference
+
+== _xamMonthCalendar_   Test Object API Reference
+
+=== Introduction
+
+This topic provides reference information about the proxy class that supports the testing of the xamMonthCalendar™ control in Micro Focus Unified Functional Testing software.
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|*Proxy class name*|*Namespace*|*Inherits from*|*Additional notes*
+
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors.xammonthcalendarproxy.html[ _XamMonthCalendarProxy_ ]
+|_InfragisticsWPF.Test.Editors_
+|
+* _RecordReplayProxyBase_ 
+
+* _IContainSubItems_ 
+
+|N/A
+
+|====

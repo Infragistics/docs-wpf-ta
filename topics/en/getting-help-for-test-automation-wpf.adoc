@@ -1,0 +1,233 @@
+﻿////
+|metadata|
+{
+    "name": "getting-help-for-test-automation-wpf",
+    "controlName": [],
+    "tags": [],
+    "guid": "c2a6cd57-501d-4c1d-964a-dc8e84ce8017",
+    "buildFlags": [],
+    "createdOn": "2012-01-25T12:17:49.8863046Z"
+}
+|metadata|
+////
+
+= Getting Help for {ProductName}
+
+== Topic Overview
+
+=== Purpose
+
+This topic explains the available options for getting help with your Infragistics product and how to prepare for contacting technical support.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref315262515,Available Help Options>>
+* <<_Ref315262589,Using the Community Site>>
+* <<_Ref315262664,Using Technical Support>>
+** <<_Ref315262676,Technical Support Overview>>
+** <<_Ref315212311,Available Support Options>>
+** <<_Ref315212507,Requirements for Using Technical Support>>
+
+*** <<_Ref315212500,Requirements>>
+*** <<_Ref315213046,Creating a Member Profile>>
+*** <<_Ref315213054,Registering Your Product>>
+*** <<_Ref315213060,Retrieving the Product Life Cycle Information>>
+*** <<_Ref315213066,Contacting Technical Support>>
+
+* <<_relatedResources,Related Resources>>
+
+[[_Ref315262515]]
+== Available Help Options
+
+=== Help Options
+
+Help on Test Automation is readily available in the following forms:
+
+* The Test Automation online forum
+* Technical support
+
+See the blocks below for an explanation on how to use each of them.
+
+[[_Ref315262589]]
+== Using the Community Site
+
+=== Using the Community Site
+
+A wealth of valuable information is available on our Community site. This user-friendly area combines blogs, articles, media and code samples as well as peer-to-peer forums - all in one central location.
+
+[[_Ref315262664]]
+== Using Technical Support
+
+[[_Ref315262676]]
+
+=== Technical Support Overview
+
+If you own a copy of {ProductName} Unified Functional Testing software, you are entitled to certain benefits regarding support services offered by Infragistics. Developer support engineers are available to help you with your issues.
+
+[[_Ref315212311]]
+
+=== Available Support Options
+
+[options="header", cols="a,a"]
+|====
+|*Support* *Options*|*Description*
+
+|*Trial Support*
+|*Note:* 
+
+Support is not available on Trial products that are Retired. 
+
+Trial users of any of Infragistics' Active products are entitled to Trial Support, which includes: 
+
+* Access to the link:http://devcenter.infragistics.com/Support/KnowledgeBase.aspx[Knowledge Base] on the site. We recommend you look for answers here first. 
+
+* No-charge technical support via our link:http://www.infragistics.com/support/get-help.aspx[Get Help] page. We'll provide help for questions regarding the following: 
+
+** installation problems 
+
+** the functionality of our products 
+
+** debugging 
+
+** programming issues 
+
+** product usage issues 
+
+** explanation of error messages. 
+
+* Access to the link:http://community.infragistics.com/forums/default.aspx[Peer-to-Peer Newsgroups/Forums] - a collection of newsgroups/forums that allow you to share problems and ideas with other Infragistics users. 
+
+|*Standard Support* (available with the Annual Subscription option)
+|Registered users of Infragistics products with valid licenses are entitled to Standard Support which includes: 
+
+* Access to the link:http://devcenter.infragistics.com/Support/KnowledgeBase.aspx[Knowledge Base] on the site. We recommend you look for answers here first No-charge direct developer support via our link:http://www.infragistics.com/support/get-help.aspx[Get Help] page. We'll provide help for questions regarding the following: 
+
+** installation problems 
+
+** the functionality of our products 
+
+** programming issues 
+
+** product usage issues 
+
+** explanation of error messages. 
+
+* Access to the link:http://community.infragistics.com/forums/default.aspx[Peer-to-Peer Newsgroups/Forums] - a collection of Internet newsgroups/forums that allow you to share problems and ideas with other Infragistics users. (Infragistics does NOT support these newsgroups/forums directly. They are peer-to-peer only.) 
+
+Service Releases are available from the Infragistics Web site. 
+
+*Note:*
+
+Some restrictions apply, as indicated by product status(your product status is available in our link:http://www.infragistics.com/support/product-lifecycle.aspx#ProductLifecycle[Product Lifecycle information]): 
+
+* Free phone support and Web Live Chat are only available with the purchase of Test Automation Subscription with Priority Support (1 year of phone support). 
+
+* We require product registration before a developer support request case can be created for a product, and also prior to accessing our Service Releases. You may register your product or review your registered products. 
+
+* Note that, the following cases fall outside the scope of our Developer Support services: 
+
+** designing or planning of deployment 
+
+** software development 
+
+** code review, custom samples 
+
+** implementation planning. 
+
+* For more information on how we can help, you can send your enquiry pertaining to our custom-tailored extended services (such as Training, Mentoring and/or Consulting) to sales@infragistics.com. 
+
+|*Test Automation Subscription Service* (Annual)
+|Our development team is committed to keeping in step with new technology, and Infragistics' Subscription Service is a convenient way to ensure your developers are always using the latest versions of Infragistics products. Infragistics Subscription Service provides one year's worth of updates, upgrades and new components – Including all new releases! In addition to all the benefits of our Standard support offerings, as a registered user, you will receive automatic notification of and access to new full version releases for the period of one year. 
+
+Renewable yearly, Infragistics Test Automation Subscription Service keeps you in step with the newest technology available and ensures that you are always using the latest versions of Infragistics products.
+
+|*Test Automation with Subscription and Priority Support* (Annual)
+|With Subscription and Priority Support, you receive all of the benefits of Subscription Service – including one year's worth of updates and upgrades and our .NET Source code – but you also receive one year of Guaranteed Rapid Response, priority phone and 24-hour Monday - Friday Web Live Chat support. Renewable yearly, Infragistics Subscription and Priority Support keeps you in step with the latest technology and provides you with the support you need, when you need it! 
+
+*Guaranteed Rapid Response*
+
+When you purchase and register your Test Automation Subscription with Priority Support, your product key is linked in our system to your support level. When you request developer support via our Website, your support request case will automatically be queued for rapid response by our Developer Support team. Priority Support also entitles you to 24-hour Monday - Friday Web Live Chat support and to phone our Support Services Department (this is a toll-free call in North America) to speak with a Developer Support Engineer during link:http://www.infragistics.com/support/default.aspx#SupportOptions[standard business hours].
+
+|====
+
+[[_Ref315212507]]
+== Requirements for Using Technical Support
+
+[[_Ref315212500]]
+
+=== Requirements
+
+To be able to use technical support, you need to have:
+
+* A member profile
+* A product registration
+* The Product lifecycle information
+
+[[_Ref315213046]]
+
+=== Creating a Member Profile
+
+Visit the  _My Infragistics_  area of Infragistics' Web site, and create a Member Profile. It is important that your most current information is entered into your Member Profile. This will ensure that our Support Service Department can deliver support correspondence and subscription upgrades to you.
+
+You can always visit your Registration Records and review your purchases, issued subscription upgrade keys and registered keys online, 24 hours a day, 7 days a week. After logging in with your MemberID, you'll be able to view vital information including product keys and subscription service and status.
+
+Your MemberID is connected to your personal profile. Your registration identifies you as the active developer entitled to use and request support for the Infragistics product you have registered.
+
+[[_Ref315213054]]
+
+=== Registering Your Product
+
+After creating a Member Profile, register your Product to your MemberID by entering the Product Key in the Product Registration page. This will provide you with superior technical support services quickly and conveniently.
+
+[[_Ref315213060]]
+
+=== Retrieving the Product Life Cycle Information
+
+Infragistics Product Life Cycle information is available in PDF format and provides the following information:
+
+* Name and version of the Infragistics tools
+* Product maintenance (bug fix) period
+* Product support period
+* Product status
+
+For more information, see link:http://www.infragistics.com/support/documentation.aspx#ProductLifecycle[Product Lifecycle].
+
+[[_Ref315213066]]
+
+=== Contacting Technical Support
+
+For issues related to your account, product ownership, or registration, please e-mail Registrations@Infragistics.com. Include your name and product key (if known) so that we may better assist you. You can also call (609) 448-2000 9 a.m. to 5 p.m., Monday to Friday, EST US.
+
+Please make sure that you provide the most thorough information as possible. This will help our support personnel to better understand your problem and provide you with the best solution. For your convenience, use the following procedure:
+
+[start=1]
+. Explain what you have done step-by-step.
+[start=2]
+. How often does the issue occur (always, often, rarely, the issue is unique)?
+[start=3]
+. Provide screenshots if possible.
+[start=4]
+. Provide any error messages or exceptions.
+[start=5]
+. Provide the version of the installed {ProductName} product.
+[start=6]
+. Provide the version of the installed Micro Focus Unified Functional Testing product.
+[start=7]
+. Provide the version of the installed Ultimate UI for WPF product.
+[start=8]
+. Provide information about your operating system.
+
+[[_relatedResources]]
+== Related Resources
+
+The table below lists resources you may find useful.
+
+[cols="a"]
+|====
+|Resource
+
+| link:http://www.infragistics.com/support/default.aspx#SupportOptions[Infragistics Support page]
+
+|====

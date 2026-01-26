@@ -1,0 +1,144 @@
+﻿////
+|metadata|
+{
+    "name": "xamtagcloud-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "b3fc316d-e776-4d3e-8174-e7ee3fc10ec5",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T07:30:15.2835677Z"
+}
+|metadata|
+////
+
+= xamTagCloud - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods for testing the xamTagCloud™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_summary, _xamTagCloud_   Test Object Recordable Methods>>
+
+** <<_ClickCloudItem, _ClickCloudItem_  >>
+
+* <<_relTopics,Related Content>>
+
+[[_summary]]
+== _XamTagCloud_   Test Object Recordable Methods
+
+=== Recordable methods summary chart
+
+The following table briefly explains the recordable methods for testing the control. Detailed information about the methods is provided in the text blocks following the table.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|*Description*
+
+| _<<ClickCloudItem, ClickCloudItem >>_ 
+|Clicks on a specified xamTagCloud item.
+
+|====
+
+[[_ClickCloudItem]]
+== _ClickCloudItem_
+
+=== Description
+
+The  _ClickCloudItem_  method is used for recording and replaying a mouse click action on a specifed xamTagCloud item.
+
+=== Details
+
+When this action is recorded, an array of xamTagCloud item’s header text and weight is used as a parameter. In case there are duplicated items, the item index is used as a parameter.
+
+When a testing script is created manually, you can use an array of header text and weight, header text or an index as a parameter.
+
+When this action is replayed and there are duplicated items, the first found item is clicked.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameter*|*Description*
+
+|Array of two tag item’s elements –header text and weight 
+
+_(default)_
+|Using an array of two xamTagCloud item’s elements – header text and weight: 
+
+*Example*
+
+Clicking on a xamTagCloud item with header text - “Test Automation” and weight - 6: 
+
+WpfWindow("MainWindow").XamTagCloud("tagCloud1").ClickCloudItem ARRAY("Test Automation", 6)
+
+|Tag item header text
+|Using a xamTagCloud item’s header text as a parameter: 
+
+*Example*
+
+Clicking on a xamTagCloud item with header text - “Test Automation”: 
+
+WpfWindow ("MainWindow"). XamTagCloud ("tagCloud1"). ClickCloudItem “Test Automation”
+
+|Tag item index
+|Using a xamTagCloud item’s index in case there are duplicated items: 
+
+*Example*
+
+Clicking on the first xamTagCloud item: 
+
+WpfWindow ("MainWindow"). XamTagCloud ("tagCloud1"). ClickCloudItem 0
+
+|====
+
+=== Default setting
+
+The xamTagCloud item click action is recorded with an array of header text and weight passed as a parameter.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception* *name*|*Exception description*|*Possible reasons*
+
+|The following item was not found.
+|The xamTagCloud item with the specified header text/weight cannot be found.
+|The method parameter is not correct.
+
+|The specified index is out of range.
+|The xamTagCloud item with the specified index cannot be found.
+|The method parameter is not within the valid range of item indexes.
+
+|====
+
+[[_relTopics]]
+== Related Content
+
+=== Topics
+
+The following table lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamtagcloud-testable-user-actions-and-elements.html[xamTagCloud - Testable User Actions and Elements]
+|This topic provides information about the user actions of the xamTagCloud™ control which you can test and the elements you can inspect.
+
+| link:xamtagcloud-property-reference.html[xamTagCloud - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamTagCloud™ control.
+
+| link:xamtagcloud-api.html[xamTagCloud - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamTagCloud™ control in Micro Focus Unified Functional Testing software.
+
+|====

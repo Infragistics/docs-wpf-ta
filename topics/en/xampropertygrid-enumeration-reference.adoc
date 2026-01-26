@@ -1,0 +1,102 @@
+﻿////
+
+|metadata|
+{
+    "name": "xampropertygrid-enumeration-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "1e3a130b-6f97-4c29-a7d9-2b6f0c3b542e",  
+    "buildFlags": [],
+    "createdOn": "2014-10-23T20:16:05.06355Z"
+}
+|metadata|
+////
+
+= xamPropertyGrid - Enumeration Reference
+
+== _XamPropertyGrid_   Enumerations Reference
+
+=== Introduction
+
+This topic provides reference material on the common enumerations used for testing the  _XamPropertyGrid_™ control.
+
+=== PrpGSubItemType
+
+This enumeration represents the sub item type.
+
+The following table summarizes the  _XamPropertyGrid_   test object enumerations used in recordable methods.
+
+[options="header", cols="a,a"]
+|====
+|Enumeration|Description
+
+| link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgsubitemtype.html[prpgFilterArea]
+|Value 1 – Represents the entire filter area across the top of the control including the sorting buttons. It ignores `oSubItem` property as there is only one.
+
+| link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgsubitemtype.html[prpgProperty]
+|Value 2 – Represents a Property element, and takes in the DisplayName path to the Property.
+
+| link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgsubitemtype.html[prpgCategory]
+|Value 3 – Represents a Category element, and takes in the DisplayName path to the Category.
+
+| link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgsubitemtype.html[prpgDescription]
+|Value 4 – Represents the entire description area across the bottom of the control. It ignores `oSubItem` property as there is only one.
+
+|====
+
+=== PrpGBrushType
+
+This enumeration represents the brush type of a  _System.Windows.Media.Brush_  .
+
+The following table summarizes the  _XamPropertyGrid_   test object enumeration used in recordable methods.
+
+[options="header", cols="a,a"]
+|====
+|Enumeration|Description
+
+| link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgbrushtype.html[prpgNone]
+|Value 1 – Represents an undefined brush type.
+
+| link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgbrushtype.html[prpgSolid]
+|Value 2 – Represents a one solid color brush type.
+
+| link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgbrushtype.html[prpgRadialGradient]
+|Value 3 – Represents a gradient brush, with a _radial_ fill pattern.
+
+| link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgbrushtype.html[prpgVerticalLinearGradient]
+|Value 4 – Represents a gradient brush, with a _vertical linear_ fill pattern.
+
+| link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgbrushtype.html[prpgHorizontalLinearGradient]
+|Value 5 – Represents a gradient brush, with a _horizontal linear_ fill pattern.
+
+|====
+
+=== PrpGCommandType
+
+This enumeration represents the commands supported by XamPropertyGrid.
+
+Listed below are the commands of the  _Infragistics.Controls.Editors.PropertyGridCommandType_   object.
+
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgAddListEntry]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgRemoveListEntry]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgResetPropertyValue]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgSelectNextItem]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgSelectPreviousItem]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgExpandSelectedItem]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgCollapseSelectedItem]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgToggleSelectedItemExpandedState]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgEnterEditMode]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgExitEditMode]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgSortByCategory]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgSortAlphabetically]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgToggleSortType]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgClearFilterText]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgToggleFilterAreaFocus]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgMoveToHome]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgMoveToEnd]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgScrollLineUp]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgScrollLineDown]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgScrollPageUp]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgScrollPageDown]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgCreateExpandableObject]
+* link:infragisticswpf.test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors.prpgcommandtype.html[prpgShowOptionsMenu]

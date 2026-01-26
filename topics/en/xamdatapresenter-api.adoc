@@ -1,0 +1,45 @@
+﻿////
+|metadata|
+{
+    "name": "xamdatapresenter-api",
+    "controlName": [],
+    "tags": [],
+    "guid": "388758e3-1de1-4f12-a7ae-a9d0f77da918",
+    "buildFlags": [],
+    "createdOn": "2012-02-01T12:58:37.843568Z"
+}
+|metadata|
+////
+
+= xamDataPresenter - API Reference
+
+== _xamDataPresenter_   Test Object API Reference
+
+=== Introduction
+
+This topic provides reference information about the proxy class that supports the testing of the xamDataPresenter™ controls in Micro Focus Unified Functional Testing software.
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|*Proxyclassname*|*Namespace*|*Inheritsfrom*|*Additional notes*
+
+|_ link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter.xamdatapresenterproxy.html[XamDataPresenterProxy]_
+|InfragisticsWPF.Test.DataPresenter
+|
+* _RecordReplayProxyBase_ 
+
+* _IContainSubItems_ 
+
+|The following base click actions are not recorded by default: 
+
+ClickControl 
+
+RightClickControl 
+
+DblClickControl 
+
+|====

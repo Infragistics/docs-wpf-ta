@@ -1,0 +1,106 @@
+﻿////
+
+|metadata|
+{
+    "name": "whats-new-in-2011-volume-2",
+    "controlName": [],
+    "tags": [],
+    "guid": "f63cec92-5d1c-4dbc-b27c-5811ce19f6c9",  
+    "buildFlags": [],
+    "createdOn": "2012-04-11T06:47:26.9078556Z"
+}
+|metadata|
+////
+
+= What's New in 2011 Volume 2
+
+== Topic Overview
+
+=== Purpose
+
+This topic lists the newly supported Infragistics controls introduced with the Ultimate UI for {ProductName} Unified Functional Testing 2011 Volume 2 Release.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref321908365, Supported Ultimate UI for WPF controls >>
+* <<_Ref321908370, Related Content >>
+
+[[_Ref321908365]]
+== Supported Ultimate UI for WPF controls
+
+=== Supported controls summary
+
+The following table summarizes the new supported controls of the {ProductName} 2011 Volume 2 Release.
+
+[options="header", cols="a,a,a"]
+|====
+|Product|Supported control|Corresponding namespace
+
+|Ultimate UI for WPF Line of Business
+|xamCalculationManager™
+|None
+
+|
+|xamComboEditor™
+| link:{ApiPlatform}test.editors.xamcomboeditor~infragisticswpf.test.editors.comboeditor-namespace.html[InfragisticsWPF.Test.Editors.ComboEditor]
+
+|
+|xamCurrenyInput™
+| link:{ApiPlatform}test.editors.xammaskedinput~infragisticswpf.test.editors.maskedinput-namespace.html[InfragisticsWPF.Test.Editors.MaskedInput]
+
+|
+|xamDateTimeInput™
+| link:{ApiPlatform}test.editors.xamdatetimeinput~infragisticswpf.test.editors.datetimeinput-namespace.html[InfragisticsWPF.Test.Editors.DateTimeInput]
+
+|
+|xamFormulaEditor™
+| link:{ApiPlatform}test.formulaeditor~infragisticswpf.test.formulaeditor-namespace.html[InfragisticsWPF.Test.FormulaEditor]
+
+|
+|xamGrid™
+| link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids-namespace.html[InfragisticsWPF.Test.Controls.Grids]
+
+|
+|xamMaskedInput™
+| link:{ApiPlatform}test.editors.xammaskedinput~infragisticswpf.test.editors.maskedinput-namespace.html[InfragisticsWPF.Test.Editors.MaskedInput]
+
+|
+|xamMultiColumnComboEditor™
+| link:{ApiPlatform}test.editors.xamcomboeditor~infragisticswpf.test.editors.comboeditor-namespace.html[InfragisticsWPF.Test.Editors.ComboEditor]
+
+|
+|xamNumericInput™
+| link:{ApiPlatform}test.editors.xammaskedinput~infragisticswpf.test.editors.maskedinput-namespace.html[InfragisticsWPF.Test.Editors.MaskedInput]
+
+|
+|xamTileManager™
+| link:{ApiPlatform}test.xamtilemanager~infragisticswpf.test.tilemanager-namespace.html[InfragisticsWPF.Test.TileManager]
+
+|====
+
+[[_Ref321908370]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:introduction.html[Introduction]
+|This topic introduces the {ProductName} Unified Functional Testing software.
+
+| link:getting-started.html[Getting Started]
+|This is a starting point for getting acquainted with {ProductName} Unified Functional Testing software.
+
+| link:known-issues-and-breaking-changes.html[Known Issues and Breaking Changes]
+|This topic provides information on the currently known issues and limitations related to {ProductName} Unified Functional Testing.
+
+| link:test-automation-for-infragistics-controls.html[Test Automation for Infragistics Controls]
+|The topics below provide reference information about the verifiable properties; recordable and replay-only methods for testing the Ultimate UI for WPF controls.
+
+|====

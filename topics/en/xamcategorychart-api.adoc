@@ -1,0 +1,30 @@
+﻿= xamCategoryChart - API Reference
+
+=== Introduction
+
+This topic provides reference information about the proxy class that supports the testing of the  _XamCategoryChart_™ control in Micro Focus Unified Functional Testing software.
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|*Proxy Class Name*|*Namespace*|*Inherits From*|*Additional Notes*
+
+| link:{ApiPlatform}test.controls.charts.datachart~infragisticswpf.test.charts.datachart.xamcategorychartproxy.html[ _XamCategoryChartProxy_ ]
+| 
+
+InfragisticsWPF.Test.Charts.DataChart
+|
+* _RecordReplayProxyBase_ 
+
+* _IXamDataChartIDProps_ 
+
+* _IXamDataChartReplay_ 
+
+* _TableVerifyBase_ 
+
+|This proxy class implements _TableVerifyBase_ so you can add checkpoint to verify the xamCategoryChart data points
+
+|====

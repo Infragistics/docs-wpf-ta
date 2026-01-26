@@ -1,0 +1,44 @@
+﻿////
+
+|metadata|
+{
+    "name": "xampropertygrid",
+    "controlName": [],
+    "tags": [],
+    "guid": "b1057ede-d46f-494c-95df-dd48c7b9ebb1",  
+    "buildFlags": [],
+    "createdOn": "2014-10-23T19:58:21.1598191Z"
+}
+|metadata|
+////
+
+= xamPropertyGrid
+
+== In This Group of Topics
+
+=== Introduction
+
+The topics in this group explain the XamPropertyGridProxy object and its use. This is the result of adding the  _XamPropertyGrid_™ control to Infragistics® {ProductName} (Unified Functional Testing) supported controls list.
+
+=== Topics
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xampropertygrid-recordable-actions.html[xamPropertyGrid - Recordable Actions]
+|This topic provides information about recordable actions for testing the _XamPropertyGrid_™ control.
+
+| link:xampropertygrid-replay-only-actions.html[xamPropertyGrid - Replay-Only Actions]
+|This topic provides information about replay-only actions for testing the _XamPropertyGrid_™ control.
+
+| link:xampropertygrid-brusheditor-actions.html[xamPropertyGrid - BrushEditor Actions]
+|This topic provides information about BrushEditor actions of the _XamPropertyGrid_™ control.
+
+| link:xampropertygrid-enumeration-reference.html[xamPropertyGrid - Enumeration Reference]
+|This topic provides reference material on the common enumerations used for testing the _XamPropertyGrid_™ control.
+
+| link:xampropertygrid-properties-reference.html[xamPropertyGrid - Properties Reference]
+|This topic provides reference information about the inspectable test object properties of the _XamPropertyGrid_™ control.
+
+|====

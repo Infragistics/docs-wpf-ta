@@ -1,0 +1,35 @@
+﻿////
+|metadata|
+{
+    "name": "xamnetworknode-enumeration-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "ef51d58f-6b38-4f59-ba46-434dd787a651",
+    "buildFlags": [],
+    "createdOn": "2012-10-29T18:20:22.3901315Z"
+}
+|metadata|
+////
+
+= xamNetworkNode - Enumeration Reference
+
+== _xamNetworkNode_   Test Object Enumerations Reference
+
+=== Introduction
+
+This topic provides reference information about the common enumerations used for testing the  _xamNetworkNode_™ control.
+
+[[_Ref337672876]]
+
+=== Enumerations reference chart
+
+The following table summarizes the  _xamNetworkNode_   test object enumerations used to define, in most recordable methods, which  _xamNetworkNode_   item performed the user interaction.
+
+[options="header", cols="a,a"]
+|====
+|Enumeration|Description
+
+| link:infragisticswpf.test.networknode~infragisticswpf.test.networknode.xamnetworknodeproxy+networknodeselectableitemtype~nwknode.html[nwkNode]
+|This enumeration represents the type of sub items of the _xamNetworkNode_ control.
+
+|====

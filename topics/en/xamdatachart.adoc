@@ -1,0 +1,43 @@
+﻿////
+|metadata|
+{
+    "name": "xamdatachart",
+    "controlName": [],
+    "tags": [],
+    "guid": "cd84cab0-5845-4555-af91-32eae5e3c658",
+    "buildFlags": [],
+    "createdOn": "2012-01-23T07:18:15.0302135Z"
+}
+|metadata|
+////
+
+= xamDataChart
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamdatachartproxy.html[XamDataChartProxy] object in {ProductName}.
+
+=== Topics
+
+The topics contained in this section cover implementing action elements, methods and properties within the  _xamDataChart™_   control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamdatachart-testable-user-actions-and-elements.html[xamDataChart - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamDataChart_ control which you can test and the elements you can inspect.
+
+| link:xamdatachart-recordable-methods.html[xamDataChart - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamDataChart_ control.
+
+| link:xamdatachart-replay-only-methods.html[xamDataChart - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the _xamDataChart_ control.
+
+| link:xamdatachart-property-reference.html[xamDataChart - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the _xamDataChart_ control.
+
+| link:xamdatachart-api.html[xamDataChart - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamDataChart_ control in Micro Focus Unified Functional Testing software.
+
+|====

@@ -1,0 +1,15 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamdatapresenter-recordable-actions",
+    "controlName": [],
+    "tags": [],
+    "guid": "1996eeb9-8fc8-451e-b498-3d793c01525c",  
+    "buildFlags": [],
+    "createdOn": "2015-04-06T19:52:33.5990748Z"
+}
+|metadata|
+////
+
+= xamDataPresenter - Recordable Actions

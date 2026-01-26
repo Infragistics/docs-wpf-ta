@@ -1,0 +1,80 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamspreadsheet-custom-properties-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "ca925873-a3c3-4ff4-a4bd-b42638e34b4e",  
+    "buildFlags": [],
+    "createdOn": "2014-11-17T13:03:07.9562931Z"
+}
+|metadata|
+////
+
+= Custom Properties - xamSpreadsheet
+
+== _XamSpreadsheet_   Custom Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the  _XamSpreadsheet_   proxy base custom properties. Custom properties are extended from the type of objects referenced below using control property access methods (See link:accessing-controls-properties.html[Accessing Controls' Properties] for more details).
+
+=== ReflectionHelper CustomProperties
+
+The following table summarizes the custom properties for XamSpreadsheet.
+
+[options="header", cols="a,a,a"]
+|====
+|Custom property|Applied Object Type|Returns…
+
+| _Rect_ 
+|Infragistics.Documents.Excel.WorksheetCell
+|_System.Windows.Rect_
+
+| _Text_ 
+|Infragistics.Documents.Excel.WorksheetCell
+| _System.String_ 
+
+| _Formula_ 
+|Infragistics.Documents.Excel.WorksheetCell
+| _System.String_ 
+
+| _CellFormatResolved_ 
+|Infragistics.Documents.Excel.WorksheetCell
+| _Infragistics.Documents.Excel.IWorksheetCellFormat_ 
+
+| _Rect_ 
+|Infragistics.Documents.Excel.WorksheetColumn
+| _System.Windows.Rect_ 
+
+| _Rect_ 
+|Infragistics.Documents.Excel.WorksheetRow
+| _System.Windows.Rect_ 
+
+|====
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamspreadsheet-recordable-actions.html[xamSpreadsheet - Recordable Actions]
+|This topic provides information about the recordable user actions for testing the _XamSpreadsheet_™ control.
+
+| link:xamspreadsheet-replay-only-actions.html[xamSpreadsheet - Replay-Only Actions]
+|This topic provides information about the replay only user actions for testing the _XamSpreadsheet_™ control.
+
+| link:xamspreadsheet-properties-reference.html[xamSpreadsheet - Properties Reference]
+|This topic provides reference information about the _XamSpreadsheet_™ control’s test object properties.
+
+| link:xamspreadsheet-enumerations-reference.html[amSpreadsheet - Enumerations Reference]
+|This topic provides reference material on the common enumerations used for testing the _XamSpreadsheet_™ control.
+
+|====

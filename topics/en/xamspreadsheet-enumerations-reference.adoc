@@ -1,0 +1,386 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamspreadsheet-enumerations-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "6083abad-8469-4277-8a27-5322ee6a1af9",  
+    "buildFlags": [],
+    "createdOn": "2014-11-17T13:17:17.5266678Z"
+}
+|metadata|
+////
+
+= xamSpreadsheet - Enumerations Reference
+
+== _XamSpreadsheet_   Enumerations Reference
+
+=== Introduction
+
+This topic provides reference material on the common enumerations used for testing the  _XamSpreadsheet_™ control.
+
+=== SshtCellDataType
+
+This enumeration represents the type of cell data that will be returned from the GetCellData action.
+
+The following table lists all the values of the enumeration.
+
+[options="header", cols="a,a"]
+|====
+|Enumeration|Description
+
+| link:infragisticswpf.test.controls.grids.xamspreadsheet~infragisticswpf.test.controls.grids.sshtcelldatatype.html[sshtCellTypeValue]
+|Value 1 – Represents returning of the value of the cell. So if a formula is being used in the cell this will return the calculated value.
+
+| link:infragisticswpf.test.controls.grids.xamspreadsheet~infragisticswpf.test.controls.grids.sshtcelldatatype.html[sshtCellTypeFormula]
+|Value 2 – Represents returning the formula of a cell if it has one, if it does not will return an empty string.
+
+| link:infragisticswpf.test.controls.grids.xamspreadsheet~infragisticswpf.test.controls.grids.sshtcelldatatype.html[sshtCellTypeText]
+|Value 3 – Represents returning the formatted text of the cell.
+
+|====
+
+=== SshtExitEditType
+
+This enumeration represents the different means to commit or discard the data when the cell is done editing.
+
+The following table lists all the values of the enumeration.
+
+[options="header", cols="a,a"]
+|====
+|Enumeration|Description
+
+| link:infragisticswpf.test.controls.grids.xamspreadsheet~infragisticswpf.test.controls.grids.sshtexitedittype.html[sshtUpdateSelectedCells]
+|Value 1 – Represents committing the data entered to every currently selected cell.
+
+| link:infragisticswpf.test.controls.grids.xamspreadsheet~infragisticswpf.test.controls.grids.sshtexitedittype.html[sshtCreateArrayFormula]
+|Value 2 – Represents committing the data as an array formula, which only affects the active cell range, if more than range of cells is selected.
+
+| link:infragisticswpf.test.controls.grids.xamspreadsheet~infragisticswpf.test.controls.grids.sshtexitedittype.html[sshtUpdateActiveCellOnly]
+|Value 3 – Represents committing the data to only the currently active cell.
+
+| link:infragisticswpf.test.controls.grids.xamspreadsheet~infragisticswpf.test.controls.grids.sshtexitedittype.html[sshtDiscardChanges]
+|Value 4 – Represents discarding the modified cell data and reverting to the previous data.
+
+|====
+
+=== SshtCommandType
+
+This enumeration represents the executable commands that can be invoked via the PerformCommand method supported by XamSpreadsheet. As these commands execute the similarly named IG Controls commands, for more information review the online documentation
+
+Listed below are the commands of the  _Infragistics.Controls.Grids.SpreadsheetCommandType_  .
+
+[cols="a,a"]
+|====
+|sshtActivatePreviousPane
+|sshtClearContents
+
+|sshtActivateNextPane
+|sshtSelectCurrentArray
+
+|sshtCellInSelectionRight
+|sshtCellInNextSelectionRange
+
+|sshtCellInSelectionLeft
+|sshtCellInPreviousSelectionRange
+
+|sshtCellInSelectionAbove
+|sshtSelectVisibleCellsOnly
+
+|sshtCellInSelectionBelow
+|sshtSelectActiveCellOnly
+
+|sshtCellRight
+|sshtRedo
+
+|sshtCellLeft
+|sshtUndo
+
+|sshtCellAbove
+|sshtEnterKeyNavigation
+
+|sshtCellBelow
+|sshtShiftEnterKeyNavigation
+
+|sshtCellWithDataLeft
+|sshtHideColumns
+
+|sshtCellWithDataRight
+|sshtUnhideColumns
+
+|sshtCellWithDataAbove
+|sshtHideRows
+
+|sshtCellWithDataBelow
+|sshtUnhideRows
+
+|sshtEdgeCellWithDataLeft
+|sshtAutoFitRowHeight
+
+|sshtEdgeCellWithDataRight
+|sshtAutoFitColumnWidth
+
+|sshtEdgeCellWithDataAbove
+|sshtMergeCellsAcross
+
+|sshtEdgeCellWithDataBelow
+|sshtMergeCells
+
+|sshtCellPageBelow
+|sshtMergeCellsAndCenter
+
+|sshtCellPageAbove
+|sshtUnmergeCells
+
+|sshtCellPageRight
+|sshtAddNewWorksheet
+
+|sshtCellPageLeft
+|sshtInsertNewWorksheets
+
+|sshtScrollLeft
+|sshtActivateNextWorksheet
+
+|sshtScrollRight
+|sshtActivatePreviousWorksheet
+
+|sshtScrollUp
+|sshtActivateAndSelectNextWorksheet
+
+|sshtScrollDown
+|sshtActivateAndSelectPreviousWorksheet
+
+|sshtScrollPageLeft
+|sshtScrollNextWorksheet
+
+|sshtScrollPageRight
+|sshtScrollPreviousWorksheet
+
+|sshtScrollPageAbove
+|sshtScrollToFirstWorksheet
+
+|sshtScrollPageBelow
+|sshtScrollToLastWorksheet
+
+|sshtFirstCellInRow
+|sshtActivatePreviousOutOfViewWorksheet
+
+|sshtFirstCellInView
+|sshtActivateNextOutOfViewWorksheet
+
+|sshtFirstCellInWorksheet
+|sshtSelectAllWorksheets
+
+|sshtFirstScrollableCellInRow
+|sshtUnselectWorksheets
+
+|sshtFirstScrollableCellInWorksheet
+|sshtRenameWorksheet
+
+|sshtLastCellInView
+|sshtDeleteWorksheets
+
+|sshtEnterEndMode
+|sshtZoomIn
+
+|sshtExitEndMode
+|sshtZoomOut
+
+|sshtLastUsedCell
+|sshtZoomToSelection
+
+|sshtLastUsedCellInRow
+|sshtZoomTo100
+
+|sshtSelectCurrentRegion
+|sshtToggleBold
+
+|sshtSelectCellRight
+|sshtToggleItalic
+
+|sshtSelectCellLeft
+|sshtToggleStrikeThrough
+
+|sshtSelectCellAbove
+|sshtToggleWrapText
+
+|sshtSelectCellBelow
+|sshtIncreaseIndentation
+
+|sshtSelectCellWithDataLeft
+|sshtDecreaseIndentation
+
+|sshtSelectCellWithDataRight
+|sshtIncreaseFontSize
+
+|sshtSelectCellWithDataAbove
+|sshtDecreaseFontSize
+
+|sshtSelectCellWithDataBelow
+|sshtAlignHorizontalCenter
+
+|sshtSelectEdgeCellWithDataLeft
+|sshtAlignHorizontalJustify
+
+|sshtSelectEdgeCellWithDataRight
+|sshtAlignHorizontalLeft
+
+|sshtSelectEdgeCellWithDataAbove
+|sshtAlignHorizontalRight
+
+|sshtSelectEdgeCellWithDataBelow
+|sshtAlignVerticalTop
+
+|sshtSelectCellPageBelow
+|sshtAlignVerticalMiddle
+
+|sshtSelectCellPageAbove
+|sshtAlignVerticalBottom
+
+|sshtSelectCellPageRight
+|sshtToggleSplitPanes
+
+|sshtSelectCellPageLeft
+|sshtToggleFreezePanes
+
+|sshtSelectFirstCellInRow
+|sshtFreezeFirstRow
+
+|sshtSelectFirstCellInView
+|sshtFreezeFirstColumn
+
+|sshtSelectFirstCellInWorksheet
+|sshtRemoveColumnScrollRegionSplit
+
+|sshtSelectFirstScrollableCellInRow
+|sshtSnapColumnScrollRegionSplit
+
+|sshtSelectFirstScrollableCellInWorksheet
+|sshtRemoveRowScrollRegionSplit
+
+|sshtSelectLastCellInView
+|sshtSnapRowScrollRegionSplit
+
+|sshtSelectLastUsedCell
+|sshtRemoveScrollRegionSplits
+
+|sshtSelectLastUsedCellInRow
+|sshtSnapScrollRegionSplits
+
+|sshtSelectRows
+|sshtDeleteRows
+
+|sshtSelectColumns
+|sshtInsertRows
+
+|sshtSelectAllCells
+|sshtDeleteColumns
+
+|sshtSwitchToNormalSelectionMode
+|sshtInsertColumns
+
+|sshtSwitchToExtendSelectionMode
+|sshtCut
+
+|sshtSwitchToAddToSelectionMode
+|sshtCopy
+
+|sshtFirstCellInViewWithinSelection
+|sshtPaste
+
+|sshtLastCellInViewWithinSelection
+|sshtToggleCellEditMode
+
+|sshtEnterEditMode
+|sshtInsertCellsShiftRight
+
+|sshtEnterEditModeAndClearValue
+|sshtInsertCellsShiftDown
+
+|sshtExitEditModeAndUpdateActiveCell
+|sshtDeleteCellsShiftLeft
+
+|sshtExitEditModeAndUpdateSelectedCells
+|sshtDeleteCellsShiftUp
+
+|sshtExitEditModeAndCreateArrayFormula
+|sshtInsertCells
+
+|sshtExitEditModeAndDiscardChanges
+|sshtDeleteCells
+
+|sshtClearFormats
+|sshtToggleShowFormulasInCells
+
+|sshtToggleUnderline
+|sshtToggleDoubleUnderline
+
+|sshtFirstUnlockedCell
+|sshtLastUnlockedCell
+
+|sshtToggleSuperscript
+|sshtToggleSubscript
+
+|sshtOpenHyperlink
+|sshtRemoveHyperlinks
+
+|sshtClearHyperlinks
+|
+
+|====
+
+=== SshtSubItemType
+
+This enumeration representing the selectable item types for the XamSpreadsheet.
+
+The following table lists all the values of the enumeration.
+
+[options="header", cols="a,a"]
+|====
+|Enumeration|Description
+
+| link:infragisticswpf.test.controls.grids.xamspreadsheet~infragisticswpf.test.controls.grids.sshtsubitemtype.html[sshtCell]
+|Value 1 – SubItem representing a Spreadsheet cell
+
+| link:infragisticswpf.test.controls.grids.xamspreadsheet~infragisticswpf.test.controls.grids.sshtsubitemtype.html[sshtColumn]
+|Value 2 – SubItem representing a Spreadsheet column
+
+| link:infragisticswpf.test.controls.grids.xamspreadsheet~infragisticswpf.test.controls.grids.sshtsubitemtype.html[sshtRow]
+|Value 3 – SubItem representing a Spreadsheet row
+
+| link:infragisticswpf.test.controls.grids.xamspreadsheet~infragisticswpf.test.controls.grids.sshtsubitemtype.html[sshtSheet]
+|Value 4 – SubItem representing a Spreadsheet Worksheet
+
+| link:infragisticswpf.test.controls.grids.xamspreadsheet~infragisticswpf.test.controls.grids.sshtsubitemtype.html[sshtFormulaBarNameBox]
+|Value 5 – SubItem representing the formula bar name box
+
+| link:infragisticswpf.test.controls.grids.xamspreadsheet~infragisticswpf.test.controls.grids.sshtsubitemtype.html[sshtFormulaBarTextEditor]
+|Value 6 – SubItem representing the formula bar Text editor
+
+|====
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamspreadsheet-recordable-actions.html[xamSpreadsheet - Recordable Actions]
+|This topic provides information about the recordable user actions for testing the _XamSpreadsheet_™ control.
+
+| link:xamspreadsheet-replay-only-actions.html[xamSpreadsheet - Replay-Only Actions]
+|This topic provides information about the replay only user actions for testing the _XamSpreadsheet_™ control.
+
+| link:xamspreadsheet-custom-properties-reference.html[Custom Properties - xamSpreadsheet]
+|This topic provides reference information about the _xamSpreadsheet's_ custom properties embedded to objects of the identified types via the Control Property Access methods.
+
+| link:xamspreadsheet-properties-reference.html[xamSpreadsheet - Properties Reference]
+|This topic provides reference information about the _XamSpreadsheet_™ control’s test object properties.
+
+|====

@@ -1,0 +1,54 @@
+﻿////
+
+|metadata|
+{
+    "name": "xammenu-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "52d1e9ec-585d-487b-8f86-5bd7d959f275",  
+    "buildFlags": [],
+    "createdOn": "2012-01-31T21:23:53.2920548Z"
+}
+|metadata|
+////
+
+= xamMenu - Property Reference
+
+== _xamMenu_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the inspectable test object properties of the xamMenu™ control.
+
+=== Properties reference chart
+
+The table below summarizes the control’s test object properties and the tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+|childmenuitems
+|a list of headers of all visible sub-menu items of the selected menu. 
+
+If the item has no header, an empty string is returned. 
+
+If the item’s _Visibility_ property is set to _Hidden_, the text _Hidden_ is returned.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+|childmenuitemscount
+|the number of the visible sub-menu items of the selected menu.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+|expandonhover
+|_True_, if a menu item can expand its submenus (if any) on a mouse hover.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+|====

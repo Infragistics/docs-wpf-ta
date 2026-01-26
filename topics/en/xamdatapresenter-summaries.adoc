@@ -1,0 +1,211 @@
+﻿////
+|metadata|
+{
+    "name": "xamdatapresenter-summaries",
+    "controlName": [],
+    "tags": [],
+    "guid": "d5fb468a-d0dd-4410-a93f-00f5c6b0bd44",
+    "buildFlags": [],
+    "createdOn": "2012-02-07T17:21:19.2872934Z"
+}
+|metadata|
+////
+
+= Summaries
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods for testing the summary feature in  _xamDataPresenter_™ controls.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_summary,Recordable Methods>>
+
+** <<_CloseSummaryDropDown,CloseSummaryDropDown>>
+** <<_OpenSummaryDropDown,OpenSummaryDropDown>>
+
+* <<_Rel,Related Content>>
+
+[[_summary]]
+== Recordable Methods Summary
+
+=== Recordable methods summary chart
+
+The following table briefly explains the recordable methods for testing the control. Detailed information about the methods is provided in the text blocks following the table.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|*Description*
+
+|_CloseSummaryDropDown_
+|Closes a summary selection dialog box for specified header.
+
+|_OpenSummaryDropDown_
+|Opens a summary selection dialog box for specified header.
+
+|====
+
+[[_CloseSummaryDropDown]]
+== _CloseSummaryDropDown_  Method
+
+=== Description
+
+The  _CloseSummaryDropDown_  method is used for recording and replaying the closing of the summary drop-down menu.
+
+=== Details
+
+This method takes a header path as a required parameter.
+
+The path is formed by concatenating the record path and the field name or field index (the parenthesis and the brackets are part of the syntax):
+
+{record path}[field name or field index]
+
+For example, the cross-section of the first record and the field  _name_  is denoted as  _{0_  _}[_  _name]_, the cross-section of the first child record of the first record and the field  _name_  is denoted as  _{0}{0}[name]_ .
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Header path
+|Using the header path as a parameter. 
+
+*Example*
+
+Closing of the summary menu for _amount_ field: 
+
+WpfWindow("MainWindow").XamDataGrid("XamDataGrid1").CloseSummaryDropDown "{0}[amount]"
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following items have not been found.
+|The specified item cannot be located when replaying the method.
+|The selected item path is not correct.
+
+|The argument is malformed.
+|The parameter is not format correctly.
+|The method parameter is not correctly formatted.
+
+|Summaries are not allowed for the supplied field.
+|Summary cannot be performed when replaying the method.
+|Summaries are disabled.
+
+|Summary Icon is not visible
+|Summary cannot be performed when replaying the method.
+|
+
+|====
+
+[[_OpenSummaryDropDown]]
+== _OpenSummaryDropDown_  Method
+
+=== Description
+
+The  _OpenSummaryDropDown_  method is used for recording and replaying the opening of the summary drop-down menu.
+
+=== Details
+
+This method takes a header path as a required parameter.
+
+The path is formed by concatenating the record path and the field name or field index (the parenthesis and the brackets are part of the syntax):
+
+{record path}[field name or field index]
+
+For example, the cross-section of the first record and the field  _name_  is denoted as  _{0_  _}[_  _name]_, the cross-section of the first child record of the first record and the field  _name_  is denoted as  _{0}{0}[name]_ .
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Header path
+|Using the header path as a parameter. 
+
+*Example*
+
+Opening of the summary menu for _amount_ field _,_ choosing summary operation _S_ _um_ and confirming the action by clicking the _Ok_ button. 
+
+WpfWindow("MainWindow").XamDataGrid("XamDataGrid1").OpenSummaryDropDown "{0}[amount]" 
+
+WpfWindow("MainWindow").WpfCheckBox("Sum").Set "On" 
+
+WpfWindow("MainWindow").WpfButton("Ok").Click
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following items have not been found.
+|The specified item cannot be located when replaying the method.
+|The selected item path is not correct.
+
+|The argument is malformed.
+|The parameter is not format correctly.
+|The method parameter is not correctly formatted.
+
+|Summaries are not allowed for the supplied field.
+|Summary cannot be performed when replaying the method.
+|Summaries are disabled.
+
+|Summary Icon is not visible
+|Summary cannot be performed when replaying the method.
+|
+
+|====
+
+[[_Rel]]
+== Related Content
+
+=== Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamdatapresenter-editing.html[Editing]
+|This topic provides reference information about the recordable user methods for testing the editing in _xamDataPresenter_ controls.
+
+| link:xamdatapresenter-filtering.html[Filtering]
+|This topic provides reference information about the recordable user methods for testing the filtering in _xamDataPresenter_ controls.
+
+| link:xamdatapresenter-navigatingselecting.html[Navigating and Selecting]
+|This topic provides reference information about the recordable user methods for testing the navigation and selection actions in _xamDataPresenter_ controls.
+
+| link:xamdatapresenter-sorting-grouping.html[Sorting and Grouping]
+|This topic provides reference information about the recordable user methods for testing the sorting and grouping user actions in _xamDataPresenter_ controls.
+
+|====

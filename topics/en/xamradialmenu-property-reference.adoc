@@ -1,0 +1,55 @@
+﻿////
+|metadata|
+{
+    "name": "xamradialmenu-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "62ad12ea-a1fb-4fde-b207-a248eb3dbb26",
+    "buildFlags": [],
+    "createdOn": "2014-04-30T19:17:52.8930938Z"
+}
+|metadata|
+////
+
+= xamRadialMenu - Property Reference
+
+== _XamRadialMenu_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the  _XamRadialMenu_™ control’s test object properties.
+
+=== Properties reference chart
+
+The following table summarizes the control’s test object properties and tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+|_link:{ApiPlatform}test.controls.menus.xamradialmenu~infragisticswpf.test.controls.menus.xamradialmenuproxy~visibleitems.html[VisibleItems]_
+|Returns a delimited string of the visible RadialMenu items.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_link:{ApiPlatform}test.controls.menus.xamradialmenu~infragisticswpf.test.controls.menus.xamradialmenuproxy~visibleitemcount.html[VisibleItemCount]_
+|Returns the integer number of the visible RadialMenu items.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_link:{ApiPlatform}test.controls.menus.xamradialmenu~infragisticswpf.test.controls.menus.xamradialmenuproxy~isopen.html[IsOpen]_
+|Returns a Boolean value to indicate whether the RadialMenu is open ( _True_ ) or closed ( _False_ ).
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====

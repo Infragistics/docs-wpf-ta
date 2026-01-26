@@ -1,0 +1,354 @@
+﻿////
+|metadata|
+{
+    "name": "xamdialogwindow-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "5c8d65a3-a948-4d7e-9a0c-fdcd7feb3dd7",
+    "buildFlags": [],
+    "createdOn": "2012-01-26T09:56:55.8782856Z"
+}
+|metadata|
+////
+
+= xamDialogWindow - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods for testing the xamDialogWindow™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_summary, _xamDialogWindow_   Test Object Recordable Methods>>
+
+** <<_Move,Move>>
+** <<_Resize,Resize>>
+** <<_Maximize,Maximize>>
+** <<_Minimize,Minimize>>
+** <<_Restore,Restore>>
+** <<_Close,Close>>
+
+* <<_ref1,Related Content>>
+
+[[_summary]]
+== _xamDialogWindow_   Test Object Recordable Methods
+
+=== Recordable methods summary chart
+
+The following table briefly explains the recordable methods for testing the control. Detailed information about the methods is provided in the text blocks following the table.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|*Description*
+
+|<<_Move,Move>>
+|Moves the xamDialogWindow.
+
+|<<_Resize,Resize>>
+|Resizes the xamDialogWindow.
+
+|<<_Maximize,Maximize>>
+|Maximizes the xamDialogWindow.
+
+|<<_Minimize,Minimize>>
+|Minimizes the xamDialogWindow.
+
+|<<_Restore,Restore>>
+|Restores the xamDialogWindow to its previous state..
+
+|<<_Close,Close>>
+|Closes the xamDialogWindow.
+
+|====
+
+[[_Move]]
+== _Move_
+
+=== Description
+
+The  _Move_  method moves the xamDialogWindow to the specified location. It is used for recording and replaying the move action performed by the user.
+
+=== Details
+
+When replaying the method, the X parameter value is assigned to the xamDialogWindow control’s Left property; the Y parameter value - to the Top property.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameter*|*Description*
+
+|
+* X 
+
+* Y 
+
+|The X and Y parameters specify the new position of the xamDialogWindow. They are of type Double. 
+
+*Example*
+
+Moving the xamDialogWindow to position X – 150, Y - 300 : 
+
+WpfWindow("DWMainWindow").XamDialogWindow("xamDialogWindow1").Move 150, 300
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception* *name*|*Exception description*|*Possible reasons*
+
+|The specified action ["Move"] is not valid when : 
+
+"IsMoveable =
+|An exception is thrown when trying to replay the move action.
+|The xamDialogWindow control’s IsMoveable property is set to _False_ (the moving is disabled).
+
+|====
+
+[[_Resize]]
+== _Resize_
+
+=== Description
+
+The  _Resize_  method is used for recording and replaying the resizing action performed by the user on the xamDialogWindow control.
+
+=== Details
+
+When replaying the method, the Width parameter value is assigned to the xamDialogWindow control’s Width property; the Height parameter value - to the Height property.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameter*|*Description*
+
+|
+* Width 
+
+* Height 
+
+|The Width and Height parameters specify the new size of the xamDialogWindow. They are of type Double. 
+
+*Example*
+
+Resizing the xamDialogWindow to new width 300 and new height 200: 
+
+WpfWindow("DWMainWindow").XamDialogWindow("xamDialogWindow1").Resize 300, 200
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The specified action ["Resize"] is not valid when : 
+
+"IsResizable =
+|An exception is thrown when trying to replay the resizing action.
+|The xamDialogWindow control’s IsResizable property is set to _False_ (the resizing is disabled).
+
+|====
+
+[[_Maximize]]
+== _Maximize_
+
+=== Description
+
+The  _Maximize_  method is used for recording and replaying the maximizing action performed by the user on the xamDialogWindow control.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+No parameters are used with this method.
+
+*Example*
+
+Maximizing the xamDialogWindow:
+
+WpfWindow("DWMainWindow").XamDialogWindow("xamDialogWindow1").Maximize
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|Cannot perform the specified action ["Maximize"].
+|An exception is thrown when trying to replay the maximizing action.
+|The xamDialogWindow control’s MaximizeButtonVisibility property is set to _Collapsed_ or to _Hidden_ .
+
+|====
+
+[[_Minimize]]
+== _Minimize_
+
+=== Description
+
+The  _Minimize_  method is used for recording and replaying the minimizing action performed by the user on the xamDialogWindow control.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+No parameters are used with this method.
+
+*Example*
+
+Minimizing the xamDialogWindow:
+
+WpfWindow("DWMainWindow").XamDialogWindow("xamDialogWindow1").Minimize
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|Cannot perform the specified action ["Minimize"].
+|An exception is thrown when trying to replay the minimizing action.
+|The xamDialogWindow control’s MinimizeButtonVisibility property is set to _Collapsed_ or to _Hidden_ .
+
+|====
+
+[[_Restore]]
+== _Restore_
+
+=== Description
+
+The  _Restore_  method is used for recording and replaying the restoring the xamDialogWindow to a normal state after being maximized or minimized.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+No parameters are used with this method.
+
+*Example*
+
+Restoring the xamDialogWindow to its normal size after being maximized:
+
+WpfWindow("DWMainWindow").XamDialogWindow("xamDialogWindow1").Maximize
+
+WpfWindow("DWMainWindow").XamDialogWindow("xamDialogWindow1").Restore
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|Cannot perform the specified action ["Restore"].
+|An exception is thrown when trying to replay the restoring action.
+|The xamDialogWindow state is already set to _Normal_ .
+
+|====
+
+[[_Close]]
+== _Close_
+
+=== Description
+
+This method is used for recording and replaying the closing of the xamDialogWindow.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+No parameters are used with this method.
+
+*Example*
+
+Closing of the xamDialogWindow:
+
+WpfWindow("DWMainWindow").XamDialogWindow("xamDialogWindow1").Close
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|Cannot perform the specified action ["Close"].
+|An exception is thrown when trying to replay the closing action.
+|The xamDialogWindow control’s CloseButtonVisibility property is set to _Collapsed_ or to _Hidden_ .
+
+|====
+
+[[_ref1]]
+== Related Content
+
+=== Topics
+
+The following table lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamdialogwindow-testable-user-actions-and-elements.html[xamDialogWindow - Testable User Actions and Elements]
+|This topic provides information about the user actions of the xamDialogWindow™ control which you can test and the elements you can inspect.
+
+| link:xamdialogwindow-property-reference.html[xamDialogWindow - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamDialogWindow™ control.
+
+| link:xamdialogwindow-api.html[xamDialogWindow - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamDialogWindow™ control in Micro Focus Unified Functional Testing software.
+
+|====

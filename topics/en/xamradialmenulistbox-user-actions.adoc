@@ -1,0 +1,56 @@
+﻿////
+|metadata|
+{
+    "name": "xamradialmenulistbox-user-actions",
+    "controlName": [],
+    "tags": [],
+    "guid": "0f359b53-7838-42e6-ae2e-106e2b30fff1",
+    "buildFlags": [],
+    "createdOn": "2014-04-30T19:19:35.7123747Z"
+}
+|metadata|
+////
+
+= xamRadialMenuListBox - User Actions
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the  _XamRadialMenuListBox_™ control’s user actions represented by link:{ApiPlatform}test.controls.menus.xamradialmenu~infragisticswpf.test.controls.menus.radialmenulistboxproxy.html[XamRadialMenuListBoxProxy] object.
+
+== _XamRadialMenuListBox_   User Actions
+
+=== Actions chart
+
+The following table lists the  _XamRadialMenuListBox_   control’s user actions and maps them to the recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|User action|Method
+
+|Clicking on a dropdown item selects a RadialMenu list item.
+|_link:{ApiPlatform}test.controls.menus.xamradialmenu~infragisticswpf.test.controls.menus.radialmenulistboxproxy~select.html[Select]_
+
+|Clicking outside of the list box or pressing `Esc` key on the keyboard closes the RadialMenu list box.
+|_link:{ApiPlatform}test.controls.menus.xamradialmenu~infragisticswpf.test.controls.menus.radialmenulistboxproxy~close.html[Close]_
+
+|====
+
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamradialmenulistbox-recordable-methods.html[xamRadialMenuListBox - Recordable Methods]
+|This topic provides information about the recordable methods for testing the _XamRadialMenuListBox_ control.
+
+| link:xamradialmenulistbox-property-reference.html[xamRadialMenuListBox - Property Reference]
+|This topic provides reference information about the _XamRadialMenuListBox_ control’s test object properties.
+
+|====

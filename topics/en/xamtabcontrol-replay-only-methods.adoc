@@ -1,0 +1,329 @@
+﻿////
+|metadata|
+{
+    "name": "xamtabcontrol-replay-only-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "a637d059-b0ee-46ed-b93a-ae88d2b8be60",
+    "buildFlags": [],
+    "createdOn": "2012-01-20T12:48:21.9275483Z"
+}
+|metadata|
+////
+
+= xamTabControl - Replay-Only Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the replay-only user methods for testing the  _XamTabControl_™.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_xamTabControl_Replay_Only_Methods, _xamTabControl Test Object Replay-Only Methods_  >>
+
+** <<_IsTabEnabled_Method, _IsTabEnabled_  >>
+** <<_GetSelection_Method, _GetSelection_  >>
+** <<_GetItemsCount_Method, _GetItemsCount_  >>
+** <<_GetItem_Method, _GetItem_  >>
+** <<_GetContent_Method, _GetContent_  >>
+
+* <<_ref1,Related Content>>
+
+[[_xamTabControl_Replay_Only_Methods]]
+== _xamTabControl_   Test Object Replay-Only Methods
+
+=== Replay-only methods summary chart
+
+The following table briefly explains the replay-only methods for testing the control. Detailed information about the methods is provided below the table.
+
+[options="header", cols="a,a"]
+|====
+|Method|Description
+
+|_<<_IsTabEnabled_Method,IsTabEnabled>>_
+|Returns _True_ if the specified tab is enabled.
+
+|_<<_GetSelection_Method,GetSelection>>_
+|Returns the selected tab header text as string value*.*
+
+|_<<_GetItemsCount_Method,GetItemsCount>>_
+|Returns the number of tabs.
+
+|_<<_GetItem_Method,GetItem>>_
+|Returns the header of the specified tab as a string value.
+
+|_<<_GetContent_Method,GetContent>>_
+|Returns a new line-delimited list of tabs’ headers.
+
+|====
+
+[[_IsTabEnabled_Method]]
+== _IsTabEnabled_
+
+=== Description
+
+The  _IsTabEnabled_  method returns  _True_  if the specified tab is enabled.
+
+=== Details
+
+The method accepts as a parameter either the tab header text or the tab index. Using the tab index is necessary when the header text of the specified tab is not unique.
+
+=== Parameters
+
+The following table explains the method’s parameters together with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|Method Parameter|Description
+
+|Tab header text
+|Using the tab header text as a parameter. 
+
+*Example*
+
+Checking if the first tab with header “Tab1” is enabled to close it: 
+
+If WpfWindow("MainWindow").XamTabControl("xamTabControl1").IsTabEnabled("Tab1")=True Then 
+
+WpfWindow("MainWindow").XamTabControl("xamTabControl1").CloseTab "Tab1" 
+
+End If
+
+|tab index
+|Using the tab index as a parameter. 
+
+*Example*
+
+Checking if the first tab with index 0 is enabled to close it: 
+
+If WpfWindow("MainWindow").XamTabControl("xamTabControl1").IsTabEnabled(0)=True Then 
+
+WpfWindow("MainWindow").XamTabControl("xamTabControl1").CloseTab 0 
+
+End If
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|Exception name|Exception description|Possible reasons
+
+|The following item was not found.
+|The selected tab cannot be located when replaying the method.
+|
+* The tab has been closed already. 
+
+* The tab doesn’t exist. 
+
+|====
+
+[[_GetSelection_Method]]
+== _GetSelection_
+
+=== Description
+
+The  _GetSelection_  method returns the selected tab header as string value.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+No parameters are used with this method.
+
+*Example*
+
+Display a message box with the header of the selected tab:
+
+msgbox(WpfWindow("MainWindow").XamTabControl("xamTabControl1").GetSelection())
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+No known exceptions.
+
+[[_GetItemsCount_Method]]
+== _GetItemsCount_
+
+=== Description
+
+The  _GetItemsCount_  method returns the number of tabs.
+
+=== Details
+
+When used without parameter, only visible tabs are counted. Including the hidden tabs in the count, requires using the  _True_  parameter.
+
+=== Parameters
+
+The following table explains the method’s parameters together with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|Method Parameter|Description
+
+|[[_Hlk314234170]] 
+
+_True_
+|Returns both the visible and the hidden tabs count. 
+
+*Example*
+
+Displaying a message box with the total number of the tabs (visible and hidden): 
+
+msgbox(WpfWindow("MainWindow").XamTabControl("xamTabControl1").GetItemsCount(True))
+
+|None
+|Returns only the visible tabs count. 
+
+*Example*
+
+Displaying a message box with the number of visible tabs: 
+
+msgbox(WpfWindow("MainWindow").XamTabControl("xamTabControl1").GetItemsCount())
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+No known exceptions.
+
+[[_GetItem_Method]]
+== _GetItem_
+
+=== Description
+
+The  _GetItem_  returns the header of the specified tab as a string value.
+
+=== Details
+
+The method accepts as a parameter the tab index number.
+
+=== Parameters
+
+The following table explains the method’s parameters together with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameter*|*Description*
+
+|tab index
+|Returns the header of the specified tab as a string value. 
+
+*Example*
+
+Displaying a message box with the header of the tab with index 4: 
+
+msgbox(WpfWindow("MainWindow").XamTabControl("xamTabControl1").GetItem(4))
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The specified index is out of range.
+|The tab indicated by the index cannot be found.
+|
+* an invalid index has been specified 
+
+|====
+
+[[_GetContent_Method]]
+== _GetContent_
+
+=== Description
+
+The  _GetContent_  method returns a new-line-delimited list of the texts of the tabs’ headers.
+
+=== Details
+
+When used without parameter, only the header texts of the visible tabs are listed. Including the header texts of the hidden tabs in the list requires using the  _True_  parameter.
+
+=== Parameters
+
+The following table explains the method’s parameters together with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|Method Parameter|Description
+
+|_True_
+|Lists both the visible and the hidden tabs. 
+
+*Example*
+
+Displaying a message box listing the header texts of all (visible and hidden) tabs: 
+
+msgbox(WpfWindow("MainWindow").XamTabControl("xamTabControl1").GetContent(True))
+
+|None
+|Lists only the visible tabs. 
+
+*Example*
+
+Displaying a message box listing the header texts of the visible tabs: 
+
+msgbox(WpfWindow("MainWindow").XamTabControl("xamTabControl1").GetContent())
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+No known exceptions.
+
+[[_ref1]]
+== Related Content
+
+=== Topics
+
+The following table lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamtabcontrol-testable-user-actions-and-elements.html[xamTabControl - Testable User Actions and Elements]
+|This topic provides information about the user actions of the xamTabControl™ which you can test and the elements you can inspect.
+
+| link:xamtabcontrol-recordable-methods.html[xamTabControl - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamTabControl™.
+
+| link:xamtabcontrol-property-reference.html[xamTabControl - Properties Reference]
+|This topic provides reference information about the inspectable test object properties of the xamTabControl™.
+
+| link:xamtabcontrol-api.html[xamTabControl - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamTabControl™ in Micro Focus Unified Functional Testing software.
+
+|====

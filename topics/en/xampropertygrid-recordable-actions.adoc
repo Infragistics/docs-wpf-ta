@@ -1,0 +1,316 @@
+﻿////
+
+|metadata|
+{
+    "name": "xampropertygrid-recordable-actions",
+    "controlName": [],
+    "tags": [],
+    "guid": "4c4eeb50-73e2-4556-974b-8b4e9105f090",  
+    "buildFlags": [],
+    "createdOn": "2014-10-23T20:13:16.2864183Z"
+}
+|metadata|
+////
+
+= xamPropertyGrid - Recordable Actions
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about recordable actions for testing the  _XamPropertyGrid_™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref386530129, _XamPropertyGrid_   Recordable Actions>>
+** <<_Ref401822817, _SortProperties_  >>
+** <<_Ref401822828, _CategorizeProperties_  >>
+** <<_Ref401822840, _SetPropertiesFilter_  >>
+** <<_Ref401822851, _SelectItem_  >>
+** <<_Ref401822905, _CollapseItem_  >>
+** <<_Ref401822916, _ResizeNameColumn_  >>
+** <<_Ref401822928, _ResizeDescArea_  >>
+** <<_Ref401822938, _PerformCommand_  >>
+** <<_Ref401822949, _SetPropertyValue_  >>
+** <<_Ref401822950, _CreateExpandableObject_  >>
+
+* <<_Ref337132389,Related Content>>
+
+[[_Ref386530129]]
+== _XamPropertyGrid_   Recordable Actions
+
+[[_Ref401822817]]
+== _SortProperties_
+
+=== Description
+
+Clicking on the Sort properties button.
+
+[[_Ref401822828]]
+== _CategorizeProperties_
+
+Clicking on the Categorize properties button.
+
+[[_Ref401822840]]
+== _SetPropertiesFilter_
+
+Filters the visible properties displayed in the property grid to only properties that contain the supplied string.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sFilterValue_ 
+|A string field by which to filter the properties.
+
+|====
+
+=== Possible exceptions
+
+The only possible exception to this action and the likely reason causing it is:
+
+Filter textbox is not visible.
+
+[[_Ref401822851]]
+== _SelectItem_
+
+=== Description
+
+Select the identified propertygrid item
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sItemString_ 
+|String path of the displayed names to the property grid item.
+
+|====
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this action and the likely reason causing them.
+
+* The specified value [sItemString] not a XamPropertyGrid item.
+
+The following item [sItemString] was not found.
+
+[[_Ref401822905]]
+== _ExpandItem_
+
+=== Description
+
+Expand the identified property grid item.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sItemString_ 
+|String path of the displayed names to the property grid item.
+
+|====
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this action and the likely reason causing them.
+
+* The specified value [sItemString] not a XamPropertyGrid item.
+* The following item [sItemString] was not found.
+
+== _CollapseItem_
+
+=== Description
+
+Collapse the identified property grid item.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sItemString_ 
+|String path of the displayed names to the property grid item.
+
+|====
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this action and the likely reason causing them.
+
+* The specified value [sItemString] not a XamPropertyGrid item.
+* The following item [sItemString] was not found.
+
+[[_Ref401822916]]
+== _ResizeNameColumn_
+
+=== Description
+
+Resizing the name column to the supplied width.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _dNewSize_ 
+|Double value to define the new size of the object.
+
+|====
+
+=== Possible exceptions
+
+None.
+
+[[_Ref401822928]]
+== _ResizeDescArea_
+
+=== Description
+
+Resizing the description area to the supplied height.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _dNewSize_ 
+|Double value to define the new size of the object.
+
+|====
+
+=== Possible exceptions
+
+None
+
+[[_Ref401822938]]
+== _PerformCommand_
+
+=== Description
+
+Perform the supplied command.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _oeCommand_ 
+|An enumerated value, string name, or integer representing a value from the _prpgCommand_ type enumeration.
+
+|====
+
+=== Possible exceptions
+
+The only possible exception to this action and the likely reason causing it is:
+
+The option supplied is not one of the valid options, valid options are [{0}].
+
+[[_Ref401822949]]
+== _SetPropertyValue_
+
+=== Description
+
+Set the value of the identified property.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sPropString_ 
+|String path of the displayed names to the property grid item.
+
+| _oValue_ 
+|A new value to set the property to.
+
+|====
+
+=== Possible exceptions
+
+The only possible exception to this action and the likely reason causing it is:
+
+The specified value [sItemString] not a XamPropertyGrid property item.
+
+[[_Ref401822950]]
+== _CreateExpandableObject_
+
+=== Description
+
+Creates an object instance of the appropriate type and assigns it to the expandable propertygrid item.
+
+=== Parameters
+
+The following table summarizes the action parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _sItem_ 
+|The expandable propertygrid item.
+
+|====
+
+=== Possible exceptions
+
+The only possible exception to this action and the likely reason causing it is:
+
+The specified value [sItem] not a XamPropertyGrid property item.
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xampropertygrid-replay-only-actions.html[xamPropertyGrid - Replay-Only Actions]
+|This topic provides information about replay-only actions for testing the _XamPropertyGrid_™ control.
+
+| link:xampropertygrid-brusheditor-actions.html[xamPropertyGrid - BrushEditor Actions]
+|This topic provides information about BrushEditor actions of the _XamPropertyGrid_™ control.
+
+| link:xampropertygrid-enumeration-reference.html[xamPropertyGrid - Enumeration Reference]
+|This topic provides reference material on the common enumerations used for testing the _XamPropertyGrid_™ control.
+
+| link:xampropertygrid-properties-reference.html[xamPropertyGrid - Properties Reference]
+|This topic provides reference information about the inspectable test object properties of the _XamPropertyGrid_™ control.
+
+| link:xampropertygrid-custom-properties-reference.html[xamPropertyGrid - Custom Properties Reference]
+|This topic provides reference information about the _XamPropertyGrid_™ proxy base custom properties.
+
+|====

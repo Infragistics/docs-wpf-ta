@@ -1,0 +1,174 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamradialmenu-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "456f96ea-236e-431c-92f9-5ec340e524e0",  
+    "buildFlags": [],
+    "createdOn": "2014-04-30T19:17:02.6590709Z"
+}
+|metadata|
+////
+
+= xamRadialMenu - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the recordable methods for testing the  _XamRadialMenu_™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref386530129, _XamRadialMenu_   Recordable Methods>>
+
+** <<_Ref386530141, _ExpandRadialMenu_  >>
+** <<_Ref386530149, _CollapseRadialMenu_  >>
+** <<_Ref386530157, _NavigateBack_  >>
+** <<_Ref386530165, _ItemClick_  >>
+** <<_Ref386530176, _ItemDrillDown_  >>
+** <<_Ref386530186, _ItemSetNumericValue_  >>
+
+* <<_Ref337132389,Related Content>>
+
+[[_Ref386530129]]
+== _XamRadialMenu_   Recordable Methods
+
+[[_Ref386530141]]
+== _ExpandRadialMenu_
+
+=== Description
+
+Expands the RadialMenu by clicking on the center button when the RadialMenu is closed.
+
+[[_Ref386530149]]
+== _CollapseRadialMenu_
+
+Collapses the RadialMenu by clicking on the center button when the RadialMenu is open (At the top level of RadialMenu).
+
+[[_Ref386530157]]
+== _NavigateBack_
+
+Collapse the RadialMenu by any of the following user interactions:
+
+* Clicking on the center button when the RadialMenu is open (Not at the top level of RadialMenu, but at the nested level)
+* Clicking on one of the inner ring’s color well preview items
+
+[[_Ref386530165]]
+== _ItemClick_
+
+Clicking on the identified RadialMenu item and releasing the left mouse button records this action.
+
+=== Parameters
+
+The following table summarizes the methods parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _oItemArg_ 
+|Contains string Item name or an integer index of the item.
+
+|====
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this method and the likely reason causing them.
+
+* The  _XamRadialMenu_   is closed
+* Action not allowed control is disabled
+* The [ _XamRadialMenuItem_  ] is disabled
+* The specified  _XamRadialMenuItem_   index [ _oItemArg_  ] is out of range
+* The following  _XamRadialMenuItem_   [ _oItemArg_  ] was not found
+
+[[_Ref386530176]]
+== _ItemDrillDown_
+
+=== Description
+
+Clicking on the outer ring of a RadialMenu item containing child items drills down into the menu for the identified item.
+
+=== Parameters
+
+The following table summarizes the methods parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+|_oItemArg_
+|Contains string Item name or an integer index of the item.
+
+|====
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this method and the likely reason causing them.
+
+* The  _XamRadialMenu_   is closed
+* Action not allowed control is disabled
+* The [ _XamRadialMenuItem_  ] is disabled
+* The specified  _XamRadialMenuItem_   index [ _oItemArg_  ] is out of range
+* The following  _XamRadialMenuItem_   [ _oItemArg_  ] was not found
+* The item [ _oItemArg_  ], has no children; therefore, it cannot be drilled down
+
+[[_Ref386530186]]
+== _ItemSetNumericValue_
+
+=== Description
+
+Drilling into the menu for the NumericGauge and clicking on a point inside the NumericGauge item.
+
+=== Parameters
+
+The following table summarizes the methods parameters followed by code examples where applicable.
+
+[options="header", cols="a,a"]
+|====
+|Parameter|Description
+
+| _oItemArg_ 
+|Represents string Item name or an integer index of the item.
+
+| _dValue_ 
+|Represents double value for the numeric gauge.
+
+|====
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this method and the likely reason causing them.
+
+* The  _XamRadialMenu_   is closed
+* Action not allowed control is disabled
+* The [ _XamRadialMenuItem_  ] is disabled
+* The specified  _XamRadialMenuItem_   index [ _oItemArg_  ] is out of range
+* The following  _XamRadialMenuItem_   [ _oItemArg_  ] was not found
+* The item [ _oItemArg_  ], has no children; therefore, it cannot be drilled down
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamradialmenu-user-actions.html[xamRadialMenu - User Actions]
+|This topic provides information about the _XamRadialMenu_ control’s user actions represented by XamRadialMenuProxy object.
+
+| link:xamradialmenu-property-reference.html[xamRadialMenu - Property Reference]
+|This topic provides reference information about the _XamRadialMenu_ control’s test object properties.
+
+| link:xamradialmenu-enumeration-reference.html[xamRadialMenu - Enumeration Reference]
+|This topic provides reference material on the common enumerations used for testing the _XamRadialMenu_ control.
+
+|====

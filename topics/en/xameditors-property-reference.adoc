@@ -1,0 +1,133 @@
+﻿////
+
+|metadata|
+{
+    "name": "xameditors-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "36f62a39-3b4b-4b06-bdc0-3936939b8ec2",  
+    "buildFlags": [],
+    "createdOn": "2012-01-27T15:09:23.0926027Z"
+}
+|metadata|
+////
+
+= xamEditors - Property Reference
+
+== _xamEditors_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the test object properties of the xamEditors that are common to all these editors. For information about the editor-specific properties for a particular editor, see its respective topic. (Listed in the 
+
+== Related Topics
+lock at the bottom.)
+
+[[_Ref315109417]]
+
+=== Properties reference chart
+
+The table below summarizes the control’s test object properties and the tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+| _link:{ApiPlatform}test.editors~infragisticswpf.test.editors.texteditorbaseproxy~displaytext.html[DisplayText]_ 
+|The display text. 
+
+.Note: 
+
+[NOTE] 
+
+==== 
+
+The display text is only used when the editor is not in edit mode. 
+
+====
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| _link:{ApiPlatform}test.editors~infragisticswpf.test.editors.texteditorbaseproxy~hasdropdown.html[HasDropDown]_ 
+|_True_ if the editor has a drop-down
+|image::images/spy.png[]
+
+| _link:{ApiPlatform}test.editors~infragisticswpf.test.editors.valueeditorbaseproxy~hasvaluechanged.html[HasValueChanged]_ 
+|Determines if the content has changed while in edit mode 
+
+.Note: 
+
+[NOTE] 
+
+==== 
+
+This property is reset to _False_ when the editor leaves edit mode. 
+
+====
+|image::images/spy.png[]
+
+| _link:{ApiPlatform}test.editors~infragisticswpf.test.editors.texteditorbaseproxy~isdroppeddown.html[IsDroppedDown]_ 
+|_True_ if the editor’s drop-down is currently opened
+|image::images/spy.png[]
+
+| _link:{ApiPlatform}test.editors~infragisticswpf.test.editors.valueeditorbaseproxy~iseditingallowed.html[IsEditingAllowed]_ 
+|_True_ if the editing of the editor is allowed
+|image::images/spy.png[]
+
+| _link:{ApiPlatform}test.editors~infragisticswpf.test.editors.valueeditorbaseproxy~isineditmode.html[IsInEditMode]_ 
+|_True_ if the editor is currently in EditMode
+|image::images/spy.png[]
+
+| _link:{ApiPlatform}test.editors~infragisticswpf.test.editors.valueeditorbaseproxy~isnullable.html[IsNullable]_ 
+|_True_ if the editor’s value can be set to _Null_
+|image::images/spy.png[]
+
+| _link:{ApiPlatform}test.editors~infragisticswpf.test.editors.valueeditorbaseproxy~isreadonly.html[IsReadOnly]_ 
+|whether the user is allowed to modify the value in the editor 
+
+_False_ is the default value. 
+
+.Note: 
+
+[NOTE] 
+
+==== 
+
+The value can be modified via Set action. 
+
+====
+|image::images/spy.png[]
+
+| _link:{ApiPlatform}test.editors~infragisticswpf.test.editors.valueeditorbaseproxy~isvaluevalid.html[IsValueValid]_ 
+|_True_ if the current value of the editor is valid
+|image::images/spy.png[]
+
+| _link:{ApiPlatform}test.editors~infragisticswpf.test.editors.texteditorbaseproxy~nulltext.html[NullText]_ 
+|The text to be displayed when the value of the editor is null and the editor is not in edit mode. 
+
+Default value is an empty string.
+|image::images/spy.png[]
+
+| _link:{ApiPlatform}test.editors~infragisticswpf.test.editors.valueeditorbaseproxy~text.html[Text]_ 
+|The value of the editor as text.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.editors~infragisticswpf.test.editors.valueeditorbaseproxy~value.html[Value]_ 
+|The value of the editor.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.editors~infragisticswpf.test.editors.valueeditorbaseproxy~valuetypename.html[ValueTypeName]_ 
+|The fully qualified name of the value type the editor expects.
+|image::images/spy.png[]
+
+|====

@@ -1,0 +1,30 @@
+﻿= xamCategoryChart
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamcategorychartproxy.html[XamCategoryChartProxy] object in {ProductName}.
+
+=== Topics
+
+The topics contained in this section cover implementing action elements, methods and properties within the  _xamCategoryChart™_   control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamcategorychart-testable-user-actions-and-elements.html[xamCategoryChart - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamCategoryChart_ control which you can test and the elements you can inspect.
+
+| link:xamcategorychart-recordable-methods.html[xamCategoryChart - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamCategoryChart_ control.
+
+| link:xamcategorychart-replay-only-methods.html[xamCategoryChart - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the _xamCategoryChart_ control.
+
+| link:xamcategorychart-property-reference.html[xamCategoryChart - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the _xamCategoryChart_ control.
+
+| link:xamcategorychart-api.html[xamCategoryChart - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamCategoryChart_ control in Micro Focus Unified Functional Testing software.
+
+|====

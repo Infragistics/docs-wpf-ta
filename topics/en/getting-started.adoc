@@ -1,0 +1,56 @@
+﻿////
+|metadata|
+{
+    "name": "getting-started",
+    "controlName": [],
+    "tags": [],
+    "guid": "e6119f09-d9ca-4e97-835a-2dad4f101c6d",
+    "buildFlags": [],
+    "createdOn": "2012-02-03T10:17:40.7145858Z"
+}
+|metadata|
+////
+
+= Getting Started
+
+=== Introduction
+
+This is a starting point for getting acquainted with {ProductName} Unified Functional Testing software.
+
+This section contains information about:
+
+* the prerequisites for the product
+* the installing, configuring and removing the product
+* the location of sample test applications and scripts
+* getting help for the product
+
+=== Topics
+
+The information you need about getting started with the {ProductName} product is covered in the following topics:
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:supported-environment.html[Supported Environments and Product Versions]
+|This topic describes the supported environment and Unified Functional Testing product versions supported by {ProductName}.
+
+| link:supported-controls-and-components.html[Supported Controls and Components]
+|This topic provides information about the supported Ultimate UI for WPF controls and components and corresponding {ProductName} Unified Functional Testing software libraries.
+
+| link:installing-configuring-removing-ta-wpf.html[Installing, Configuring and Removing {ProductName}]
+|This section contains information about: 
+
+* How to install and configure the {ProductName} product 
+
+* How to switch between different CLR versions and different product versions 
+
+* How to remove the {ProductName} product 
+
+| link:accessing-the-sample-test-applications-and-scripts.html[Accessing the Sample Test Applications and Scripts]
+|This topic provides information about the sample WPF test applications and scripts provided for Ultimate UI for WPF controls.
+
+| link:getting-help-for-test-automation-wpf.html[Getting Help for {ProductName}]
+|This topic explains the available options for getting help with your Infragistics product and how to prepare for contacting technical support.
+
+|====

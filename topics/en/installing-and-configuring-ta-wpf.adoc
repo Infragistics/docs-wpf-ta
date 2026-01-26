@@ -1,0 +1,133 @@
+﻿////
+|metadata|
+{
+    "name": "installing-and-configuring-ta-wpf",
+    "controlName": [],
+    "tags": [],
+    "guid": "6a03182b-42f5-469f-9da2-5a22177f48f9",
+    "buildFlags": [],
+    "createdOn": "2012-02-02T07:59:41.2129697Z"
+}
+|metadata|
+////
+
+= Installing and Configuring {ProductName}
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides instructions about the installation {ProductName} Unified Functional Testing.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref315857821,Introduction>>
+* <<_Ref315857826,Prerequisites>>
+* <<_Ref315857834,Installing the {ProductName} Unified Functional Testing>>
+* <<_Ref315857839,Installing the Required Unified Functional Testing Patches for {ProductName}>>
+* <<_Ref315857845,Verifying the {ProductName} Product Installation>>
+* <<_Ref315872512,Related Topics>>
+
+[[_Ref315857821]]
+== Introduction
+
+[[_Ref315857826]]
+
+=== Introduction
+
+The full installation of {ProductName} is two-tier process: you first install {ProductName} itself, and then – the required Unified Functional Testing patches. Theses patches ensure the compatibility and flawless work of your testing environment.
+
+== Prerequisites
+
+=== Prerequisites summary
+
+Before installing {ProductName}, make sure that the following requirements are met:
+
+* Micro Focus Unified Functional Testing product properly installed before installing the {ProductName}.
+For more information, see the link:supported-environment.html[Supported Environments and Product Versions] topic.
+* UFT’s .NET and WPF add-ins properly installed. The .NET and WPF add-ins have to be available and loaded in the Unified Functional Testing Add-In Manager.
+* {ProductName} Product Key. If you don’t have a Product Key, contact your system administrator or Test Automation technical support.
+* The Unified Functional Testing patches available for installing.
+
+[[_Ref315857834]]
+== Installing the {ProductName} Unified Functional Testing
+
+=== Installation procedure
+
+To install {ProductName}, run the product installer. On the the installation wizard's screens you will be required to acknowledge reading the installation notes and the license agreement andd also you will be prompted to input the following information:
+
+* Full Name
+* Organization
+* Product Key (if you do not enter product key a trial version will be installed)
+* CLR version of {ProductName} to be installed
+
+*Note:*
+
+You can change the CLR version later if necessary. For details, refer to the link:switching-ta-clr-versions.html[Switching Test Automation / CLR Versions] topic.
+
+[[_Ref315857839]]
+== Installing the Required Unified Functional Testing Patches for {ProductName}
+
+=== Required UFT patches
+
+After the completing the product installation of {ProductName}, you need to install the required UFT patches. The required patches depend on the version of Unified Functional Testing you are using.
+
+For details, refer to the link:supported-environment.html[Supported Environments and Product Versions] topic.
+
+The required patches can be found in the installed {ProductName} folder.
+
+[[_Ref315857845]]
+== Verifying the {ProductName} Product Installation
+
+=== Installation verification summary
+
+*Make sure the required add-ins are enabled.*
+
+To enable the Micro Focus Unified Functional Testing product to recognize the Ultimate UI for WPF controls, make sure you have enabled the {ProductName} add-in and the .NET and WPF. To check/enable add-ins, access the "Add-in Manager" dialog and make sure to check the "*{ProductVersion} Test Automation CLR4*" or "*{ProductVersion} Test Automation Version Free* " checkbox.
+
+*Make sure the configuration files exist.*
+
+Two configuration files should be available in the following UFT folder: *C:\Program Files (x86)\Micro Focus\Unified Functional Testing for UFT\dat\Extensibility\WPF* , as shown in the table below.
+
+[options="header", cols="a,a,a,a"]
+|====
+|*File name*|*Description*|*Purpose*|*Location*
+
+|<volume> Test Automation <CLR version>.xml
+|{ProductName} Test Object Configuration XML File
+|Defines a test object class for every Ultimate UI for WPF control, as well as its identification properties, test object methods, and a few other parameters.
+|Installed under UFT‘s dat\Extensibility\WPF folder
+
+|<volume> Test Automation <CLR version>.cfg
+|{ProductName} Toolkit Configuration File
+|The Ultimate UI for WPF control types are mapped to test object types (classes).
+|Installed under UFT’s dat\Extensibility\WPF folder.
+
+|====
+
+[[_Ref315872512]]
+== Related Topics
+
+=== Related topics summary
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:supported-environment.html[Supported Environments and Product Versions]
+|This topic describes the supported environment and Unified Functional Testing product versions supported by {ProductName}.
+
+| link:switching-ta-clr-versions.html[Switching Test Automation / CLR Versions]
+|This topic explains how to switch between the {ProductName} product volumes and the CLR versions.
+
+| link:removing-ta-from-hp-qtp.html[Removing Test Automation from Micro Focus Unified Functional Testing]
+|This topic explains how to disable the {ProductName} Unified Functional Testing software.
+
+| link:getting-help-for-test-automation-wpf.html[Getting Help for {ProductName}]
+|This topic explains the available options for getting help with your Infragistics product and how to prepare for contacting technical support.
+
+|====

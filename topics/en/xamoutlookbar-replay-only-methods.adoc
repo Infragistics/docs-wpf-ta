@@ -1,0 +1,178 @@
+﻿////
+|metadata|
+{
+    "name": "xamoutlookbar-replay-only-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "e387ff2e-7495-4a02-847c-9a563ae04bd5",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T12:24:45.2202609Z"
+}
+|metadata|
+////
+
+= xamOutlookBar - Replay-Only Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the replay-only user methods for testing the  _xamOutlookBar_™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_summary,xamOutlookBar Test Object Replay-Only Methods>>
+
+** <<_ClickSubItem,ClickSubItem>>
+
+* <<_ref1,Related Content>>
+
+[[_summary]]
+== xamOutlookBar Test Object Replay-Only Methods
+
+=== Replay-only methods summary chart
+
+The following table briefly explains the replay-only methods for testing the control. Detailed information about the methods is provided below the table.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|*Description*
+
+| link:{ApiPlatform}test.shared~infragisticswpf.test.shared.recordreplayproxybase~clicksubitem.html[ClickSubItem]
+|Clicks on the specified item at the specified location.
+
+|====
+
+[[_ClickSubItem]]
+== _ClickSubItem_  Method
+
+=== Description
+
+The  _ClickSubItem_  method replays the click user action performed on a specified item at a specifed location.
+
+=== Details
+
+This is a common method for most of the supported controls that have sub-items. By default, this is a replay-only method, but it can be recorded in sub-items.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameter*|*Description*
+
+|Sub Item Type 
+
+_(_ _required_ _)_
+|The sub-item type parameter can take one of the following options that define an area in the control: 
+
+• OutlookBarGroup = 0, 
+
+• SelectedGroupHeader = 1, 
+
+• SelectedGroupContent = 2, 
+
+• OverflowArea = 3, 
+
+• NavArea = 4 
+
+The method can accept either the string interpretation or the index as a parameter.
+
+|Sub-item 
+
+_(_ _required_ _)_
+|The sub-item is the targeted element that will be clicked.
+
+|Region _(Optional)_
+|The Region parameter can take one of the following options: 
+
+* igTopLeft, 
+
+* igTopCenter, 
+
+* igTopRight, 
+
+* igMidLeft, 
+
+* igMidCenter, 
+
+* igMidRight, 
+
+* igBottomLeft, 
+
+* igBottomCenter, 
+
+* igBottomRight, 
+
+* igAt, 
+
+* igPercent 
+
+|Modifier 1 
+
+_(Optional)_ 
+
+Modifier 2 
+
+( _Optional)_
+|The exact location is defined by the region parameter or by the combination of region and modifiers. Through the modifiers, you specify an offset in the region. 
+
+*Example*
+
+Click on the xamOutlookBar’s group with header “Calendar” in its center: 
+
+WpfWindow("MainWindow").XamOutlookBar("xamOutlookBar").ClickSubItem OutlookBarGroup, "Calendar", igMidCenter
+
+|
+|
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception* *name*|*Exception description*|*Possible reasons*
+
+|The following item was not found.
+|The selected tab cannot be located when replaying the method.
+|
+* The tab has been closed already. 
+
+* The tab doesn’t exist. 
+
+|====
+
+[[_ref1]]
+== Related Content
+
+=== Topics
+
+The following table lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamoutlookbar-testable-user-actions-and-elements.html[xamOutlookBar - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamOutlookBar_ control which you can test and the elements you can inspect.
+
+| link:xamoutlookbar-recordable-methods.html[xamOutlookBar - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamOutlookBar_ control.
+
+| link:xamoutlookbar-property-reference.html[xamOutlookBar - Properties Reference]
+|This topic provides reference information about the test object properties of the _xamOutlookBar_ control that can be inspected.
+
+| link:xamoutlookbar-api.html[xamOutlookBar - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamOutlookBar_ control in Micro Focus Unified Functional Testing software.
+
+|====

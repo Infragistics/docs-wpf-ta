@@ -1,0 +1,760 @@
+﻿////
+|metadata|
+{
+    "name": "xamgrid-navigating-and-selecting",
+    "controlName": [],
+    "tags": [],
+    "guid": "9cd59486-18d0-4955-ab7c-a394b8781098",
+    "buildFlags": [],
+    "createdOn": "2012-04-14T09:50:45.6175781Z"
+}
+|metadata|
+////
+
+= Navigating and Selecting
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods related to the testing of the navigation and selection in the  _xamGrid_™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref322541047,Recordable Navigation and Selection Methods>>
+
+** <<_ActivateCell, _ActivateCell_  >>
+** <<_ExpandRow, _ExpandRow_  >>
+** <<_CollapseRow, _CollapseRow_  >>
+** <<_Select, _Select_  >>
+** <<_SelectionAdded, _SelectionAdded_  >>
+** <<_SelectionChanged, _SelectionChanged_  >>
+** <<_SelectionRemoved, _SelectionRemoved_  >>
+** <<_SetFixedColumn, _SetFixedColumn_  >>
+
+* <<_Ref322541123, Related Content >>
+
+[[_Ref322541047]]
+== Recordable Navigation and Selection Methods
+
+=== Recordable navigation and selection methods summary chart
+
+The following table summarizes the purpose and functionality of the recordable methods for testing the navigation and selection end-user interactions in the xamGrid control.
+
+[options="header", cols="a,a"]
+|====
+|Method|Description
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~activatecell.html[ActivateCell]_
+|Activates a specified cell.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~expandrow.html[ExpandRow]_
+|Expands a specified row.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~collapserow.html[CollapseRow]_
+|Collapses a specified row.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~select.html[Select]_
+|Selects one or more items of a specified type (column, row or cell).
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~selectionadded.html[SelectionAdded]_
+|Adds one or more xamGrid items of a specified type (column, row, or cell) to an existing collection.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~selectionchanged.html[SelectionChanged]_
+|Modifies an existing collection by adding and removing one or more xamGrid items of a specified type (column, row, or cell).
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~selectionremoved.html[SelectionRemoved]_
+|Removes one or more xamGrid items of a specified type (column, row, or cell) from an existing collection.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~setfixedcolumn.html[SetFixedColumn]_
+|Sets the position of a column to a specified fixed location.
+
+|====
+
+[[_ActivateCell]]
+== _ActivateCell_
+
+=== Description
+
+The  _ActivateCell_   method activates a specified cell.
+
+=== Details
+
+The ActivateCell method is recorded in a test when a xamGrid cell is activated.
+
+When replaying the method:
+
+[start=1]
+. The cell path is validated.
+[start=2]
+. The cell is activated.
+
+The method accepts the cell path as a parameter.
+
+The path is formed by concatenating the row path and the column key (the parenthesis and the brackets are part of the syntax): *{row path}[column key]* 
+
+For example, the cross-section of the first row and the column key is denoted as {0}[key], the cross-section of the first child row of the first row and the column key is denoted as {0}{0}[key].
+
+=== Parameters
+
+The following table maps the desired configuration to its parameters’ settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the path to the cell to activate
+|sCellArg
+|The path to the cell in the xamGrid
+
+|====
+
+=== Example
+
+Activating a cell in the first row and  _CustomerID_   column.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").ActivateCell "{0}[CustomerID]"
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter’s format is incorrect.
+|The method’s parameter is not in a valid format.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|====
+
+[[_ExpandRow]]
+== _ExpandRow_
+
+=== Description
+
+The  _ExpandRow_   method expands a specified row.
+
+=== Details
+
+The ExpandRow method is recorded in a test when a row is expanded in the xamGrid control.
+
+When replaying the method:
+
+[start=1]
+. The row path is validated.
+[start=2]
+. The row is expanded.
+
+The method accepts the row path as a parameter.
+
+The path is formed by concatenating the row paths (the parenthesis are part of the syntax): *{row path}* 
+
+The path is formed by concatenating together the parent row’ indexes and the target row’s index; the concatenation goes, left to right, in descending hierarchical order, from the root row index down to the sub-row’s indexes and finally to the target row’s index. If the path consists of more than one index, all indexes must be surrounded by parentheses.
+
+For example:
+
+* The target row is the first root row: 0
+* The target row is the first sub-row of the first root row: {0}{0}
+* The target row is the third sub-row of the first sub-row of the first root row: {0}{0}{2}
+
+=== Parameters
+
+The following table maps the desired configuration to its parameters’ settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the path to a row to expand
+|oRecordArgument
+|The path to the row in the xamGrid
+
+|====
+
+=== Example
+
+Expanding the first xamGrid row.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").ExpandRow 0
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter’s format is incorrect.
+|The method’s parameter is not in a valid format.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|====
+
+[[_CollapseRow]]
+== _CollapseRow_
+
+=== Description
+
+The  _CollapseRow_   method collapses a specified row.
+
+=== Details
+
+The CollapseRow method is recorded in a test when a row is collapsed in the xamGrid control.
+
+When replaying the method:
+
+[start=1]
+. The row path is validated.
+[start=2]
+. The row is collapsed.
+
+The method accepts the row path as a parameter.
+
+The path is formed by concatenating the row paths (the parenthesis are part of the syntax): *{row path}* 
+
+The path is formed by concatenating together the parent row’ indexes and the target row’s index; the concatenation goes, left to right, in descending hierarchical order, from the root row index down to the sub-row’s indexes and finally to the target row’s index. If the path consists of more than one index, all indexes must be surrounded by parentheses.
+
+For example:
+
+* The target row is the first root row: 0
+* The target row is the first sub-row of the first root row: {0}{0}
+* The target row is the third sub-row of the first sub-row of the first root row: {0}{0}{2}
+
+=== Parameters
+
+The following table maps the desired configuration to its parameters’ settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the path to a row to collapse
+|oRecordArgument
+|The path to the row in the xamGrid
+
+|====
+
+=== Example
+
+Collapsing the first xamGrid row.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").CollapseRow 0
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter’s format is incorrect.
+|The method’s parameter is not in a valid format.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|====
+
+[[_Select]]
+== _Select_
+
+=== Description
+
+The  _Select_   method selects one or more items of a specified type (column, row or cell).
+
+=== Details
+
+The Select method is recorded in a test when a xamGrid item is selected. For more information about the selectable xamGrid items, see the link:xamgrid-enumeration-reference.html[xamGrid - Enumeration Reference] topic.
+
+When replaying the method:
+
+[start=1]
+. The selectable item type is verified.
+[start=2]
+. The item path is verified.
+[start=3]
+. The item(s) is/are selected.
+
+The method accepts as parameters the selectable item type and the path to the item.
+
+=== Parameters
+
+The following table maps the desired configuration to its parameters’ settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the selectable item type
+|oEnumSelectedType
+|
+* _xGrdCell_ value 
+
+* _xGrdColumn_ value 
+
+* _xGrdRow_ value 
+
+|Specify the selectable item path
+|oSelectedItems
+|The path to the selectable item in the xamGrid
+
+|====
+
+=== Example
+
+* Selecting an array of xamGrid cells in the second row and the columns CustomerID and Company.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").Select xGrdCell, Array("{1}[CustomerID]", "{1}[Company]" )
+----
+
+* Selecting an array of xamGrid columns – Company and ContactName.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").Select xGrdColumn,Array("[Company]","[ContactName]")
+----
+
+* Selecting an array of rows (the first and the second xamGrid row).
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").Select xGrdRow, Array(0,1)
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|====
+
+[[_SelectionAdded]]
+== _SelectionAdded_
+
+=== Description
+
+The  _SelectionAdded_   method adds one or more xamGrid items of a specified type (column, row or cell) to an existing collection.
+
+=== Details
+
+The SelectionAdded method is recorded in a test when a particular xamGrid item is selected and added to an existing selection of similar items.
+
+When replaying the method:
+
+[start=1]
+. The selectable item type is verified.
+[start=2]
+. The path to the item is verified.
+[start=3]
+. The item(s) is/are selected.
+[start=4]
+. The item(s) is/are added to the existing selection.
+
+The method accepts as parameters the selectable item type and the path to the item to be added.
+
+=== Parameters
+
+The following table maps the desired configuration to its parameters’ settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the type of the selectable item
+|oEnumSelectedType
+|
+* _xGrdCell_ value 
+
+* _xGrdColumn_ value 
+
+* _xGrdRow_ value 
+
+|Specify the path to the selectable item
+|oSelectedItemsAdded
+|The path to the selectable items to be added
+
+|====
+
+=== Example
+
+* Adding another cell in an existing selection of cells.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").Select xGrdCell, Array("{1}[CustomerID]", "{1}[Company]" )
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SelectionAdded xGrdCell, "{1}[ContactName]"
+----
+
+* Adding the ContactTitle column to an existing selection of columns.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").Select xGrdColumn, Array("[Company]","[ContactName]")  
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SelectionAdded xGrdColumn, "[ContactTitle]"
+----
+
+* Adding a row to an existing selection of rows.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").Select xGrdRow, Array(0,1)  
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SelectionAdded  xGrdRow, 2
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|====
+
+[[_SelectionChanged]]
+== _SelectionChanged_
+
+=== Description
+
+The  _SelectionChanged_   method modifies an existing collection by adding and removing one or more xamGrid items of a specified type (column, row or cell).
+
+=== Details
+
+The SelectionChanged method is recorded in a test when an existing collection of xamGrid selectable items is changed.
+
+When replaying the method:
+
+[start=1]
+. The item type of the items that are added is verified.
+[start=2]
+. The paths to the items that are added is verified.
+[start=3]
+. The item type of the items that are removed is verified.
+[start=4]
+. The paths to the items that are removed is verified.
+
+The method accepts as parameters the selectable item type and the path to the item to be removed.
+
+=== Parameters
+
+The following table maps the desired configuration to its parameters’ settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the type of the xamGrid items to be added
+|oEnumSelectedType
+|
+* _xGrdCell_ value 
+
+* xGrdColumn value 
+
+* _xGrdRow_ value 
+
+|Specify the xamGrid items to be added
+|oSelectedItemsAdded
+|The path to the selectable items to be added
+
+|Specify the type of the removed xamGrid items
+|oEnumRemovedType
+|
+* _xGrdCell_ value 
+
+* _xGrdColumn_ value 
+
+* _xGrdRow_ value 
+
+|Specify the xamGrid items to be removed
+|oSelectedItemsRemoved
+|The path to the selectable items to be removed
+
+|====
+
+=== Example
+
+Adding two cells into selection and removing one of them.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SelectionChanged xGrdCell, Array("{0}[Company]", "{0}[ContactName]"), xGrdCell, "{0}[Company]"
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|====
+
+[[_SelectionRemoved]]
+== _Selection_   _Removed_
+
+=== Description
+
+The  _SelectionRemoved_   method removes one or more xamGrid items of a specified type (column, row, or cell) from an existing collection.
+
+=== Details
+
+The SelectionRemoved method is recorded in a test when a particular xamGrid item is selected and removed from an existing selection of similar items.
+
+When replaying the method:
+
+[start=1]
+. The selectable item type is verified.
+[start=2]
+. The item path is verified.
+[start=3]
+. The item/items is/are removed from the existing selection.
+
+The method accepts as parameters the selectable item type and the path to the item to be removed.
+
+=== Parameters
+
+The following table maps the desired configuration to its parameters’ settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the type of the selectable item
+|oEnumRemovedType
+|
+* _xGrdCell_ value 
+
+* _xGrdColumn_ value 
+
+* _xGrdRow_ value 
+
+|Specify the path to the selectable item
+|oSelectedItemsRemoved
+|The path to the selectable items to be removed
+
+|====
+
+=== Example
+
+* Creating a selection and then removing a cell from the existing selection of cells.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SelectionAdded xGrdCell, Array("{1}[Company]", "{1}[ContactName]")  
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SelectionRemoved xGrdCell, "{1}[Company]"
+----
+
+* Removing the ContactTitle column from the existing selection of columns.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SelectionAdded xGrdColumn, Array("[ContactName]","[ContactTitle]") 
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SelectionRemoved xGrdColumn, "[ContactTitle]"
+----
+
+* Removing the first row from the existing selection of rows.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SelectionAdded xGrdRow, Array(0,1,2) 
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SelectionRemoved xGrdRow, 0
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|====
+
+[[_SetFixedColumn]]
+== _SetFixedColumn_
+
+=== Description
+
+The  _SetFixedColumn_   method sets the position of a column to a specified fixed location.
+
+=== Details
+
+The SetFixedColumn method is recorded in a test when fixing of a xamGrid column is performed. The fixing of a column can be done either by clicking on the fixed column indicator and by dragging the column into the designated area of the xamGrid control.
+
+When replaying the method:
+
+[start=1]
+. The specified column header is verified.
+[start=2]
+. The fixed state is verified.
+[start=3]
+. The column fixing should be enabled.
+[start=4]
+. The column is fixed.
+
+The method accepts as parameters column header and fixed state.
+
+=== Parameters
+
+The following table maps the desired configuration to its parameters’ settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the column to fix
+|sHeaderArg
+|Column header
+
+|Specify the position of the fixed column
+|oFixedState
+|
+* xGrdLeft value 
+
+* _xGrdNotFixed_ value 
+
+* _xGrdRight_ value 
+
+|====
+
+=== Example
+
+Fixing the  _Company_   column in the left xamGrid area.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SetFixedColumn  "[Company]",  xGrdLeft
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter’s format is incorrect.
+|The method’s parameter is not in a valid format.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|The element is not visible.
+|The column is not visible and replaying the method fails.
+|The column either doesn’t exist or is hidden.
+
+|The supplied FixedState is not allowed.
+|Fixing of a column is not enabled and replaying the method fails.
+|Column fixing is not enabled.
+
+|====
+
+[[_Ref322541123]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamgrid-display.html[Display]
+|This topic provides reference information about the recordable user methods related to the testing of the display features in the xamGrid control.
+
+| link:xamgrid-editing.html[Editing]
+|This topic provides reference information about the recordable user methods related to the testing of the editing in the xamGrid control.
+
+| link:xamgrid-filtering.html[Filtering]
+|This topic provides reference information about the recordable user methods related to the testing of the filtering in the xamGrid control.
+
+| link:xamgrid-sorting-and-grouping.html[Sorting and Grouping]
+|This topic provides reference information about the recordable user methods related to the testing of the sorting and grouping in the xamGrid control.
+
+| link:xamgrid-summaries.html[Summaries]
+|This topic provides reference information about the recordable user methods related to the testing of the summaries in the xamGrid control.
+
+|====

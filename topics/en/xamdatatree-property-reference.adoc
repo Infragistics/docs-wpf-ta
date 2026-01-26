@@ -1,0 +1,126 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamdatatree-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "d96a0c2e-4184-4dbb-b507-f38f5d28aa61",  
+    "buildFlags": [],
+    "createdOn": "2012-01-18T21:34:34.9673251Z"
+}
+|metadata|
+////
+
+= xamDataTree - Properties Reference
+
+== _xamDataTree_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the inspectable test object properties of the  _xamDataTree_™ control.
+
+[[_dataTreePropRef]]
+
+=== Properties reference chart
+
+The table below summarizes the control’s test method parameters and the tools for inspecting them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+| _link:infragisticswpf.test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~activenode.html[ActiveNode]_ 
+|The header of the current active node.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| _link:infragisticswpf.test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~isactivedraggable.html[IsActiveDraggable]_ 
+|Is the current active node draggable.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| _link:infragisticswpf.test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~isactivedroptarget.html[IsActiveDropTarget]_ 
+|Is the current active node a drop target.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| _link:infragisticswpf.test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~isactiveexpanded.html[IsActiveExpanded]_ 
+|Is the current active node expanded.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| _link:infragisticswpf.test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~currenteditnode.html[CurrentEditNode]_ 
+|The header of the currently edited node
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| _link:infragisticswpf.test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~activenodechildren.html[ActiveNodeChildren]_ 
+|A list of the visible child nodes of the current active node.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:infragisticswpf.test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~activenodechildrencount.html[ActiveNodeChildrenCount]_ 
+|The number of the visible child nodes of the current active node.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:infragisticswpf.test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~activenodesibling.html[ActiveNodeSibling]_ 
+|A list of the visible sibling nodes of the current active node.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:infragisticswpf.test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~activenodesiblingcount.html[ActiveNodeSiblingCount]_ 
+|The number of the visible sibling nodes of the current active node.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:infragisticswpf.test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~allnodes.html[AllNodes]_ 
+|A list of all nodes’ paths. The list is a new-line delimited. 
+
+Example: 
+
+Parent1 
+
+Parent1;Child1
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:infragisticswpf.test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~allrootnodes.html[AllRootNodes]_ 
+|A list of all root nodes’ headers (new-line-delimited).
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:infragisticswpf.test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~allrootnodescount.html[AllRootNodesCount]_ 
+|The number of all root nodes.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====

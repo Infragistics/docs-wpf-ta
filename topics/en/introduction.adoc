@@ -1,0 +1,87 @@
+﻿////
+|metadata|
+{
+    "name": "introduction",
+    "controlName": [],
+    "tags": [],
+    "guid": "5bf3c758-0ccc-4726-a838-424b7e722eab",
+    "buildFlags": [],
+    "createdOn": "2012-02-03T10:15:52.5797734Z"
+}
+|metadata|
+////
+
+= Introduction
+
+== Topic Overview
+
+=== Purpose
+
+This topic introduces the {ProductName} Unified Functional Testing software.
+
+== Introduction
+
+=== Introduction
+
+{ProductName} Unified Functional Testing software is a collection of proxy classes that supports the testing of Ultimate UI for WPF controls. This collection is built using the Micro Focus Unified Functional Testing .NET and WPF Add-in extensibility.
+
+{ProductName} Unified Functional Testing allows Test automation professionals to create fully regression-test WPF applications with user interfaces developed using Infragistics' Ultimate UI for WPF products.
+
+With these custom libraries, you can record and replay script commands for such applications in Micro Focus Unified Functional Testing without having to use generic mouse coordinates. The playback is faster and enables more test scripts to be run in less time, which translates to better test coverage of applications and eventually higher quality of the developed software.
+
+The product also allows testers to check data rendered by those controls to make it easy to verify their test cases' result with an easy to use functionality built right into Unified Functional Testing.
+
+== {ProductName} Main Characteristics
+
+=== Main characteristics summary
+
+Following are the main features of the full version of {ProductName}:
+
+* A complete suite of custom libraries for creating automated tests for user interfaces built with Ultimate UI for WPF and Ultimate UI for WPF Data Visualization products controls
+* Ability to switch between CLR versions and different product versions using the Version Utility tool shipped with {ProductName} product
+* Customizing the test settings using the Settings Utility tool shipped with {ProductName} product
+* Test automation
+* Built-in check points for all controls to ease the verification of data inside the Ultimate UI for WPF and Ultimate UI for WPF Data Visualization controls
+* Ability to deploy side-by-side versions to allow user to test different application built with different versions of Ultimate UI for WPF
+* Read-only access to the entire controls’ object model to allow tester to get what they want from the controls
+* Easy and quick recording and replaying of user actions
+
+== Related Topics
+
+=== Related topics summary chart
+
+The following table lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:whats-new.html[What's New]
+|This section contains information about: 
+
+* The new supported controls and features that were added to this volume release of the Ultimate UI for {ProductName}. 
+
+* The supported controls and features added to previous releases. 
+
+| link:supported-environment.html[Supported Environments and Product Versions]
+|This topic describes the supported environment and QTP/UFT product versions supported by {ProductName}.
+
+| link:getting-help-for-test-automation-wpf.html[Getting Help for {ProductName}]
+|This topic explains the available options for getting help with your Infragistics product and how to prepare for contacting technical support.
+
+| link:installing-configuring-removing-ta-wpf.html[Installing, Configuring and Removing {ProductName}]
+|This section contains information about: 
+
+* How to install and configure the {ProductName} product 
+
+* How to switch between different CLR versions and different product versions 
+
+* How to remove the {ProductName} product 
+
+| link:known-issues-and-breaking-changes.html[Known Issues and Breaking Changes]
+|This topic provides information on the currently known issues and limitations related to {ProductName} Unified Functional Testing. These issues will be addressed in future releases of the product.
+
+| link:test-automation-for-infragistics-controls.html[Test Automation for Infragistics Controls]
+|This section provides reference information about the verifiable properties and the recordable and replay-only methods for testing the Ultimate UI for WPF controls.
+
+|====

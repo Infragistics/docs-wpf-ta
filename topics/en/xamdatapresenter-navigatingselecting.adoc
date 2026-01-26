@@ -1,0 +1,635 @@
+﻿////
+|metadata|
+{
+    "name": "xamdatapresenter-navigatingselecting",
+    "controlName": [],
+    "tags": [],
+    "guid": "818e6356-3e0f-4afe-8b18-88e21a2a41f6",
+    "buildFlags": [],
+    "createdOn": "2012-02-07T16:54:42.3209495Z"
+}
+|metadata|
+////
+
+= Navigating and Selecting
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods for testing the navigation and selection actions in xamDataPresenter™ controls.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_summary,Recordable Methods>>
+
+** <<_ActivateRecord,ActivateRecord>>
+** <<_ActivateCell,ActivateCell>>
+** <<_ExpandRecord,ExpandRecord>>
+** <<_CollapseRecord,CollapseRecord>>
+** <<_MoveField,MoveField>>
+** <<_Select,Select>>
+** <<_SelectionAdded,SelectionAdded>>
+** <<_SelectionRemoved,SelectionRemoved>>
+** <<_SelectionChanged,SelectionChanged>>
+
+* <<_Rel,Related Content>>
+
+[[_summary]]
+== Recordable Methods
+
+=== Recordable methods summary chart
+
+The following table briefly explains the recordable methods for testing the control. Detailed information about the methods is provided in the text blocks following the table.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|*Description*
+
+|_ActivateCell_
+|Activates the specified cell.
+
+|_ActivateRecord_
+|Activates the specified record.
+
+|_ExpandRecord_
+|Expands the specified record.
+
+|_CollapseRecord_
+|Collapses the specified record.
+
+|_Select_
+|Selects one or more items of a particular type.
+
+|_SelectionAdded_
+|Adds one or more items of a particular type to the existing selection.
+
+|_SelectionRemoved_
+|Removes one or more items of a particular type from the existing selection.
+
+|_SelectionChanged_
+|Adds and removes one or more items of a particular type from the existing selection.
+
+|====
+
+[[_ActivateCell]]
+== _ActivateCell_
+
+=== Description
+
+The  _ActivateCell_  method is used for recording and replaying the cell activation action performed by the user.
+
+=== Details
+
+When replaying, this method performs some validations first and then activates a cell:
+
+[start=1]
+. Validating the specified cell path,
+[start=2]
+. Activating the cell
+
+The method accepts as a parameter the cell path in the active field layout.
+
+The path is formed by concatenating the record path and the field name or field index (the parenthesis and the brackets are part of the syntax):
+
+{record path}[field name or field index]
+
+For example, the cross-section of the first record and the field  _name_  is denoted as  _{0_  _}[_  _name]_, the cross-section of the first child record of the first record and the field  _name_  is denoted as  _{0}{0}[name]_ .
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Cell path
+|Using the cell path as a parameter. 
+
+*Example*
+
+Activating the cell in the “Title” field: 
+
+WpfWindow("MainWindow").XamDataGrid("dataGrid").ActivateCell "{1}{2}[Title]"
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following cell was not found.
+|The cell cannot be located when replaying the method.
+|The cell doesn’t exist.
+
+|The argument is malformed.
+|The parameter is not format correctly.
+|The method parameter is not correctly formatted.
+
+|====
+
+[[_ActivateRecord]]
+== _ActivateRecord_
+
+=== Description
+
+The  _ActivateRecord_  method is used for recording and replaying the record activation action performed by the user.
+
+=== Details
+
+When replaying, this method performs some validations first and then activates the specified record:
+
+[start=1]
+. Validating the specified record path,
+[start=2]
+. Activating the record
+
+The method accepts as a parameter the number of the record in the active field layout. The numbering starts from 0.
+
+The record path is formed in the following way:
+
+* root record number
+* {root record number}{parent record number}
+* {root record number}{parent record number}{child record number}
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Record path
+|Using the record path as a parameter. 
+
+*Example*
+
+Activating the third child record of the first root record: 
+
+WpfWindow("MainWindow").XamDataGrid("dataGrid").ActivateRecord "{0}{2}"
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following record was not found.
+|The record cannot be located when replaying the method.
+|The record doesn’t exist or is hidden.
+
+|The argument is malformed.
+|The parameter is not format correctly.
+|The method parameter is not correctly formatted.
+
+|====
+
+[[_ExpandRecord]]
+== _ExpandRecord_
+
+=== Description
+
+The  _ExpandRecord_  method is used for recording and replaying the record expanding action performed by the user.
+
+=== Details
+
+When replaying, this method performs some validations first and then expands the record:
+
+[start=1]
+. Validating the specified record path,
+[start=2]
+. Expanding the record
+
+The method accepts as a parameter the record path in the active field layout.
+
+The record path is formed in the following way:
+
+* root record number
+* {root record number}{parent record number}
+* {root record number}{parent record number}{child record number}
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Record path
+|Using the record path as a parameter. 
+
+*Example*
+
+Expanding the first root record: 
+
+WpfWindow("MainWindow").XamDataGrid("dataGrid").ExpandRecord 0
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following record was not found.
+|The record cannot be located when replaying the method.
+|The record doesn’t exist or is hidden.
+
+|The argument is malformed.
+|The parameter is not format correctly.
+|The method parameter is not correctly formatted.
+
+|====
+
+[[_CollapseRecord]]
+== _CollapseRecord_
+
+=== Description
+
+The  _CollapseRecord_  method is used for recording and replaying the record collapsing action performed by the user.
+
+=== Details
+
+When replaying, this method performs some validations first and then collapses the record:
+
+[start=1]
+. Validating the specified record path
+[start=2]
+. Collapsing the record
+
+The method accepts as a parameter the record path in the active field layout.
+
+The record path is formed in the following way:
+
+* root record number
+* {root record number}{parent record number}
+* {root record number}{parent record number}{child record number}
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Record path
+|Using the record path as a parameter. 
+
+*Example*
+
+Collapsing the first root record: 
+
+WpfWindow("MainWindow").XamDataGrid("dataGrid").CollapseRecord 0
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following record was not found.
+|The record cannot be located when replaying the method.
+|The record doesn’t exist or is hidden.
+
+|The argument is malformed.
+|The parameter is not format correctly.
+|The method parameter is not correctly formatted.
+
+|====
+
+[[_MoveField]]
+== _MoveField_
+
+=== Description
+
+The  _MoveField_  method is used for recording and replaying the moving of a particular field from the initial location to a new location performed by the user.
+
+=== Details
+
+The method accepts as a parameter the name of the field to be moved and the customization information saved during the recording while the field moving is performed by the user.
+
+=== Parameters
+
+The following table explains the method’s parameters.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|sFieldName
+|The name of the field to be moved.
+
+|sCustomizations
+|The customizations XML which is saved during the recording of the field moving performed by the user.
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+No known exception.
+
+[[_Select]]
+== _Select_
+
+=== Description
+
+The  _Select_  method is used for recording and replaying the item selection action performed by the user.
+
+=== Details
+
+The method takes the selectable item type and an item as parameters.
+
+The selectable item types are listed in the link:xamdatapresenter-enumeration-reference.html[xamDataPresenter - Enumeration Reference] topic.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|
+* Selectable item type 
+
+* Selected item(s) 
+
+|*Example* *1* 
+
+When selecting a field, you can use either the field name or index: 
+
+Selecting the _Author_ field: 
+
+WpfWindow("MainWindow").XamDataGrid("dataGrid").Select gridField, "[Author]" 
+
+Selecting the second field: 
+
+WpfWindow("MainWindow").XamDataGrid("dataGrid").Select gridField, 1 
+
+*Example*2*
+
+Selecting the first record: 
+
+WpfWindow("MainWindow").XamDataGrid("dataGrid").Select gridRecord, 0 
+
+*Example*3*
+
+Selecting a cell in the _Author_ field: 
+
+WpfWindow("MainWindow").XamDataGrid("dataGrid").Select gridCell, "{0}{0}[Author]"
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following items have not been found.
+|The specified item cannot be located when replaying the method.
+|The selected item path is not correct.
+
+|====
+
+[[_SelectionAdded]]
+== _SelectionAdded_
+
+=== Description
+
+The  _SelectionAdded_  method is used for recording and replaying the muliple selection action performed by the user.
+
+=== Details
+
+The method accepts the selectable item type and item to be added in existing selection as parameters.
+
+The selectable item types are listed in the link:xamdatapresenter-enumeration-reference.html[xamDataPresenter - Enumeration Reference] topic.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|
+* Selectable item type 
+
+* New item to be added 
+
+|Using the selectable item type and item to be added as parameters. 
+
+*Example*
+
+Adding three cells to the selection: 
+
+WpfWindow("MainWindow").XamDataGrid("dataGrid").Select gridCell, "{1}{1}[Isbn]" 
+
+WpfWindow("MainWindow").XamDataGrid("dataGrid").SelectionAdded gridCell, "{1}{1}[Title]" 
+
+WpfWindow("MainWindow").XamDataGrid("dataGrid").SelectionAdded gridCell, "{1}{1}[Author]"
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following items have not been found.
+|The item that has to be added to the selection can’t be located when replaying.
+|The selected item path is not correct.
+
+|====
+
+[[_SelectionRemoved]]
+== _SelectionRemoved_
+
+=== Description
+
+The  _SelectionRemoved_  method is used for recording and replaying the removal of an item from existing selection.
+
+=== Details
+
+The method takes the selectable item type and item to be removed from existing selection as parameters.
+
+The selectable item types are listed in the link:xamdatapresenter-enumeration-reference.html[xamDataPresenter - Enumeration Reference] topic.
+
+=== Parameters
+
+The following table explains the method’s parameters together with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|
+* Selectable item type 
+
+* Item to be removed 
+
+|Using a selectable item type and an item to be removed as parameters. 
+
+*Example*
+
+Removing a cell from a selection: 
+
+WpfWindow("MainWindow").XamDataGrid("dataGrid").SelectionRemoved gridCell,"{1}{1}[Title]"
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following items have not been found.
+|The item that has to be removed from the selection can’t be located when replaying.
+|The selected item path is not correct.
+
+|====
+
+[[_SelectionChanged]]
+== _SelectionChanged_
+
+=== Description
+
+The  _SelectionChanged_  method is used for recording and replaying the changes (adding and removing of items) in existing selection.
+
+=== Details
+
+The method takes a selectable item type and items to be added and removed from existing selection as parameters.
+
+The selectable item types are listed in the link:xamdatapresenter-enumeration-reference.html[xamDataPresenter - Enumeration Reference] topic.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|
+* Selectable item type 
+
+* Array of items to be added 
+
+* Selectable item type 
+
+* Array of items to be removed 
+
+|The method takes two arrays of items to be added and to be removed. 
+
+*Example*
+
+Changing the cell selection – adding and removing items of type _gridCell_ : 
+
+WpfWindow("MainWindow").XamDataGrid("dataGrid").SelectionChanged gridCell, ARRAY("{1}{4}[Title]", "{1}{5}[Title]", "{1}{6}[Title]"),gridCell, Array("{1}{5}[Title]")
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following items have not been found.
+|The item that has to be removed from the selection can’t be located when replaying.
+|The selected item path is not correct.
+
+|====
+
+[[_Rel]]
+== Related Content
+
+=== Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamdatapresenter-editing.html[Editing]
+|This topic provides reference information about the recordable user methods for testing the editing in xamDataPresenter™ controls.
+
+| link:xamdatapresenter-filtering.html[Filtering]
+|This topic provides reference information about the recordable user methods for testing the filtering in xamDataPresenter™ controls.
+
+| link:xamdatapresenter-sorting-grouping.html[Sorting and Grouping]
+|This topic provides reference information about the recordable user methods for testing the sorting and grouping user actions in xamDataPresenter™ controls.
+
+| link:xamdatapresenter-summaries.html[Summaries]
+|This topic provides reference information about the recordable user methods for testing the summary feature in xamDataPresenter™ controls.
+
+|====

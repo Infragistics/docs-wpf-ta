@@ -1,0 +1,32 @@
+﻿////
+|metadata|
+{
+    "name": "revision-history",
+    "controlName": [],
+    "tags": [],
+    "guid": "293b20d4-a29f-48d5-ae85-369d7e0c47c0",
+    "buildFlags": [],
+    "createdOn": "2012-02-06T16:26:38.1529617Z"
+}
+|metadata|
+////
+
+= Revision History
+
+=== Introduction
+
+This section contains information about the supported controls and features added to the previous releases.
+
+* link:whats-new-in-2016-volume-2.html[What's New in 2016 Volume 2]
+* link:whats-new-in-2016-volume-1.html[What's New in 2016 Volume 1]
+* link:whats-new-in-2015-volume-2.html[What's New in 2015 Volume 2]
+* link:whats-new-in-2015-volume-1.html[What's New in 2015 Volume 1]
+* link:whats-new-in-2014-volume-2.html[What's New in 2014 Volume 2]
+* link:whats-new-in-2014-volume-1.html[What's New in 2014 Volume 1]
+* link:whats-new-in-2013-volume-2.html[What's New in 2013 Volume 2]
+* link:whats-new-in-2013-volume-1.html[What's New in 2013 Volume 1]
+* link:whats-new-in-2012-volume-2.html[What's New in 2012 Volume 2]
+* link:whats-new-in-2012-volume-1.html[What's New in 2012 Volume 1]
+* link:whats-new-in-2011-volume-2.html[What's New in 2011 Volume 2]
+* link:whats-new-in-2011-volume-1.html[What's New in 2011 Volume 1]
+* link:whats-new-in-2010-volume-3.html[What's New in 2010 Volume 3]

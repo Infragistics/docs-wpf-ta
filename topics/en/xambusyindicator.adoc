@@ -1,0 +1,31 @@
+﻿////
+|metadata|
+{
+    "name": "xambusyindicator",
+    "controlName": [],
+    "tags": [],
+    "guid": "d4622ff2-4079-4f5a-b046-58ec278e791f",
+    "buildFlags": [],
+    "createdOn": "2015-09-18T08:40:00.3327616Z"
+}
+|metadata|
+////
+
+= xamBusyIndicator
+
+=== Introduction
+
+The topic below provides reference information about link:infragisticswpf.test~infragisticswpf4.test.controls.xambusyindicatorproxy.html[XamBusyIndicatorProxy] object in {ProductName}.
+
+=== Topics
+
+The topic contained in this section covers reference information about the  _xamBusyIndicator™_   control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xambusyindicator-api.html[xamBusyIndicator - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamBusyIndicator_ control in Micro Focus Unified Functional Testing software.
+
+|====

@@ -1,0 +1,44 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamrichtexteditor",
+    "controlName": [],
+    "tags": [],
+    "guid": "560ee91d-9b81-4678-a0e1-4c0ab8aa450f",  
+    "buildFlags": [],
+    "createdOn": "2013-11-20T21:14:23.5258829Z"
+}
+|metadata|
+////
+
+= xamRichTextEditor
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.xamrichtexteditorproxy.html[XamRichTextEditorProxy] object in {ProductName}.
+
+=== Topics
+
+The topics contained in this section cover implementing action elements, methods and properties within the  _XamRichTextEditor™_   control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamrichtexteditor-user-actions.html[xamRichTextEditor - User Actions]
+|This topic provides information about the _xamRichTextEditor_ control’s testable user actions and elements.
+
+| link:xamrichtexteditor-recordable-methods.html[xamRichTextEditor - Recordable Methods]
+|This topic provides information about recording and replaying actions using the _xamRichTextEditor_ control’s testable user methods.
+
+| link:xamrichtexteditor-replay-only-methods.html[xamRichTextEditor - Replay-Only Methods]
+|This topic provides information about the _XamRichTextEditor_ control’s testable user replay-only methods.
+
+| link:xamrichtexteditor-property-reference.html[xamRichTextEditor - Property Reference]
+|This topic provides reference information about the _xamRichTextEditor_ control’s test object properties.
+
+| link:xamrichtexteditor-enumeration-reference.html[xamRichTextEditor - Enumeration Reference]
+|This topic provides reference material on the common enumerations used for testing the _xamRichTextEditor_ control.
+
+|====

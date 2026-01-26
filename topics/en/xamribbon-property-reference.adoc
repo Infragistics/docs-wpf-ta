@@ -1,0 +1,222 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamribbon-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "77b25145-761f-452b-87ba-e0f6b2f2cf5a",  
+    "buildFlags": [],
+    "createdOn": "2013-04-19T13:56:58.8228955Z"
+}
+|metadata|
+////
+
+= xamRibbon - Property Reference
+
+== _XamRibbon_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the  _xamRibbon_™ control’s test object properties.
+
+[[_Ref337672876]]
+
+=== Properties reference chart
+
+The following table summarizes the control’s test object properties and tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~ribbontabs.html[RibbonTabs]_ 
+|Returns header text for all of the _RibbonTabs_ . If the header text is unavailable it will return the _RibbonTab’s_ DataType instead.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~ribbontabscount.html[RibbonTabsCount]_ 
+|Returns the count of the visible _RibbonTabItems_ .
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~contextualtabs.html[ContextualTabs]_ 
+|Returns the contextual tab headers and all of its child ribbon tab items. If one of the header texts is un available, the object type is returned.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~contextualtabscount.html[ContextualTabsCount]_ 
+|Returns the count of the visible _ContextualTabGroups_ .
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~selectedtab.html[SelectedTab]_ 
+|Identifies the currently selected ribbon tab.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~selectedtabgroups.html[SelectedTabGroups]_ 
+|Returns all of the ribbon groups for the selected tab.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~selectedtabgroupscount.html[SelectedTabGroupsCount]_ 
+|Returns the count of all the visible _RibbonGroups_ of the currently selected ribbon tab.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~isselectedtabcontextual.html[IsSelectedTabContextual]_ 
+|Returns `true` if the current selected tab is present and contains a _ContextualTabGroup_, otherwise returns `false`.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~applicationmenuleftareaitems.html[ApplicationMenuLeftAreaItems]_ 
+|Returns the headers of all the visible items on the _ApplicationMenu’s_ first level, identified as being the area to the left of the _ApplicationMenu_ .
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~applicationmenuleftareaitemscount.html[ApplicationMenuLeftAreaItemsCount]_ 
+|Returns the count of all the visible items on the first level in the left area of the _ApplicationMenu_ .
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~applicationmenurecentitems.html[ApplicationMenuRecentItems]_ 
+|Returns the headers of all the visible items on the _ApplicationMenu’s_ first level in its recent items area.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~applicationmenurecentitemscount.html[ApplicationMenuRecentItemsCount]_ 
+|Returns the count of all the visible items on the _ApplicationMenu’s_ first level in its Recent items area.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~applicationmenufooteritems.html[ApplicationMenuFooterItems]_ 
+|Returns the headers of all the visible items on the _ApplicationMenu’s_ first level in its footer.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~applicationmenufooteritemscount.html[ApplicationMenuFooterItemsCount]_ 
+|Returns the count of all the visible items on the _ApplicationMenu’s_ first level in its footer area.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~applicationmenuselectedtabitems.html[ApplicationMenuSelectedTabItems]_ 
+|Returns the headers of all the visible _ApplicationMenu2010_ items contained within the _ApplicationMenu2010_ Selected tab area. 
+
+.Note: 
+
+[NOTE] 
+
+==== 
+
+_ApplicationMenu2010_ must be active and open; otherwise it will return no value. 
+
+====
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~applicationmenuselectedtabitemscount.html[ApplicationMenuSelectedTabItemsCount]_ 
+|Returns the count of all the visible _ApplicationMenu2010_ items contained within the _ApplicationMenu2010_ Selected tab area. 
+
+.Note: 
+
+[NOTE] 
+
+==== 
+
+_ApplicationMenu2010_ must be active and open; otherwise it will return 0. 
+
+====
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~qatitems.html[QATItems]_ 
+|Returns the headers of all the visible items on the first level of the _QuickAccessToolBar_ .
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~qatitemscount.html[QATItemsCount]_ 
+|Returns the count of all the visible items on the first level of the _QuickAccessToolBar_ .
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~tabitemareaitems.html[TabItemAreaItems]_ 
+|*(New)* Returns the headers(if exists), otherwise types of all visible items contained within the _TabItemAreaToolbar_ .
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~tabitemareaitemscount.html[TabItemAreaItemsCount]_ 
+|*(New)* Returns the count of all visible items contained within the _TabItemAreaToolbar_ .
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon.xamribbonproxy~iswithinribbonwindow.html[IsWithinRibbonWindow]_ 
+|Returns `true` if the _xamRibbon_ is hosted within ribbon window (in the caption area of a window), otherwise it returns `false`.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====

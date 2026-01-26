@@ -1,0 +1,334 @@
+﻿////
+|metadata|
+{
+    "name": "xamcontextmenu-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "7bdba9f6-54fe-47fe-a8b8-6daae335cb50",
+    "buildFlags": [],
+    "createdOn": "2012-02-01T07:55:05.995257Z"
+}
+|metadata|
+////
+
+= xamContextMenu - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods for testing the xamContextMenu™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_summary,xamContextMenu Test Object Recordable Methods Summary>>
+
+** <<_CheckMenuItem, _CheckMenuItem_   Method>>
+** <<_SelectMenuItem, _SelectMenuItem_   Method>>
+** <<_UnCheckMenuItem, _UnCheckMenuItem_   Method>>
+
+* <<_RelTopics,Related Topics>>
+
+[[_summary]]
+== xamContextMenu Test Object Recordable Methods Summary
+
+=== Recordable methods summary chart
+
+The following table briefly explains the recordable methods for testing the control. Detailed information about the methods is provided in the text blocks following the table.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|*Description*
+
+|_link:{ApiPlatform}test.menu~infragisticswpf.test.menu.xammenubaseproxy~checkmenuitem.html[CheckMenuItem]_
+|Checks a xamContextMenu item checkbox.
+
+|_link:{ApiPlatform}test.menu~infragisticswpf.test.menu.xammenubaseproxy~selectmenuitem.html[SelectMenuItem]_
+|Clicks on a specified menu item.
+
+|_link:{ApiPlatform}test.menu~infragisticswpf.test.menu.xammenubaseproxy~uncheckmenuitem.html[UnCheckMenuItem]_
+|Unchecks a xamContextMenu item checkbox.
+
+|====
+
+[[_CheckMenuItem]]
+== _CheckMenuItem_   Method
+
+=== Description
+
+The  _CheckMenuItem_  records and replays the marking of the check box of a specified menu item.
+
+=== Details
+
+When the marking of the checkbox of a menu item action is recorded, the location of the menu item is stored as a unique path. This path consists of the headers of the parent menus’ items and the header of the targeted menu item.
+
+In case there are duplicate or missing headers, the menu item index is recorded.
+
+When a testing script is being created manually, you the following options are available for specifying the path to the menu item:
+
+* headers
+* indexes
+* a combination of headers and indexes
+
+When replaying the marking action, if the checkbox is already marked, the action is ignored and the checkbox remains marked.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Header identifier
+|The unique menu item header identifier is: 
+
+* for root menu items: the header 
+
+* for sub-menu items: the path to the item consisting of the headers of the parent items pointing to the item, stored in an array 
+
+*Note:* The menu items are listed in hierarchically downward order, i.e. root item, sub-item, sub-sub-item (see the example). 
+
+*Example*
+
+Marking the checkbox of an item named “ _Pdf_ ” which has a parent item _File_ belonging to the root menu item _Create_ (Create>File>Pdf): 
+
+WpfWindow("MainWindow").XamContextMenu("xamContextMenu1").CheckMenuItem ARRAY("Create", "File", "Pdf")
+
+|Index identifier
+|The unique menu item index identifier is: 
+
+* for root menu items: the index 
+
+* for sub-menu items: the path to the item consisting of the indexes of the parent items pointing to the item, stored in an array 
+
+*Note:* The menu items are listed in hierarchically downward order, i.e. root item, sub-item, sub-sub-item (see the example). 
+
+*Example*
+
+Checking the checkbox of the third child menu item starting from the first root menu item and its first child: 
+
+WpfWindow("MainWindow").XamContextMenu("xamContextMenu1").CheckMenuItem ARRAY(0, 0, 2)
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception* *name*|*Exception description*|*Possible reasons*
+
+|Cannot perform the specified action as the item is not checkable.
+|The specified menu item cannot be checked.
+|The menu item property _IsCheckable_ is not set to _True._
+
+|The following item was not found.
+|The xamContextMenu item with the specified header text cannot be found.
+|The method parameter is not correct.
+
+|The specified index is out of range.
+|The xamContextMenu item with the specified index cannot be found.
+|The method parameter is not within the valid range of item indexes.
+
+|====
+
+[[_SelectMenuItem]]
+== _SelectMenuItem_   Method
+
+=== Description
+
+The  _SelectMenuItem_  method records and replays a mouse click on a specifed xamContextMenu item.
+
+=== Details
+
+When a click on a menu item is recorded, the location of the menu item is stored as a unique path. This path consists of the header of the parent menu items and the header of the targeted menu item.
+
+In case there are duplicate or missing headers, the index of the item is recorded.
+
+When a testing script is created manually, you can use the following options to specify the path to the menu item:
+
+* headers
+* indexes
+* combination of headers and indexes
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Header identifier
+|The unique menu item header identifier is: 
+
+* for root menu items: the header 
+
+* for sub-menu items : the path to the item consisting of the headers of the parent items pointing to the item, stored in an array 
+
+Note: The menu items are listed in hierarchically downward order, i.e. root item, sub-item, sub-sub-item (see the example). 
+
+*Example*
+
+Clicking on a child xamContextMenu item _File_ with a parent named _Create_ : 
+
+WpfWindow("MainWindow").XamContextMenu("xamContextMenu1").SelectMenuItem ARRAY("Create", "File")
+
+|Index identifier
+|The unique menu item index identifier is: 
+
+* for root menu items: the index 
+
+* for sub-menu items: the path to the item consisting of the indexes of the parent items pointing to the item, stored in an array 
+
+*Note:* The menu items are listed in hierarchically downward order, i.e. root item, sub-item, sub-sub-item (see the example). 
+
+*Example*
+
+Clicking on the third child of the first root menu item: 
+
+WpfWindow("MainWindow").XamContextMenu("xamContextMenu1").SelectMenuItem ARRAY(0, 2)
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following item was not found.
+|The xamContextMenu item with the specified header text cannot be found.
+|The method parameter is not correct.
+
+|The specified index is out of range.
+|The xamContextMenu item with the specified index cannot be found.
+|The method parameter is not within the valid range of item indexes.
+
+|====
+
+[[_UnCheckMenuItem]]
+== _UnCheckMenuItem_  Method
+
+=== Description
+
+The  _UnCheckMenuItem_  method is used for recording and replaying unchecking the check box of a specified menu item.
+
+=== Details
+
+When the unchecking of a menu item checkbox action is recorded, the location of the menu item is stored as a unique path. This path consists of the header of the parent menu items and the header of the targeted menu item.
+
+In case there are duplicate or missing headers, a menu item index is recorded.
+
+When a testing script is created manually, you can use the following options to specify the path to the menu item:
+
+* headers
+* indexes
+* combination of headers and indexes
+
+When replaying the unchecking, if the item is already unchecked, the action is ignored and the item remains unchecked.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameter*|*Description*
+
+|Header identifier
+|The unique identifier of the menu item header is: 
+
+* for root menu items: the header 
+
+* for sub-menu items : the path to the item consisting of the headers of the parent items pointing to the item, stored in an array 
+
+Note: The menu items are listed in hierarchically downward order, i.e. root item, sub-item, sub-sub-item (see the example). 
+
+*Example*
+
+Unchecking the checkbox of a child menu item _Pdf_ with root menu item – _Create_ and a parent – _File_ ( _Create>File>_ _Pdf_ ): 
+
+WpfWindow("MainWindow").XamContextMenu("xamContextMenu1").UnCheckMenuItem ARRAY("Create", "File", "Pdf")
+
+|Index identifier
+|The unique menu item index identifier is: 
+
+* for root menu items: the index 
+
+* for sub-menu items: the path to the item consisting of the indexes of the parent items pointing to the item, stored in an array 
+
+*Note:* The menu items are listed in hierarchically downward order, i.e. root item, sub-item, sub-sub-item (see the example). 
+
+*Example*
+
+Unchecking the checkbox of the third child menu item starting from the first root menu item and its first child: 
+
+WpfWindow("MainWindow").XamContextMenu("xamContextMenu1").UnCheckMenuItem ARRAY(0, 0, 2)
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|Cannot perform the specified action as the item is not checkable.
+|The specified menu item cannot be unchecked.
+|The menu item property _IsCheckable_ is not set to _True._
+
+|The following item was not found.
+|The xamContextMenu item with the specified header text cannot be found.
+|The method parameter is not correct.
+
+|The specified index is out of range.
+|The xamContextMenu item with the specified index cannot be found.
+|The method parameter is not within the valid range of item indexes.
+
+|====
+
+[[_RelTopics]]
+== Related Topics
+
+=== Related topics summary chart
+
+The following table lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamcontextmenu-testable-user-actions-and-elements.html[xamContextMenu - Testable User Actions and Elements]
+|This topic provides information about the user actions of the xamContextMenu™ control which you can test and the elements you can inspect.
+
+| link:xamcontextmenu-replay-only-methods.html[xamContextMenu - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the xamContextMenu™ control.
+
+| link:xamcontextmenu-property-reference.html[xamContextMenu - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamContextMenu™ control.
+
+| link:xamcontextmenu-api.html[xamContextMenu - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamContextMenu™ control in Micro Focus Unified Functional Testing software.
+
+|====

@@ -1,0 +1,43 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamsparkline-api",
+    "controlName": [],
+    "tags": [],
+    "guid": "6dfe83d2-72de-428f-b2ac-1cb90dd72c59",  
+    "buildFlags": [],
+    "createdOn": "2012-06-26T17:10:17.1322537Z"
+}
+|metadata|
+////
+
+= xamSparkline - API Reference
+
+[[_Ref326580262]]
+== _xamSparkline_   Test Object API Reference
+
+=== Introduction
+
+This topic provides a table of the  _xamSparkline_   control’s proxy class namespace and inheritance information.
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|Proxy Class Name|Namespace|Inherits From|Additional Notes
+
+| link:{ApiPlatform}test.sparkline~infragisticswpf.test.sparkline.xamsparklineproxy.html[XamSparklineProxy]
+|_InfragisticsWPF.Test.Sparkline_
+|
+_RecordReplayProxyBase_ 
+
+_IXamSparklineReplay_ 
+
+_IXamSparklineControlIDProps_ 
+
+|N/A
+
+|====

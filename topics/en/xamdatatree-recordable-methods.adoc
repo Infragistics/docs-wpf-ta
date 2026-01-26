@@ -1,0 +1,498 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamdatatree-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "1815f1e3-924e-41ef-a86c-e33ea46dfad8",  
+    "buildFlags": [],
+    "createdOn": "2012-01-18T22:01:27.0558852Z"
+}
+|metadata|
+////
+
+= xamDataTree - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods for testing the xamDataTree™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_dataTreeRecordableMethods, _xamDataTree_   Test Object Recordable Methods>>
+
+** <<_selectMethod,Select>>
+** <<_Activate_Method,Activate>>
+** <<_SetText_Method,SetText>>
+** <<_SetNodeState_Method,SetNodeState>>
+** <<_Expand_Method,Expand>>
+** <<_Collapse_Method,Collapse>>
+
+* <<_ref1,Related Content>>
+
+[[_dataTreeRecordableMethods]]
+== _xamDataTree_   Test Object Recordable Methods
+
+=== Recordable methods summary chart
+
+The following table briefly explains the recordable methods for testing the control. Detailed information about the methods is provided in the text blocks following the table.
+
+[options="header", cols="a,a"]
+|====
+|Method|Description
+
+| _<<selectMethod, Select >>_ 
+|Selects a xamDataTree node.
+
+| _<<ActivateMethod, Activate >>_ 
+|Activates a xamDataTree node.
+
+| _<<SetTextMethod, SetText >>_ 
+|Sets the header text of the specified node.
+
+| _<<SetNodeStateMethod, SetNodeState >>_ 
+|Sets the check state of the specified node.
+
+| _<<ExpandMethod, Expand >>_ 
+|Expands a specified node.
+
+| _<<CollapseMethod, Collapse >>_ 
+|Collapses a specified node.
+
+|====
+
+[[_selectMethod]]
+== _Select_
+
+=== Description
+
+The  _Select_  method is used for recording and replaying a node selection.
+
+The method records the path to the currently selected node.
+
+When it is replayed, the method uses the provided node path to select it.
+
+=== Details
+
+The method accepts as a parameter an array of nodes’ header or array of nodes’ index forming the path to the selected node, depending on whether there are duplicating node headers. The following rule applies:
+
+* If the header text is unique, the node header text is used as a parameter.
+* If the header text is not unique, the index is used instead for every duplicating header text.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|Method Parameter|Description
+
+|Array of nodes’ text 
+
+_(default)_
+|Used if the node header text is unique or it is the first occurrence of a duplicated header text. 
+
+*Example*
+
+Selecting a child node “Honeymoon” with parent node “Thriller”: 
+
+WpfWindow("MainWindow").XamDataTree("dataTree").Select Array("Thriller",” Honeymoon”)
+
+|Array of nodes’ index
+|Used if after the first occurrence of the non-unique header text the rest of the node header text is not unique. 
+
+*Example*
+
+WpfWindow("MainWindow").XamDataTree("dataTree").Select Array(0,1)
+
+|====
+
+=== Default setting
+
+This method takes as a parameter an array of node headers forming the path to the specified node.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|Exception name|Exception description|Possible reasons
+
+|The following item was not found.
+|The selected node cannot be located when replaying the method.
+|The array of headers or indexes is not correct.
+
+|====
+
+[[_Activate_Method]]
+== _Activate_
+
+=== Description
+
+The  _Activate_  method is used for recording and replaying a node activation.
+
+The method records the path to the currently active node.
+
+When it is replayed, the method uses the provided node path to activate it.
+
+=== Details
+
+The method accepts as a parameter an array of nodes’ header or an array of nodes’ index forming the path to the activated node, depending on whether there are duplicating node headers. The following rules applies:
+
+* If the header text is unique, the node header text is used as a parameter.
+* If the header text is not unique, the index is used instead for every duplicating header text.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|Method Parameter|Description
+
+|Array of nodes’ text 
+
+_(default)_
+|Used if the node header text is unique or it is the first occurrence of a duplicated header text. 
+
+*Example*
+
+Activating a child node “Honeymoon” with parent node “Thriller”: 
+
+WpfWindow("MainWindow").XamDataTree("dataTree").Activate Array("Thriller",” Honeymoon”)
+
+|Array of nodes’ index
+|Used if after the first occurrence of the non-unique header text, the rest of the node header text is not unique. 
+
+*Example*
+
+WpfWindow("MainWindow").XamDataTree("dataTree"). Activate Array(0,1)
+
+|====
+
+=== Default setting
+
+This method takes as a parameter an array of node headers forming the path to the specified node.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|Exception name|Exception description|Possible reasons
+
+|The following item was not found.
+|The node cannot be activated because it cannot be located when replaying the method.
+|The array of headers or indexes is not correct.
+
+|====
+
+[[_SetText_Method]]
+== _SetText_
+
+=== Description
+
+The  _SetText_  method is used for recording and replaying the editing of the node header.
+
+The method records the path to the currently edited node and the new text to be set.
+
+When it is replayed, the method sets the new text to the edited node header.
+
+=== Details
+
+The method accepts as a first parameter an array of nodes’ header or an array of nodes’ index forming the path to the node, depending on whether there are duplicating node headers. The following rules applies:
+
+* If the header text is unique, the node header text is used as a parameter.
+* If the header text is not unique, the index is used instead for every duplicating header text.
+
+=== Parameters
+
+The following table explains the method’s parameters together with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|Method Parameter|Description
+
+|
+* Array of nodes’ text 
+
+_(default)_ 
+
+* The new node text 
+
+|Used if the node header text is unique or it is the first occurrence of a duplicated header text. 
+
+*Example*
+
+Editing a child node: 
+
+WpfWindow("MainWindow").XamDataTree("dataTree").SetText ARRAY("Book", "Old title"), "New Title"
+
+|
+* Array of nodes’ index 
+
+* The new node text 
+
+|Used if after the first occurrence of the non-unique header text the rest of the node header text is not unique 
+
+*Example*
+
+WpfWindow("MainWindow").XamDataTree("dataTree").SetText ARRAY(1, 1), "New Title"
+
+|====
+
+=== Default setting
+
+This method takes as parameters array of node headers (node path) and the new text to be set.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|Exception name|Exception description|Possible reasons
+
+|The following item was not found.
+|The node cannot be edited because it cannot be located when replaying the method.
+|The array of headers or indexes is not correct.
+
+|====
+
+[[_SetNodeState_Method]]
+== _SetNodeState_
+
+=== Description
+
+The  _SetNodeState_  method is used for recording and replaying checking/unchecking of a node.
+
+The method records the path to the node and the check state value.
+
+When it is replayed, the method checks/unchecks the node.
+
+=== Details
+
+The check state can be one of the following values:
+
+• Checked = 0
+
+• UnChecked
+
+• Indetermined
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|Method Parameter|Description
+
+|
+* Array of nodes’ text 
+
+_(default)_ 
+
+* The new check state 
+
+|Used if the node header text is unique or it is the first occurrence of a duplicated header text. 
+
+*Example*
+
+Check a node: 
+
+WpfWindow("MainWindow").XamDataTree("dataTree").SetNodeState Array("Thriller", “The Broker”), Checked
+
+|
+* Array of nodes’ index 
+
+* The new check state 
+
+|Used if after the first occurrence of the non-unique header text the rest of the node header text is not unique 
+
+*Example*
+
+WpfWindow("MainWindow").XamDataTree("dataTree").SetNodeState Array(0, 1), Checked
+
+|====
+
+=== Default setting
+
+This method takes as parameters array of node headers (node path) and the new check state of the node.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|Exception name|Exception description|Possible reasons
+
+|The following item was not found.
+|The node cannot be checked/unchecked because it cannot be located when replaying the method.
+|The array of headers or indexes is not correct.
+
+|====
+
+[[_Expand_Method]]
+== _Expand_
+
+=== Description
+
+The  _Expand_  method is used for recording and replaying the expanding of a parent node.
+
+The method records the path to the node that is expanded.
+
+When it is replayed, the method expands the specified parent node.
+
+=== Details
+
+The method accepts as first parameter either an array of nodes’ header or array of nodes’ index forming the path to the node, depending on whether there are duplicating node headers. The following rule applies:
+
+* If the header text is unique, the node header text is used as a parameter.
+* If the header text is not unique, the index is used instead for every duplicating header text.
+
+=== Parameters
+
+The following table explains the method’s parameters together with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|Method Parameter|Description
+
+|
+* Array of nodes’ text 
+
+_(default)_
+|Used if the node header text is unique or it is the first occurrence of a duplicated header text. 
+
+*Example*
+
+Expanding a parent node: 
+
+WpfWindow("MainWindow").XamDataTree("dataTree").Expand Array(“Thriller”)
+
+|
+* Array of nodes’ index 
+
+|Used if after the first occurrence of the non-unique header text the rest of the node header text is not unique 
+
+*Example*
+
+WpfWindow("MainWindow").XamDataTree("dataTree").Expand Array(0)
+
+|====
+
+=== Default setting
+
+This method takes as a parameter an array of nodes’ header (node path).
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|Exception name|Exception description|Possible reasons
+
+|The following item was not found.
+|The node cannot be expanded because it cannot be located when replaying the method.
+|The array of headers or indexes is not correct.
+
+|====
+
+[[_Collapse_Method]]
+== _Collapse_
+
+=== Description
+
+The  _Collapse_  method is used for recording and replaying collapsing of a parent node.
+
+The method records the path to the node that is collapsed.
+
+When it is replayed, the method collapses the specified parent node.
+
+=== Details
+
+The method accepts as a first parameter an array of nodes’ header or array of nodes’ index forming the path to the node, depending on whether there are duplicating node headers. The following rule applies:
+
+* If the header text is unique, the node header text is used as a parameter.
+* If the header text is not unique, the index is used instead for every duplicating header text.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|Method Parameter|Description
+
+|
+* Array of nodes’ text 
+
+_(default)_
+|Used if the node header text is unique or it is the first occurrence of a duplicated header text. 
+
+*Example*
+
+Collapsing a root node: 
+
+WpfWindow("MainWindow").XamDataTree("dataTree").Collapse Array(“Thriller”)
+
+|
+* Array of nodes’ index 
+
+|Used if after the first occurrence of the non-unique header text the rest of the node header text is not unique 
+
+*Example*
+
+WpfWindow("MainWindow").XamDataTree("dataTree").Collapse Array(0)
+
+|====
+
+=== Default setting
+
+This method takes as a parameter an array of nodes’ header (node path).
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|Exception name|Exception description|Possible reasons
+
+|The following item was not found.
+|The node cannot be collapsed because it cannot be located when replaying the method.
+|The array of headers or indexes is not correct.
+
+|====
+
+[[_ref1]]
+== Related Content
+
+=== Topics
+
+The following table lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamdatatree-testable-user-actions-and-elements.html[xamDataTree - Testable User Actions and Elements]
+|This topic provides information about the user actions of the xamDataTree™ control which you can test and the elements you can inspect.
+
+| link:xamdatatree-property-reference.html[xamDataTree - Properties Reference]
+|This topic provides reference information about the inspectable test object properties of the xamDataTree™ control.
+
+| link:xamdatatree-api.html[xamDataTree - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamDataTree™ control in Micro Focus Unified Functional Testing software.
+
+|====

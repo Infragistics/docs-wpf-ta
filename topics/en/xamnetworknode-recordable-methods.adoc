@@ -1,0 +1,471 @@
+﻿////
+|metadata|
+{
+    "name": "xamnetworknode-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "8b5dd912-85f5-4807-8c43-28679e9bd67a",
+    "buildFlags": [],
+    "createdOn": "2012-10-29T20:54:41.918123Z"
+}
+|metadata|
+////
+
+= xamNetworkNode - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the  _xamNetworkNode_™ control’s testable user recordable methods.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref338265452, xamNetworkNode Test Object Recordable Methods Summary >>
+
+** <<_Ref338271984, _ActivateNode_   method>>
+** <<_Ref338277352, _ClearSelection_   method>>
+** <<_Ref338277363, _CollapseNode_   method>>
+** <<_Ref338277374, _ExpandNode_   method>>
+** <<_Ref338277386, _SelectNodes_   method>>
+** <<_Ref338277405, _PanArea_   method>>
+** <<_Ref338277416, _ZoomArea_   method>>
+
+* <<_Ref337132389, Related Content >>
+
+[[_Ref338265452]]
+== _xamNetworkNode_  Test Object Recordable Methods Summary
+
+=== Recordable methods summary chart
+
+The following table briefly explains the various recordable methods for testing the control. Detailed information about the methods follows the table.
+
+[options="header", cols="a,a"]
+|====
+|Method|Description
+
+|_link:{ApiPlatform}test.networknode~infragisticswpf.test.networknode.xamnetworknodeproxy~activatenode.html[ActivateNode]_
+|This method stores the activated node’s identifier.
+
+|_link:{ApiPlatform}test.networknode~infragisticswpf.test.networknode.xamnetworknodeproxy~clearselection.html[ClearSelection]_
+|This method listens for the node’s collection change event when clearing the entire selection of the _xamNetworkNode_ control.
+
+|_link:{ApiPlatform}test.networknode~infragisticswpf.test.networknode.xamnetworknodeproxy~collapsenode.html[CollapseNode]_
+|This method listens for the event that fires when a _xamNetworkNode_ control’s node collapses.
+
+|_link:{ApiPlatform}test.networknode~infragisticswpf.test.networknode.xamnetworknodeproxy~expandnode.html[ExpandNode]_
+|This method listens for the event that fires when a _xamNetworkNode_ control’s node expands.
+
+|_link:{ApiPlatform}test.networknode~infragisticswpf.test.networknode.xamnetworknodeproxy~selectnodes.html[SelectNodes]_
+|This method stores the identifiers of all the selected nodes as of when the collection changes.
+
+|_link:panning-and-zooming.html[PanArea]_
+|This proxy method pans to specific coordinates of the _xamNetworkNode_ control’s layout area.
+
+|_link:panning-and-zooming.html[ZoomArea]_
+|This proxy method zooms to specific coordinates of the _xamNetworkNode_ control’s layout area.
+
+|====
+
+[[_Ref338271984]]
+== _ActivateNode_   method
+
+=== Description
+
+This method activates a single  _xamNetworkNode_   control node obtained from its `oNodeIdentifier`.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oNodeIdentifier`
+|Uniquely identifies the _xamNetworkNode_ control’s node using either the node’s label or visible index.
+
+|====
+
+=== Example
+
+Activating the node labeled “Node45.”
+
+[source,csharp]
+----
+XamNetworkNode("xamNetworkNode1").ActivateNode "Node45"
+----
+
+Activating the node using an index (zero-based).
+
+[source,csharp]
+----
+XamNetworkNode("xamNetworkNode1").SelectNodes 10
+----
+
+=== Default settings
+
+Initially there is no active node.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions to the method and the likely reason causing them.
+
+[cols="a"]
+|====
+|Exception reasons
+
+|The node(s) visibility is hidden or collapsed.
+
+|Index of the node(s) is out of range.
+
+|Cannot find the node Label(s) among the existing nodes collection.
+
+|====
+
+[[_Ref338277352]]
+== _ClearSelection_   method
+
+=== Description
+
+This method clears the  _xamNetworkNode_   control’s entire selection of nodes.
+
+=== Parameters
+
+None
+
+=== Example
+
+The following script is from the recording where the  _xamNetworkNode_   is set with selection mode as “ _Extended_  .” While in extended mode, selecting a node and then clicking on the same node again clears the entire selection.
+
+[source,csharp]
+----
+XamNetworkNode("xamNetworkNode1").ClearSelection
+----
+
+=== Default settings
+
+Clears all nodes from any selection.
+
+=== Possible exceptions
+
+N/A
+
+[[_Ref338277363]]
+== _CollapseNode_   method
+
+=== Description
+
+The method described here collapses a single  _xamNetworkNode_   control node, obtained from its `oNodeIdentifier`.
+
+.Note:
+[NOTE]
+====
+By default, expansion indicators are disabled, so your application needs to enable them before testing. Achieve this by setting the `ExpansionIndicatorVisibility` property to  _True_  .
+====
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oNodeIdentifier`
+|This uniquely identifies the _xamNetworkNode_ control’s node, which can be either the node’s label or visible index.
+
+|====
+
+=== Example
+
+Collapsing the node with label “Node3.”
+
+[source,csharp]
+----
+XamNetworkNode("xamNetworkNode1").CollapseNode "Node3"
+----
+
+Collapsing the node using an index 2.
+
+[source,csharp]
+----
+XamNetworkNode("xamNetworkNode1").CollapseNode 2
+----
+
+=== Default settings
+
+Initially, all nodes are expanded with the expansion indicators not visible (disabled).
+
+=== Possible exceptions
+
+The following table lists the possible exceptions to the method and the likely reason causing them.
+
+[cols="a"]
+|====
+|Exception reasons
+
+|A node on which the expansion indicator is invisible cannot be collapsed.
+
+|The node(s) visibility is hidden or collapsed.
+
+|Index of the node(s) is out of range.
+
+|The node Label(s) is not found among the existing nodes collection.
+
+|====
+
+[[_Ref338277374]]
+== _ExpandNode_   method
+
+=== Description
+
+This method expands a single node, of the  _xamNetworkNode_   control, obtained from its `oNodeIdentifier`.
+
+.Note:
+[NOTE]
+====
+Disabled by default, expansion indicators, require your application to enable them before testing setting the `ExpansionIndicatorVisibility` property to  _True_  .
+====
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oNodeIdentifier`
+|This uniquely identifies the _xamNetworkNode_ control’s node, which can be either the node’s label or visible index.
+
+|====
+
+=== Example
+
+Expanding the node with label “Node3.”
+
+[source,csharp]
+----
+XamNetworkNode("xamNetworkNode1").ExpandNode "Node3"
+----
+
+Expanding the node using an index (zero-based).
+
+[source,csharp]
+----
+XamNetworkNode("xamNetworkNode1").ExpandNode 2
+----
+
+=== Default settings
+
+By design, all nodes are initially expanded with their expansion indicators not visible (disabled).
+
+=== Possible exceptions
+
+The following table lists the possible exceptions to the method and the likely reason causing them.
+
+[cols="a"]
+|====
+|Exception reasons
+
+|A node on which the expansion indicator is invisible cannot be expanded.
+
+|The node(s) visibility is hidden or collapsed.
+
+|Index of the node(s) is out of range.
+
+|The node Label(s) is not found among the existing nodes collection.
+
+|====
+
+[[_Ref338277386]]
+== _SelectNodes_   method
+
+=== Description
+
+This method selects a single node or an array of nodes obtained from the  _xamNetworkNode_   control's `oNodeIdentifiers` argument.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oNodeIdentifiers`
+|Uniquely identifies the x _amNetworkNode_ control’s nodes. 
+
+* If this identifier represents a single node, it can be either the node’s label or the visible index 
+
+* If this identifier represents multiple nodes, it will be an array of each node’s label or visible index. 
+
+|====
+
+=== Example
+
+Selecting multiple nodes with labels identified as, “Node44” and “Node45.”
+
+[source,csharp]
+----
+XamNetworkNode("xamNetworkNode1").SelectNodes ARRAY("Node44", "Node45")
+----
+
+Selecting multiple nodes using the nodes’ indices (zero-based).
+
+[source,csharp]
+----
+XamNetworkNode("xamNetworkNode1").SelectNodes ARRAY(15, 16)
+----
+
+Selecting a single node with label identified as, “Node44.”
+
+[source,csharp]
+----
+XamNetworkNode("xamNetworkNode1").SelectNodes "Node44"
+----
+
+Selecting a single node using the node’s index (zero-based).
+
+[source,csharp]
+----
+XamNetworkNode("xamNetworkNode1").SelectNodes 15
+----
+
+=== Default settings
+
+All nodes are unselected.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions to the method and the likely reason causing them.
+
+[cols="a"]
+|====
+|Exception reasons
+
+|The selection type of the _xamNetworkNode_ control is set to “None” meaning that nodes cannot be selected.
+
+|The selection type of the xamN _etworkNode_ control is “Single” and more than one nodes is specified in the `oNodeIdentifiers`.
+
+|The node(s) visibility is hidden or collapsed.
+
+|Index of the node(s) is out of range.
+
+|The node Label(s) is not found among the existing nodes collection.
+
+|====
+
+[[_Ref338277405]]
+== _PanArea_   method
+
+=== Description
+
+This method identifies the pan area on the  _xamNetworkNode_   control’s layout using two coordinates (`dAreaLeft` and `dAreaTop`).
+
+=== Parameters
+
+The following table explains the method’s parameters followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`dAreaLeft`
+|Left coordinate of the new area, a calculated value from the layout’s left border.
+
+|`dAreaTop`
+|Top coordinate of the new area, a calculated value from the layout’s top border.
+
+|====
+
+=== Example
+
+Indicates the control’s position on the  _xamNetworkNode_   layout using the pan area coordinates.
+
+[source,csharp]
+----
+XamNetworkNode("xamNetworkNode1").PanArea 2.7057, 2.8726
+----
+
+=== Default settings
+
+N/A
+
+=== Possible exceptions
+
+Refer to link:panning-and-zooming.html[Panning and Zooming] topic.
+
+[[_Ref338277416]]
+== _ZoomArea_   method
+
+=== Description
+
+This method Identifies the zoom area on the  _xamNetworkNode_   control’s layout using the four coordinates (`dAreaLeft`, `dAreaTop`, `dAreaRight` and `dAreaBottom`).
+
+=== Parameters
+
+The following table explains the method’s parameters followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`dAreaLeft`
+|Left coordinate of the new area, a calculated value from the layout’s left border.
+
+|`dAreaTop`
+|Top coordinate of the new area, a calculated value from the layout’s top border.
+
+|`dAreaRight`
+|Right coordinate of the new area, a calculated value from the layout’s right border.
+
+|`dAreaBottom`
+|Bottom coordinates of the new area, a calculated value from the layout’s bottom border.
+
+|====
+
+=== Example
+
+Displays the control on the  _xamNetworkNode_   layout, zoomed in or out, based on the specified coordinates.
+
+[source,csharp]
+----
+XamNetworkNode("xamNetworkNode1").ZoomArea -7.4562, 0, 651.9637, 497.7631
+----
+
+=== Default settings
+
+N/A
+
+=== Possible exceptions
+
+Refer to the link:panning-and-zooming.html[Panning and Zooming] topic for additional information.
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamnetworknode-testable-user-actions-and-elements.html[xamNetworkNode - Testable User Actions and Elements]
+|This topic provides information about the _xamNetworkNode_ control’s testable user actions and elements.
+
+| link:xamnetworknode-replay-only-methods.html[xamNetworkNode - Replay-Only Methods]
+|This topic provides information about the _xamNetworkNode_ control’s testable user replay-only methods.
+
+| link:xamnetworknode-property-reference.html[xamNetworkNode - Property Reference]
+|This topic provides reference information about the _xamNetworkNode_ control’s test object properties.
+
+| link:xamnetworknode-enumeration-reference.html[xamNetworkNode - Enumeration Reference]
+|This topic provides reference information about the common enumerations used in testing the _xamNetworkNode_ control.
+
+|====

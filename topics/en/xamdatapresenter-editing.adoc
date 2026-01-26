@@ -1,0 +1,235 @@
+﻿////
+|metadata|
+{
+    "name": "xamdatapresenter-editing",
+    "controlName": [],
+    "tags": [],
+    "guid": "5a17b8d3-1bf4-46dd-9b42-d9ad2453ca6a",
+    "buildFlags": [],
+    "createdOn": "2012-02-07T16:34:02.2996089Z"
+}
+|metadata|
+////
+
+= Editing
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods for testing the editing in  _xamDataPresenter_™ controls.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_summary,Recordable Methods>>
+
+** <<_SetCellData,SetCellData>>
+** <<_SetInvalidDataCell,SetInvalidDataCell>>
+
+* <<_Rel,Related Content>>
+
+[[_summary]]
+== Recordable Methods
+
+=== Recordable methods summary chart
+
+The following table briefly explains the recordable methods for testing the control. Detailed information about the methods is provided in the text blocks following the table.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|*Description*
+
+|_SetCellData_
+|Sets a new value to the specified cell.
+
+|_SetInvalidDataCell_
+|Types a string into a cell with a text based editor.
+
+|====
+
+[[_SetCellData]]
+== _SetCellData_
+
+=== Description
+
+The  _SetCellData_   method is used for recording and replaying the cell editing action performed by the user.
+
+=== Details
+
+When replaying, this method performs some validations first and then edits the cell value:
+
+[start=1]
+. Validating the specified cell path,
+[start=2]
+. Setting the new supplied value in the cell,
+[start=3]
+. Exiting the edit mode
+
+The method accepts as parameters the cell path and the new value to be set.
+
+The path is formed by concatenating the record path and the field name or field index (the parenthesis and the brackets are part of the syntax):
+
+{record path}[field name or field index]
+
+For example, the cross-section of the first record and the field  _name_  is denoted as  _{0_  _}[_  _name]_, the cross-section of the first child record of the first record and the field  _name_  is denoted as  _{0}{0}[name]_ .
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|
+* Cell path 
+
+* The new cell value 
+
+|Using the cell path and the value to be set as parameters. 
+
+*Example*
+
+Setting a new value in the cell in the “Isbn” field: 
+
+WpfWindow("MainWindow").XamDataGrid("dataGrid").SetCellData "{0}{1}[Isbn]", "0743223333"
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter is not format correctly.
+|The method parameter is not correctly formatted.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method parameter is not correct.
+
+|Unable to enter edit mode.
+|Editing of the cell is not enabled and the replaying the method fails.
+|The editing is not enabled.
+
+|The element is not visible.
+|The cell to be edited is not visible and replaying the method fails.
+|The cell doesn’t exist or is hidden.
+
+|====
+
+[[_SetInvalidDataCell]]
+== _SetInvalidDataCell_
+
+=== Description
+
+The  _SetInvalidDataCell_  method is used for recording and replaying typing a new value in the specified cell with a text based editor.
+
+=== Details
+
+When replaying, this method performs some validations first and then sets the cell to Edit mode:
+
+[start=1]
+. Validating the specified cell path,
+[start=2]
+. Triggering the CellEnterEditMode event,
+[start=3]
+. Filling the editor with the specified value,
+[start=4]
+. Exiting the Edit mode
+
+The method takes the cell path and the new value to be set as parameters.
+
+The path is formed by concatenating the record path and the field name or field index (the parenthesis and the brackets are part of the syntax):
+
+{record path}[field name or field index]
+
+For example, the cross-section of the first record and the field  _name_  is denoted as  _{0_  _}[_  _name]_, the cross-section of the first child record of the first record and the field  _name_  is denoted as  _{0}{0}[name]_ .
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|
+* Cell path 
+
+* The new cell value 
+
+|Using the cell path and the value to be set as parameters. 
+
+*Example*
+
+Editing the cell in the “Isbn” field: 
+
+WpfWindow("MainWindow").XamDataGrid("dataGrid").SetInvalidDataCell "{0}{1}[Isbn]", "0743223333"
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter is not format correctly.
+|The method parameter is not correctly formatted.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method parameter is not correct.
+
+|Unable to enter edit mode.
+|Editing of the cell is not enabled and the replaying the method fails.
+|The editing is not enabled.
+
+|The element is not visible.
+|The cell to be edited is not visible and replaying the method fails.
+|The cell doesn’t exist or is hidden.
+
+|====
+
+[[_Rel]]
+== Related Content
+
+=== Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamdatapresenter-filtering.html[Filtering]
+|This topic provides reference information about the recordable user methods for testing the filtering in _xamDataPresenter_ controls.
+
+| link:xamdatapresenter-navigatingselecting.html[Navigating and Selecting]
+|This topic provides reference information about the recordable user methods for testing the navigation and selection actions in _xamDataPresenter_ controls.
+
+| link:xamdatapresenter-sorting-grouping.html[Sorting and Grouping]
+|This topic provides reference information about the recordable user methods for testing the sorting and grouping user actions in _xamDataPresenter_ controls.
+
+| link:xamdatapresenter-summaries.html[Summaries]
+|This topic provides reference information about the recordable user methods for testing the summary feature in _xamDataPresenter_ controls.
+
+|====

@@ -1,0 +1,38 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamgantt",
+    "controlName": [],
+    "tags": [],
+    "guid": "090e86fd-cc59-4dc1-bbb3-5b4755b8e389",  
+    "buildFlags": [],
+    "createdOn": "2012-10-29T20:29:30.6751893Z"
+}
+|metadata|
+////
+
+= xamGantt
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test.controls.schedules.xamgantt~infragisticswpf.test.controls.schedules.xamganttproxy.html[XamGanttProxy] object in {ProductName}.
+
+=== Topics
+
+The topics contained in this section cover implementing action elements, methods and properties within the  _xamGantt_™ control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamgantt-testable-user-actions-and-elements.html[xamGantt - Testable User Actions and Elements]
+|This topic provides information about the _xamGantt_ control’s testable user actions and elements
+
+| link:xamgantt-recordable-methods.html[xamGantt - Recordable Methods]
+|This topic provides information about the _xamGantt_ control’s testable user recordable methods.
+
+| link:xamgantt-replay-only-methods.html[xamGantt - Replay-Only Methods]
+|This topic provides information about the _xamGantt_ control’s testable user replay-only methods.
+
+|====

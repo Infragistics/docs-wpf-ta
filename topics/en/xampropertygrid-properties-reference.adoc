@@ -1,0 +1,92 @@
+﻿////
+
+|metadata|
+{
+    "name": "xampropertygrid-properties-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "c986082e-c880-4e4b-b04b-f3e89feed85f",  
+    "buildFlags": [],
+    "createdOn": "2014-10-23T20:15:01.6472779Z"
+}
+|metadata|
+////
+
+= xamPropertyGrid - Properties Reference
+
+== _XamPropertyGrid_   Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the inspectable test object properties of the  _XamPropertyGrid_™ control.
+
+=== Properties reference chart
+
+The following table summarizes the control’s test object properties and tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+|_ItemsCount_
+|Returns the integer number of total items.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_ItemsFilteredInCount_
+|Returns the integer number of _unfiltered_ items.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====
+
+=== Table Verification
+
+When performing a standard checkpoint, the returned result contains a table of the current visible menu items, or the root item if the XamPropertyGrid is closed.
+
+==== Table Verification Definitions
+
+[options="header", cols="a,a,a"]
+|====
+|Column name|Data type|Description
+
+|ItemType
+|System.String
+|String value representing the type of _PropertyGridItem_ .
+
+|Depth
+|System.Int32
+|Integer value representing the depth from the top level. Top level items being 0.
+
+|Parent
+|System.String
+|String value of the parent items DisplayName.
+
+|DisplayName
+|System.String
+|The display name of the property.
+
+|PropertyType
+|System.String
+|The data type for the property.
+
+|Value
+|System.Object
+|The value of the property.
+
+|IsFilteredOut
+|System.Bool
+|Boolean value (`true/false`) Indicating if the property was filtered out or not.
+
+|IsExpanded
+|System.Bool
+|Boolean value (`true/false`) indicating if the property has children when expanded.
+
+|====

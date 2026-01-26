@@ -1,0 +1,55 @@
+﻿////
+
+|metadata|
+{
+    "name": "custom-properties-xamradialmenu",
+    "controlName": [],
+    "tags": [],
+    "guid": "71a5162a-3bab-45b7-acea-51b7d6d02724",  
+    "buildFlags": [],
+    "createdOn": "2014-04-30T19:26:55.6603651Z"
+}
+|metadata|
+////
+
+= Custom Properties - xamRadialMenu
+
+== _XamRadialMenu_   Custom Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the  _XamRadialMenu_™ proxy base custom properties for the  _XamRadialMenu_   control. Use the control property access methods for extending custom properties from the type of objects referenced below (See link:accessing-controls-properties.html[Accessing Controls' Properties] for more details).
+
+=== Custom properties reference chart
+
+The following table summarizes the custom properties for  _XamRadialMenu_  .
+
+[options="header", cols="a,a,a"]
+|====
+|Custom property|Applied Object Type|Returns...
+
+| _Offset_ 
+|`Infragistics.Controls.Menu.RadialMenuItemBase`
+|An integer value of the visible wedge offset position of the _RadialMenuItem_ .
+
+| _Span_ 
+|`Infragistics.Controls.Menu.RadialMenuItemBase`
+|An integer value of the _Span_ of wedges used by the _RadialMenuItem_ .
+
+| _ClickPoint_ 
+|`Infragistics.Controls.Menu.RadialMenuItemBase`
+|A _Point_ object of the center click point of the _RadialMenuItem_ .
+
+| _DrillPoint_ 
+|`Infragistics.Controls.Menu.RadialMenuItemBase`
+|A _Point_ object from the center of the outer ring, which is the drill down point of the _RadialMenuItem_ .
+
+| _StartAngle_ 
+|`Infragistics.Controls.Menu.RadialMenuItemBase`
+|A double value of the angle, in radians, of the start angle for the _RadialMenuItem_ .
+
+| _EndAngle_ 
+|`Infragistics.Controls.Menu.RadialMenuItemBase`
+|A double value of the angle, in radians, of the end angle for the _RadialMenuItem_ .
+
+|====

@@ -1,0 +1,238 @@
+﻿////
+|metadata|
+{
+    "name": "xameditors-replay-only-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "46df5380-7aa4-435e-9ec9-bc9bf89bb4b4",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T15:45:54.947174Z"
+}
+|metadata|
+////
+
+= xamEditors - Replay-Only Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the replay-only user methods for testing the xamEditors that are common to all these editors. For information about the editor-specific recordable user methods for a particular editor, see its respective topic. 
+
+== Related Topics
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref314924646, _xamEditors_   Test Objects Replay-Only Methods>>
+** <<_Ref314924654,Supported editor controls>>
+** <<_Ref314924659,Replay-only methods summary>>
+** <<_Ref314924668,SetCaretPos>>
+** <<_Ref314924675,SelectAll>>
+** <<_Ref314924683,SetSelection>>
+
+* <<_Ref315378588,Related Content>>
+
+[[_Ref314924646]]
+== xamEditors Test Objects Replay-Only Methods
+
+[[_Ref314924654]]
+
+=== Supported editor controls
+
+The methods covered in this topic apply to the following controls:
+
+* xamDateTimeEditor™
+* xamNumericEditor™
+* xamCurrencyEditor™
+* xamMaskedEditor™
+* xamComboEditor™
+* xamTextEditor™
+* xamCheckEditor™
+
+[[_Supported_editor_controls]]
+
+[[_Ref314924659]]
+
+=== Replay-only methods summary
+
+The following table briefly explains the replay-only methods for testing the control. Detailed information about the methods is provided below the table.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|*Description*
+
+|_link:{ApiPlatform}test.editors~infragisticswpf.test.editors.texteditorbaseproxy~setcaretpos.html[SetCaretPos]_
+|Sets the cursor position in the editor.
+
+|_link:{ApiPlatform}test.editors~infragisticswpf.test.editors.texteditorbaseproxy~selectall.html[SelectAll]_
+|Selects all the text in the editor.
+
+|_link:{ApiPlatform}test.editors~infragisticswpf.test.editors.texteditorbaseproxy~setselection.html[SetSelection]_
+|Selects a range in the text.
+
+|====
+
+[[_Ref314924668]]
+== _SetCaretPos_
+
+=== Description
+
+This method replays the cursor positioning in the text editor.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameter*|*Description*
+
+|Caret position 
+
+_(_ _required_ _)_
+|*The caret position specifies where to place the cursor in the xamEditors.* 
+
+*Example*
+
+Setting the cursor position after 3 letters in a xamTextEditor: 
+
+WpfWindow("MainWindow").XamTextEditor("xamTextEditor").Set "Text here ..." 
+
+WpfWindow("MainWindow").XamTextEditor("xamTextEditor").SetCaretPos 3
+
+|====
+
+=== Default setting
+
+This method takes the caret position as a parameter.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The specified index is out of range.
+|The caret position cannot be set because it falls out of the valid range.
+|The method parameter value is not valid.
+
+|====
+
+[[_Ref314924675]]
+== _SelectAll_
+
+=== Description
+
+This method replays the selection of the editor’s text.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+No parameters are used with this method.
+
+*Example*
+
+Selecting all the text in a xamTextEditor:
+
+WpfWindow("MainWindow").XamTextEditor("xamTextEditor").SelectAll
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+No known exceptions.
+
+[[_Ref314924683]]
+== _SetSelection_
+
+=== Description
+
+This method replays selecting a range in the content of the text editor.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameter*|*Description*
+
+|
+* Starting position 
+
+* Selection length 
+
+|The starting position specifies the caret position in the text and the selection length specifies how many symbols will be selected. 
+
+*Example*
+
+Selecting a new range of text after the 4 letter and 6 letters after it: 
+
+WpfWindow("MainWindow").XamTextEditor("xamTextEditor").Set "Text here ..." 
+
+WpfWindow("MainWindow").XamTextEditor("xamTextEditor").SetSelection 4, 6
+
+|====
+
+=== Default setting
+
+This method takes the start position and the selection length as parameters.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The specified index is out of range.
+|The start caret position cannot be set because it falls out of the valid range.
+|The start position method parameter value is not valid.
+
+|====
+
+[[_Ref315378588]]
+== Related Content
+
+=== Topics
+
+The following table lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xammonthcalendar-replay-only-methods.html[xamMonthCalendar - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the xamMonthCalendar™ control.
+
+| link:xameditors-testable-user-actions-and-elements.html[xamEditors - Testable User Actions and Elements]
+|This topic provides information about the user actions of the xamEditors controls which you can test and the elements you can inspect.
+
+| link:xameditors-recordable-methods.html[xamEditors - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamEditors that are common to all these editors.
+
+| link:xameditors-property-reference.html[xamEditors - Property Reference]
+|This topic provides reference information about the test object properties of the xamEditors that are common to all these editors.
+
+| link:xameditors-api.html[xamEditors - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamEditors™ controls in Micro Focus Unified Functional Testing software.
+
+|====

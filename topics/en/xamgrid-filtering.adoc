@@ -1,0 +1,384 @@
+﻿////
+|metadata|
+{
+    "name": "xamgrid-filtering",
+    "controlName": [],
+    "tags": [],
+    "guid": "4a42746c-f945-456b-a008-82a57bc6513a",
+    "buildFlags": [],
+    "createdOn": "2012-04-14T09:49:03.5443718Z"
+}
+|metadata|
+////
+
+= Filtering
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods related to the testing of the filtering in the xamGrid™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref322537698,Recordable Methods>>
+
+** <<_ClearFilterCell, _ClearFilterCell_  >>
+** <<_CloseFilterMenu, _CloseFilterMenu_  >>
+** <<_OpenFilterMenu, _OpenFilterMenu_  >>
+** <<_SetFilterCellCompOperator, _SetFilterCellCompOperator_  >>
+
+* <<_Ref322253512,Related Content>>
+
+[[_Ref322537698]]
+== Recordable Methods
+
+=== Recordable methods summary chart
+
+The following table summarizes the purpose and functionality of the recordable methods for testing the filtering in the xamGrid control.
+
+[options="header", cols="a,a"]
+|====
+|Method|Description
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~clearfiltercell.html[ClearFilterCell]_
+|Deletes the content of the filter cell.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~closefiltermenu.html[CloseFilterMenu]_
+|Closes the filtering menu.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~openfiltermenu.html[OpenFilterMenu]_
+|Opens the filtering menu.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~setfiltercellcompoperator.html[SetFilterCellCompOperator]_
+|Sets a filtering comparison operator.
+
+|====
+
+[[_ClearFilterCell]]
+== _ClearFilterCell_
+
+=== Description
+
+The  _ClearFilterCell_   deletes the content of the filter cell.
+
+=== Details
+
+The ClearFilterCell method is recorded in a test when the end user clicks the filter cell’s  _Clear_   button.
+
+When replaying the method:
+
+[start=1]
+. The specified filter cell path is validated.
+[start=2]
+. If visible, the  _Clear_   button is clicked.
+
+The method accepts the path to the filter cell as a parameter.
+
+=== Parameters
+
+The following table maps the desired configuration to parameters settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the filter cell to be cleared
+|sCellArg
+|The filter cell path
+
+|====
+
+=== Example
+
+Setting a filter value for the  _Company_   column in the xamGrid first and then clearing the the filter.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SetCellData "{FILTER}[Company]", "alf"  
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").ClearFilterCell  "{FILTER}[Company]"
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|[[_Hlk322533527]] 
+
+The argument is malformed.
+|The parameter’s format is incorrect.
+|The method’s parameter is not in a valid format.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|The element is not visible.
+|The item is not visible and replaying the method fails.
+|The item on which the action is performed either doesn’t exist or is hidden.
+
+|====
+
+[[_CloseFilterMenu]]
+== _CloseFilterMenu_
+
+=== Description
+
+The  _CloseFilterMenu_   method closes the filtering menu.
+
+=== Details
+
+The CloseFilterMenu method is recorded in a test when the column’s filter menu is closed.
+
+When replaying the method:
+
+[start=1]
+. The specified column header is validated.
+[start=2]
+. A check is performed to verify that filtering is allowed.
+[start=3]
+. The filtering menu closes down.
+
+The method accepts the column header name as a parameter.
+
+=== Parameters
+
+The following table maps the desired configuration to parameters settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the filtering menu to close
+|sHeaderArg
+|The column header name
+
+|====
+
+=== Example
+
+Closing the filtering menu of the  _Company_   column.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").CloseFilterMenu "[Company]"
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|[[_Hlk322533769]] 
+
+The argument is malformed.
+|The parameter’s format is incorrect.
+|The method’s parameter is not in a valid format.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|The element is not visible.
+|The item is not visible and replaying the method fails.
+|The item on which the action is performed either doesn’t exist or is hidden.
+
+|====
+
+[[_OpenFilterMenu]]
+== _OpenFilterMenu_
+
+=== Description
+
+The  _OpenFilterMenu_   method opens the filtering menu.
+
+=== Details
+
+The OpenFilterMenu method is recorded in a test when the column’s filter menu is opened.
+
+When replaying the method:
+
+[start=1]
+. The specified column header is validated.
+[start=2]
+. A check is performed to verify that filtering is allowed.
+[start=3]
+. The filtering menu opens up.
+
+The method accepts as a parameter a column header.
+
+=== Parameters
+
+The following table maps the desired configuration to parameters settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the filtering menu to be open
+|sHeaderArg
+|The column header name
+
+|====
+
+=== Example
+
+Opening the filtering menu of the  _Company_   column.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").OpenFilterMenu "[Company]"
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter’s format is incorrect.
+|The method’s parameter is not in a valid format.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|The element is not visible.
+|The item is not visible and replaying the method fails.
+|The item on which the action is performed either doesn’t exist or is hidden.
+
+|====
+
+[[_SetFilterCellCompOperator]]
+== _SetFilterCellCompOperator_
+
+=== Description
+
+The  _SetFilterCellCompOperator_   method sets a filtering comparison operator.
+
+=== Details
+
+The SetFilterCellCompOperator method is recorded in a test when a comparison operator is selected from the filter comparison operators combo box.
+
+When replaying the method:
+
+[start=1]
+. The specified cell path is validated.
+[start=2]
+. The filter comparison operators combo box drops down.
+[start=3]
+. The specified operator is set.
+
+The method accepts as parameters the path to the filter cell and a comparison operator.
+
+=== Parameters
+
+The following table maps the desired configuration to parameters settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the path to the filter cell
+|sFilterCell
+|The filter cell path
+
+|Specify the filtering comparison operator
+|oCompOperator
+|A valid option from the link:{ApiPlatform}test.shared~infragisticswpf.test.shared.igcomparisonoperator.html[IGComparisonOperator] enumeration.
+
+|====
+
+=== Example
+
+Changing the comparison operator to  _Ends With_   and filtering the data that ends with  _en_   in the  _Company_   column.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SetFilterCellCompOperator "{FILTER}[Company]" ,igcEndsWith
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SetCellData "{FILTER}[Company]", "en"
+----
+
+[[_Hlk322533239]]
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter’s format is incorrect.
+|The method’s parameter is not in a valid format.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|The option supplied is not one of the valid options.
+|The provided comparison operator is not valid and replaying the method fails.
+|The method parameter is invalid.
+
+|The filter comparison operator menu is not visible in the supplied cell.
+|The filter comparison operator menu is not visible and replaying the method fails.
+|The filter comparison operator menu is not visible.
+
+|====
+
+[[_Ref322253512]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamgrid-display.html[Display]
+|This topic provides reference information about the recordable user methods related to the testing of the display features in the xamGrid control.
+
+| link:xamgrid-editing.html[Editing]
+|This topic provides reference information about the recordable user methods related to the testing of the editing in the xamGrid control.
+
+| link:xamgrid-navigating-and-selecting.html[Navigating and Selecting]
+|This topic provides reference information about the recordable user methods related to the testing of the navigation and selection in the xamGrid control.
+
+| link:xamgrid-sorting-and-grouping.html[Sorting and Grouping]
+|This topic provides reference information about the recordable user methods related to the testing of the sorting and grouping in the xamGrid control.
+
+| link:xamgrid-summaries.html[Summaries]
+|This topic provides reference information about the recordable user methods related to the testing of the summaries in the xamGrid control.
+
+|====

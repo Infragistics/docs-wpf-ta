@@ -1,0 +1,118 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamdiagram-enumerations-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "f5858bde-3e1a-470e-8dd9-0413d857b595",  
+    "buildFlags": [],
+    "createdOn": "2014-11-18T12:45:15.6413256Z"
+}
+|metadata|
+////
+
+= xamDiagram - Enumerations Reference
+
+== _XamDiagram_   Enumerations Reference
+
+=== Introduction
+
+This topic provides reference material on the common enumerations used for testing the  _XamDiagram_™ control.
+
+=== DiagramConnPoint
+
+This enumeration represents which end of a connection to use.
+
+The following table summarizes the  _XamDiagram_   test object enumerations used in recordable methods.
+
+[options="header", cols="a,a"]
+|====
+|Enumeration|Description
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.diagramconnpoint.html[dgrmStart]
+|Value 0 – Represents the start point of a Diagram Connector.
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.diagramconnpoint.html[dgrmEnd]
+|Value 1 – Represents the end point of a Diagram Connector.
+
+|====
+
+=== DgrmCommand
+
+This enumeration represents the commands supported by XamPropertyGrid. This list is a direct copy of commands listed in the actual control’s API’s at Infragistics.Controls.Charts.DiagramCommands as well as the System.Windows.Input.ApplicationCommands
+
+The following table summarizes the  _XamDiagram_   test object enumerations used in recordable methods.
+
+[options="header", cols="a,a"]
+|====
+|Enumeration|Description
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.dgrmcommand.html[dgrmCut]
+|Value 1 - Perform a Cut operation on the selected items
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.dgrmcommand.html[dgrmCopy]
+|Value 2 - Perform a Copy operation on the selected items
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.dgrmcommand.html[dgrmPaste]
+|Value 3 - Perform a Paste operation into the Diagram
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.dgrmcommand.html[dgrmUndo]
+|Value 4 - Perform an Undo operation on the Diagram
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.dgrmcommand.html[dgrmRedo]
+|Value 5 - Perform a Redo operation on the Diagram
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.dgrmcommand.html[dgrmDelete]
+|Value 6 - Delete the selected items
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.dgrmcommand.html[dgrmBringForward]
+|Value 7 - Bring the selected items foward on the Z-Index one level
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.dgrmcommand.html[dgrmBringToFront]
+|Value 8 - Bring the selected items foward all the way on the Z-Index
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.dgrmcommand.html[dgrmCloseOptionsPane]
+|Value 9 - If open close the options pane of the selected items
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.dgrmcommand.html[dgrmEnterEditMode]
+|Value 10 - Puts the selected item into EditMode for assigning it a name
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.dgrmcommand.html[dgrmExitEditMode]
+|Value 11 - Exits EditMode for assigning a name of the selected item
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.dgrmcommand.html[dgrmSendBackward]
+|Value 12 - Sends the selected items backward on the Z-Index one level
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.dgrmcommand.html[dgrmSendToBack]
+|Value 13 - Sends the selected items backwards all the way on the Z-Index
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.dgrmcommand.html[dgrmShowOptionsPane]
+|Value 14 - Shows the option pane for the selected items
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.dgrmcommand.html[dgrmSelectAll]
+|Value 15 - Select all the items in the XamDiagram
+
+|====
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamdiagram-recordable-actions.html[xamDiagram - Recordable Actions]
+|This topic provides information about the recordable user actions for testing the _XamDiagram_™ control.
+
+| link:xamdiagram-replay-only-actions.html[xamDiagram - Replay-Only Actions]
+|This topic provides information about replay-only actions for testing the _XamDiagram_™ control.
+
+| link:xamdiagram-properties-reference.html[xamDiagram - Properties Reference]
+|This topic provides reference information about the _XamDiagram_™ control’s test object properties.
+
+|====

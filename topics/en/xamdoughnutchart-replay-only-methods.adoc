@@ -1,0 +1,189 @@
+﻿////
+|metadata|
+{
+    "name": "xamdoughnutchart-replay-only-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "c2243757-e2a5-4359-bae3-31570c64ef7d",
+    "buildFlags": [],
+    "createdOn": "2013-04-09T22:12:36.1181578Z"
+}
+|metadata|
+////
+
+= xamDoughnutChart - Replay-only Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the  _xamDoughnutChart_™ control’s testable user replay-only methods.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref338265452,xamDoughnutChart Test Object Replay-only Methods Summary>>
+* <<_Ref338277352, _GetSliceValue_   action method>>
+* <<_Ref338277363, _GetRingSliceCount_   action method>>
+* <<_Ref338277374, _GetRingSliceLabels_   action method>>
+* <<_Ref337132389,Related Content>>
+
+[[_Ref338265452]]
+== _xamDoughnutChart_  Test Object Replay-only Methods Summary
+
+=== Replay-Only methods summary chart
+
+The following table briefly describes the replay-only method for testing the control.
+
+[options="header", cols="a,a"]
+|====
+|Method|Replay action description
+
+| _GetSliceValue_ 
+|Returns the value for a given slice.
+
+| _GetRingSliceCount_ 
+|Returns the count of all visible slices for a given ring.
+
+| _GetRingSliceLabels_ 
+|Returns a delimited string of all visible slices for a given ring.
+
+|====
+
+[[_Ref338277352]]
+== _GetSliceValue_   action method
+
+=== Description
+
+This replay action returns the numerical value of the selected slice of the  _xamDoughnutChart_   control.
+
+=== Parameters
+
+The following table describes the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oSliceId`
+|Identifies the following elements of the _xamDoughnutChart_ control: 
+
+* The chart’s slice using either the slice’s label or zero-based (integer) index 
+
+* The chart’s ring using 2-dimensional array comprised of a zero-based (integer) index 
+
+|====
+
+=== Example
+
+The following script Returns the value of the “Sales” slice of the doughnut chart on the inner-most ring.
+
+[source,csharp]
+----
+x = XamDoughnutChart("Identifier").GetSliceValue “Sales”
+msgbox x
+----
+
+=== Possible exceptions
+
+The following is the list of possible exceptions to the method and the likely reason causing them.
+
+==== Exception reasons
+
+* The specified  _XamDoughnut_   Ring index [{1}] is out of range
+* The specified  _XamDoughnut_   Slice index [{1}] is out of range
+* The following  _XamDoughnut_   Slice [{1}] key was not found
+* Argument [{0}] is formatted incorrectly format must be
+
+`[int SliceIndex | string SliceLabel | ARRAY ( int RingIndex, { int SliceIndex | string SliceLabel} )]`
+
+[[_Ref338277363]]
+== _GetRingSliceCount_   action method
+
+=== Description
+
+This replay action returns the visible slice count of the supplied ring of the  _xamDoughnutChart_   control.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`iRingIndex`
+|Uniquely identifies the (zero-based) index of the chart’s ring, which can be either inner (0) or outer, depending on the number of rings defined in the application.
+
+|====
+
+=== Example
+
+Returns the number of visible slices for the inner most ring.
+
+[source,csharp]
+----
+x = …XamDoughnutChart("Identifier").GetRingSliceCount 0
+msgbox x
+----
+
+=== Possible exceptions
+
+The reason of exception returned from this action is that the specified  _XamDoughnut_   Ring index [{1}] is out of range.
+
+[[_Ref338277374]]
+== _GetRingSliceLabels_   action method
+
+=== Description
+
+This action returns a delimited string of all labels of a given ring of the  _xamDoughnutChart_   control.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`iRingIndex`
+|Uniquely identifies the (zero-based) index of the chart’s ring, which can be either inner or outer.
+
+|====
+
+=== Example
+
+Returns a delimited string of labels for the visible slices of the inner-most ring.
+
+[source,csharp]
+----
+x = …XamDoughnutChart("Identifier").GetRingSliceLabels 0
+msgbox x
+----
+
+=== Possible exceptions
+
+The reason of exception returned from this action is that the specified  _XamDoughnut_   Ring index [{1}] is out of range.
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamdoughnutchart-user-actions-and-elements.html[xamDoughnutChart User Actions and Elements]
+|This topic provides information about the _xamDoughnutChart_ control’s testable user actions and elements.
+
+| link:xamdoughnutchart-recordable-methods.html[xamDoughnutChart Recordable Methods Reference]
+|This topic provides information about the _xamDoughnutChart_ control’s testable user recordable methods.
+
+| link:xamdoughnutchart-property-reference.html[xamDoughnutChart Property Reference]
+|This topic provides reference information about the _xamDoughnutChart_ control’s test object properties.
+
+|====

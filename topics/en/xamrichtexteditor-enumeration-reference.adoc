@@ -1,0 +1,48 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamrichtexteditor-enumeration-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "57df920c-d93f-45b8-8026-bb744560d39f",  
+    "buildFlags": [],
+    "createdOn": "2013-11-22T18:38:50.3134022Z"
+}
+|metadata|
+////
+
+= xamRichTextEditor - Enumeration Reference
+
+== _xamRichTextEditor_   Test Object Enumerations
+
+=== Introducton
+
+This topic provides reference material on the common enumerations used for testing the  _xamRichTextEditor_™ control.
+
+[[_Ref337672876]]
+
+=== Enumerations reference chart
+
+The following table summarizes the purpose of the  _xamRichTextEditor_   test object enumerations that are used most often, in recordable methods, to define which  _xamRichTextEditor_   item, upon which an End-User interaction is performed.
+
+[options="header", cols="a,a"]
+|====
+|Enumeration|Description
+
+| link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.rtedviewlocation.html[rtedViewLocation]
+|Use this enumeration to represent the view location of a document pane.
+
+| link:{ApiPlatform}test.shared~infragisticswpf.test.shared.igeditorupdatemode.html[IGEditorUpdateMode]
+|Use this enumeration to specify how to apply new text to an Editor.
+
+| link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.rtedcharactersetting.html[rtedCharacterSetting]
+|Use this enumeration to specify the text formatting in the editor.
+
+| link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.rtedparagraphsetting.html[rtedParagraphSetting]
+|Use this enumeration to specify how the text alignment in the editor.
+
+| link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.rtedcommandtype.html[rtedCommandType]
+|Use this enumeration to represent the types of executable commands on the _xamRichTextEditor_ .
+
+|====

@@ -1,0 +1,105 @@
+﻿////
+|metadata|
+{
+    "name": "xamdoughnutchart-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "a3b1b73c-0d6f-4713-8f27-2086de6e2e21",
+    "buildFlags": [],
+    "createdOn": "2013-04-09T21:51:18.2960706Z"
+}
+|metadata|
+////
+
+= xamDoughnutChart - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the  _xamDoughnutChart_™ control’s testable user methods for recording and replaying actions.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref352172238, _ClickSlice_   action>>
+* <<_Ref337132389,Related Content>>
+
+[[_Ref352172238]]
+== _ClickSlice_   action
+
+=== Description
+
+This recordable action when replayed simulates a click on the specified slice of the  _xamDoughnutChart_   control.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oSliceId`
+|Records the click action on the specified slice of the _xamDoughnutChart_ control.
+
+|====
+
+=== Example
+
+Click on the “Sales” slice of the doughnut chart on the inner-most ring.
+
+[source,csharp]
+----
+XamDoughnutChart("Identifier").ClickSlice “Sales”
+----
+
+Click on the fourth slice (zero-based index) of the doughnut chart on the inner-most ring.
+
+[source,csharp]
+----
+XamDoughnutChart("Identifier").ClickSlice 3
+----
+
+Click on the “Development” slice in the second ring from the center. It is zero-based index.
+
+[source,csharp]
+----
+XamDoughnutChart("Identifier").ClickSlice ARRAY(1, "Development")
+----
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this method and the likely reasons causing them.
+
+==== Exception reasons
+
+* The specified XamDoughnut Ring index [{1}] is out of range.
+* The specified XamDoughnut Slice index [{1}] is out of range.
+* The following XamDoughnut Slice [{1}] key was not found.
+* Argument [{0}] is not formatted correctly format must be:
+
+[int SliceIndex | string SliceLabel | ARRAY (int RingIndex, { int SliceIndex | string SliceLabel} )]'
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamdoughnutchart-user-actions-and-elements.html[xamDoughnutChart - User Actions and Elements]
+|This topic provides information about the _xamDoughnutChart_ control’s testable user actions and elements.
+
+| link:xamdoughnutchart-replay-only-methods.html[xamDoughnutChart - Replay-only Methods]
+|This topic provides information about the _xamDoughnutChart_ control’s testable user replay-only methods.
+
+| link:xamdoughnutchart-property-reference.html[xamDoughnutChart - Property Reference]
+|This topic provides reference information about the _xamDoughnutChart_ control’s test object properties.
+
+|====

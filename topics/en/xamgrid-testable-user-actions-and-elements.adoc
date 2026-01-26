@@ -1,0 +1,257 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamgrid-testable-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "c3579689-e4a0-4390-8eea-9a8f08236811",  
+    "buildFlags": [],
+    "createdOn": "2012-04-14T09:44:48.1468346Z"
+}
+|metadata|
+////
+
+= xamGrid - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the user actions of the  _xamGrid_™ control which you can test and the elements you can inspect.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref322433301,xamGrid Testable User Actions>>
+* <<_Ref322433309,xamGrid Testable Elements>>
+* <<_Ref322433314,Related Content>>
+
+[[_Ref322433301]]
+== xamGrid Testable User Actions
+
+[[_Ref322445791]]
+
+=== Testable user actions chart
+
+The table below lists the testable user actions of the control and maps them to recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|User action|Method
+
+|Activating a xamGrid cell
+| link:xamgrid-navigating-and-selecting.html#_ActivateCell[ActivateCell]
+
+|Clearing the content of the filter cell in the xamGrid
+| link:xamgrid-filtering.html#_ClearFilterCell[ClearFilterCell]
+
+|Closing the xamGrid column filter menu
+| link:xamgrid-filtering.html#_CloseFilterMenu[CloseFilterMenu]
+
+|Closing the Hidden Columns Menu for the supplied column
+| link:xamgrid-display.html#_CloseHiddenColsMenu[CloseHiddenColsMenu]
+
+|Closing the xamGrid column summaries menu
+| link:xamgrid-summaries.html#_CloseSummaryMenu[CloseSummaryMenu]
+
+|Collapsing parent row
+| link:xamgrid-navigating-and-selecting.html#_CollapseRow[CollapseRow]
+
+|Copies the selected cell(s) to the clipboard
+| link:xamgrid-editing.html#_CopyToClipboard[CopyToClipboard]
+
+|Row or cell exiting of edit mode
+| link:xamgrid-editing.html#_ExitEditMode[ExitEditMode]
+
+|Expanding a parent row
+| link:xamgrid-navigating-and-selecting.html#_ExpandRow[ExpandRow]
+
+|Grouping by column
+| link:xamgrid-sorting-and-grouping.html#_GroupByColumn[GroupByColumn]
+
+|Hide the supplied column
+| link:xamgrid-display.html#_HideColumn[HideColumn]
+
+|Moves the the supplied column to the specified index relative to its parent
+| link:xamgrid-display.html#_MoveColumn[MoveColumn]
+
+|Opens the Hidden Columns Menu for the supplied column
+| link:xamgrid-display.html#_OpenHiddenColsMenu[OpenHiddenColsMenu]
+
+|Opening the xamGrid column filter menu
+| link:xamgrid-filtering.html#_OpenFilterMenu[OpenFilterMenu]
+
+|Opening the xamGrid column summaries menu
+| link:xamgrid-summaries.html#_OpenSummaryMenu[OpenSummaryMenu]
+
+|Pastes cell(s) from the clipboard into the xamGrid
+| link:xamgrid-editing.html#_PasteFromClipboard[PasteFromClipboard]
+
+|Resizes the supplied column or array of columns to the supplied size. Autosizes the column if no size is supplied
+| link:xamgrid-display.html#_ResizeColumn[ResizeColumn]
+
+|Row entering into edit mode
+| link:xamgrid-editing.html#_RowEnterEditMode[RowEnterEditMode]
+
+|Selecting a xamGrid selectable item – cell, column or row
+| link:xamgrid-navigating-and-selecting.html#_Select[Select]
+
+|Adding a xamGrid selectable item into a selection
+| link:xamgrid-navigating-and-selecting.html#_SelectionAdded[SelectionAdded]
+
+|Changing existing selection of xamGrid selectable items
+| link:xamgrid-navigating-and-selecting.html#_SelectionChanged[SelectionChanged]
+
+|Removing items from an existing selection
+| link:xamgrid-navigating-and-selecting.html#_SelectionRemoved[SelectionRemoved]
+
+|Setting a new value in a xamGrid cell
+| link:xamgrid-editing.html#_SetCellData[SetCellData]
+
+|Setting a comparison operator when filtering data
+| link:xamgrid-filtering.html#_SetFilterCellCompOperator[SetFilterCellCompOperator]
+
+|Fixing a column
+| link:xamgrid-navigating-and-selecting.html#_SetFixedColumn[SetFixedColumn]
+
+|Sorting a column
+| link:xamgrid-sorting-and-grouping.html#_SortColumn[SortColumn]
+
+|Ungrouping data in the xamGrid
+| link:xamgrid-sorting-and-grouping.html#_UnGroupColumn[UnGroupColumn]
+
+|====
+
+[[_Ref322433309]]
+== xamGrid Testable Elements
+
+[[_Ref322445802]]
+
+=== Testable elements summary chart
+
+The following table lists the elements in the control that you can test, the information you can retrieve about them, and the properties and methods that manage the retrieve operations.
+
+Legend:
+
+image::images/spy.png[]
+
+ – Identification property (Visible in object spy)
+
+image::images/checkpoint.png[]
+
+ – Checkpoint property (Visible with checkpoints)
+
+image::images/script.png[]
+
+ – Accessible in script
+
+[options="header", cols="a,a,a,a,a"]
+|====
+|Tested element|Test deliverable|Member type|Test object member|Accessibility
+
+|Cell
+|The active cell path
+|property
+| _link:xamgrid-property-reference.html#_Ref322538370[activecell]_ 
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+|Cell
+|The value of the cell
+|method
+| _link:xamgrid-replayonly-methods.html#_getcelldata[GetCellData]_ 
+|image::images/script.png[]
+
+|Column
+|The number of visible columns in the active area
+|property
+| _link:xamgrid-property-reference.html#_Ref322538370[columncount]_ 
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|Column
+|The delimited list of the identifiers of the visible columns in the active area
+|property
+| _link:xamgrid-property-reference.html#_Ref322538370[columns]_ 
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|Data
+|All cell data in the cross section of visible rows and columns in the active area
+|verifiable table content
+|
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+|Row
+|The active row path
+|property
+| _link:xamgrid-property-reference.html#_Ref322538370[activerow]_ 
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+|Row
+|The visible rows count in the active area
+|property
+| _link:xamgrid-property-reference.html#_Ref322538370[rowcount]_ 
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|Summary
+|The content of all summaries applied on a column
+|method
+| _link:xamgrid-replayonly-methods.html#_GetSummaryText[GetSummaryText]_ 
+|image::images/script.png[]
+
+|Summary
+|The summary type for a column
+|method
+| _link:xamgrid-replayonly-methods.html#_GetSummaryType[GetSummaryType]_ 
+|image::images/script.png[]
+
+|Summary
+|The summary value for a column
+|method
+| _link:xamgrid-replayonly-methods.html#_GetSummaryValue[GetSummaryValue]_ 
+|image::images/script.png[]
+
+|====
+
+[[_Ref322433314]]
+== Related Content
+
+=== Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamgrid-recordable-methods.html[xamGrid - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamGrid control.
+
+| link:xamgrid-replayonly-methods.html[xamGrid - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the xamGrid control.
+
+| link:xamgrid-property-reference.html[xamGrid - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamGrid control.
+
+| link:xamgrid-api.html[xamGrid - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamGrid control.
+
+|====

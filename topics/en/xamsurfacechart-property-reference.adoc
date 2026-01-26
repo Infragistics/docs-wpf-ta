@@ -1,0 +1,109 @@
+﻿////
+|metadata|
+{
+    "name": "xamsurfacechart-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "172dd636-7210-4829-8cd9-8a33cb642665",
+    "buildFlags": [],
+    "createdOn": "2016-04-25T14:24:03.9751547Z"
+}
+|metadata|
+////
+
+= xamSurfaceChart3D - Property Reference
+
+== _XamSurfaceChart3D_   Test Object Properties Reference
+
+=== Purpose
+
+This topic provides reference information about the inspectable test object properties of the  _XamSurfaceChart3D_™ control.
+
+[[_Ref337672876]]
+
+=== Properties reference chart
+
+The table below summarizes the control’s test method parameters and tools with which you can inspect them.
+
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+|_link:{ApiPlatform}test.controls.charts.xamsurfacechart3d~infragisticswpf.test.charts.xamsurfacechart3d.ixamscattersurface3didprops~axistitles.html[AxisTitles]_
+|Returns the titles of the X, Y, and Z axes.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_link:{ApiPlatform}test.controls.charts.xamsurfacechart3d~infragisticswpf.test.charts.xamsurfacechart3d.ixamscattersurface3didprops~rotationtype.html[RotationType]_
+|Retruns _"srfcQuaternion" or "srfcAxisAngle,"_ depending on the current Rotation type of the chart.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_link:{ApiPlatform}test.controls.charts.xamsurfacechart3d~infragisticswpf.test.charts.xamsurfacechart3d.ixamscattersurface3didprops~rotationx.html[RotationX]_
+|Returns the current rotation's X value, for quaternion rotations, or the X value for the axis vector for an axis/angle rotation.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_link:{ApiPlatform}test.controls.charts.xamsurfacechart3d~infragisticswpf.test.charts.xamsurfacechart3d.ixamscattersurface3didprops~rotationy.html[RotationY]_ _
+|Returns the current rotation's Y value, for quaternion rotations, or the Y value for the axis vector for an axis angle rotation.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_link:{ApiPlatform}test.controls.charts.xamsurfacechart3d~infragisticswpf.test.charts.xamsurfacechart3d.ixamscattersurface3didprops~rotationz.html[RotationZ]_ 
+|Returns the current rotation's Z value, for quaternion rotations, or the z value for the axis vector for an axis/angle rotation.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_link:{ApiPlatform}test.controls.charts.xamsurfacechart3d~infragisticswpf.test.charts.xamsurfacechart3d.ixamscattersurface3didprops~rotationw.html[RotationW]_ 
+|Returns the current rotation's W value, for quaternion rotations, or the angle of rotation for an axis/angle rotation.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_link:{ApiPlatform}test.controls.charts.xamsurfacechart3d~infragisticswpf.test.charts.xamsurfacechart3d.ixamscattersurface3didprops~scale.html[Scale]_ 
+|Returns the scale of the chart, often referred to as the "zoom level".
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====
+
+=== Topics
+
+The topic contained in this section covers reference information about the  _xamSurfaceChart™_   control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+|link:xamsurfacechart-testable-user-actions-and-elements.html[xamSurfaceChart3D - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamSurfaceChart_ control which you can test and the elements you can inspect.
+
+| link:xamsurfacechart-recordable-methods.html[xamSurfaceChart3D - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamSurfaceChart_ control.
+
+| link:xamsurfacechart-api.html[xamSurfaceChart3D - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamSurfaceChart_ control in Micro Focus Unified Functional Testing software.
+
+|====

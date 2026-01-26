@@ -1,0 +1,66 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamdoughnutchart-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "a6dfaea1-6994-4a6d-bc27-906b59d4ff16",  
+    "buildFlags": [],
+    "createdOn": "2013-04-09T22:19:40.2054142Z"
+}
+|metadata|
+////
+
+= xamDoughnutChart - Property Reference
+
+== _xamDoughnutChart_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the  _xamDoughnutChart_™ control’s test object properties.
+
+[[_Ref337672876]]
+
+=== Properties reference chart
+
+The table below summarizes the control’s test object properties and the tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+| _RingCount_ 
+|Returns the ring count of the xam _DoughnutChart_ control.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _VisibleSlicesCount_ 
+|Returns the count of the visible slices of the xam _DoughnutChart_ control.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _SelectedSlicesCount_ 
+|Returns the count of all the visible selected slices used in the xam _DoughnutChart_ control.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _ExplodedSlicesCount_ 
+|Returns the count of all the visible exploded slices used in the xam _DoughnutChart_ control.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====

@@ -1,0 +1,41 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamdoughnutchart",
+    "controlName": [],
+    "tags": [],
+    "guid": "ef08c3ea-cac0-4f43-8c0d-32d29f40f0b5",  
+    "buildFlags": [],
+    "createdOn": "2013-04-09T21:46:01.1099286Z"
+}
+|metadata|
+////
+
+= xamDoughnutChart
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamdoughnutchartproxy.html[XamDoughnutChartProxy] object in {ProductName}.
+
+=== Topics
+
+The topics contained in this section cover implementing action elements, methods and properties within the  _xamDoughnutChart_™ control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamdoughnutchart-user-actions-and-elements.html[xamDoughnutChart - User Actions and Elements]
+|This topic provides information about the _xamDoughnutChart_ control’s testable user actions and elements.
+
+| link:xamdoughnutchart-recordable-methods.html[xamDoughnutChart - Recordable Methods]
+|This topic provides information about the _xamDoughnutChart_ control’s testable user recordable methods.
+
+| link:xamdoughnutchart-replay-only-methods.html[xamDoughnutChart - Replay-only Methods]
+|This topic provides information about the _xamDoughnutChart_ control’s testable user replay-only methods.
+
+| link:xamdoughnutchart-property-reference.html[xamDoughnutChart - Property Reference]
+|This topic provides reference information about the _xamDoughnutChart_ control’s test object properties.
+
+|====

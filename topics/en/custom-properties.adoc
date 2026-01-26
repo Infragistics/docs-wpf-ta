@@ -1,0 +1,45 @@
+﻿////
+
+|metadata|
+{
+    "name": "custom-properties",
+    "controlName": [],
+    "tags": [],
+    "guid": "79809a7a-f906-411d-a556-a7379718e04d",  
+    "buildFlags": [],
+    "createdOn": "2014-04-30T19:24:40.8708875Z"
+}
+|metadata|
+////
+
+= Custom Properties
+
+=== Introduction
+
+The topics in this group provide information about the custom properties of all supported controls along with those that are control-specific. Custom properties represent proxy objects extended form the controls in order to access sub items of the controls for testing. More details about the types of custom properties are presented in the following list of topics.
+
+=== Topics
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:custom-properties-all-controls.html[Custom Properties - All Controls]
+|This topic provides reference information about the _Proxybase_ custom properties for all controls supported in the Ultimate UI for {ProductName}.
+
+| link:custom-properties-datapresenterbase.html[Custom Properties - DataPresenterBase]
+|This topic provides reference information about the _DataPresenterBase_ custom properties for _xamDataGrid_™, _xamDataPresenter_™, _xamDataCards_™, and _xamDataCarousel_™ controls.
+
+| link:xampropertygrid-custom-properties-reference.html[Custom Properties - xamPropertyGrid]
+|This topic provides reference information about the _xamPropertyGrid_™ proxy base custom properties for the _xamPropertyGrid_ control.
+
+| link:custom-properties-xamradialmenu.html[Custom Properties - xamRadialMenu]
+|This topic provides reference information about the _xamRadialMenu™_ proxy base custom properties for the _xamRadialMenu_ control.
+
+| link:xamspreadsheet-custom-properties-reference.html[Custom Properties - xamSpreadsheet]
+|This topic provides reference information about the _xamSpreadsheet_™ proxy base custom properties for the _xamSpreadsheet_ control.
+
+| link:accessing-controls-properties.html[Accessing Controls' Properties]
+|This topic provides reference information about the methods for accessing the properties and sub-properties of Infragistics controls.
+
+|====

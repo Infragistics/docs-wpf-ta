@@ -1,0 +1,31 @@
+﻿////
+|metadata|
+{
+    "name": "whats-new",
+    "controlName": [],
+    "tags": [],
+    "guid": "86dd8100-b4b0-40ab-b664-978e6425ee42",
+    "buildFlags": [],
+    "createdOn": "2012-02-06T16:24:43.2479617Z"
+}
+|metadata|
+////
+
+= What's New
+
+=== Introduction
+
+This section contains information about the new and previous supported controls and features added/updated in this volume realease.
+
+=== Topics
+
+The information you need to get started with {ProductName} is covered in the following topics:
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:revision-history.html[Revision History]
+|This section contains information about the supported controls and features added to the previous releases.
+
+|====

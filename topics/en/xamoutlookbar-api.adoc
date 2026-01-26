@@ -1,0 +1,39 @@
+﻿////
+|metadata|
+{
+    "name": "xamoutlookbar-api",
+    "controlName": [],
+    "tags": [],
+    "guid": "bc74428c-26c4-4269-b5b1-f268a88f8b39",
+    "buildFlags": [],
+    "createdOn": "2012-01-26T13:46:28.6465961Z"
+}
+|metadata|
+////
+
+= xamOutlookBar - API Reference
+
+== _xamOutlookBar_   Test Object API Reference
+
+=== Introduction
+
+This topic provides reference information about the proxy class that supports the testing of the  _xamOutlookBar_™ control in Micro Focus Unified Functional Testing software.
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|*Proxy Class Name*|*Namespace*|*Inherits From*|*Additional Notes*
+
+| link:{ApiPlatform}test.outlookbar~infragisticswpf.test.outlookbar.xamoutlookbarproxy.html[ _XamOutlookBarProxy_ ]
+|_InfragisticsWPF.Test.OutlookBar_
+|
+* _RecordReplayProxyBase_ 
+
+* _IContainSubItems_ 
+
+|
+
+|====

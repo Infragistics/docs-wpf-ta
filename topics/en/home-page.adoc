@@ -1,0 +1,54 @@
+﻿////
+|metadata|
+{
+    "name": "test-automation-for-wpf ",
+    "controlName": [],
+    "tags": [],
+    "guid": "8312f303-dfd1-433d-8fed-f27417e523ef",
+    "buildFlags": [],
+    "createdOn": "2012-01-18T12:21:28.6956473Z"
+}
+|metadata|
+////
+
+= {ProductName} {ProductVersion}
+
+=== Introduction
+
+Before you start using Ultimate UI for {ProductName} Unified Functional Testing, be sure to read through the topics in this section to ensure that you are getting the most of out of the product.
+
+This section contains information about:
+
+* The product’s main characteristics
+* The supported Ultimate UI for WPF controls
+* Instructions about getting started with the product – installation, configuration and removal
+* The known issues and limitations
+* Reference content related to testing of the Ultimate UI for WPF controls
+
+=== Topics
+
+The information you need to get started with {ProductName} is covered in the following topics:
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:introduction.html[Introduction]
+|This topic introduces the {ProductName} Unified Functional Testing software.
+
+| link:whats-new.html[What's New]
+|This section contains information about the new supported controls and features that were added to this volume release of the Ultimate UI for {ProductName} and the supported controls and features added to previous releases.
+
+| link:known-issues-and-breaking-changes.html[Known Issues and Breaking Changes]
+|This topic provides information on the currently known issues and limitations related to {ProductName} Unified Functional Testing.
+
+| link:getting-started.html[Getting Started]
+|This is a starting point for getting acquainted with {ProductName} Unified Functional Testing software.
+
+| link:test-automation-for-infragistics-controls.html[Test Automation for Infragistics Controls]
+|The topics below provide reference information about the verifiable properties and the recordable and replay-only methods for testing the Ultimate UI for WPF controls.
+
+| link:working-with-test-automation-wpf.html[Working with {ProductName}]
+|The topics in this group explain how to use various Test Automation features.
+
+|====

@@ -1,0 +1,251 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamtabcontrol-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "99881f1e-bfde-4dda-aea3-91ffb903d260",  
+    "buildFlags": [],
+    "createdOn": "2012-01-20T12:45:47.0965483Z"
+}
+|metadata|
+////
+
+= xamTabControl - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods for testing the  _xamTabControl_™.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_summary, _xamTabControl_   Test Object Recordable Methods>>
+
+** <<_closetabMethod, _CloseTab_  >>
+** <<_movetabMethod, _MoveTab_  >>
+** <<_selectMethod, _Select_  >>
+
+* <<_ref1,Related Content>>
+
+[[_summary]]
+== _xamTabControl_   Test Object Recordable Methods
+
+=== Recordable methods summary chart
+
+The following table briefly explains the recordable methods for testing the control. Detailed information about the methods is provided in the text blocks following the table.
+
+[options="header", cols="a,a"]
+|====
+|Method|Description
+
+| link:{ApiPlatform}test~infragisticswpf.test.controls.xamtabcontrolproxy~closetab.html[ _CloseTab_ ]
+|Closes a specific tab.
+
+| link:{ApiPlatform}test~infragisticswpf.test.controls.xamtabcontrolproxy~movetab.html[ _MoveTab_ ]
+|Moves a specific tab.
+
+| link:{ApiPlatform}test~infragisticswpf.test.controls.xamtabcontrolproxy~select.html[ _Select_ ]
+|Selects a specific tab.
+
+|====
+
+[[_closetabMethod]]
+== _CloseTab_
+
+=== Description
+
+The  _CloseTab_  method closes the current tab. It is used for recording and replaying the tab closing action performed by the user (clicking the Close button of the tab).
+
+=== Details
+
+The method accepts as a parameter a tab identifier which can be the tab header text or the tab index.
+
+When recording is performed and there are duplicating tab headers’ texts, the tab index is used.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|Method Parameter|Description
+
+|Tab header text 
+
+_(default)_
+|Using the tab header text as a parameter. 
+
+*Example*
+
+Closing the first tab with header _Tab1_ in xamTabControl: 
+
+WpfWindow("MainWindow").XamTabControl("xamTabControl1").CloseTab "Tab1"
+
+|Tab index
+|Using the tab index as a parameter. 
+
+*Example*
+
+Closing the first tab with index _0_ in xamTabControl: 
+
+WpfWindow("MainWindow").XamTabControl("xamTabControl1").CloseTab 0
+
+|====
+
+=== Default setting
+
+The tab closing action is recorded with the tab header text passed as a parameter.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|Exception name|Exception description|Possible reasons
+
+|The following item was not found.
+|The selected tab cannot be located when replaying the method.
+|
+* The tab has been closed already. 
+
+* The tab doesn’t exist. 
+
+|====
+
+[[_movetabMethod]]
+== _MoveTab_
+
+=== Description
+
+The  _MoveTab_  method moves a specific tab to a new location. It is used for recording and replaying the tab moving action performed by the user (by dragging and dropping a tab item).
+
+=== Details
+
+The method accepts as a parameter an index of the tab item being moved, an index of the new tab item location and the drop location relative to the new tab item location. The relative drop location can be left or right from the target location index.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|Method Parameter|Description
+
+| 
+
+* Tab item index 
+
+* New tab item location index 
+
+* Drop location 
+
+|The following example will move tab item with index 3 to the right side of the location with index 6. 
+
+*Example*
+
+WpfWindow("MainWindow").XamTabControl("xamTabControl1").MoveTab 3, 6, "RightOfTarget"
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+No known exceptions.
+
+[[_selectMethod]]
+== _Select_
+
+=== Description
+
+The  _Select_  method selects a tab. It is used for recording and replaying the tab selection action performed by the user.
+
+=== Details
+
+The method accepts as a parameter a tab identifier which can either be the tab header text or the tab index.
+
+When recording is performed and there are duplicating tab headers’ texts, the tab index is used.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|Method Parameter|Description
+
+|Tab header text 
+
+_(default)_
+|Using the tab header text as a parameter. 
+
+*Example*
+
+Selecting the first tab with header “Tab1” in xamTabControl: 
+
+WpfWindow("MainWindow").XamTabControl("xamTabControl1").Select "Tab1"
+
+|tab index
+|Using the tab index as a parameter. 
+
+*Example*
+
+Selecting the first tab with index 0 in xamTabControl: 
+
+WpfWindow("MainWindow").XamTabControl("xamTabControl1").Select 0
+
+|====
+
+=== Default setting
+
+The tab selection action is recorded with the tab header text passed as a parameter.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|Exception name|Exception description|Possible reasons
+
+|The following item was not found.
+|The selected tab cannot be located when replaying the method.
+|
+* The tab has been closed already. 
+
+* The tab doesn’t exist. 
+
+|====
+
+[[_ref1]]
+== Related Content
+
+=== Topics
+
+The following table lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamtabcontrol-testable-user-actions-and-elements.html[xamTabControl - Testable User Actions and Elements]
+|This topic provides information about the user actions of the xamTabControl™ which you can test and the elements you can inspect.
+
+| link:xamtabcontrol-replay-only-methods.html[xamTabControl - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the XamTabControl™.
+
+| link:xamtabcontrol-property-reference.html[xamTabControl - Properties Reference]
+|This topic provides reference information about the inspectable test object properties of the xamTabControl™.
+
+| link:xamtabcontrol-api.html[xamTabControl - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamTabControl™ in Micro Focus Unified Functional Testing software.
+
+|====

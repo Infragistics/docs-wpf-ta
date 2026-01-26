@@ -1,0 +1,150 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamrichtexteditor-user-actions",
+    "controlName": [],
+    "tags": [],
+    "guid": "0c47e9ad-7d6e-4ce2-8067-1d732f42c3b3",  
+    "buildFlags": [],
+    "createdOn": "2013-11-22T19:21:14.7718226Z"
+}
+|metadata|
+////
+
+= xamRichTextEditor - User Actions
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the  _xamRichTextEditor_™ control’s testable user actions and elements.
+
+[[_Ref338260068]]
+== _XamRichTextEditor_   Testable User Actions
+
+=== Testable user action chart
+
+The following table summarizes the control’s user actions and maps them to the recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|User action|Method
+
+|Moving the Caret position either via the mouse or arrow keys on the keyboard.
+| _link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.xamrichtexteditorproxy~setcaretlocation.html[SetCaretLocation]_ 
+
+|
+* Using `Shift + Click` on a location in the Editor other than caret location 
+
+* Holding the `Shift` while using the arrow keys to move away from the current caret location 
+
+* Holding the mouse down and dragging over a range of characters 
+
+| _link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.xamrichtexteditorproxy~selecttolocation.html[SelectToLocation]_ 
+
+|Typing into the editor.
+| _link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.xamrichtexteditorproxy~sendstring.html[SendString]_ 
+
+|
+* Pressing the `Delete` key any number of times cutting the currently selected text 
+
+| _link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.xamrichtexteditorproxy~deletexcharacters.html[DeleteXCharacters]_ 
+
+|
+* Pressing the `Backspace` key any number of times cutting the currently selected text 
+
+| _link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.xamrichtexteditorproxy~backspacexcharacters.html[BackspaceXCharacters]_ 
+
+|Clicking in a different _RichDocumentViewArea_ then the active one.
+| _link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.xamrichtexteditorproxy~setactiveview.html[SetActiveView]_ 
+
+|
+* Dragging an existing splitter from one position to another 
+
+* Dragging a Mini-splitter to a new position 
+
+| _link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.xamrichtexteditorproxy~setsplitter.html[SetSplitter]_ 
+
+|Using the mouse wheel for scrolling while holding the `Ctrl` key.
+| _link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.xamrichtexteditorproxy~setzoomlevel.html[SetZoomLevel]_ 
+
+|Holding the `Ctrl` key down and clicking on a hyperlink.
+| _link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.xamrichtexteditorproxy~clickhyperlink.html[ClickHyperlink]_ 
+
+|Using keyboard commands: 
+
+* `Ctrl + B` = Bold 
+
+* `Ctrl + I` = Italics 
+
+* `Ctrl + U` = Underline 
+
+* `Ctrl + Shift + (‘+’ key)` = Superscript 
+
+* `Ctrl + (‘+’ key)` = Subscript 
+
+| _link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.xamrichtexteditorproxy~applycharactersetting.html[ApplyCharacterSetting]_ 
+
+|Using keyboard commands: 
+
+* `Ctrl + B` = Bold 
+
+* `Ctrl + I` = Italics 
+
+* `Ctrl + U` = Underline 
+
+* `Ctrl + Shift + (‘+’ key)` = Superscript 
+
+* `Ctrl + (‘+’ key)` = Subscript 
+
+| _link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.xamrichtexteditorproxy~removecharactersetting.html[RemoveCharacterSetting]_ 
+
+|Using keyboard commands: 
+
+* `Ctrl + L` = Left 
+
+* `Ctrl + R` = Right 
+
+* `Ctrl + E` = Center 
+
+* `Ctrl + J` = Justified 
+
+| _link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.xamrichtexteditorproxy~applyparagraphsetting.html[ApplyParagraphSetting]_ 
+
+|Using keyboard commands: 
+
+* `Ctrl + C` = Copy 
+
+* `Ctrl + X` = Cut 
+
+* `Ctrl + V` = Paste 
+
+| _link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors.xamrichtexteditorproxy~executecommand.html[ExecuteCommand]_ 
+
+|====
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamrichtexteditor-recordable-methods.html[xamRichTextEditor - Recordable Methods]
+|This topic provides information about recording and replaying actions using the _xamRichTextEditor_ control’s testable user methods.
+
+| link:xamrichtexteditor-replay-only-methods.html[xamRichTextEditor - Replay-Only Methods]
+|This topic provides information about the _XamRichTextEditor_ control’s testable user replay-only methods.
+
+| link:xamrichtexteditor-property-reference.html[xamRichTextEditor - Property Reference]
+|This topic provides reference information about the _xamRichTextEditor_ control’s test object properties.
+
+| link:xamrichtexteditor-enumeration-reference.html[xamRichTextEditor - Enumeration Reference]
+|This topic provides reference material on the common enumerations used for testing the _xamRichTextEditor_ control.
+
+|====

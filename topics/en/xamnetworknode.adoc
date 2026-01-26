@@ -1,0 +1,43 @@
+﻿////
+|metadata|
+{
+    "name": "xamnetworknode",
+    "controlName": [],
+    "tags": [],
+    "guid": "adfe10ed-50ad-470a-8f52-1f3dcdbd36f5",
+    "buildFlags": [],
+    "createdOn": "2012-10-29T17:10:04.6551366Z"
+}
+|metadata|
+////
+
+= xamNetworkNode
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test.networknode~infragisticswpf.test.networknode.xamnetworknodeproxy.html[XamNetworkNodeProxy] object in {ProductName}.
+
+=== Topics
+
+The topics contained in this section cover implementing action elements, methods and properties within the  _xamNetworkNode_™ control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamnetworknode-testable-user-actions-and-elements.html[xamNetworkNode - Testable User Actions and Elements]
+|This topic provides information about the _xamNetworkNode_ control’s testable user actions and elements.
+
+| link:xamnetworknode-recordable-methods.html[xamNetworkNode - Recordable Methods]
+|This topic provides information about the _xamNetworkNode_ control’s testable user recordable methods.
+
+| link:xamnetworknode-replay-only-methods.html[xamNetworkNode - Replay-Only Methods]
+|This topic provides information about the _xamNetworkNode_ control’s testable user replay-only methods.
+
+| link:xamnetworknode-property-reference.html[xamNetworkNode - Property Reference]
+|This topic provides reference information about the _xamNetworkNode_ control’s test object properties.
+
+| link:xamnetworknode-enumeration-reference.html[xamNetworkNode - Enumeration Reference]
+|This topic provides reference information about the common enumerations used in testing the _xamNetworkNode_ control.
+
+|====

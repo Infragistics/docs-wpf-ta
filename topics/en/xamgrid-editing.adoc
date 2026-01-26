@@ -1,0 +1,360 @@
+﻿////
+|metadata|
+{
+    "name": "xamgrid-editing",
+    "controlName": [],
+    "tags": [],
+    "guid": "fa4403fb-c4a1-4648-b430-f65a48c2a3ae",
+    "buildFlags": [],
+    "createdOn": "2012-04-14T09:48:20.2240402Z"
+}
+|metadata|
+////
+
+= Editing
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods related to the testing of the editing in the xamGrid™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref321754277,Recordable Methods>>
+
+** <<_CopyToClipboard, _CopyToClipboard_  >>
+** <<_ExitEditMode, _ExitEditMode_  >>
+** <<_PasteFromClipboard, _PasteFromClipboard_  >>
+** <<_RowEnterEditMode, _RowEnterEditMode_  >>
+** <<_SetCellData, _SetCellData_  >>
+
+* <<_Ref322527620,Related Contrnt>>
+
+[[_Ref321754277]]
+== Recordable Methods
+
+=== Methods reference summary
+
+The following table summarizes the purpose and functionality of the recordable methods for testing the editing in the xamGrid control.
+
+[options="header", cols="a,a"]
+|====
+|Method|Description
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~copytoclipboard.html[CopyToClipboard]_
+|Copies the selected cell(s) to the clipboard.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~exiteditmode.html[ExitEditMode]_
+|Exits the Edit mode for the row with or without committing the changes.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~pastefromclipboard.html[PasteFromClipboard]_
+|Pastes cell(s) from the clipboard into the xamGrid.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~rowentereditmode.html[RowEnterEditMode]_
+|Sets Edit mode for the row.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~setcelldata.html[SetCellData]_
+|Sets the cell to a specified value.
+
+|====
+
+[[_CopyToClipboard]]
+== _CopyToClipboard_
+
+=== Description
+
+The  _CopyToClipboard_   method copies the selected cell(s) to the clipboard. This action is recorded when the user presses Ctrl-C while at least one cell is selected.
+
+=== Parameters
+
+This method accepts no parameters.
+
+=== Example
+
+Copying the data from the selected cells to the clipboard:
+
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").CopyToClipboard                               
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+When XamGrid.ClipboardSettings.AllowCopy == false
+
+_Cannot perform the specified action [CopyToClipboard]_ .
+
+[[_ExitEditMode]]
+== _ExitEditMode_
+
+=== Description
+
+The  _ExitEditMode_   method is recorded in a test when, after editing a row or a cell, the user accepts the data changes or presses the ESC key to cancel changes.
+
+=== Details
+
+When replaying the method, the row or cell exits Edit mode.
+
+This method is useful when the entered data is not valid and the update should be canceled.
+
+This method takes a boolean value as a parameter.
+
+=== Parameters
+
+The following table maps the desired configuration to parameters settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Exit Edit mode without changing the data (for example - after pressing the ESC button)
+|bCancel
+| _T_ _rue_ 
+
+|Exit Edit mode and accept the data changes
+|bCancel
+|_False_ or blank
+
+|====
+
+=== Example
+
+* Changing the cell value and canceling the update after that:
+
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SetCellData "{0}[CustomerID]","BOLID12"
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").ExitEditMode True                               
+----
+
+* Changing the cell value, accepting changes and exiting from the editing mode:
+
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SetCellData "{0}[CustomerID]","BOLID12"
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").ExitEditMode                           
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+No known exceptions.
+
+[[_PasteFromClipboard]]
+== _PasteFromClipboard_
+
+=== Description
+
+The  _PasteFromClipboard_   method pastes the copied cell(s) from the clipboard to the xamGrid. This action is recorded when the user presses Ctrl-V in the xamGrid while at least one cell is in the clipboard.
+
+=== Parameters
+
+This method accepts no parameters.
+
+=== Example
+
+Pasting the cells into the xamGrid from the clipboard:
+
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").PasteFromClipboard                               
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+When XamGrid.ClipboardSettings.AllowPaste == false
+
+_Cannot perform the specified action [PasteFromClipboard]_ .
+
+[[_RowEnterEditMode]]
+== _RowEnterEditMode_
+
+=== Description
+
+The  _RowEnterEditMode_   method is recorded in a test when a row enters Edit mode.
+
+=== Details
+
+When replaying the method:
+
+[start=1]
+. The row address is validated.
+[start=2]
+. The row is set to Edit mode.
+
+The method accepts the row path as a parameter.
+
+The path is formed by concatenating the row paths (the parenthesis are part of the syntax):
+
+*{row path}*
+
+The path is formed by concatenating together the parent row’ indexes and the target row’s index; the concatenation goes, left to right, in descending hierarchical order, from the root row index down to the sub-row’s indexes and finally to the target row’s index. If the path consists of more than one index, all indexes must be surrounded by parentheses.
+
+For example:
+
+* The target row is the first root row: 0
+* The target row is the first sub-row of the first root row: {0}{0}
+
+The target row is the third sub-row of the first sub-row of the first root row: {0}{0}{2}
+
+=== Parameters
+
+The following table maps the desired configuration to parameters settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the path to a row
+|oRecordArg
+|The path to the row in the xamGrid
+
+|====
+
+=== Example
+
+The first row is editable and a new value is set in the CustomerID column. After that, the row exits Edit mode and changes are accepted.
+
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").RowEnterEditMode 0
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SetCellData "{0}[CustomerID]","TestID"
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").ExitEditMode                        
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|There is no ActiveRow
+|There is no active row.
+|No active row is selected.
+
+|====
+
+[[_SetCellData]]
+== _SetCellData_
+
+=== Description
+
+The  _SetCellData_   method is recorded in a test when a value is changed in a xamGrid cell.
+
+=== Details
+
+When replaying the method:
+
+[start=1]
+. The provided cell address is validated.
+[start=2]
+. If the cell exists, the cell is is set to Edit mode and then its value is modified.
+[start=3]
+. The cell exits Edit mode.
+
+The method accepts as parameters the cell path and the new value to be set.
+
+The path is formed by concatenating the row path and the column key (the parenthesis and the brackets are part of the syntax):
+
+*{row path}[column key]*
+
+For example, the cross-section of the first row and the column key is denoted as {0}[key], the cross-section of the first child row of the first row and the column key is denoted as {0}{0}[key].
+
+=== Parameters
+
+The following table maps the desired configuration to parameters settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the path to a cell to edit
+|sCellArg
+|The path to the cell in the xamGrid
+
+|Specify the new value to set
+|oValue
+|The new cell value
+
+|====
+
+=== Example
+
+Setting a new value to the cell in the first row and column  _CustomerID_  .
+
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").SetCellData "{0}[CustomerID]", "New Value"
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter is not format correctly.
+|The method’s parameter is not correctly formatted.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|Unable to enter Edit mode.
+|Editing of the cell is not allowed and the replaying the method fails.
+|Editing is not enabled.
+
+|The element is not visible.
+|The cell to be edited is not visible and replaying the method fails.
+|The cell doesn’t exist or is hidden.
+
+|====
+
+[[_Ref322527620]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamgrid-display.html[Display]
+|This topic provides reference information about the recordable user methods related to the testing of the display features in the xamGrid control.
+
+| link:xamgrid-filtering.html[Filtering]
+|This topic provides reference information about the recordable user methods related to the testing of the filtering in the xamGrid control.
+
+| link:xamgrid-navigating-and-selecting.html[Navigating and Selecting]
+|This topic provides reference information about the recordable user methods related to the testing of the navigation and selection in the xamGrid control.
+
+| link:xamgrid-sorting-and-grouping.html[Sorting and Grouping]
+|This topic provides reference information about the recordable user methods related to the testing of the sorting and grouping in the xamGrid control.
+
+| link:xamgrid-summaries.html[Summaries]
+|This topic provides reference information about the recordable user methods related to the testing of the summaries in the xamGrid control.
+
+|====

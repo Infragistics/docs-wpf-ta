@@ -1,0 +1,41 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamdatatree",
+    "controlName": [],
+    "tags": [],
+    "guid": "0e85d1d4-bb5a-4121-b992-1d16a57fa986",  
+    "buildFlags": [],
+    "createdOn": "2012-01-23T07:22:43.6590737Z"
+}
+|metadata|
+////
+
+= xamDataTree
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy.html[XamDataTreeProxy] object in {ProductName}.
+
+=== Topics
+
+The topics contained in this section cover implementing action elements, methods and properties within the  _xamDataTree™_   control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamdatatree-testable-user-actions-and-elements.html[xamDataTree - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamDataTree_ control which you can test and the elements you can inspect.
+
+| link:xamdatatree-recordable-methods.html[xamDataTree - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamDataTree_ control.
+
+| link:xamdatatree-property-reference.html[xamDataTree - Properties Reference]
+|This topic provides reference information about the inspectable test object properties of the _xamDataTree_ control.
+
+| link:xamdatatree-api.html[xamDataTree - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamDataTree_ control in Micro Focus Unified Functional Testing software.
+
+|====

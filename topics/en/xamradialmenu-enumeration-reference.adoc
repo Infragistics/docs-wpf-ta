@@ -1,0 +1,34 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamradialmenu-enumeration-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "e1d34e4a-797c-4d54-ac24-1220f0ec83d0",  
+    "buildFlags": [],
+    "createdOn": "2014-04-30T19:18:31.2769318Z"
+}
+|metadata|
+////
+
+= xamRadialMenu - Enumeration Reference
+
+== _XamRadialMenu_   Enumerations Reference
+
+=== Introduction
+
+This topic provides reference material on the common enumerations used for testing the  _XamRadialMenu_™ control.
+
+=== Enumerations reference chart
+
+The following table summarizes the  _XamRadialMenu_   test object enumeration used most often in recordable methods.
+
+[options="header", cols="a,a"]
+|====
+|Enumeration|Description
+
+| link:infragisticswpf.test.controls.menus.xamradialmenu~infragisticswpf.test.controls.menus.rmnusubitemtype.html[RMnuSubItemType]
+|This enumeration represents the sub item type.
+
+|====

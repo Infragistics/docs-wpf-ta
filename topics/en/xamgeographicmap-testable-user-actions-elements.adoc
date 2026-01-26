@@ -1,0 +1,183 @@
+﻿////
+|metadata|
+{
+    "name": "xamgeographicmap-testable-user-actions-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "0947ea3f-1627-4756-a15b-1667bce0f0b2",
+    "buildFlags": [],
+    "createdOn": "2012-06-26T14:28:09.1418041Z"
+}
+|metadata|
+////
+
+= xamGeographicMap - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the user actions of the xamGeographicMap™ control, which you can test and the elements you can inspect.
+
+[[_Ref326578028]]
+[[_Ref326568554]]
+== _xamGeographicMap_   Testable User Actions
+
+=== Testable user actions
+
+The table below lists the testable user actions of the control and maps them to the methods that emulate them.
+
+Legend:
+
+image::images/replay.png[]
+
+ – Replayable in UFT script
+
+image::images/record.png[]
+
+ – Recordable by default
+
+[options="header", cols="a,a,a"]
+|====
+|User action|Method|Accessibility
+
+|Rotating the mouse wheel on the control
+| link:panning-and-zooming.html#_Ref326652875[ZoomArea]
+|image::images/replay.png[] 
+
+image::images/record.png[]
+
+|Changing the zoom value via elements of the Overview Plus Detail (OPD) pane
+| link:panning-and-zooming.html#_Ref326652875[ZoomArea]
+|image::images/replay.png[] 
+
+image::images/record.png[]
+
+|Dragging the mouse drag on the control
+| link:panning-and-zooming.html#_Ref328511646[PanArea]
+|image::images/replay.png[] 
+
+image::images/record.png[]
+
+|Dragging the mouse in the OPD pane
+| link:panning-and-zooming.html#_Ref328511646[PanArea]
+|image::images/replay.png[] 
+
+image::images/record.png[]
+
+|Left-clicking on the control
+| link:emulating-the-mouse.html#_Ref326919172[ClickControl]
+|image::images/replay.png[] 
+
+image::images/record.png[]
+
+|Double-clicking on the control
+| link:emulating-the-mouse.html#_Ref328523605[DblClickControl]
+|image::images/replay.png[] 
+
+image::images/record.png[]
+
+|Right-clicking on the control
+| link:emulating-the-mouse.html#_Ref328523633[RightClickControl]
+|image::images/replay.png[] 
+
+image::images/record.png[]
+
+|Performing various mouse actions, including mouse down, mouse drag, and mouse up, on the control.
+| link:emulating-the-mouse.html#_Ref328523618[MouseActionOnControl]
+|image::images/replay.png[]
+
+|Setting the application focus on the control.
+| link:setting-focus.html#_Ref328660175[SetFocus]
+|image::images/replay.png[]
+
+|====
+
+[[_Ref326578601]]
+[[_Ref326568573]]
+== _xamGeographicMap_   Testable Elements
+
+=== Testable elements summary chart
+
+The following table identifies testable control elements and their retrievable information along with and the properties and methods that manage the retrieval process. *Legend:* 
+
+image::images/spy.png[]
+
+ – Identification property (Visible in object spy)
+
+image::images/checkpoint.png[]
+
+ – Checkpoint property (Visible with checkpoints)
+
+image::images/script.png[]
+
+ – Accessible in script
+
+[options="header", cols="a,a,a,a,a"]
+|====
+|Tested element|Test deliverable|Member type|Test object member|Accessibility
+
+|Series
+|The chart series type (called “series name”), title, index, and tooltip content} of all chart series present in the control.
+|property
+|_SeriesInfo_
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|Series
+|The count of the chart series present in the control.
+|property
+|_SeriesCount_
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|Data points
+|A string with all data points of all the series present in the xamGeographicMap control
+|verifiable table content 
+
+including the following columns: 
+
+* SeriesName 
+
+* SeriesTitle 
+
+* SeriesIndex 
+
+* DataPointLatitude 
+
+* DataPointLongitude 
+
+* DataPointValue 
+
+|_DataPoints_
+|image::images/checkpoint.png[]
+
+|Property settings
+|A list of the control’s properties and their data type
+|method
+|_GetNAProperties_
+|image::images/checkpoint.png[]
+
+|====
+
+[[_Ref328407898]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamgeographicmap-api.html[xamGeographicMap - Test Object API Referencce]
+|This topic provides reference information about the proxy class that supports the testing of the _xamGeographicMap_ control in Micro Focus Unified Functional Testing software.
+
+|====

@@ -1,0 +1,277 @@
+﻿////
+|metadata|
+{
+    "name": "xammonthcalendar-replay-only-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "daaba5ca-626c-4b49-9171-d51ff90a7742",
+    "buildFlags": [],
+    "createdOn": "2012-01-21T07:57:12.5113909Z"
+}
+|metadata|
+////
+
+= xamMonthCalendar - Replay-Only Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the replay-only user methods for testing the xamMonthCalendar™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_xamMonthCalendar_Replay_Only_Method,xamMonthCalendar Test Object Replay-Only Methods Summary>>
+* <<_ClickHeader_Method,_ClickHeader_  Method>>
+* <<_ClickCalendarItem_Method,_ClickCalendarItem_  Method>>
+* <<_ClickSubItem_Method,_ClickSubItem_  Method>>
+* <<_ref1,Related Topics>>
+
+[[_xamMonthCalendar_Replay_Only_Method]]
+== xamMonthCalendar Test Object Replay-Only Methods Summary
+
+=== Replay-only methods summary chart
+
+The following table briefly explains the replay-only methods for testing the control. Detailed information about the methods is provided below the table.
+
+[options="header", cols="a,a"]
+|====
+|Method|Description
+
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors.xammonthcalendarproxy~clickheader.html[ _ClickHeader_ ]
+|Clicks on the xamMonthCalendar header.
+
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors.xammonthcalendarproxy~clickcalendaritem.html[ _ClickCalendarItem_ ]
+|Clicks on the specified calendar item.
+
+| link:{ApiPlatform}test.shared~infragisticswpf.test.shared.recordreplayproxybase~clicksubitem.html[ _ClickSubItem_ ]
+|Validates the calendar sub item and its location, brings it to view and clicks at the specified point.
+
+|====
+
+[[_ClickHeader_Method]]
+== _ClickHeader_  Method
+
+=== Description
+
+This method replays the click user action on the specified header of the xamMonthCalendar control.
+
+=== Details
+
+Using this method, you can simulate the zooming out of the control.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|Method Parameter|Description
+
+|Header text 
+
+_(_ _required_ _)_
+|This method takes a xamMonthCalendar header as a parameter, verifies that the specified text is the same as the current header and clicks on it. 
+
+*Example*
+
+Clicking on the header and zooming out from Dates calendar mode to Months mode: 
+
+WpfWindow("MainWindow").XamMonthCalendar("xamMonthCalendar").ClickHeader "March, 2012"
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a"]
+|====
+|Exception name|Possible reasons
+
+|• The specified value is not a DateTime 
+
+• The following CalendarItem was not found.
+|The method parameter is not valid.
+
+|====
+
+[[_ClickCalendarItem_Method]]
+== _ClickCalendarItem_  Method
+
+=== Description
+
+This method replays the click action on a specified xamMonthCalendar item combined with pressing of a specified keyboard button.
+
+=== Details
+
+First, the specified calendar item is validated, then the item is brought into view and a specified key state is set. After that a click action is performed and the key state is reset.
+
+The possible values for the key state are the following:
+
+* igShift
+* igAlt
+* igShiftAlt
+* igCtrl
+* igShiftCtrl
+* igAltCtrl
+* igShiftAltCtrl
+
+=== Parameters
+
+The following table explains the method’s parameters together with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|Method Parameter|Description
+
+|
+* Calendar item 
+
+_(_ _required_ _)_ 
+
+* Key state 
+
+_(_ _optional_ _)_
+|*This method is using a calendar item and a key state to perform a click* *action.* 
+
+*Example*
+
+Clicking on two dates and pressing the CTRL key in order to add these dates to a selected dates collection: 
+
+WpfWindow("MainWindow").XamMonthCalendar("xamMonthCalendar").ClickCalendarItem #3/1/2011#, igCtrl 
+
+WpfWindow("MainWindow").XamMonthCalendar("xamMonthCalendar").ClickCalendarItem #3/2/2011#, igCtrl
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely causing them.
+
+[options="header", cols="a,a"]
+|====
+|Exception name|Possible reasons
+
+|• The specified value is not a DateTime 
+
+• The following CalendarItem was not found.
+|The method parameter is not valid.
+
+|====
+
+[[_ClickSubItem_Method]]
+== _ClickSubItem_  Method
+
+=== Description
+
+This method is used for performing a click on a specified item at a specifed location. This method is common for most of the supported controls that have sub items.
+
+=== Details
+
+In the context of testing, the xamMonthCalendar the sub item type can take one of the following values:
+
+•  _calHdr_  (calendar header sub item type)
+
+•  _calItem_  (calendar item sub item type)
+
+=== Parameters
+
+The following table explains the method’s parameters together with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|Method Parameter|Description
+
+|
+* Sub Item Type 
+
+_(_ _R_ _equired)_ 
+
+* Sub Item 
+
+_(_ _R_ _equired)_ 
+
+* Region 
+
+_(Optional)_ 
+
+* X 
+
+_(Optional)_ 
+
+* Y 
+
+_(Optional)_
+|*Example* 
+
+* Click on the calendar item “2011” when the current calendar mode is Years: 
+
+WpfWindow("MainWindow").XamMonthCalendar("xamMonthCalendar").ClickSubItem calItem, "2011", igAt, 28.64,19.04 
+
+* Click on the calendar header “January, 2012” when the current calendar mode is Days to zoom out the calendar: 
+
+WpfWindow("MainWindow").XamMonthCalendar("xamMonthCalendar").ClickSubItem calHdr, "January, 2012", igAt, 103,13
+
+|====
+
+=== Default setting
+
+This method takes several parameters:
+
+* calendar sub item type
+* calendar sub item
+* region
+* coordinates of a point
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|Exception name|Exception description|Possible reasons
+
+|The point required to perform the operation is not visible.
+|The click location cannot be resolved.
+|The method parameters defining the point to click are not valid.
+
+|====
+
+[[_ref1]]
+== Related Topics
+
+=== Related topics summary chart
+
+The following table lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xammonthcalendar-testable-user-actions-and-elements.html[xamMonthCalendar - Testable User Actions and Elements]
+|This topic provides information about the user actions of the xamMonthCalendar™ control which you can test and the elements you can inspect.
+
+| link:xammonthcalendar-recordable-methods.html[xamMonthCalendar - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamMonthCalendar™ control.
+
+| link:xammonthcalendar-property-reference.html[xamMonthCalendar - Properties Reference]
+|This topic provides reference information about the inspectable test object properties of the xamMonthCalendar™ control.
+
+| link:xammonthcalendar-api.html[xamMonthCalendar - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamMonthCalendar™ control in Micro Focus Unified Functional Testing software.
+
+| link:xameditors-replay-only-methods.html[xamEditors - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the xamEditors that are common to all these editors.
+
+|====

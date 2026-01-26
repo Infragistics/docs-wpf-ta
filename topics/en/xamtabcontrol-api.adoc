@@ -1,0 +1,53 @@
+﻿////
+|metadata|
+{
+    "name": "xamtabcontrol-api",
+    "controlName": [],
+    "tags": [],
+    "guid": "69527ced-a4f4-45e9-9d0b-8b18a471bbd4",
+    "buildFlags": [],
+    "createdOn": "2012-01-22T18:45:35.4039001Z"
+}
+|metadata|
+////
+
+= xamTabControl - API Reference
+
+== _xamTabControl_   Test Object API Reference
+
+=== Introduction
+
+This topic provides reference information about the proxy class that supports the testing of the  _xamTabControl_™ in Micro Focus Unified Functional Testing software.
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|*Proxy Class Name*|*Namespace*|*Inherits From*|*Additional Notes*
+
+| link:{ApiPlatform}test~infragisticswpf.test.controls.xamtabcontrolproxy.html[ _XamTabControlProxy_ ]
+|_InfragisticsWPF.Test.Controls_
+|
+* _RecordReplayProxyBase_ 
+
+* _IXamTabControlReplay_ 
+
+* _IXamTabControlIDProps_ 
+
+* _IContainSubItems_ 
+
+|This proxy class implements the _IContainSubItems_ interface and supports the following related methods: 
+
+* _ClickSubItem_ 
+
+* _RightClickSubItem_ 
+
+* _DblClickSubItem_ 
+
+* _MouseActionOnSubItem_ 
+
+* _GetSubItemProperty_ 
+
+|====

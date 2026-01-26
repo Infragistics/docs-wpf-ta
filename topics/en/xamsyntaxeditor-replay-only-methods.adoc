@@ -1,0 +1,156 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamsyntaxeditor-replay-only-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "dbf99773-279e-4ee7-bd5a-b9decd18b448",  
+    "buildFlags": [],
+    "createdOn": "2012-10-29T21:02:45.637123Z"
+}
+|metadata|
+////
+
+= xamSyntaxEditor - Replay-Only Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the  _xamSyntaxEditor_™ control’s testable user replay-only methods.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref338265452, _xamSyntaxEditor_   Test Object Replay-Only Methods>>
+
+** <<_Ref338526418, _GetLocationFromOffset_  >>
+** <<_Ref338526427, _GetOffsetFromLocation_  >>
+
+* <<_Ref337132389,Related Content>>
+
+[[_Ref338265452]]
+== _xamSyntaxEditor_  Test Object Replay-Only Methods
+
+=== Replay-Only methods summary chart
+
+The following table briefly explains the replay-only methods for testing controls. Detailed information about the methods is available following the table.
+
+[options="header", cols="a,a"]
+|====
+|Method|Description
+
+| _<<Ref338526418, GetLocationFromOffset >>_ 
+|Returns a two dimensional array consisting of the line index and character index of the supplied character offset.
+
+| _<<Ref338526427, GetOffsetFromLocation >>_ 
+|Returns the offset of the overall character location from the start of the file, the supplied line and character location.
+
+|====
+
+[[_Ref338526418]]
+== _GetLocationFromOffset_
+
+=== Description
+
+This helper method, allows the offset location to interact with a line or character location, and reverse back to the offset location.
+
+=== Parameters
+
+The following table explains the method’s parameters followed by a code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`iOffset`
+|Zero-based integer value representing the overall character location offset, from the start of the syntax editor’s loaded document.
+
+|====
+
+=== Example
+
+This example demonstrates how to translate the character offset of 55 to a location you would call. It will return an object array such as `ARRAY(``12,2).`
+
+[source,csharp]
+----
+XamSyntaxEditor("xamSyntaxEditor1").GetLocationFromOffset 55
+----
+
+=== Possible exceptions
+
+There is no document currently loaded in the  _xamSyntaxEditor;_   required to perform this operation.
+
+[[_Ref338526427]]
+== _GetOffsetFromLocation_
+
+=== Description
+
+This helper method, allows the line or character location to interact with the offset, and reverse back to the line or character’s location.
+
+=== Parameters
+
+The following table explains the method’s parameters followed by a code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`aryLocation`
+|This two dimensional array, consisting of the _zero-based_ line index and a _zero-based_ character index, represents a text location in the syntax editor’s loaded document. 
+
+.Note: 
+
+[NOTE] 
+
+==== 
+
+The line numbers are _one-based_ by default. 
+
+====
+
+|====
+
+=== Example
+
+This example demonstrates how to translate the location of line number 13, and 3rd character to a character offset of your choice. It will return an integer value of the character location.
+
+[source,csharp]
+----
+XamSyntaxEditor("xamSyntaxEditor1").GetOffsetFromLocation ARRAY(12,2)
+----
+
+=== Possible exceptions
+
+There is no document currently loaded in the  _xamSyntaxEditor;_   required to perform this operation.
+
+Another possibility is that the TextLocation argument [{0}] is malformed the correct format should be
+
+`:\``n iOffsetLocation | ARRAY(iLineIndex,` `iCharIndex).`
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamsyntaxeditor-testable-user-actions-and-elements.html[xamSyntaxEditor - Testable User Actions and Elements]
+|This topic provides information about the _xamSyntaxEditor_ control’s testable user actions and elements.
+
+| link:xamsyntaxeditor-recordable-methods.html[xamSyntaxEditor - Recordable Methods]
+|This topic provides information about the _xamSyntaxEditor_ control’s testable user recordable methods.
+
+| link:xamsyntaxeditor-property-reference.html[xamSyntaxEditor - Property Reference]
+|This topic provides reference information about the _xamSyntaxEditor_ control’s test object properties.
+
+| link:xamsyntaxeditor-enumeration-reference.html[xamSyntaxEditor - Enumeration Reference]
+|This topic provides reference information about the common enumerations used in testing the _xamSyntaxEditor_ control.
+
+|====

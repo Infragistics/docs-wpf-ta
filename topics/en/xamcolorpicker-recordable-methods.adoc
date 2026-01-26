@@ -1,0 +1,128 @@
+﻿////
+|metadata|
+{
+    "name": "xamcolorpicker-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "89275b6f-9c48-4e57-a215-53c23a7e962e",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T13:09:28.0988444Z"
+}
+|metadata|
+////
+
+= xamColorPicker - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods for testing the xamColorPicker™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_summary,xamColorPicker Test Object Recordable Methods Summary>>
+
+** <<_SetColor, _SetColor_   Method>>
+
+* <<_Related,Related Topics>>
+
+[[_summary]]
+== xamColorPicker Test Object Recordable Methods Summary
+
+=== Recordable methods summary chart
+
+The following table briefly explains the recordable methods for testing the control. Detailed information about the methods is provided in the text blocks following the table.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|*Description*
+
+| link:{ApiPlatform}test.editors.xamcolorpicker~infragisticswpf.test.editors.colorpicker.xamcolorpickerproxy~setcolor.html[ _SetColor_ ]
+|Sets the selected color to the xamColorPicker.
+
+|====
+
+[[_SetColor]]
+== _SetColor_  Method
+
+=== Description
+
+The  _SetColor_  method sets the selected color to the xamColorPicker control. It records and replays the color selection action performed by the user.
+
+'''
+
+=== Details
+
+This method takes as an argument either the color code or its predefined color name (for example, either  _#FFFF0000_  or  _Red_,  _#FFD3D3D3_  or  _LightGray_,  _#FF00008B_  or  _DarkBlue_ ).
+
+'''
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Color code 
+
+_(default)_
+|Using a color code as a parameter: 
+
+*Example*
+
+Setting the xamColorPicker color to red: 
+
+WpfWindow("MainWindow").XamColorPicker("colorPicker").SetColor "#FFFF0000"
+
+|Color name
+|Using the predefined color name as a parameter: 
+
+*Example*
+
+Setting the xamColorPicker color to red: 
+
+WpfWindow("MainWindow").XamColorPicker("colorPicker").SetColor "Red"
+
+|====
+
+'''
+
+=== Default setting
+
+The color setting action is recorded with the color code passed as a parameter.
+
+'''
+
+=== Possible exceptions
+
+No known exceptions.
+
+[[_Related]]
+== Related Topics
+
+=== Related topics summary chart
+
+The following table lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamcolorpicker-testable-user-actions-and-elements.html[xamColorPicker - Testable User Actions and Elements]
+|This topic provides information about the user actions of the xamColorPicker™ control which you can test and the elements you can inspect.
+
+| link:xamcolorpicker-replay-only-methods.html[xamColorPicker - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the xamColorPicker™ control.
+
+| link:xamcolorpicker-property-reference.html[xamColorPicker - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamColorPicker™ control.
+
+| link:xamcolorpicker-api.html[xamColorPicker - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamColorPicker™ control in Micro Focus Unified Functional Testing software.
+
+|====

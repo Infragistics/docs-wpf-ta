@@ -1,0 +1,79 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamsparkline-testable-user-actions-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "b29fc6d4-217b-415f-b32b-b9c3906758a6",  
+    "buildFlags": [],
+    "createdOn": "2012-06-26T15:27:42.1130984Z"
+}
+|metadata|
+////
+
+= xamSparkline - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic is the UFT tester’s guide for the  _xamSparkline_™ control in applications under test with the {ProductName} UFT Add-In.
+
+== _xamSparkline_   Testable User Actions
+
+=== Testable user actions chart
+
+The table below lists the control’s testable user actions and methods that emulate them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|User action|Method|Accessibility
+
+|Mouse click on the _xamSparkline_ control
+| _ClickControl_ 
+|image::images/replay.png[] 
+
+image::images/record.png[]
+
+|Mouse double-click on the _xamSparkline_ control
+| _DblClickControl_ 
+|image::images/replay.png[] 
+
+image::images/record.png[]
+
+|Mouse right-click on the _xamSparkline_ control
+| _RightClickControl_ 
+|image::images/replay.png[] 
+
+image::images/record.png[]
+
+|Perform a mouse action on the _xamSparkline_ control.
+| _MouseActionOnControl_ 
+|image::images/replay.png[]
+
+|Set application focus on the _xamSparkline_ control.
+| _SetFocus_ 
+|image::images/replay.png[]
+
+|====
+
+[[_Ref328407898]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamsparkline-property-reference.html[xamSparkline - Property Reference]
+|This topic provides reference information about the _xamSparkine_ control’s test object properties.
+
+| link:xamsparkline-api.html[xamSparkline - API Reference]
+|This topic provides a table of the _xamSparkline_ control’s proxy class namespace and inheritance information
+
+|====

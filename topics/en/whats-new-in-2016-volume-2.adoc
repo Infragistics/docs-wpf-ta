@@ -1,0 +1,28 @@
+﻿= What's New in 2016 Volume 2
+
+== Topic Overview
+
+=== Purpose
+
+This topic presents control proxies of the new and enhanced features for the Infragistics® Test Automation for WPF (Unified Functional Testing) for 2016 Volume 2 release.
+
+== What’s New Summary
+
+=== What’s new summary chart
+
+The following table summarizes the new features in Infragistics 2016 Volume 2 controls suite that are now supported in Infragistics Test Automation.
+
+==== xamCategoryChart
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|New Control
+|{ProductName} supports the xamCategoryChart control as part of the Ultimate UI for WPF product in the 2016.2 release. 
+
+==== Related topic: 
+
+link:xamCategoryChart-xamCategoryChart.html[xamCategoryChart]
+
+|====

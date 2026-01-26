@@ -1,0 +1,73 @@
+﻿////
+|metadata|
+{
+    "name": "xamcomboeditor-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "d52b339b-40c6-49df-8cc4-7327bdc12729",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T16:47:19.1205733Z"
+}
+|metadata|
+////
+
+= xamComboEditor - Property Reference
+
+== _xamComboEditor_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the inspectable test object properties of the xamComboEditor™ control.
+
+The topic covers only the properties that are specific to this xamEditor. For information about the properties that are common to all the xamEditors, refer to to the following topic: link:xameditors-property-reference.html[xamEditors - Property Reference].
+
+=== Properties reference chart
+
+The table below summarizes the control’s test object properties and the tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+|_link:{ApiPlatform}test.editors~infragisticswpf.test.editors.xamcomboeditorproxy~selectedindex.html[SelectedIndex]_
+|The Index of the item selected from the xamComboEditor ItemsSource.
+|image::images/spy.png[]
+
+|_link:{ApiPlatform}test.editors~infragisticswpf.test.editors.xamcomboeditorproxy~selecteditem.html[SelectedItem]_
+|The item that is currently selected from the Items source.
+|image::images/spy.png[]
+
+|_link:{ApiPlatform}test.editors~infragisticswpf.test.editors.xamcomboeditorproxy~selectedtext.html[SelectedText]_
+|the currently selected text. If nothing is selected then it returns an empty string.
+|image::images/spy.png[]
+
+|_link:{ApiPlatform}test.editors~infragisticswpf.test.editors.xamcomboeditorproxy~selectionlength.html[SelectionLength]_
+|The length of the currently selected text. If nothing is selected then it returns _0_ .
+|image::images/spy.png[]
+
+|_link:{ApiPlatform}test.editors~infragisticswpf.test.editors.xamcomboeditorproxy~selectionstart.html[SelectionStart]_
+|The starting location of the currently selected text. If no selection has been made, the location of the caret is returned.
+|image::images/spy.png[]
+
+|_link:{ApiPlatform}test.editors~infragisticswpf.test.editors.xamcomboeditorproxy~textlength.html[TextLength]_
+|The length of the current text in the editor.
+|image::images/spy.png[]
+
+|_link:{ApiPlatform}test.editors.xamcomboeditor~infragisticswpf.test.editors.comboeditor.comboeditorbaseproxy`2~selectedvalue.html[SelectedValue]_
+|*(New)* Returns the selected value of the _XamComboEditor_ control.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_link:{ApiPlatform}test.editors.xamcomboeditor~infragisticswpf.test.editors.comboeditor.comboeditorbaseproxy`2~selectedvalues.html[SelectedValues]_
+|*(New)* Returns an array of the selected values of the _XamComboEditor_ control.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====

@@ -1,0 +1,168 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamdoughnutchart-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "a047897a-1d7c-4b3d-8dfe-ee098581c389",  
+    "buildFlags": [],
+    "createdOn": "2013-04-09T21:58:19.6471705Z"
+}
+|metadata|
+////
+
+= xamDoughnutChart - User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the  _xamDoughnutChart_™ control’s testable user actions and elements.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref338260068,xamDoughnutChart Testable User Actions>>
+* <<_Ref338260076,xamDoughnutChart Testable Elements>>
+* <<_Ref337132389,Related Content>>
+
+[[_Ref338260068]]
+== _xam_  _DoughnutChart_  Testable User Actions
+
+=== Testable user action chart
+
+The following table summarizes the control’s user actions and maps them to the recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|User action|Method
+
+|Clicking on a specified slice of the _xamDoughnutChart_ control.
+| link:xamdoughnutchart-recordable-methods.html#_Ref352172238[ClickSlice]
+
+|With replay action returns the value for a given slice.
+| link:xamdoughnutchart-replay-only-methods.html#_Ref338265452[GetSliceValue]
+
+|With replay action returns the visible slice count for a given ring.
+| link:xamdoughnutchart-replay-only-methods.html#_Ref338277363[GetRingSliceCount]
+
+|With replay action returns a delimited string of all the labels of the visible slices for a given ring.
+| link:xamdoughnutchart-replay-only-methods.html#_Ref338277374[GetRingSliceLabels]
+
+|====
+
+[[_Ref338260076]]
+== _xam_  _DoughnutChart_  Testable Elements
+
+=== Testable elements summary chart
+
+The following table lists the elements in the control that you can test, the information you can retrieve about them, along with the properties and methods that manage the retrieval operations.
+
+*Legend:*
+
+image::images/spy.png[]
+
+ – Identification property (Visible in object spy)
+
+image::images/checkpoint.png[]
+
+ – Checkpoint property (Visible with checkpoints)
+
+image::images/script.png[]
+
+ – Accessible in script
+
+[options="header", cols="a,a,a,a,a"]
+|====
+|Testable elements|Test deliverable|Member type|Test object member|Accessibility
+
+|Chart’s Ring
+|Returns the count of the _DoughnutChart_ control’s Rings.
+|Property
+|RingCount
+|image::images/spy.png[] 
+
+image::images/Checkpoint.png[] 
+
+image::images/script.png[]
+
+|Chart’s visible slice
+|Returns the count of the _DoughnutChart_ control’s visible slices.
+|Property
+|VisibleSlicesCount
+|image::images/spy.png[] 
+
+image::images/Checkpoint.png[] 
+
+image::images/script.png[]
+
+|Chart’s selected slices
+|Returns the count of all of the visible selected slices used in the _DoughnutChart_ control.
+|Property
+|SelectedSlicesCount
+|image::images/spy.png[] 
+
+image::images/Checkpoint.png[] 
+
+image::images/script.png[]
+
+|Chart’s exploded slices
+|Returns the count of all of the visible exploded slices used in the _DoughnutChart_ control.
+|Property
+|ExplodedSlicesCount
+|image::images/spy.png[] 
+
+image::images/Checkpoint.png[] 
+
+image::images/script.png[]
+
+|Data
+|Tabular data returned during standard checkpoint: 
+
+* RingIndex 
+
+* LevelDepth 
+
+* Label 
+
+* Value 
+
+* Percent 
+
+* IsExploded 
+
+* IsOthersSlice 
+
+* IsVisible 
+
+* IsSelected 
+
+|Verifiable table content
+|
+|image::images/Checkpoint.png[]
+
+|====
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamdoughnutchart-recordable-methods.html[xamDoughnutChart - Recordable Methods]
+|This topic provides information about the _XamDoughnutChart_ control’s testable user recordable methods.
+
+| link:xamdoughnutchart-replay-only-methods.html[xamDoughnutChart - Replay-only Methods]
+|This topic provides information about the _XamDoughnutChart_ control’s testable user replay-only methods.
+
+| link:xamdoughnutchart-property-reference.html[xamDoughnutChart - Property Reference]
+|This topic provides reference information about the _XamDoughnutChart_ control’s test object properties.
+
+|====

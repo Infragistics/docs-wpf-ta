@@ -1,0 +1,63 @@
+﻿////
+|metadata|
+{
+    "name": "xammonthcalendar-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "d8900de9-ec98-4dff-930e-785fbd11572d",
+    "buildFlags": [],
+    "createdOn": "2012-01-22T10:46:28.0260532Z"
+}
+|metadata|
+////
+
+= xamMonthCalendar - Properties Reference
+
+== _xamMonthCalendar_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the inspectable test object properties of the xamMonthCalendar™ control.
+
+[[_propRef]]
+
+=== Properties reference chart
+
+The table below summarizes the control’s test object properties and the tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors.xammonthcalendarproxy~activedate.html[ActiveDate]
+|The currently selected date as a string.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors.xammonthcalendarproxy~selecteddates.html[SelectedDates]
+|A comma-delimited string with selected dates in the format _#mm/dd/yyyy#_ .
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors.xammonthcalendarproxy~currentcalendarmode.html[CurrentCalendarMode]
+|A string representation of the current visible unit of time.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors.xammonthcalendarproxy~headertext.html[HeaderText]
+|The current header text as a string.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====

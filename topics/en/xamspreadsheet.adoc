@@ -1,0 +1,44 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamspreadsheet",
+    "controlName": [],
+    "tags": [],
+    "guid": "5d84a14c-c01d-4f10-b0d6-215a07905848",  
+    "buildFlags": [],
+    "createdOn": "2014-11-17T12:48:20.5147335Z"
+}
+|metadata|
+////
+
+= xamSpreadsheet
+
+== In This Group of Topics
+
+=== Introduction
+
+The topics in this group explain the XamSpreadsheetProxy object and its use. This is the result of adding the  _XamSpreadsheet_™ control to Infragistics® {ProductName} (Unified Functional Testing) supported controls list.
+
+=== Topics
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamspreadsheet-recordable-actions.html[xamSpreadsheet - Recordable Actions]
+|This topic provides information about recordable actions for testing the _XamSpreadsheet_™ control.
+
+| link:xamspreadsheet-replay-only-actions.html[xamSpreadsheet - Replay-Only Actions]
+|This topic provides information about replay-only actions for testing the _XamSpreadsheet_™ control.
+
+| link:xamspreadsheet-enumerations-reference.html[xamSpreadsheet - Enumerations Reference]
+|This topic provides reference material on the common enumerations used for testing the _XamSpreadsheet_™ control.
+
+| link:xamspreadsheet-properties-reference.html[xamSpreadsheet - Properties Reference]
+|This topic provides reference information about the inspectable test object properties of the _XamSpreadsheet_™ control.
+
+| link:xamspreadsheet-custom-properties-reference.html[xamSpreadsheet - Custom Properties Reference]
+|This topic provides reference information about the _XamSpreadsheet_™ proxy base custom properties.
+
+|====

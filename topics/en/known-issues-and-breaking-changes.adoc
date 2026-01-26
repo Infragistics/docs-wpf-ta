@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "known-issues-and-breaking-changes",
+    "controlName": [],
+    "tags": [],
+    "guid": "1a48c073-9448-403a-a41a-276fafbf2f72",  
+    "buildFlags": [],
+    "createdOn": "2012-10-29T23:10:55.2164055Z"
+}
+|metadata|
+////
+
+= Known Issues and Breaking Changes
+
+The following links will take you to the list for known issues and different versions of that first introduced the breaking changes.
+
+* link:known-issues-and-breaking-changes-2018-volume-2.html[2018 Volume 2]
+* link:known-issues-and-breaking-changes-2014-volume-2.html[2014 Volume 2]
+* link:known-issues-and-breaking-changes-2013-volume-1.html[2013 Volume 1]
+* link:qtp-limitations.html[QTP Limitations]

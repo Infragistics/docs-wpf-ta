@@ -1,0 +1,56 @@
+﻿////
+|metadata|
+{
+    "name": "test-automation-for-infragistics-controls",
+    "controlName": [],
+    "tags": [],
+    "guid": "6a111265-fed1-4ce8-90f7-8aaa1f9e1fe1",
+    "buildFlags": [],
+    "createdOn": "2012-01-22T18:22:44.7725755Z"
+}
+|metadata|
+////
+
+= Test Automation for Infragistics Controls
+
+== Ultimate UI for WPF Controls – Testing and Reference Information
+
+=== Introduction
+
+The topics below provide reference information about the verifiable properties and the recordable and replay-only methods for testing the Ultimate UI for WPF controls.
+
+=== Topics
+
+The information you need about testing the Ultimate UI for WPF controls is covered in the following topics:
+
+* link:gauge-controls.html[Gauge Controls]
+* link:olapviewmodel.html[OlapViewModel]
+* link:xamcategorychart.html[xamCategoryChart]
+* link:xamcolorpicker.html[xamColorPicker]
+* link:xamcomboeditor.html[xamComboEditor]
+* link:xamcontextmenu.html[xamContextMenu]
+* link:xamdatachart.html[xamDataChart]
+* link:xamdatapresenter.html[xamDataPresenter]
+* link:xamdatatree.html[xamDataTree]
+* link:xamdiagram.html[xamDiagram]
+* link:xamdiagramtoolbox.html[xamDiagramToolbox]
+* link:xamdialogwindow.html[xamDialogWindow]
+* link:xamdoughnutchart.html[xamDoughnutChart]
+* link:xameditors.html[xamEditors]
+* link:xamgantt.html[xamGantt]
+* link:xamgeographicmap.html[xamGeographicMap]
+* link:xamgrid.html[xamGrid]
+* link:xammenu.html[xamMenu]
+* link:xamnetworknode.html[xamNetworkNode]
+* link:xammonthcalendar.html[xamMonthCalendar]
+* link:xamoutlookbar.html[xamOutlookBar]
+* link:xampropertygrid.html[xamPropertyGrid]
+* link:xamradialmenu.html[xamRadialMenu]
+* link:xamribbon.html[xamRibbon]
+* link:xamrichtexteditor.html[xamRichTextEditor]
+* link:xamsparkline.html[xamSparkline]
+* link:xamspreadsheet.html[xamSpreadsheet]
+* link:xamsurfacechart-xamsurfacechart.html[xamSurfaceChart3D]
+* link:xamsyntaxeditor.html[xamSyntaxEditor]
+* link:xamtabcontrol.html[xamTabControl]
+* link:xamtagcloud.html[xamTagCloud]

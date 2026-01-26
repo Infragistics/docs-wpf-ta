@@ -1,0 +1,187 @@
+﻿////
+|metadata|
+{
+    "name": "xamgantt-replay-only-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "8bdd9d57-4e82-41a6-90fb-f8ca3b52f5fe",
+    "buildFlags": [],
+    "createdOn": "2012-10-29T20:45:29.324123Z"
+}
+|metadata|
+////
+
+= xamGantt - Replay-Only Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the  _xamGantt_™ control’s testable user replay-only methods.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref338265452, _xamGantt_   Test Object Replay-Only Methods>>
+
+** <<_Ref338271984, _GetTaskProperty_  >>
+** <<_Ref338271990, _SetTaskProperty_  >>
+** <<_Ref339036207, _SetFirstVisibleDate_  >>
+
+* <<_Ref337132389,Related Content>>
+
+[[_Ref338265452]]
+== _xamGantt_   Test Object Replay-Only Methods
+
+=== Replay-Only methods summary chart
+
+The following table briefly explains the replay-only methods for testing controls. Detailed information about the methods follows the table.
+
+[options="header", cols="a,a"]
+|====
+|Method|Description
+
+|_link:{ApiPlatform}test.controls.schedules.xamgantt~infragisticswpf.test.controls.schedules.xamganttproxy~gettaskproperty.html[GetTaskProperty]_
+|This method returns the supplied task’s property value.
+
+|_link:{ApiPlatform}test.controls.schedules.xamgantt~infragisticswpf.test.controls.schedules.xamganttproxy~settaskproperty.html[SetTaskProperty]_
+|This method sets the supplied task’s property value.
+
+|_link:{ApiPlatform}test.controls.schedules.xamgantt~infragisticswpf.test.controls.schedules.xamganttproxy~setfirstvisibledate.html[SetFirstVisibleDate]_
+|This method sets the visible date of the task.
+
+|====
+
+[[_Ref338271984]]
+== _GetTaskProperty_
+
+=== Description
+
+The `GetTaskProperty` method retrieves a task’s value.
+
+=== Parameters
+
+The following table lists the code examples included in this topic.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oTaskArg`
+|Validates the task’s value property.
+
+|`oPropertyName`
+|Returns the supplied task’s name property.
+
+|====
+
+=== Example
+
+Retrieves and displays the third (index=2) visible task name in a message box.
+
+[source,csharp]
+----
+msgbox …XamGantt("Identifier").GetTaskProperty(2, gntTaskName)
+----
+
+=== Possible exceptions
+
+The following list contains the possible exceptions for the method and the reason that is likely to be causing them.
+
+* The specified project task index [{1}] is out of range
+* The specified project task index[{1}] was not found
+
+[[_Ref338271990]]
+== _SetTaskProperty_  
+
+=== Description
+
+The `SetTaskProperty` method allows changing a task’s value with a specified string value.
+
+=== Parameters
+
+The following table lists the code examples included in this topic.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oTaskArg`
+|Validates the task’s value property.
+
+|`oPropertyName`
+|Validates the task’s name property.
+
+|`oNewValue`
+|Attempts to set the task’s value property to a new value.
+
+|====
+
+=== Example
+
+Changing the task named “Planning” to a name “New name”.
+
+[source,csharp]
+----
+XamGantt("Identifier").SetTaskProperty “Planning”, gntTaskName, “New name”
+----
+
+=== Possible exceptions
+
+The following list contains the possible exceptions for the method and the reason that is likely to be causing them.
+
+* The specified project Task index [{1}] is out of range
+* Cannot find the following project task [{1}]
+
+[[_Ref339036207]]
+== _SetFirstVisibleDate_
+
+=== Description
+
+This method allows setting the first visible date to a task where the first date increment includes the supplied date.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`dtNewDate`
+|An argument containing the new supplied date for a given task.
+
+|====
+
+=== Example
+
+Set the first visible DateTime to one where the first date increment includes 9/14/2012 8:00AM.
+
+[source,csharp]
+----
+XamGantt("Identifier").SetFirstVisibleDate  #9/14/2012 8:00AM#
+----
+
+=== Possible exceptions
+
+None (outside of invalid or not included parameters thrown by UFT).
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamgantt-testable-user-actions-and-elements.html[xamGantt - Testable User Actions and Elements]
+|This topic provides information about the _xamGantt_ control’s testable user actions and elements.
+
+| link:xamgantt-recordable-methods.html[xamGantt - Recordable Methods]
+|This topic provides information about the _xamGantt_ control’s testable user recordable methods.
+
+|====

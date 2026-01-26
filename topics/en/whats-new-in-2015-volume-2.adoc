@@ -1,0 +1,106 @@
+﻿////
+|metadata|
+{
+    "name": "whats-new-in-2015-volume-2",
+    "controlName": [],
+    "tags": [],
+    "guid": "23174230-98c3-4c66-b6a6-f9af3bb6d5cc",
+    "buildFlags": [],
+    "createdOn": "2015-09-09T06:57:20.8624336Z"
+}
+|metadata|
+////
+
+= What's New in 2015 Volume 2
+
+== Topic Overview
+
+=== Purpose
+
+This topic presents control proxies of the new and enhanced features for the Infragistics® Test Automation for WPF (Unified Functional Testing) for 2015 Volume 2 release.
+
+== What’s New Summary
+
+=== What’s new summary chart
+
+The following table summarizes the new controls and features in Infragistics 2015 Volume 2 suite that are now supported in Infragistics Test Automation.
+
+==== xamBusyIndicator
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|New Control
+|{ProductName} supports the xamBusyIndicator control as part of the Ultimate UI for WPF product in the 2015.2 release. 
+
+image::images/What's_New_in_2015_Volume_2(TA-WPF)_1.png[] 
+
+==== Related topic: 
+
+link:xambusyindicator.html[xamBusyIndicator]
+
+|====
+
+==== xamDataGrid
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|Excel Style Filtering Support
+|The new ExcelStyleFilterButton is now recognized by the Test Automation. 
+
+==== Related topic: 
+
+link:xamdatapresenter.html[xamDataPresenter]
+
+|INotifyDataErrorInfo / IDataErrorInfo Interfaces Support
+|There are two new methods in the DataPresenterRecordProxyBase class: 
+
+* GetCellDataError for obtaining the DataError of the Cell 
+
+* GetRecordDataError for obtaining the DataError of the DataRecord 
+
+==== Related topic: 
+
+link:xamdatapresenter.html[xamDataPresenter]
+
+|Template Selector Support
+|The xamDataGrid's Cells now expose a custom property called TemplateEditor to support the template selector. 
+
+==== Related topic: 
+
+link:xamdatapresenter.html[xamDataPresenter]
+
+|====
+
+==== xamPropertyGrid
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|Method Implementation Change
+|The XamPropertyGridProxy's method IsKnownPartOf implementation is changed to let the Test Automation to identify the clicked element, when there are custom editors. 
+
+==== Related topic: 
+
+link:xampropertygrid.html[xamPropertyGrid]
+
+|====
+
+==== xamSpreadsheet
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|Data Validation Support
+|A new value is added to the SshtCellDataType enumeration (sshtIsCellDataValid), so we can use the existing GetCellData method to check whether a cell is valid by setting the optional parameter to the new value. 
+
+==== Related Topic: 
+
+link:xamspreadsheet.html[xamSpreadsheet]
+
+|====

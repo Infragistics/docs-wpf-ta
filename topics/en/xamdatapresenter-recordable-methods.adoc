@@ -1,0 +1,146 @@
+﻿////
+|metadata|
+{
+    "name": "xamdatapresenter-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "ea9f90d4-d4fd-49e2-93fa-402bcd1e14c2",
+    "buildFlags": [],
+    "createdOn": "2012-02-01T13:19:28.4976062Z"
+}
+|metadata|
+////
+
+= xamDataPresenter - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods for testing the  _xamDataPresenter_™ controls.
+
+== xamDataPresenter Test Object Recordable User Actions Summary
+
+=== Recordable user actions summary chart
+
+The following table briefly explains the recordable methods for testing the control. Detailed information about a particular method can be found in the  *Method*  referenced topics for the respective  *User action type* .
+
+[options="header", cols="a,a,a"]
+|====
+|*User action type*|*User action*|*Method*
+
+|_Editing_
+|Setting cell data
+|link:xamdatapresenter-editing.html#_SetCellData[SetCellData]
+
+|
+|Setting invalid cell data
+|link:xamdatapresenter-editing.html#_SetInvalidDataCell[SetInvalidDataCell]
+
+|_Filtering_
+|Setting a comparison operator
+|link:xamdatapresenter-filtering.html#_SetFilterCellCompOperator[SetFilterCellCompOperator]
+
+|
+|Selecting a filter value from the filter icons
+|link:xamdatapresenter-filtering.html#_SelectFilter[SelectFilter]
+
+|
+|Opening of the Custom Filter Selection dialog
+|link:xamdatapresenter-filtering.html#_OpenCustomFilterDialog[OpenCustomFilterDialog]
+
+|
+|Clearing the filters’ values
+|link:xamdatapresenter-filtering.html#_ClearRecordFilters[ClearRecordFilters]
+
+|_Navigating and selecting_
+|Activating a record
+|link:xamdatapresenter-navigatingselecting.html#_ActivateRecord[ActivateRecord]
+
+|
+|Activating a cell
+|link:xamdatapresenter-navigatingselecting.html#_ActivateCell[ActivateCell]
+
+|
+|Record expanding
+|link:xamdatapresenter-navigatingselecting.html#_ExpandRecord[ExpandRecord]
+
+|
+|Record collapsing
+|link:xamdatapresenter-navigatingselecting.html#_ExpandRecord[CollapseRecord]
+
+|
+|Field moving
+|link:xamdatapresenter-navigatingselecting.html#_MoveField[MoveField]
+
+|
+|Selecting a xamDataPresenter item
+|link:xamdatapresenter-navigatingselecting.html#_Select[Select]
+
+|
+|Adding an item to selection
+|link:xamdatapresenter-navigatingselecting.html#_SelectionAdded[SelectionAdded]
+
+|
+|Removing an item to selection
+|link:xamdatapresenter-navigatingselecting.html#_SelectionRemoved[SelectionRemoved]
+
+|
+|Changing exiting items selection
+|link:xamdatapresenter-navigatingselecting.html#_SelectionChanged[SelectionChanged]
+
+|_Sorting and grouping_
+|GroupField collapsing
+|link:xamdatapresenter-sorting-grouping.html#_CollapseGroupField[CollapseGroupField]
+
+|
+|GroupField expanding
+|link:xamdatapresenter-sorting-grouping.html#_ExpandGroupField[ExpandGroupField]
+
+|
+|Field grouping
+|link:xamdatapresenter-sorting-grouping.html#_GroupByField[GroupByField]
+
+|
+|Field sorting
+|link:xamdatapresenter-sorting-grouping.html#_SortField[SortField]
+
+|
+|Field ungrouping
+|link:xamdatapresenter-sorting-grouping.html#_UnGroupField[UnGroupField]
+
+|_Summaries_
+|Opening of the summaries’ drop-down menu
+|link:xamdatapresenter-summaries.html#_OpenSummaryDropDown[OpenSummaryDropDown]
+
+|Closing of the summaries’ drop-down menu
+|link:xamdatapresenter-summaries.html#_CloseSummaryDropDown[CloseSummaryDropDown]
+
+|====
+
+== Related Content
+
+=== Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamdatapresenter-testable-user-actions-and-elements.html[xamDataPresenter - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamDataPresenter_ controls which you can test and the elements you can inspect.
+
+| link:xamdatapresenter-replay-only-methods.html[xamDataPresenter - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the _xamDataPresenter_ controls.
+
+| link:xamdatapresenter-enumeration-reference.html[xamDataPresenter - Enumeration Reference]
+|This topic provides reference information about the common enumerations used for testing the _xamDataPresenter_ controls.
+
+| link:xamdatapresenter-property-reference.html[xamDataPresenter - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the _xamDataPresenter_ controls.
+
+| link:xamdatapresenter-api.html[xamDataPresenter - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamDataPresenter_ controls in Micro Focus Unified Functional Testing software.
+
+|====

@@ -1,0 +1,225 @@
+﻿////
+|metadata|
+{
+    "name": "xamdatapresenter-testable-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "7b4815fa-bea8-4f67-83d1-540b8210fcbe",
+    "buildFlags": [],
+    "createdOn": "2012-02-01T13:17:18.5056083Z"
+}
+|metadata|
+////
+
+= xamDataPresenter - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the user actions of the xamDataPresenter™ controls which you can test and the elements you can inspect.
+
+== xamDataPresenter Testable User Actions
+
+=== Testable user actions chart
+
+The table below lists the testable user actions of the control and maps them to recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|*User action*|*Method*
+
+|Activating a xamDataPresenter record
+|_ActivateRecord_
+
+|Activating a cell
+|_ActivateCell_
+
+|Expanding a record
+|_ExpandRecord_
+
+|Collapsing a record
+|_CollapseRecord_
+
+|Editing of a cell
+|_SetCellData_
+
+|Typing a new value in a cell editor
+|_SetInvalidDataCell_
+
+|Setting a comparison operator when filtering data
+|_SetFilterCellCompOperator_
+
+|Filterign data through filter icons
+|_SelectFilter_
+
+|Selecting a xamDataPresenter item – cell, field, or record
+|_Select_
+
+|Adding one or more items of a particular type to the existing selection
+|_SelectionAdded_
+
+|Removing one or more items of a particular type from the existing selection.
+|_SelectionRemoved_
+
+|Changing the existing selection
+|_SelectionChanged_
+
+|Sorting the data by a specified field
+|_SortField_
+
+|Grouping the data by a specified field
+|_GroupByField_
+
+|Ungrouping data
+|_UnGroupField_
+
+|Opening the summary drop-down menu
+|_OpenSummaryDropDown_
+
+|Closing the summary drop-down menu
+|_CloseSummaryDropDown_
+
+|Opening the Custom Filter Selectino dialog window to add more filters and operators
+|_OpenCustomFilterDialog_
+
+|Clearing the filters content
+|_ClearRecordFilters_
+
+|====
+
+== xamDataPresenter Testable Elements
+
+=== Testable elements summary chart
+
+The following table lists the elements in the control that you can test, the information you can retrieve about them, and the properties and methods that manage the retrieve operations.
+
+Legend:
+
+image:images/spy.png[]
+– Identification property
+
+image:images/checkpoint.png[]
+– Checkpoint property
+
+image:images/script.png[]
+– Accessible in script
+
+[options="header", cols="a,a,a,a,a"]
+|====
+|*Tested element*|*Test deliverable*|*Member type*|*Test object member*|*Accessibility*
+
+|Cell
+|The active cell path
+|property
+|_activecell_
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|The value of the cell
+|method
+|_GetCellData_
+|image:images/script.png[]
+
+|Field
+|The active field path
+|property
+|_activefield_
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|The number of visible fields
+|property
+|_fieldcount_
+|image:images/spy.png[] 
+image:images/checkpoint.png[] 
+image:images/script.png[]
+
+|
+|The list with fields' headers
+|property
+|_fields_
+|image:images/spy.png[] 
+image:images/checkpoint.png[] 
+image:images/script.png[]
+
+|Record
+|The active record path
+|property
+|_activerecord_
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|The visible records count
+|property
+|_recordcount_
+|image:images/spy.png[] 
+image:images/checkpoint.png[] 
+image:images/script.png[]
+
+|Content
+|A list with currently selected items paths
+|property
+|_selectedcontent_
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|The type of the selected item
+|property
+|_selectedcontenttype_
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|The content of the visible records and fields cells in the active area
+|verifiable table content
+|
+|image:images/checkpoint.png[]
+
+|Summary
+|The content of all summaries for a field
+|method
+|_GetSummaryText_
+|image:images/checkpoint.png[]
+
+|
+|The summary type for a field
+|method
+|_GetSummaryType_
+|image:images/checkpoint.png[]
+
+|
+|The summary value for a field
+|method
+|_GetSummaryValue_
+|image:images/checkpoint.png[]
+
+|====
+
+== Related Topics
+
+=== Related topics summary chart
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamdatapresenter-recordable-methods.html[xamDataPresenter - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamDataPresenter™ controls.
+
+| link:xamdatapresenter-replay-only-methods.html[xamDataPresenter - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the xamDataPresenter™ controls.
+
+| link:xamdatapresenter-property-reference.html[xamDataPresenter - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamDataPresenter™ controls.
+
+| link:xamdatapresenter-api.html[xamDataPresenter - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamDataPresenter™ controls in Micro Focus Unified Functional Testing software.
+
+|====

@@ -1,0 +1,43 @@
+﻿////
+|metadata|
+{
+    "name": "xamcontextmenu",
+    "controlName": [],
+    "tags": [],
+    "guid": "3ee1ec45-dcc9-4a5b-8782-95896371b61c",
+    "buildFlags": [],
+    "createdOn": "2012-02-01T07:53:33.889257Z"
+}
+|metadata|
+////
+
+= xamContextMenu
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test.menu~infragisticswpf.test.menu.xamcontextmenuproxy.html[XamContextMenuProxy] object in {ProductName}.
+
+=== Topics
+
+The topics contained in this section cover implementing action elements, methods and properties within the  _xamContextMenu™_   control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamcontextmenu-testable-user-actions-and-elements.html[xamContextMenu - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamContextMenu_ control which you can test and the elements you can inspect.
+
+| link:xamcontextmenu-recordable-methods.html[xamContextMenu - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamContextMenu_ control.
+
+| link:xamcontextmenu-replay-only-methods.html[xamContextMenu - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the _xamContextMenu_ control.
+
+| link:xamcontextmenu-property-reference.html[xamContextMenu - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the _xamContextMenu_ control.
+
+| link:xamcontextmenu-api.html[xamContextMenu - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamContextMenu_ control in Micro Focus Unified Functional Testing software.
+
+|====

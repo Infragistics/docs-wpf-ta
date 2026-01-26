@@ -1,0 +1,60 @@
+﻿////
+|metadata|
+{
+    "name": "api-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "123acafe-0814-4946-8b8b-f8904afb4c5b",
+    "buildFlags": [],
+    "createdOn": "2011-06-28T17:50:50.058789Z"
+}
+|metadata|
+////
+
+= API Reference
+
+The application programming interface (API) is the foundation for all {ProductName} controls. The API Reference Guide offers a definitive listing of all the {ProductName} software classes and methods - organized by assembly:
+
+* link:{ApiPlatform}test.charts.xamdatachart.html[{ApiPlatform}Test.Charts.XamDataChart Assembly]
+* link:{ApiPlatform}test.controls.barcodes.html[{ApiPlatform}Test.Controls.Barcodes Assembly]
+* link:{ApiPlatform}test.controls.charts.xamsurfacechart3d.html[{ApiPlatform}Test.Charts.XamSurfaceChart3D Assembly]
+* link:{ApiPlatform}test.controls.editors.xampropertygrid.html[{ApiPlatform}Test.Controls.Editors.XamPropertyGrid Assembly]
+* link:{ApiPlatform}test.controls.editors.xamrichtexteditor.html[{ApiPlatform}Test.Controls.Editors.XamRichTextEditor Assembly]
+* link:{ApiPlatform}test.controls.editors.xamsyntaxeditor.html[{ApiPlatform}Test.Controls.Editors.XamSyntaxEditor Assembly]
+* link:{ApiPlatform}test.controls.gauges.html[{ApiPlatform}Test.Controls.Gauges Assembly]
+* link:{ApiPlatform}test.controls.grids.xamgrid.html[{ApiPlatform}Test.Controls.Grids.XamGrid Assembly]
+* link:{ApiPlatform}test.controls.grids.xampivotgrid.html[{ApiPlatform}Test.Controls.Grids.XamPivotGrid Assembly]
+* link:{ApiPlatform}test.controls.grids.xamspreadsheet.html[{ApiPlatform}Test.Controls.Grids.XamSpreadsheet Assembly]
+* link:{ApiPlatform}test.controls.menus.xamradialmenu.html[{ApiPlatform}Test.Controls.Menus.XamRadialMenu Assembly]
+* link:{ApiPlatform}test.controls.schedules.xamgantt.html[{ApiPlatform}Test.Controls.Schedules.XamGantt Assembly]
+* link:{ApiPlatform}test.datapresenter.html[{ApiPlatform}Test.DataPresenter Assembly]
+* link:{ApiPlatform}test.datatree.html[{ApiPlatform}Test.DataTree Assembly]
+* link:{ApiPlatform}test.datavisualization.html[{ApiPlatform}Test.DataVisualization Assembly]
+* link:{ApiPlatform}test.dialogwindow.html[{ApiPlatform}Test.DialogWindow Assembly]
+* link:{ApiPlatform}test.dockmanager.html[{ApiPlatform}Test.DockManager Assembly]
+* link:{ApiPlatform}test.editors.html[{ApiPlatform}Test.Editors Assembly]
+* link:{ApiPlatform}test.editors.xamcalendar.html[{ApiPlatform}Test.Editors.XamCalendar Assembly]
+* link:{ApiPlatform}test.editors.xamcolorpicker.html[{ApiPlatform}Test.Editors.XamColorPicker Assembly]
+* link:{ApiPlatform}test.editors.xamcomboeditor.html[{ApiPlatform}Test.Editors.XamComboEditor Assembly]
+* link:{ApiPlatform}test.editors.xamdatetimeinput.html[{ApiPlatform}Test.Editors.XamDateTimeInput Assembly]
+* link:{ApiPlatform}test.editors.xammaskedinput.html[{ApiPlatform}Test.Editors.XamMaskedInput Assembly]
+* link:{ApiPlatform}test.editors.xamslider.html[{ApiPlatform}Test.Editors.XamSlider Assembly]
+* link:{ApiPlatform}test.formulaeditor.html[{ApiPlatform}Test.FormulaEditor Assembly]
+* link:{ApiPlatform}test.gauge.html[{ApiPlatform}Test.Gauge Assembly]
+* link:{ApiPlatform}test.geographicmap.html[{ApiPlatform}Test.GeographicMap Assembly]
+* link:{ApiPlatform}test.map.html[{ApiPlatform}Test.Map Assembly]
+* link:{ApiPlatform}test.menu.html[{ApiPlatform}Test.Menu Assembly]
+* link:{ApiPlatform}test.networknode.html[{ApiPlatform}Test.NetworkNode Assembly]
+* link:{ApiPlatform}test.orgchart.html[{ApiPlatform}Test.OrgChart Assembly]
+* link:{ApiPlatform}test.outlookbar.html[{ApiPlatform}Test.OutlookBar Assembly]
+* link:{ApiPlatform}test.reporting.html[{ApiPlatform}Test.Reporting Assembly]
+* link:{ApiPlatform}test.ribbon.html[{ApiPlatform}Test.Ribbon Assembly]
+* link:{ApiPlatform}test.schedules.html[{ApiPlatform}Test.Schedules Assembly]
+* link:{ApiPlatform}test.shared.html[{ApiPlatform}Test.Shared Assembly]
+* link:{ApiPlatform}test.sparkline.html[{ApiPlatform}Test.Sparkline Assembly]
+* link:{ApiPlatform}test.tagcloud.html[{ApiPlatform}Test.TagCloud Assembly]
+* link:{ApiPlatform}test.timeline.html[{ApiPlatform}Test.Timeline Assembly]
+* link:{ApiPlatform}test.treemap.html[{ApiPlatform}Test.TreeMap Assembly]
+* link:{ApiPlatform}test.html[{ApiPlatform}Test Assembly]
+* link:{ApiPlatform}test.xamdiagram.html[{ApiPlatform}Test.XamDiagram Assembly]
+* link:{ApiPlatform}test.xamtilemanager.html[{ApiPlatform}Test.XamTileManager Assembly]

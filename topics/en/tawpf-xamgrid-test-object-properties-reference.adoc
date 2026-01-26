@@ -1,0 +1,15 @@
+﻿////
+
+|metadata|
+{
+    "name": "tawpf-xamgrid-test-object-properties-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "994cea56-911a-44b4-a0b3-1de4949850b1",  
+    "buildFlags": [],
+    "createdOn": "2012-04-17T15:00:23.7598314Z"
+}
+|metadata|
+////
+
+= xamGrid Test Object Properties Reference

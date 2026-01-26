@@ -1,0 +1,427 @@
+﻿////
+|metadata|
+{
+    "name": "xamdatapresenter-replay-only-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "e63f44a5-c371-4bb3-96ff-b07207f6937d",
+    "buildFlags": [],
+    "createdOn": "2012-02-01T13:21:33.8121364Z"
+}
+|metadata|
+////
+
+= xamDataPresenter - Replay-Only Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the replay-only user methods for testing the  _xamDataPresenter_™ controls.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_xamDataPresenter,xamDataPresenter Test Object Replay-Only Methods>>
+
+** <<_CellEnterEditMode, _CellEnterEditMode_  >>
+** <<_GetSelection_Method, _GetCellData_  >>
+** <<_GetSummaryText, _GetSummaryText_  >>
+** <<_GetSummaryType, _GetSummaryType_  >>
+** <<_GetSummaryValue, _GetSummaryValue_  >>
+
+*  *<<_Related_Topics,Related Content>>*
+
+[[_xamDataPresenter]]
+== xamDataPresenter Test Object Replay-Only Methods
+
+=== Replay-only methods summary chart
+
+The following table briefly explains the replay-only methods for testing the control. Detailed information about the methods is provided below the table.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|*Description*
+
+|_CellEnterEditMode_
+|Sets the specified cell in edit mode.
+
+|_GetCellData_
+|Returns the value of the specified cell.
+
+|_GetSummaryText_
+|Returns the content of all summaries for a field.
+
+|_GetSummaryType_
+|Returns the summary type for a field.
+
+|_GetSummaryValue_
+|Returns the summary value for a field.
+
+|====
+
+[[_CellEnterEditMode]]
+== _CellEnterEditMode_
+
+=== Description
+
+The  _CellEnterEditMode_  method sets the specified cell in edit mode.
+
+=== Details
+
+The method accepts as a parameter the cell path in the active field layout.
+
+The cell path is formed in the following way:
+
+- {record path}[field name]
+
+This method validates the specified cell path, activates the cell, checks if the editing is enabled. After that performs an action to set the cell in edit mode.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Cell path
+|This method uses the cell path as a parameter. 
+
+*Example*
+
+Setting a cell from the third record and a field _“name”_ in edit mode: 
+
+WpfWindow("MainWindow").XamDataGrid("XamDataGrid1").CellEnterEditMode "{3}[name]"
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter is not format correctly.
+|Method parameter is not correct.
+
+|The following item was not found.
+|The specified cell cannot be located when replaying the method.
+|Method parameter is not correct.
+
+|Unable to enter edit mode.
+|The cell cannot be set in edit mode when replaying the method.
+|Editing is disabled.
+
+|Element is not visible
+|
+|The cell doesn’t exist or is hidden.
+
+|The point required to perform the operation is not visible.
+|
+|
+
+|====
+
+[[_GetSelection_Method]]
+== _GetCellData_
+
+=== Description
+
+The  _GetCellData_  method returns the value of the specified cell.
+
+=== Details
+
+The method accepts as a parameter the cell path in the active field layout.
+
+The cell path is formed in the following way:
+
+- {record path}[field name]
+
+This method validates the specified cell path and returns the cell value.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Cell path
+|This method uses the cell path as a parameter. 
+
+*Example*
+
+Displaying the message box with the value of a cell: 
+
+msgbox(WpfWindow("MainWindow").XamDataGrid("XamDataGrid1").GetCellData "{3}[name]")
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter is not format correctly.
+|Method parameter is not correct.
+
+|The following item was not found.
+|The specified cell cannot be located when replaying the method.
+|Method parameter is not correct.
+
+|====
+
+[[_GetSummaryText]]
+== _GetSummaryText_
+
+=== Description
+
+The  _GetSummaryText_  method returns as a string all summaries for a field.
+
+=== Details
+
+The method accepts as a parameter the cell path to identify the field which summary text will be retrieved.
+
+The cell path is formed in the following way:
+
+- {record path}[field name]
+
+This method validates the specified cell path, checks if field summary is enabled and returns the entire content of the summary.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Cell path
+|This method uses the cell path as a parameter. 
+
+*Example*
+
+Displaying a message box with the content of the summary for the field _“amount”_ : 
+
+msgbox(WpfWindow("MainWindow").XamDataGrid("XamDataGrid1").GetSummaryText ("{0}[amount]"))
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter is not format correctly
+|Method parameter is not correct.
+
+|The following item was not found.
+|The specified cell cannot be located when replaying the method.
+|Method parameter is not correct.
+
+|Summaries are not allowed for the supplied field.
+|The summaries are not allowed and the summary text cannot be retrieved.
+|Summaries are not enabled for the specified cell field.
+
+|No summaries for the supplied field.
+|There are no summaries for a field and method replaying fails.
+|There are no summaries to be retrieved.
+
+|====
+
+[[_GetSummaryType]]
+== _GetSummaryType_
+
+=== Description
+
+The  _GetSummaryType_  method returns the type of the summary for a field (for example  _“Average”_,  _“Count”_,  _“Sum”_  and so on).
+
+=== Details
+
+This method takes a cell path as a required parameter and it identifies a field with summary.
+
+The cell path is formed in the following way:
+
+- {record path}[field name]
+
+The optional parameter specifies which successive summary type to be returned in case there are several summaries performed on a field.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|
+* Cell path 
+
+* Index 
+
+_(optional)_
+|The cell path parameter is a required parameter and identifies the field which summary type will be retrieved. 
+
+The index parameter is optional and is used to specify which successive summary type to be retrieved in case there is more than one. 
+
+*Example*
+
+Displaying a message box with the second summary’s type for the field _“amount”_ : 
+
+msgbox(WpfWindow("MainWindow").XamDataGrid("XamDataGrid1").GetSummaryType("{0}[amount]", 1))
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter is not format correctly
+|Method parameter is not correct.
+
+|The following item was not found.
+|The specified cell cannot be located when replaying the method.
+|Method parameter is not correct.
+
+|Summaries are not allowed for the supplied field.
+|The summaries are not allowed and the summary text cannot be retrieved.
+|Summaries are not enabled for the specified cell field.
+
+|No summaries for the supplied field.
+|There are no summaries for a field and method replaying fails.
+|There are no summaries to be retrieved.
+
+|====
+
+[[_GetSummaryValue]]
+== _GetSummaryValue_
+
+=== Description
+
+The  _GetSummaryValue_  method returns the summary value for a specifed field.
+
+=== Details
+
+This method takes a cell path as a required parameter and it identifies a field with summary.
+
+The cell path is formed in the following way:
+
+- {record path}[field name]
+
+The optional parameter specifies which successive summary value to be returned in case there are several summaries performed on a field.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|
+* Cell path 
+
+* Index 
+
+_(optional)_
+|The cell path parameter is a required parameter and identifies the field which summary value will be retrieved. 
+
+The index parameter is optional and is used to specify which successive summary value to be retrieved in case there is more than one. 
+
+*Example*
+
+Displaying a message box with the second summary’s value for the field _“amount”_ : 
+
+msgbox(WpfWindow("MainWindow").XamDataGrid("XamDataGrid1").GetSummaryValue("{0}[amount]", 1))
+
+|====
+
+=== Default setting
+
+No default settings.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter is not format correctly
+|Method parameter is not correct.
+
+|The following item was not found.
+|The specified cell cannot be located when replaying the method.
+|Method parameter is not correct.
+
+|Summaries are not allowed for the supplied field.
+|The summaries are not allowed and the summary text cannot be retrieved.
+|Summaries are not enabled for the specified cell field.
+
+|No summaries for the supplied field.
+|There are no summaries for a field and method replaying fails.
+|There are no summaries to be retrieved.
+
+|====
+
+[[_Related_Topics]]
+== Related Content
+
+=== Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamdatapresenter-testable-user-actions-and-elements.html[xamDataPresenter - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamDataPresenter_ controls which you can test and the elements you can inspect.
+
+| link:xamdatapresenter-recordable-methods.html[xamDataPresenter - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamDataPresenter_ controls.
+
+| link:xamdatapresenter-property-reference.html[xamDataPresenter - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the _xamDataPresenter_ controls.
+
+| link:xamdatapresenter-api.html[xamDataPresenter - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamDataPresenter_ controls in Micro Focus Unified Functional Testing software.
+
+|====

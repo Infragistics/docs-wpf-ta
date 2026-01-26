@@ -1,0 +1,43 @@
+﻿////
+|metadata|
+{
+    "name": "xamdialogwindow-api",
+    "controlName": [],
+    "tags": [],
+    "guid": "f10ff10b-a0b1-4367-a488-f327c06f7e54",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T13:53:02.0729214Z"
+}
+|metadata|
+////
+
+= xamDialogWindow - API Reference
+
+== _xamDialogWindow_   Test Object API Reference
+
+=== Purpose
+
+This topic provides reference information about the proxy class that supports the testing of the  _xamDialogWindow_™ control in Micro Focus Unified Functional Testing software.
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|*Proxyclassname*|*Namespace*|*Inheritsfrom*|*Additional notes*
+
+|_link:{ApiPlatform}test.dialogwindow~infragisticswpf.test.dialogwindow.xamdialogwindowproxy.html[XamDialogWindowProxy]_
+| 
+
+_InfragisticsWPF.Test.DialogWindow_
+|
+* _RecordReplayProxyBase_ 
+
+* _IXamDialogWindowReplay_ 
+
+* _IXamDialogWindowIDProps_ 
+
+|N/A
+
+|====

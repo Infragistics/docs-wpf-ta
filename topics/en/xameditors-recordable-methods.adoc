@@ -1,0 +1,335 @@
+﻿////
+|metadata|
+{
+    "name": "xameditors-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "a49237d9-d582-4573-a72b-b6b63ecdba32",
+    "buildFlags": [],
+    "createdOn": "2012-01-23T06:43:35.1085947Z"
+}
+|metadata|
+////
+
+= xamEditors - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods for testing the xamEditors that are common to all these editors. For information about the editor-specific recordable user methods for a particular editor, see its respective topic. (Listed in the *
+
+== Related Topics
+block at the bottom.)
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref314227548,xamEditors Test Objects Recordable Methods>>
+** <<_Ref314755562,Supported editor controls>>
+** <<_Ref314755604,Recordable methods summary>>
+** <<_Set_Method,Set>>
+** <<_Ref315000992,Clear>>
+** <<_Ref315001002,SetText>>
+** <<_Ref315001015,DropDown>>
+** <<_Ref315001023,CloseUp>>
+
+* <<_ref1,Related Content>>
+
+[[_Ref314227548]]
+== xamEditors Test Objects Recordable Methods
+
+[[_Ref314755562]]
+
+=== Supported editor controls
+
+The methods covered in this topic apply to the following controls:
+
+* xamCheckEditor™
+* xamComboEditor™
+* xamCurrencyEditor™
+* xamDateTimeEditor™
+* xamMaskedEditor™
+* xamNumericEditor™
+* xamTextEditor™
+
+[[_Ref314755604]]
+
+=== Recordable methods summary
+
+The following table briefly explains the recordable methods for testing the control. Detailed information about the methods is provided in the text blocks following the table.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|*Description*
+
+|_link:{ApiPlatform}test.editors~infragisticswpf.test.editors.texteditorbaseproxy~clear.html[Clear]_
+|Clears the text in the editor.
+
+|_link:{ApiPlatform}test.editors~infragisticswpf.test.editors.texteditorbaseproxy~closeup.html[CloseUp]_
+|Closes the editor’s drop-down list if it has one available.
+
+|_link:{ApiPlatform}test.editors.xamcomboeditor~infragisticswpf.test.editors.comboeditor.comboeditorbaseproxy`2~dropdown.html[DropDown]_
+|Opens the editor’s drop-down list if it has one available.
+
+|_link:{ApiPlatform}test.editors~infragisticswpf.test.editors.valueeditorbaseproxy~set.html[Set]_
+|Sets the value property of the xamEditors.
+
+|_link:{ApiPlatform}test.editors~infragisticswpf.test.editors.texteditorbaseproxy~settext.html[SetText]_
+|Sets the editor text.
+
+|====
+
+[[_Set_Method]]
+== _Set_
+
+=== Description
+
+The  _Set_  method records and replays the setting of a value to an editor.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameter*|*Description*
+
+|The value to set
+|The value is of simple value type. The exact type depends on which xamEditor control is being used. 
+
+*Example*
+
+Setting a value to the xamCheckEditor control. In this case, the value is _True_ or _False_ (= checked or unchecked, respectively): 
+
+WpfWindow("MainWindow").XamCheckEditor("xamCheckEditor").Set True 
+
+Setting a value to xamNumericEditor control. In this case, the value will be a numeric data: 
+
+WpfWindow("MainWindow").XamNumericEditor("xamNumericEditor").Set 15.42
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+No known exceptions.
+
+[[_Ref315000992]]
+== _Clear_
+
+=== Description
+
+The  _Clear_  method records and replays the clearing of the text in the editor.
+
+=== Details
+
+The method records the setting of the editor in Edit mode and the deleting of the text in it.
+
+When replayed, the method validates whether the editor is in edit mode, selects the text, and then simulates pressing the *Backspace* key.
+
+=== Parameters
+
+No parameters are used with this method.
+
+*Example*
+
+Clear the text in the editor:
+
+WpfWindow("MainWindow").XamTextEditor("xamTextEditor").Clear
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reasons that are likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception* *name*|*Exception description*|*Possible reasons*
+
+|Action not allowed
+|Thrown if the method is replayed when the control is not enabled
+|The text editor is disabled.
+
+|Editing not allowed.
+|Editing is attempted while the control is not is not in Edit mode.
+|The text editor is read-only.
+
+|====
+
+[[_Ref315001002]]
+== _SetText_
+
+=== Description
+
+The  _SetText_  method records and replays the adding of text to the text editor.
+
+=== Details
+
+The method records the setting of the editor in Edit mode and the adding of the new text.
+
+When replayed, the method validates if the editor is in edit mode, selects the old text content, simulates deleting with the Backspace key and adds the new text.
+
+=== Parameters
+
+The following table explains the method’s parameters together with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameter*|*Description*
+
+|[[_Hlk314234170]] 
+
+The new text to add
+|The text string to add. 
+
+*Example*
+
+Deleting the existing text and adding the new one: 
+
+WpfWindow("MainWindow").XamTextEditor("xamTextEditor").SetText "Another text string"
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reasons that are likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|Action not allowed
+|Thrown if the method is replayed when the control is not enabled
+|The text editor is disabled.
+
+|Editing is not allowed
+|Editing is attempted while the control is not is not in Edit mode.
+|The text editor is read-only.
+
+|====
+
+[[_Ref315001015]]
+== _DropDown_
+
+=== Description
+
+The  _DropDown_  method records and replays the opening of an editor drop-down list if such a drop-down exists.
+
+=== Details
+
+The method records the clicking on the drop-down button.
+
+When replayed, the method validates whether the editor is has a drop-down and opens it.
+
+=== Parameters
+
+No parameters are used with this method.
+
+*Example*
+
+Opening the drop-down in a xamDateTimeEditor control:
+
+WpfWindow("MainWindow").XamDateTimeEditor("dateTimeEditor").DropDown
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reasons that are likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|Object cannot be dropped down.
+|The editor drop-down list can’t be opened.
+|The control “AllowDropDown” property is set to _False_ .
+
+|====
+
+[[_Ref315001023]]
+== _CloseUp_
+
+=== Description
+
+The  _CloseUp_  method records and replays the closing of an editor drop-down list if such a drop-down exists.
+
+=== Details
+
+The method records the clicking on the drop-down button.
+
+When replayed, the method validates whether the editor has a drop-down and closes it.
+
+=== Parameters
+
+No parameters are used with this method.
+
+*Example*
+
+Closing the drop-down in a xamDateTimeEditor control:
+
+WpfWindow("MainWindow").XamDateTimeEditor("dateTimeEditor").CloseUp
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reasons that are likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|Object cannot be dropped down.
+|The editor drop-down list can’t be opened.
+|The control “AllowDropDown” property is set to _False_ .
+
+|====
+
+[[_ref1]]
+== Related Content
+
+=== Topics
+
+The following table lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xammonthcalendar-recordable-methods.html[xamMonthCalendar - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamMonthCalendar™ control.
+
+| link:xameditors-testable-user-actions-and-elements.html[xamEditors - Testable User Actions and Elements]
+|This topic provides information about the user actions of the xamEditors controls which you can test and the elements you can inspect.
+
+| link:xameditors-replay-only-methods.html[xamEditors - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the xamEditors that are common to all these editors.
+
+| link:xameditors-property-reference.html[xamEditors - Property Reference]
+|This topic provides reference information about the test object properties of the xamEditors that are common to all these editors.
+
+| link:xameditors-api.html[xamEditors - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamEditors™ controls in Micro Focus Unified Functional Testing software.
+
+|====

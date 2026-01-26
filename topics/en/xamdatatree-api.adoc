@@ -1,0 +1,43 @@
+﻿////
+|metadata|
+{
+    "name": "xamdatatree-api",
+    "controlName": [],
+    "tags": [],
+    "guid": "04338bc0-735b-4e5f-8e88-d239e617835b",
+    "buildFlags": [],
+    "createdOn": "2012-01-26T13:43:48.9436274Z"
+}
+|metadata|
+////
+
+= xamDataTree - API Reference
+
+== _xamDataTree_   Test Object API Reference
+
+=== Introduction
+
+This topic provides reference information about the proxy class that supports the testing of the xamDataTree™ control in Micro Focus Unified Functional Testing software.
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|*Proxy Class Name*|*Namespace*|*Inherits From*|*Additional Notes*
+
+| link:{ApiPlatform}test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy.html[ _XamDataTreeProxy_ ]
+| 
+
+_InfragisticsWPF.Test.DataTree_
+|
+* _RecordReplayProxyBase_ 
+
+* _IXamDataTreeReplay_ 
+
+* _IXamDataTreeControlIDProps_ 
+
+|N/A
+
+|====

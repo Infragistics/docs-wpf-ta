@@ -1,0 +1,130 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamdiagram-properties-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "1813a06e-0a0c-477b-aff6-710092793779",  
+    "buildFlags": [],
+    "createdOn": "2014-11-18T12:45:51.7383974Z"
+}
+|metadata|
+////
+
+= xamDiagram - Properties Reference
+
+== _XamDiagram_   Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the inspectable test object properties of the  _XamDiagram_™ control.
+
+=== Properties reference chart
+
+The following table summarizes the control’s test object properties and tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+|ZoomLevel
+|Settable property that returns a double which represents the current zoom level. Where 1 = 100%
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|Location
+|a double value representing the [X,Y] Offset from its current location
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====
+
+=== Table Verification
+
+When performing a standard checkpoint, the returned result contains a table of the current visible menu items, or the root item if the XamDiagram is closed.
+
+==== Table Verification Definitions
+
+[options="header", cols="a,a,a"]
+|====
+|Column name|Data type|Description
+
+|Index
+|System.Int32
+|Integer index of the DiagramItem in the Diagram.Items collection
+
+|Text
+|System.Int32
+|string VisibleText of DiagramItem
+
+|Type
+|System.String
+|string Type Name of the DiagramItem
+
+|LocOrStartPosX
+|System.Double
+|double value of the X location for a DiagramNode, or a StartPosition of a DiagramConnection
+
+|LocOrStartPosY
+|System.Double
+|double value of the X location for a DiagramNode, or a StartPosition of a DiagramConnection
+
+|WidthOrEndPosX
+|System.Double
+|double value of the Width for a DiagramNode, or a EndPosition of a DiagramConnection
+
+|HeightOrEndPosY
+|System.Double
+|double value of the Height for a DiagramNode, or a EndPosition of a DiagramConnection
+
+|NodeShapeType
+|System.String
+|string value of the ShapeType of a DiagramNode
+
+|ConnStartCnIndex
+|System.Int32
+|integer index of the Node attached to the start of the DiagramConnection
+
+|ConnStartPtName
+|System.String
+|string name of the point area of a Node attached to the start of the DiagramConnection
+
+|ConnEndCnIndex
+|System.Int32
+|integer index of the Node attached to the end of the DiagramConnection
+
+|ConnEndPtName
+|System.String
+|string name of the point area of a Node attached to the start of the DiagramConnection
+
+|====
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamdiagram-recordable-actions.html[xamDiagram - Recordable Actions]
+|This topic provides information about recordable actions for testing the _XamDiagram_™ control.
+
+| link:xamdiagram-replay-only-actions.html[xamDiagram - Replay-Only Actions]
+|This topic provides information about replay-only actions for testing the _XamDiagram_™ control.
+
+| link:xamdiagram-enumerations-reference.html[xamDiagram - Enumerations Reference]
+|This topic provides reference material on the common enumerations used for testing the _XamDiagram_™ control.
+
+|====

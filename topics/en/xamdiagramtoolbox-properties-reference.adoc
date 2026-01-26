@@ -1,0 +1,72 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamdiagramtoolbox-properties-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "52bbf4ac-9d00-4879-b399-137693a9d0a1",  
+    "buildFlags": [],
+    "createdOn": "2014-11-18T12:44:42.5764819Z"
+}
+|metadata|
+////
+
+= xamDiagramToolbox - Properties Reference
+
+== _XamDiagramToolbox_   Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the inspectable test object properties of the  _XamDiagramToolbox_™ control.
+
+=== Table Verification
+
+When performing a standard checkpoint, the returned result contains a table of the current visible menu items, or the root item if the XamDiagramToolbox is closed.
+
+==== Table Verification Definitions
+
+[options="header", cols="a,a,a"]
+|====
+|Column name|Data type|Description
+
+|Category
+|System.String
+|String text name of the category the Item belongs to.
+
+|ItemType
+|System.String
+|String type name of the Item.
+
+|Item
+|System.String
+|String title name of the Item.
+
+|IndexInCategory
+|System.String
+|Integer index of the item within the category.
+
+|IndexOverall
+|System.String
+|Integer inded of the item among all the items.
+
+|====
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamdiagramtoolbox-recordable-actions.html[xamDiagramToolbox - Recordable Actions]
+|This topic provides information about recordable actions for testing the _XamDiagramToolbox_™ control.
+
+| link:xamdiagramtoolbox-enumerations-reference.html[xamDiagramToolbox - Enumerations Reference]
+|This topic provides reference material on the common enumerations used for testing the _XamDiagramToolbox_™ control.
+
+|====

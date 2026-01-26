@@ -1,0 +1,58 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamradialgauge-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "8137d9fb-42a9-427d-a3d8-4780778a80a0",  
+    "buildFlags": [],
+    "createdOn": "2013-11-20T21:19:54.3988829Z"
+}
+|metadata|
+////
+
+= xamRadialGauge - Property Reference
+
+== _xamRadialGauge_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the  _xamRadialGauge_™ control’s test object properties.
+
+[[_Ref337672876]]
+
+=== Properties reference chart
+
+The table below summarizes the control’s test method parameters and the tools for inspecting them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+| _Value_ 
+|This property is a recordable setter double value representing the test object. Changing the value of the control via a key press or mouse interaction records the new value.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _MinimumValue_ 
+|A double data type, whose value represents the minimum value.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _MaximumValue_ 
+|A double data type, whose value represents the maximum value.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====

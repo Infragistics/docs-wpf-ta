@@ -1,0 +1,38 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamsparkline",
+    "controlName": [],
+    "tags": [],
+    "guid": "409f9ea6-2b0f-4c28-80d5-bfb6eec082e9",  
+    "buildFlags": [],
+    "createdOn": "2012-06-26T15:22:51.3190219Z"
+}
+|metadata|
+////
+
+= xamSparkline
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test.sparkline~infragisticswpf.test.sparkline.xamsparklineproxy.html[XamSparklineProxy] object in {ProductName}.
+
+=== Topics
+
+This section contains topics covering testing and API reference for the  _xamSparkline_™ control.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamsparkline-testable-user-actions-elements.html[xamSparkline - Testable User Actions and Elements]
+|This topic is the UFT tester’s guide for the _xamSparkline_ control in applications under test with {ProductName} Add-In.
+
+| link:xamsparkline-property-reference.html[xamSparkline - API Reference]
+|This topic provides reference information about the _xamSparkine_™ control’s test object properties.
+
+| link:xamsparkline-api.html[xamSparkline - API Reference]
+|This topic provides a table of the _xamSparkline_ control’s proxy class namespace and inheritance information.
+
+|====

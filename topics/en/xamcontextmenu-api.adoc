@@ -1,0 +1,49 @@
+﻿////
+|metadata|
+{
+    "name": "xamcontextmenu-api",
+    "controlName": [],
+    "tags": [],
+    "guid": "f7dbbf02-bb94-4100-87c4-34dc53f9572e",
+    "buildFlags": [],
+    "createdOn": "2012-02-01T07:57:14.699257Z"
+}
+|metadata|
+////
+
+= xamContextMenu - API Reference
+
+== _xamContextMenu_   Test Object API Reference
+
+=== Introduction
+
+This topic provides reference information about the proxy class that supports the testing of the xamContextMenu™ control in Micro Focus Unified Functional Testing software.
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|*Proxyclassname*|*Namespace*|*Inheritsfrom*|*Additional notes*
+
+|_link:{ApiPlatform}test.menu~infragisticswpf.test.menu.xamcontextmenuproxy.html[XamContextMenuProxy]_
+|InfragisticsWPF.Test.Menu
+|
+* _XamMenuBaseProxy_ 
+
+* _IXamMenuReplay_ 
+
+* _IXamMenuControlIDProps_ 
+
+* _IContainSubItems_ 
+
+|The following base click actions are not recorded by default: 
+
+ClickControl 
+
+RightClickControl 
+
+DblClickControl 
+
+|====

@@ -1,0 +1,101 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamspreadsheet-properties-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "fa20a41e-a75b-4a00-8132-cc45404f16a5",  
+    "buildFlags": [],
+    "createdOn": "2014-11-17T13:03:43.9782664Z"
+}
+|metadata|
+////
+
+= xamSpreadsheet - Properties Reference
+
+== _XamSpreadSheet_   Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the inspectable test object properties of the  _XamSpreadSheet_™ control.
+
+=== Properties reference chart
+
+The following table summarizes the control’s test object properties and tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+|_ActiveCell_
+|Returns the string representation of the currently active cell.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_ActiveSheet_
+|Returns the string name of the currently active sheet.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _ActiveCellRange_ 
+|Returns the string representation of the selection of just the active cell range.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _SelectedCells_ 
+|Returns the string representation of the entire selection of cells.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _ZoomLevel_ 
+|Returns a value from 10-400, 100 being the default representing the percentage of zoom for the current worksheet.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====
+
+=== Table Verification
+
+When performing a standard checkpoint, the returned result contains a table of the values of the selected cells of the active cell range of the XamSpreadSheet.
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamspreadsheet-recordable-actions.html[xamSpreadsheet - Recordable Actions]
+|This topic provides information about the recordable user actions for testing the _XamSpreadsheet_™ control.
+
+| link:xamspreadsheet-replay-only-actions.html[xamSpreadsheet - Replay-Only Actions]
+|This topic provides information about the replay only user actions for testing the _XamSpreadsheet_™ control.
+
+| link:xamspreadsheet-custom-properties-reference.html[xamSpreadsheet - Custom Properties Reference]
+|This topic provides reference information about the xamSpreadsheet's custom properties embedded to objects of the identified types via the Control Property Access methods.
+
+| link:xamspreadsheet-enumerations-reference.html[xamSpreadsheet - Enumerations Reference]
+|This topic provides reference material on the common enumerations used for testing the _XamSpreadsheet_™ control.
+
+|====

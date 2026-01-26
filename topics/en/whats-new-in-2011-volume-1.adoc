@@ -1,0 +1,91 @@
+﻿////
+|metadata|
+{
+    "name": "whats-new-in-2011-volume-1",
+    "controlName": [],
+    "tags": [],
+    "guid": "db121616-1da4-4c82-9ad4-2bd999f98ceb",
+    "buildFlags": [],
+    "createdOn": "2012-02-03T10:16:34.9490099Z"
+}
+|metadata|
+////
+
+= What's New in 2011 Volume 1
+
+== Topic Overview
+
+'''
+
+=== Purpose
+
+This topic lists the newly supported Infragistics controls introduced with the Ultimate UI for {ProductName} Unified Functional Testing 2011 Volume 1 Release.
+
+'''
+
+=== In this topic
+
+This document contains the following sections:
+
+* <<_Supported_Controls,New Supported Ultimate UI for WPF controls>>
+* <<_Related_Topics,Related Topics>>
+
+'''
+
+[[_Supported_Controls]]
+== Supported Ultimate UI for WPF controls
+
+=== Supported controls chart
+
+The table below briefly explains the new supported controls of the Ultimate UI for {ProductName} 2011 Volume 1 Release.
+
+[options="header", cols="a,a,a"]
+|====
+|Product|Supported control|Corresponding namespace
+
+|Ultimate UI for WPF Data Visualization
+|xamNetworkNode™
+| link:{ApiPlatform}test.networknode~infragisticswpf.test.networknode-namespace.html[InfragisticsWPF.Test.NetworkNode]
+
+|
+|xamOrgChart™
+| link:{ApiPlatform}test.orgchart~infragisticswpf.test.orgchart-namespace.html[InfragisticsWPF.Test.OrgChart]
+
+|
+|xamPieChart™
+| link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.piechart-namespace.html[InfragisticsWPF.Test.PieChart]
+
+|Ultimate UI for WPF
+|xamCalendar™
+| link:{ApiPlatform}test.editors.xamcalendar~infragisticswpf.test.editors.calendar-namespace.html[InfragisticsWPF.Test.Editors.Calendar]
+
+|
+|xamDateNavigator™ (part of xamSchedule™)
+| link:{ApiPlatform}test.schedules~infragisticswpf.test.schedules-namespace.html[InfragisticsWPF.Test.Schedules]
+
+|====
+
+[[_Related_Topics]]
+== Related Topics
+
+=== Related topics chart
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:introduction.html[Introduction]
+|This topic introduces the {ProductName} Unified Functional Testing software.
+
+| link:getting-started.html[Getting Started]
+|This is a starting point for getting acquainted with {ProductName} Unified Functional Testing software.
+
+| link:known-issues-and-breaking-changes.html[Known Issues and Breaking Changes]
+|This topic provides information on the currently known issues and limitations related to {ProductName} Unified Functional Testing. These issues will be addressed in future releases of the product.
+
+| link:test-automation-for-infragistics-controls.html[Test Automation for Infragistics Controls]
+|The topics below provide reference information about the verifiable properties and the recordable and replay-only methods for testing the Ultimate UI for WPF controls.
+
+|====

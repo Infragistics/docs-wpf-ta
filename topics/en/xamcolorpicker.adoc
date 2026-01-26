@@ -1,0 +1,43 @@
+﻿////
+|metadata|
+{
+    "name": "xamcolorpicker",
+    "controlName": [],
+    "tags": [],
+    "guid": "90413248-b02a-4caf-829f-0037189a61dc",
+    "buildFlags": [],
+    "createdOn": "2012-01-23T07:15:11.2318355Z"
+}
+|metadata|
+////
+
+= xamColorPicker
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test.editors.xamcolorpicker~infragisticswpf.test.editors.colorpicker.xamcolorpickerproxy.html[XamColorPickerProxy] object in {ProductName}.
+
+=== Topics
+
+The topics contained in this section cover implementing action elements, methods and properties within the  _xamColorPicker™_   control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamcolorpicker-testable-user-actions-and-elements.html[xamColorPicker - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamColorPicker_ control which you can test and the elements you can inspect.
+
+| link:xamcolorpicker-recordable-methods.html[xamColorPicker - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamColorPicker_ control.
+
+| link:xamcolorpicker-replay-only-methods.html[xamColorPicker - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the _xamColorPicker_ control.
+
+| link:xamcolorpicker-property-reference.html[xamColorPicker - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the _xamColorPicker_ control.
+
+| link:xamcolorpicker-api.html[xamColorPicker - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamColorPicker_ control in Micro Focus Unified Functional Testing software.
+
+|====

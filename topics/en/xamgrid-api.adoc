@@ -1,0 +1,44 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamgrid-api",
+    "controlName": [],
+    "tags": [],
+    "guid": "d072b3f6-3592-4216-a8e0-2844f7d2b6b9",  
+    "buildFlags": [],
+    "createdOn": "2012-04-18T07:48:22.8488796Z"
+}
+|metadata|
+////
+
+= xamGrid - API Reference
+
+== _xamGrid_   Test Object API Reference
+
+=== Introduction
+
+This topic provides reference information about the proxy class that supports the testing of the  _xamGrid_™ control in Micro Focus Unified Functional Testing software.
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|Proxy class name|Namespace|Inherits from|Additional notes
+
+| _link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxy.html[XamGridProxy]_ 
+|_InfragisticsWPF.Test.Controls.Grids_
+|
+* _RecordReplayProxyBase_ 
+
+* _IContainSubItems_ 
+
+* _IRecordSubItem_ 
+
+* _ITableVerify_ 
+
+|Base click actions _Cli_ _ckOnControl, RightClickControl_ and _DblClickControl_ are not recorded by default.
+
+|====

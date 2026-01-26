@@ -1,0 +1,127 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamdatapresenter-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "55f09045-682d-45c0-8a04-a0bd803b80d7",  
+    "buildFlags": [],
+    "createdOn": "2012-01-21T08:58:14.1523909Z"
+}
+|metadata|
+////
+
+= xamDataPresenter - Property Reference
+
+== _xamDataPresenter_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the inspectable test object properties of the  _xamDataPresenter_™ controls.
+
+This topic concerns the test object properties of the following controls:
+
+*  _xamDataGrid_  
+*  _xamDataCarousel_  
+*  _xamDataCards_  
+
+=== Properties reference chart
+
+The table below summarizes the control’s test object properties and the tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+| link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter.datapresenterrecordproxybase~activecell.html[ActiveCell]
+|A string path identifier representing the current active cell in the following format: 
+
+*{ROW} [COLUMN]*Example:*
+
+First column layout, first row and column named _Title_ : 
+
+{0}{0}[Title]
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter.datapresenterrecordproxybase~activerecord.html[ActiveRecord]
+|A string path identifier representing the current active record in the following format: 
+
+{*FIELD LAYOUT*}{*RECORD* } 
+
+*Example**:*
+
+First field layout, first record: 
+
+_{0}{0}_
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter.datapresenterrecordproxybase~activefield.html[ActiveField]
+|A string path identifier representing the field of the current active cell {*FIELD LAYOUT*}{*RECORD*}[*FIELD* ] 
+
+*Example:*
+
+First field layout, first record and column named “Title”: 
+
+_{0}{0}[_ _Title_ _]_
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter.datapresenterrecordproxybase~recordcount.html[RecordCount]
+|The count of the visible rows in the currently active area
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter.datapresenterrecordproxybase~fields.html[Fields]
+|A delimited string that represents the visible Field identifiers
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter.datapresenterrecordproxybase~fieldcount.html[FieldCount]
+|The count of the visible fields in the currently active area
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter.datapresenterrecordproxybase~filteredinrecordcount.html[FilteredInRecordCount]
+|*(New)* Returns the current record count of filtered in records for the ActiveArea.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter.datapresenterrecordproxybase~selectedcontenttype.html[SelectedContentType]
+|A string representation of the current selected item. The type of the selected item can be one of the following: 
+
+* gridField 
+
+* gridRecord 
+
+* gridCell 
+
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter.datapresenterrecordproxybase~selectedcontent.html[SelectedContent]
+|A new-line-delimited list of the paths of all currently selected items
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+|====

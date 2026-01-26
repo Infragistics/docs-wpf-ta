@@ -1,0 +1,43 @@
+﻿////
+|metadata|
+{
+    "name": "xamdatachart-api",
+    "controlName": [],
+    "tags": [],
+    "guid": "daabfe60-ccc7-4ac9-9f8e-cfc9d785aabe",
+    "buildFlags": [],
+    "createdOn": "2012-01-26T13:40:53.8991247Z"
+}
+|metadata|
+////
+
+= xamDataChart - API Reference
+
+== _xamDataChart_   Test Object API Reference
+
+=== Introduction
+
+This topic provides reference information about the proxy class that supports the testing of the xamDataChart™ control in Micro Focus Unified Functional Testing software.
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|*Proxy Class Name*|*Namespace*|*Inherits From*|*Additional Notes*
+
+| link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart.xamdatachartproxy.html[ _XamDataChartProxy_ ]
+|InfragisticsWPF.Test.Charts.DataChart
+|
+* _RecordReplayProxyBase_ 
+
+* _IXamDataChartReplay_ 
+
+* _IXamDataChartIDProps_ 
+
+* _ITableVerify_ 
+
+|This proxy class implements _ITableVerify_ so you can add checkpoint to verify the xamDataChart data points in a table view.
+
+|====

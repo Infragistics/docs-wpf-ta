@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "xampropertygrid-custom-properties-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "e42e397d-a64b-4842-b981-92a39377e8c1",  
+    "buildFlags": [],
+    "createdOn": "2014-11-04T10:44:24.7036532Z"
+}
+|metadata|
+////
+
+= Custom Properties - xamPropertyGrid
+
+== _XamPropertyGrid_   Custom Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the  _XamPropertyGrid_   proxy base custom properties. Custom properties are extended from the type of objects referenced below using control property access methods (See link:accessing-controls-properties.html[Accessing Controls' Properties] for more details).
+
+=== ReflectionHelper CustomProperties
+
+The following table summarizes the custom properties for XamPropertyGrid.
+
+[options="header", cols="a,a,a"]
+|====
+|Custom property|Applied Object Type|Returns…
+
+| _DisplayPath_ 
+|Infragistics.Controls.Editors.PropertyGridPropertyItem
+|_System.String_ .
+
+|====

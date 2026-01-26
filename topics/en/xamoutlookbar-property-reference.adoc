@@ -1,0 +1,137 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamoutlookbar-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "ff176976-44e8-4edb-971d-5468ae1b9a6f",  
+    "buildFlags": [],
+    "createdOn": "2012-01-18T09:00:57.2339709Z"
+}
+|metadata|
+////
+
+= xamOutlookBar - Properties Reference
+
+== _XamOutlookBar_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the test object properties of the  _xamOutlookBar_™ control that can be inspected.
+
+[[PropRef]]
+
+=== Properties reference chart
+
+The table below summarizes the control’s test object properties and the tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+|totalgroupheaders
+|A list with the headers of all visible xamOutlookBar groups.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|totalgroupscount
+|the total count of the groups visible in the control areas: 
+
+* navigation area 
+
+* overflow area 
+
+* context menu area 
+
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|navareagroupheaders
+|_navareagroupheaders_
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|navareagroupscount
+|the total count of the groups visible in the navigation area.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|overflowareagroupheaders
+|a list of headers of the groups visible in the overflow area.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|overflowareagroupscount
+|the total count of the groups visible in the overflow area.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|overflowcontextmenugroupheaders
+|a list of headers of the groups visible in the overflow context menu area.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|overflowcontextmenugroupscount
+|the total count of the groups visible in the overflow context menu area.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|selectedgroupheader
+|the header of the selected group.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|selectedgrouplocation
+|the location of the selected group.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|navareamaxgroupscount
+|the maximum number of groups in the navigation area.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|isoutlookbarminimized
+|True if the control is minimized.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====

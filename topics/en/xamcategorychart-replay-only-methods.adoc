@@ -1,0 +1,138 @@
+﻿= xamCategoryChart - Replay-Only Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the replay-only user methods for testing the  _xamCategoryChart_™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_summary, _xamCategoryChart_   Test Object Replay-Only Methods>>
+
+** <<_getseriescount, _GetSeriesCount_  >>
+** <<_GetDataPointCount_Method, _GetDataPointCount_  >>
+
+* <<_ref1,Related Content>>
+
+[[_summary]]
+== _xamCategoryChart_   Test Object Replay-Only Methods
+
+=== Replay-only methods summary chart
+
+The following table briefly explains the replay-only methods for testing the control. Detailed information about the methods is provided below the table.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|*Description*
+
+|_<<_getseriescount,GetSeriesCount>>_
+|Returns the number of series in the xamCategoryChart control.
+
+|_<<_GetDataPointCount_Method,GetDataPointCount>>_
+|Returns the number of data points in the specified series.
+
+|====
+
+[[_getseriescount]]
+== _GetSeriesCount_
+
+=== Description
+
+The  _GetSeriesCount_  method returns the number of series in the xamCategoryChart control.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+No parameters are used with this method.
+
+*Example*
+
+Display a message box with the number of series:
+
+msgbox(WpfWindow("MainWindow").XamCategoryChart("columnCategoryChart").GetSeriesCount)
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+No known exceptions.
+
+[[_GetDataPointCount_Method]]
+== _GetDataPointCount_
+
+=== Description
+
+The GetDataPointCount method returns the number of data points in a specified series.
+
+=== Details
+
+This method accepts as a parameter either the series name or index.
+
+=== Parameters
+
+The following table explains the method’s parameters together with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameter*|*Description*
+
+|Series name
+|The series name as a parameter. 
+
+*Example*
+
+Displaying a message box with the number of series: 
+
+msgbox(WpfWindow("MainWindow").XamCategoryChart("columnCategoryChart").GetDataPointCount (“series1”))
+
+|Series index
+|The series index as a parameter. 
+
+*Example*
+
+Displaying a message box with the number of series: 
+
+msgbox(WpfWindow("MainWindow").XamCategoryChart("columnCategoryChart").GetDataPointCount (1))
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+No known exceptions.
+
+[[_ref1]]
+== Related Content
+
+=== Topics
+
+The following table lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamcategorychart-testable-user-actions-and-elements.html[xamCategoryChart Testable User Actions and Elements]
+|This topic provides information about the user actions of the xamCategoryChart™ control which you can test and the elements you can inspect.
+
+| link:xamcategorychart-recordable-methods.html[xamCategoryChart - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamCategoryChart™ control.
+
+| link:xamcategorychart-property-reference.html[xamCategoryChart - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamCategoryChart™ control.
+
+| link:xamcategorychart-api.html[xamCategoryChart - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamCategoryChart™ control in Micro Focus Unified Functional Testing software.
+
+|====

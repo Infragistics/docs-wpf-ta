@@ -1,0 +1,94 @@
+﻿////
+|metadata|
+{
+    "name": "xamdatapresenter-enumeration-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "76ef6ea7-4aeb-4d0f-8bfc-6d88813c2bc9",
+    "buildFlags": [],
+    "createdOn": "2014-05-02T17:36:37.2963472Z"
+}
+|metadata|
+////
+
+= xamDataPresenter - Enumeration Reference
+
+== _xamDataPresenter_   Test Object Enumerations Reference
+
+=== Introduction
+
+This topic provides reference information about the common enumerations used for testing the  _xamDataPresenter_™ controls.
+
+[[_enum_summary]]
+
+=== Enumerations reference chart
+
+The following table lists the common enumerations used in the testing methods of the xamDataPresenter controls and maps these enumerations to their respective index values. You can use either the string representation or the index of the enumerations items.
+
+[options="header", cols="a,a"]
+|====
+|*Enumeration*|*Items*
+
+|Item types
+|
+* gridField = 1 
+
+* gridRecord = 2 
+
+* gridCell = 3 
+
+|Comparison operators ( link:{ApiPlatform}test.shared~infragisticswpf.test.shared.igcomparisonoperator.html[IGComparisonOperator])
+|
+* igEquals = 0 
+
+* igNotEquals = 1 
+
+* igLessThan = 2 
+
+* igLessThanOrEqualTo = 3 
+
+* igGreaterThan = 4 
+
+* igGreaterThanOrEqualTo = 5 
+
+* igContains = 6 
+
+* igDoesNotContain = 7 
+
+* igLike = 8 
+
+* igNotLike = 9 
+
+* igMatch = 10 
+
+* igDoesNotMatch = 11 
+
+* igStartsWith = 12 
+
+* igDoesNotStartWith = 13 
+
+* igEndsWith = 14 
+
+* igDoesNotEndWith = 15 
+
+* igTop = 16 
+
+* igBottom = 17 
+
+* igTopPercentile = 18 
+
+* igBottomPercentile = 19 
+
+* igIn = 20 *(New)*
+
+* igNotIn = 21 *(New)*
+
+|Sort direction
+|
+* igNotSorted = 0 
+
+* igAscending = 1 
+
+* igDescending = 2 
+
+|====

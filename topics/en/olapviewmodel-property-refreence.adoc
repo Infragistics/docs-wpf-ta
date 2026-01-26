@@ -1,0 +1,74 @@
+﻿////
+
+|metadata|
+{
+    "name": "olapviewmodel-property-refreence",
+    "controlName": [],
+    "tags": [],
+    "guid": "b79fd6c5-7337-4bbb-a70e-355a892fd11e",  
+    "buildFlags": [],
+    "createdOn": "2012-10-29T21:28:29.850123Z"
+}
+|metadata|
+////
+
+= OlapViewModel - Property Reference
+
+== _OlapViewModel_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the test object properties of the controls that use  _OlapViewModel_   _._
+
+[[_Ref337672876]]
+
+=== Properties reference chart
+
+The table below summarizes the control’s test object properties and tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+|_MeasuresItemHeaders_
+|Returns the headers of all the items in the control’s _Measures_ area. 
+
+Default value is empty string.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_FiltersItemHeaders_
+|Returns the headers of all the items in the control’s _Filters_ area. 
+
+Default value is empty string.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_RowsItemHeaders_
+|Returns the headers of all the items in the control’s _Rows_ area. 
+
+Default value is empty string.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|_ColumnsItemHeaders_
+|Returns the headers of all the items in the control’s _Columns_ area. 
+
+Default value is empty string.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====

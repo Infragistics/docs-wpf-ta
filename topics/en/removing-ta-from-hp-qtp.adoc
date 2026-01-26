@@ -1,0 +1,107 @@
+﻿////
+|metadata|
+{
+    "name": "removing-ta-from-hp-qtp",
+    "controlName": [],
+    "tags": [],
+    "guid": "bba862b9-943d-41d1-b8e2-4b42d84628b4",
+    "buildFlags": [],
+    "createdOn": "2012-01-25T07:32:41.0707648Z"
+}
+|metadata|
+////
+
+= Removing Test Automation from Micro Focus Unified Functional Testing
+
+== Topic Overview
+
+=== Purpose
+
+This topic explains how to disable the {ProductName} software.
+
+[[_Ref315104314]]
+
+=== In this topic
+
+This document contains the following sections:
+
+* <<_Ref315104323,Disabling the {ProductName} Using the Version Utility’s Graphical Interface>>
+
+** <<_Introduction,Introduction>>
+** <<_Overview,Overview>>
+** <<_Steps,Steps>>
+
+* <<_Ref315106352,Related Content>>
+
+'''
+
+[[_Ref315104323]]
+== Disabling the {ProductName} Using the Version Utility’s Graphical Interface
+
+[[_Introduction]]
+
+=== Introduction
+
+You can disable the {ProductName} product temporary without having to uninstall manually the product when your testing environment is changing. Test Automation has a special tool called “Version Utility” that enables you to do this. It enables you to disable the product either form the command line or with the tools’ wizard-like graphical interface.
+
+The following procedure describes how you disable the {ProductName} product using the Version Utility’s Graphical Interface.
+
+'''
+
+[[_Overview]]
+
+=== Overview
+
+Following is a conceptual overview of the process:
+
+[start=1]
+. <<step1,Starting the Version Utility tool>>
+[start=2]
+. <<step2,Disabling the {ProductName}>>
+
+'''
+
+[[_Steps]]
+
+=== Steps
+
+The table below describes the procedure in detail.
+
+=== 1. Start the Version Utility tool.
+
+Start the user interface of the Version Utility in either of the following ways:
+
+• From the Windows Start Menu shortcut *Infragistics > 20{ProductVersion} > WPF Test Automation for Micro Focus > Tools*
+
+• From the Version Utility executable file residing in *<WPF Test Automation Installation Folder>\Tools\Version Utility\InfragisticsWPF.Test.VersionUtility.UI.exe*
+
+The Test Automation Version Utility dialog appears.
+
+=== 2. Disable the {ProductName}.
+
+1. From the drop-down, choose the *Disable* option and all TA for WPF product configuration files will be removed from the Micro Focus UFT "dat\Extensibility\WPF" folder.
+
+2. Click *Apply* to confirm the change.
+
+3. Click *Quit* to close the window.
+
+[[_Ref315106352]]
+== Related Content
+
+'''
+
+=== Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:installing-and-configuring-ta-wpf.html[Installing and Configuring {ProductName}]
+|This topic provides instructions about the installation {ProductName} Unified Functional Testing.
+
+| link:switching-ta-clr-versions.html[Switching Test Automation / CLR Versions]
+|This topic explains how to switch between the {ProductName} product volumes and the CLR versions.
+
+|====

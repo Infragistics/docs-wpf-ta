@@ -1,0 +1,329 @@
+﻿////
+|metadata|
+{
+    "name": "xamdatapresenter-filtering",
+    "controlName": [],
+    "tags": [],
+    "guid": "615709cc-c348-4ce2-9b8d-5cf850390a09",
+    "buildFlags": [],
+    "createdOn": "2012-02-07T16:43:39.8163548Z"
+}
+|metadata|
+////
+
+= Filtering
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods for testing the filtering in xamDataPresenter™ controls.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref314227548,Recordable Methods>>
+
+** <<_ClearRecordFilters,ClearRecordFilters>>
+** <<_OpenCustomFilterDialog,OpenCustomFilterDialog>>
+** <<_SelectFilter,SelectFilter>>
+** <<_SetFilterCellCompOperator,SetFilterCellCompOperator>>
+
+* <<_Ref316382717,Related Content>>
+
+[[_Ref314227548]]
+== Recordable Methods
+
+=== Recordable methods summary chart
+
+The following table briefly explains the recordable methods for testing the control. Detailed information about the methods is provided in the text blocks following the table.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|*Description*
+
+|_ClearRecordFilters_
+|Clears all filters for a specified record.
+
+|_OpenCustomFilterDialog_
+|Opens the Custom Filter Selection dialog when the user chooses the _(Custom)_ option from the filter menu.
+
+|_SelectFilter_
+|Selects a filter value from the filter icons.
+
+|_SetFilterCellCompOperator_
+|Sets a comparison operator in the specified filter cell.
+
+|====
+
+[[_ClearRecordFilters]]
+== _ClearRecordFilters_
+
+=== Description
+
+The  _ClearRecordFilters_  method is used for recording and replaying the clearing of all filters for a specified record. This method records the clicking of the  _Clear_  button positioned on the left in xamDataGrid control.
+
+=== Details
+
+When replaying, this method performs some validations first and then clears all record filters:
+
+[start=1]
+. Validating the specified record path
+[start=2]
+. Clearing the filters’ values
+
+The method accepts the record path as a parameter.
+
+The record path is formed in the following way:
+
+* root record number
+* {root record number}{parent record number}
+* {root record number}{parent record number}{child record number}
+* …
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Record path
+|Using the record path as a parameter. 
+
+*Example*
+
+Setting filter for two fields – _supplier_ and _amount_ and clearing all the filters for the specified _FILTER_ record after that: 
+
+WpfWindow("MainWindow").XamDataGrid("XamDataGrid1").SetCellData "{FILTER}[supplier]", "Supplier 1" 
+
+WpfWindow("MainWindow").XamDataGrid("XamDataGrid1").SetCellData "{FILTER}[amount]", "62" 
+
+WpfWindow("MainWindow").XamDataGrid("XamDataGrid1").ClearRecordFilters "{FILTER}"
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following record was not found.
+|The record cannot be located when replaying the method.
+|The record doesn’t exist or is hidden.
+
+|The argument is malformed.
+|The parameter is not format correctly.
+|The method parameter is not correctly formatted.
+
+|====
+
+[[_OpenCustomFilterDialog]]
+== _OpenCustomFilterDialog_
+
+=== Description
+
+The  _OpenCustomFilterDialog_  method is used for recording and replaying the opening of the Custom Filter Selection dialog. This dailog appears when a user chooses the option  _(Custom)_  from the filter menu for a specified field.
+
+=== Details
+
+This method takes a header path as a required parameter.
+
+The path is formed by concatenating the record path and the field name or field index (the parenthesis and the brackets are part of the syntax):
+
+{record path}[field name or field index]
+
+For example, the cross-section of the first record and the field  _name_  is denoted as  _{0_  _}[_  _name]_, the cross-section of the first child record of the first record and the field  _name_  is denoted as  _{0}{0}[name]_ .
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Header path
+|Using the header path as a parameter. 
+
+*Example*
+
+Opening the Custom Filter Selection dialog for _amount_ field: 
+
+WpfWindow("MainWindow").XamDataGrid("XamDataGrid1").OpenCustomFilterDialog "{FILTER}[amount]"
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following record was not found.
+|The record cannot be located when replaying the method.
+|The record doesn’t exist or is hidden.
+
+|The argument is malformed.
+|The parameter is not format correctly.
+|The method parameter is not correctly formatted.
+
+|Filtering not allowed on the supplied field.
+|The filtering cannot be performed when replaying the method.
+|Filtering is disabled.
+
+|====
+
+[[_SelectFilter]]
+== _SelectFilter_
+
+=== Description
+
+The  _SelectFilter_  method is used for recording and replaying data filtering through the filter icons (when the xamDataPresenter property  _FilterUIType_  is set to  _LabelIcons_ ).
+
+=== Details
+
+The method accepts as parameters the header path and a value from the filter drop-down list.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|
+* Header path 
+
+* Option from the filter drop-down menu 
+
+|Using the header path and an option from the filter drop-down menu as parameters. 
+
+*Example*
+
+Choosing the option _David McCullough_ from the filter drop-down menu and filtering the data in the _Author_ field: 
+
+WpfWindow("MainWindow").XamDataGrid("dataGrid").SelectFilter "{0}{0}[Author]", "David McCullough"
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|This action can only be used with the FilterUI Type [LabelIcon]
+|The FilterUIType is not correctly set.
+|The FilterUIType is not set to LabelItems.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method parameter is not correct.
+
+|====
+
+[[_SetFilterCellCompOperator]]
+== _SetFilterCellCompOperator_
+
+=== Description
+
+The  _SetFilterCellCompOperator_  method is used for recording and replaying setting a comparison operator in the specified filter cell.
+
+=== Details
+
+The method takes the filter cell path and a comparison operator as parameters.
+
+The different operators are listed in the link:xamdatapresenter-enumeration-reference.html[xamDataPresenter - Enumeration Reference] topic.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameter*|*Description*
+
+|
+* Cell path 
+
+* Comparison operator 
+
+|Using the cell path and a comparison operator as parameters. 
+
+*Example*
+
+Setting a comparison operator _igContains_ to the “Author” field: 
+
+WpfWindow("MainWindow").XamDataGrid("dataGrid").SetFilterCellCompOperator "{0}{FILTER}[Author]", igContains
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter is not format correctly.
+|The method parameter is not correctly formatted.
+
+|The following item was not found.
+|The specified cell cannot be located when replaying the method.
+|The method parameter is not correct.
+
+|====
+
+[[_Ref316382717]]
+== Related Content
+
+=== Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamdatapresenter-editing.html[Editing]
+|This topic provides reference information about the recordable user methods for testing the editing in xamDataPresenter™ controls.
+
+| link:xamdatapresenter-navigatingselecting.html[Navigating and Selecting]
+|This topic provides reference information about the recordable user methods for testing the navigation and selection actions in xamDataPresenter™ controls.
+
+| link:xamdatapresenter-sorting-grouping.html[Sorting and Grouping]
+|This topic provides reference information about the recordable user methods for testing the sorting and grouping user actions in xamDataPresenter™ controls.
+
+| link:xamdatapresenter-summaries.html[Summaries]
+|This topic provides reference information about the recordable user methods for testing the summary feature in xamDataPresenter™ controls.
+
+|====

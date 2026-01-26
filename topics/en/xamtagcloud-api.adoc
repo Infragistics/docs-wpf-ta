@@ -1,0 +1,41 @@
+﻿////
+|metadata|
+{
+    "name": "xamtagcloud-api",
+    "controlName": [],
+    "tags": [],
+    "guid": "edd3f691-c0e6-4844-b6dd-d3dc33ac00fd",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T07:30:35.5175677Z"
+}
+|metadata|
+////
+
+= xamTagCloud - API Reference
+
+== _xamTagCloud_   Test Object API Reference
+
+=== Introduction
+
+This topic provides reference information about the proxy class that supports the testing of the  _xamTagCloud_™ control in Micro Focus Unified Functional Testing software.
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|*Proxy Class Name*|*Namespace*|*Inherits From*|*Additional Notes*
+
+| link:{ApiPlatform}test.tagcloud~infragisticswpf.test.tagcloud.xamtagcloudproxy.html[ _XamTagCloudProxy_ ]
+|_InfragisticsWPF.Test.TagCloud_
+|
+* _RecordReplayProxyBase_ 
+
+* _IXamTagCloudReplay_ 
+
+* _IXamTagCloudIDProps_ 
+
+|N/A
+
+|====

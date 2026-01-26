@@ -1,0 +1,47 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamsyntaxeditor",
+    "controlName": [],
+    "tags": [],
+    "guid": "4c102ac4-e1ba-4c2c-90f9-050792fea4e2",  
+    "buildFlags": [],
+    "createdOn": "2012-10-29T19:54:57.2741264Z"
+}
+|metadata|
+////
+
+= xamSyntaxEditor
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy.html[XamSyntaxEditorProxy] object in {ProductName}.
+
+=== Topics
+
+This section contains topics covering the implementation of action elements, methods and properties in  _xamSyntaxEditor_™ control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamsyntaxeditor-testable-user-actions-and-elements.html[xamSyntaxEditor - Testable User Actions and Elements]
+|This topic provides information about the _xamSyntaxEditor_ control’s testable user actions and elements.
+
+| link:xamsyntaxeditor-recordable-methods.html[xamSyntaxEditor - Recordable Methods]
+|This topic provides information about the _xamSyntaxEditor_ control’s testable user recordable methods.
+
+| link:xamsyntaxeditor-replay-only-methods.html[xamSyntaxEditor - Replay-Only Methods]
+|This topic provides information about the _xamSyntaxEditor_ control’s testable user replay-only methods.
+
+| link:xamsyntaxeditor-property-reference.html[xamSyntaxEditor - Property Reference]
+|This topic provides reference information about the xamSyntaxEditor control’s test object properties.
+
+| link:xamsyntaxeditor-enumeration-reference.html[xamSyntaxEditor - Enumeration Reference]
+|This topic provides reference information about the common enumerations used in testing the _xamSyntaxEditor_ control.
+
+| link:xamsyntaxeditor-limitations.html[xamSyntaxEditor - Limitations]
+|This topic summarizes the _xamSyntaxEditor_ ’s limitations.
+
+|====

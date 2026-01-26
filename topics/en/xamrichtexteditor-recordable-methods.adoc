@@ -1,0 +1,582 @@
+﻿////
+|metadata|
+{
+    "name": "xamrichtexteditor-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "aa46c207-b369-4a77-bb44-73ea9eb2d109",
+    "buildFlags": [],
+    "createdOn": "2013-11-22T19:22:11.0574506Z"
+}
+|metadata|
+////
+
+= xamRichTextEditor - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about recording and replaying actions using the  _xamRichTextEditor™_   control’s testable user methods.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref338271984, _XamRichTextEditor_   Recordable Method>>
+
+** <<_Ref372740459, _SetCaretLocation_  >>
+** <<_Ref372740473, _SelectToLocation_  >>
+** <<_Ref372740490, _SendString_  >>
+** <<_Ref372740502, _DeleteXCharacters_  >>
+** <<_Ref372740518, _BackspaceXCharacters_  >>
+** <<_Ref372740533, _SetActiveView_  >>
+** <<_Ref372740546, _SetSplitter_  >>
+** <<_Ref372740557, _SetZoomLevel_  >>
+** <<_Ref372740569, _ClickHyperlink_  >>
+** <<_Ref372740580, _ApplyCharacterSetting_  >>
+** <<_Ref372740592, _RemoveCharacterSetting_  >>
+** <<_Ref372740603, _ApplyParagraphSetting_  >>
+** <<_Ref372740618, _ExecuteCommand_  >>
+
+* <<_Ref337132389,Related Content>>
+
+[[_Ref338271984]]
+== _XamRichTextEditor_   Recordable Methods
+
+[[_Ref372740459]]
+== _SetCaretLocation_
+
+=== Description
+
+Sets the caret location of the text.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`iLocation`
+|Zero-based integer value representing the character offset from the start of the RichTextEditor.
+
+|====
+
+=== Example
+
+Use the following action for setting the caret location to between the 25th and 26th characters overall.
+
+[source,csharp]
+----
+XamRichTextEditor("Identifier").SetCaretLocation 25
+----
+
+=== Possible exceptions
+
+None
+
+[[_Ref372578584]]
+[[_Ref372740473]]
+== _SelectToLocation_
+
+=== Description
+
+Selects all the text from the current caret position to the provided location.
+
+=== Parameters
+
+The following table explains the method’s parameter.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`iLocation`
+|Zero-based integer value representing the character offset from the start of the RichTextEditor.
+
+|====
+
+=== Example
+
+Use the following action for selecting from the current caret position up to between the 25th and 26th overall characters, the following action should be used.
+
+[source,csharp]
+----
+XamRichTextEditor("Identifier").SelectToLocation 25
+----
+
+=== Possible exceptions
+
+None
+
+[[_Ref372578599]]
+[[_Ref372740490]]
+== _SendString_
+
+=== Description
+
+Sends a string of characters to the current caret position.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`sToType`
+|String value sent to the RichTextEditor’s current caret position. NOTE:{label} It uses custom UFT character representations such as `vbTab` to represent tabs, and `vbCRLF` to represent CarriageReturn LineFeed.
+
+|====
+
+=== Example
+
+To send the string “Hello” to the current caret position.
+
+[source,csharp]
+----
+XamRichTextEditor("Identifier").SendString “Hello”
+----
+
+To send the string “Hi,” followed by a line-feed (`SHIFT + Enter`); with “Bob” on the following line, and a carriage return (`Enter`) to start a new paragraph.
+
+[source,csharp]
+----
+XamRichTextEditor("Identifier").SendString vbTab + “Hi,” + vbLF + “Bob” +vbCR
+----
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this method and the likely reasons causing them.
+
+==== Exception reasons
+
+* The operation cannot be performed because the  _xamRichTextEditor_   does not have a document loaded.
+* Editing is not allowed.
+* The text supplied was not sent because it contained a tab, which the  _xamRichTextEditor_   did not accept.
+
+[[_Ref372578623]]
+[[_Ref372740502]]
+== _DeleteXCharacters_
+
+=== Description
+
+Sends a number of Delete keys to the  _xamRichTextEditor_  's current caret location.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`iNumDeletes`
+|Integer value representing the number of characters deleted, default value is 1.
+
+|====
+
+=== Example
+
+Deletes 5 characters back from the current caret location.
+
+[source,csharp]
+----
+XamRichTextEditor("Identifier").DeleteXCharacters 5
+----
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this method and the likely reasons causing them.
+
+==== Exception reasons
+
+* The operation cannot be performed because the  _xamRichTextEditor_   does not have a document loaded
+* Editing is not allowed
+
+[[_Ref372578678]]
+[[_Ref372740518]]
+== _BackspaceXCharacters_
+
+=== Description
+
+Sends the number of backspace characters to the x _amRichTextEditor_  's current caret location.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`iNumBackSpaces`
+|Integer value representing the number of times sending the key sequence backspace, default value is 1.
+
+|====
+
+=== Example
+
+Starting from the current caret location press the `Backspace` key 5 times.
+
+[source,csharp]
+----
+XamRichTextEditor("Identifier").BackspaceXCharacters 5
+----
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this method and the likely reasons causing them.
+
+==== Exception reasons
+
+* The operation cannot be performed because the  _xamRichTextEditor_   does not have a document loaded.
+* Editing is not allowed.
+
+[[_Ref372578698]]
+[[_Ref372740533]]
+== _SetActiveView_
+
+=== Description
+
+Sets the active view of the  _xamRichTextEditor_  .
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oeViewLocation`
+|A String or enumerated value of type _rtedViewLocation_ representing the new active view location.
+
+|====
+
+=== Example
+
+To change the active view to the upper view location.
+
+[source,csharp]
+----
+XamRichTextEditor("Identifier").SetActiveView rtedUpper
+----
+
+=== Possible exceptions
+
+The possible exception to this method and the likely reasons causing it is that it cannot set the View to that view as the  _xamRichTextEditor_   view is not split.
+
+[[_Ref372578741]]
+[[_Ref372740546]]
+== _SetSplitter_
+
+=== Description
+
+Splits the view, and/or set the location of the splitter.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code examples.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`iSplitterPosition`
+|Integer value representing the pixel distance from top or left edge respectively to set the splitter. Default value is 0, which represents removing the splitter.
+
+|====
+
+=== Example
+
+Moves or creates a new splitter, if one did not exist before, to a position of 100 pixels.
+
+[source,csharp]
+----
+XamRichTextEditor("Identifier").SetSplitter 100
+----
+
+Removes an existing splitter.
+
+[source,csharp]
+----
+XamRichTextEditor("Identifier").SetSplitter
+----
+
+=== Possible exceptions
+
+The possible exception to this method and the likely reason causing it is that the specified value (`iSplitterPosition`) is out of range.
+
+[[_Ref372578765]]
+[[_Ref372740557]]
+== _SetZoomLevel_
+
+=== Description
+
+Sets the zoom level for the editor.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code examples.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`iZoomLevel`
+|Integer value representing the percentage of zoom level. Default value is 100 (100%).
+
+|====
+
+=== Example
+
+Sets the zoom level to 300%.
+
+[source,csharp]
+----
+XamRichTextEditor("Identifier").SetZoomLevel 300
+----
+
+Resets the zoom level to 100%.
+
+[source,csharp]
+----
+XamRichTextEditor("Identifier").SetZoomLevel
+----
+
+=== Possible exceptions
+
+None.
+
+[[_Ref372740569]]
+== _ClickHyperlink_
+
+=== Description
+
+Executes a hyperlink by pressing the `Ctrl` key and clicking on it.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code examples.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oHyperlink`
+|Represents either an integer value of a document offset containing a hyperlink, or a string value of the hyperlink text. 
+
+* Recording – When there is more than one instance of a hyperlink text, it will record an integer instead 
+
+* Replaying – When there is more than one instance, it will select the first instance 
+
+|====
+
+=== Example
+
+Performing `Ctrl+Click` on a hyperlink containing a document offset of 20.
+
+[source,csharp]
+----
+XamRichTextEditor("Identifier").ClickHyperlink 20
+----
+
+Performing `Ctrl+Click` on a hyperlink text “ *Click here* ”.
+
+[source,csharp]
+----
+XamRichTextEditor("Identifier").ClickHyperlink “Click here”
+----
+
+=== Possible exceptions
+
+The following is the list of possible exceptions to the method and the likely reason causing them.
+
+==== Exception reasons
+
+* There was no hyperlink found at the document offset [oHyperlink]
+* There was no hyperlink found with the text [oHyperlink]
+* The supplied Hyperlink argument [oHyperlink] is not one of the expected type(s) listed here: String or Int1
+
+[[_Ref372578810]]
+[[_Ref372740580]]
+== _ApplyCharacterSetting_
+
+=== Description
+
+Sets the text formatting based on the current caret position.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oeCharacterSetting`
+|String command name or enumerated value representing the text formatting setting.
+
+|====
+
+=== Example
+
+Changes the currently selected text to Bold.
+
+[source,csharp]
+----
+XamRichTextEditor("Identifier").ApplyCharacterSetting rtedBold
+----
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this method and the likely reasons causing them.
+
+==== Exception reasons
+
+* The option supplied is not the [rtedCharacterSettings], the only valid option
+* The operation cannot be performed because the  _xamRichTextEditor_   does not have a document loaded.
+* Editing is not allowed.
+
+[[_Ref372578827]]
+[[_Ref372740592]]
+== _RemoveCharacterSetting_
+
+=== Description
+
+Removes the text formatting based on caret position.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by a code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oeCharacterSetting`
+|String command name or enumerated value representing the text formatting setting.
+
+|====
+
+=== Example
+
+Removes Bold text setting from the currently selected text to Bold.
+
+[source,csharp]
+----
+XamRichTextEditor("Identifier").RemoveCharacterSetting rtedBold
+----
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this method and the likely reasons causing them.
+
+==== Exception reasons
+
+* The option supplied is not the valid [rtedCharacterSettings] option
+* The operation cannot be performed because the x _amRichTextEditor_   does not have a document loaded
+* Editing is not allowed
+
+[[_Ref372578843]]
+[[_Ref372740603]]
+== _ApplyParagraphSetting_
+
+=== Description
+
+Sets the text alignment based on caret position.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oeParagraphSetting`
+|String command name or enumerated value representing the text alignment.
+
+|====
+
+=== Example
+
+Aligns the paragraph to the left.
+
+[source,csharp]
+----
+XamRichTextEditor("Identifier").ApplyParagraphSetting rtedAlignLeft
+----
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to this method and the likely reasons causing them.
+
+==== Exception reasons
+
+* The option supplied is not a valid [rtedParagraphSettings]option
+* The operation cannot be performed because the  _xamRichTextEditor_   does not have a document loaded
+* Editing is not allowed
+
+[[_Ref372578863]]
+[[_Ref372740618]]
+== _ExecuteCommand_
+
+=== Description
+
+Executes the supplied command.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oeCommandId`
+|String command name or enumerated value representing the command name.
+
+|====
+
+=== Example
+
+To copy the selected text to the clipboard.
+
+[source,csharp]
+----
+XamRichTextEditor("Identifier").ExecuteCommand rtedCopy
+----
+
+=== Possible exceptions
+
+The possible exceptions to this method are that the option supplied is not one of the valid options, valid options are [{0}]
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamrichtexteditor-user-actions.html[xamRichTextEditor - User Actions]
+|This topic provides information about the _xamRichTextEditor_ control’s testable user actions and elements.
+
+| link:xamrichtexteditor-replay-only-methods.html[xamRichTextEditor - Replay-Only Methods]
+|This topic provides information about the _XamRichTextEditor_ control’s testable user replay-only methods.
+
+| link:xamrichtexteditor-property-reference.html[xamRichTextEditor - Property Reference]
+|This topic provides reference information about the _xamRichTextEditor_ control’s test object properties.
+
+| link:xamrichtexteditor-enumeration-reference.html[xamRichTextEditor - Enumeration Reference]
+|This topic provides reference material on the common enumerations used for testing the _xamRichTextEditor_ control.
+
+|====

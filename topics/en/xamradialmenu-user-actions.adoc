@@ -1,0 +1,77 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamradialmenu-user-actions",
+    "controlName": [],
+    "tags": [],
+    "guid": "38883a5a-1ebe-4eb5-b0df-b6c31cb82509",  
+    "buildFlags": [],
+    "createdOn": "2014-04-30T19:15:08.968703Z"
+}
+|metadata|
+////
+
+= xamRadialMenu - User Actions
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the  _XamRadialMenu_™ control’s user actions represented by link:{ApiPlatform}test.controls.menus.xamradialmenu~infragisticswpf.test.controls.menus.xamradialmenuproxy.html[XamRadialMenuProxy] object.
+
+== _XamRadialMenu_   User Actions
+
+=== Testable user actions chart
+
+The following table lists the  _XamRadialMenu_   control’s user actions and maps them to recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|User action|Method
+
+|Clicking on the center button when the RadialMenu is closed expands the RadialMenu.
+| _link:{ApiPlatform}test.controls.menus.xamradialmenu~infragisticswpf.test.controls.menus.xamradialmenuproxy~expandradialmenu.html[ExpandRadialMenu]_ 
+
+|Clicking on the center button when the RadialMenu is open (At the top level of RadialMenu) collapses the RadialMenu.
+| _link:{ApiPlatform}test.controls.menus.xamradialmenu~infragisticswpf.test.controls.menus.xamradialmenuproxy~collapseradialmenu.html[CollapseRadialMenu]_ 
+
+|Clicking on: 
+
+* The center button when the RadialMenu is open (Not at the top level of RadialMenu) displaying child tools menu 
+
+* One of the inner ring’s color well preview items collapses the RadialMenu. 
+
+| _link:{ApiPlatform}test.controls.menus.xamradialmenu~infragisticswpf.test.controls.menus.xamradialmenuproxy~navigateback.html[NavigateBack]_ 
+
+|Clicking on the identified RadialMenu item.
+| _link:{ApiPlatform}test.controls.menus.xamradialmenu~infragisticswpf.test.controls.menus.xamradialmenuproxy~itemclick.html[ItemClick]_ 
+
+|Clicking on the outer ring of a RadialMenu item containing a child items drills down into the menu for an identified item.
+| _link:{ApiPlatform}test.controls.menus.xamradialmenu~infragisticswpf.test.controls.menus.xamradialmenuproxy~itemdrilldown.html[ItemDrillDown]_ 
+
+|Drilling into the menu for the NumericGauge and clicking on a point inside the NumericGauge item.
+| _link:{ApiPlatform}test.controls.menus.xamradialmenu~infragisticswpf.test.controls.menus.xamradialmenuproxy~itemsetnumericvalue.html[ItemSetNumericValue]_ 
+
+|====
+
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamradialmenu-recordable-methods.html[xamRadialMenu - Recordable Methods]
+|This topic provides information about the recordable methods for testing the _XamRadialMenu_ control.
+
+| link:xamradialmenu-property-reference.html[xamRadialMenu - Property Reference]
+|This topic provides reference information about the _XamRadialMenu_ control’s test object properties.
+
+| link:xamradialmenu-enumeration-reference.html[xamRadialMenu - Enumeration Reference]
+|This topic provides reference material on the common enumerations used for testing the _XamRadialMenu_ control.
+
+|====

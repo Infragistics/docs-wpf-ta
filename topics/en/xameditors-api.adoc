@@ -1,0 +1,60 @@
+﻿////
+|metadata|
+{
+    "name": "xameditors-api",
+    "controlName": [],
+    "tags": [],
+    "guid": "ae8f2b91-310c-49df-8492-8ffcd4d891b9",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T15:47:42.207899Z"
+}
+|metadata|
+////
+
+= xamEditors - API Reference
+
+== _xamEditors_   Test Object API Reference
+
+=== Introduction
+
+This topic provides reference information about the proxy class that supports the testing of the xamEditors™ controls in Micro Focus Unified Functional Testing software.
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|*Proxy Class Name*|*Namespace*|*Inherits From*|*Additional Notes*
+
+|_link:{ApiPlatform}test.editors~infragisticswpf.test.editors.valueeditorbaseproxy.html[ValueEditorBaseProxy]_
+| 
+
+_InfragisticsWPF.Test.Editors_
+|_RecordReplayProxyBasep_
+|The following base click actions are not recorded by default: 
+
+* _ClickControl_ 
+
+* _RightClickControl_ 
+
+* _DblClickControl_ 
+
+|_link:{ApiPlatform}test.editors~infragisticswpf.test.editors.texteditorbaseproxy.html[TextEditorBaseProxy]_
+| 
+
+_InfragisticsWPF.Test.Editors_
+|
+_ValueEditorBaseProxy_ 
+
+_RecordReplayProxyBase_ 
+
+|The following base click actions are not recorded by default: 
+
+_ClickControl_ 
+
+_RightClickControl_ 
+
+_DblClickControl_ 
+
+|====

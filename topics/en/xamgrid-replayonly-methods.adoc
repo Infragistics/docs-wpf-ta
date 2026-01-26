@@ -1,0 +1,479 @@
+﻿////
+|metadata|
+{
+    "name": "xamgrid-replayonly-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "97635c8b-fcc2-4ed1-a4f2-ece55f3a99e3",
+    "buildFlags": [],
+    "createdOn": "2012-04-18T07:50:03.2359173Z"
+}
+|metadata|
+////
+
+= xamGrid - Replay-Only Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the replay-only user methods for testing the  _xamGrid_™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref322540345,xamGrid Test Object Replay-Only Methods>>
+
+** <<_CellEnterEditMode, _CellEnterEditMode_  >>
+** <<_GetCellData, _GetCellData_  >>
+** <<_GetSummaryText, _GetSummaryText_  >>
+** <<_GetSummaryType, _GetSummaryType_  >>
+** <<_GetSummaryValue, _GetSummaryValue_  >>
+
+* <<_Ref322527163,Related Content>>
+
+[[_Ref322540345]]
+== xamGrid Test Object Replay-Only Methods
+
+=== Replay-only methods summary chart
+
+The following table briefly explains the replay-only methods for testing the control. Detailed information about the methods is provided below the table.
+
+[options="header", cols="a,a"]
+|====
+|Method|Description
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~cellentereditmode.html[CellEnterEditMode]_
+|Sets the specified cell in edit mode.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~getcelldata.html[GetCellData]_
+|Returns the value of the specified cell.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~getsummarytext.html[GetSummaryText]_
+|Returns the content of all summaries for the specified column.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~getsummarytype.html[GetSummaryType]_
+|Returns the summary type for the specified column.
+
+|_link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids.xamgridproxybase~getsummaryvalue.html[GetSummaryValue]_
+|Returns the summary value for the specified column.
+
+|====
+
+[[_CellEnterEditMode]]
+== _CellEnterEditMode_
+
+=== Description
+
+The `CellEnterEditMode` method sets the specified cell in edit mode.
+
+=== Details
+
+When replaying the method:
+
+[start=1]
+. The specified cell path is validated
+[start=2]
+. The cell is activated
+[start=3]
+. A check is performed to verify that the editing is enabled
+[start=4]
+. The cell is set in edit mode
+
+The method accepts as a parameter the cell path.
+
+The path is formed by concatenating the row path and the column key (the parenthesis and the brackets are part of the syntax): *{row path}[column key]* 
+
+For example, the cross-section of the first row and the column key is denoted as {0}[key], the cross-section of the first child row of the first row and the column key is denoted as {0}{0}[key].
+
+=== Parameters
+
+The following table maps the desired configuration to parameters settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the cell that is set in edit mode
+|sCellArg
+|The cell path
+
+|====
+
+=== Example
+
+Setting a cell located in the first row and  _Company_   column in edit mode.
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").CellEnterEditMode "{0}[Company]"
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter is not formatted correctly.
+|The method’s parameter is not correctly formatted.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|Unable to enter edit mode.
+|The cell cannot be set in edit mode when replaying the method.
+|The editing is disabled.
+
+|====
+
+[[_GetCellData]]
+== _GetCellData_
+
+=== Description
+
+The `GetCellData` method returns the value of the specified cell.
+
+=== Details
+
+When replaying the method:
+
+[start=1]
+. The specified cell path is validated
+[start=2]
+. The cell value is returned
+
+The method accepts as a parameter the cell path.
+
+The path is formed by concatenating the row path and the column key (the parenthesis and the brackets are part of the syntax): *{row path}[column key]* 
+
+For example, the cross-section of the first row and the column key is denoted as {0}[key], the cross-section of the first child row of the first row and the column key is denoted as {0}{0}[key].
+
+=== Parameters
+
+The following table maps the desired configuration to parameters settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the cell which value is retrieved
+|sCellArg
+|The cell path
+
+|====
+
+=== Example
+
+Displaying the content of a cell in the first row and  _Company_   column in the xamGrid.
+
+[source,xaml]
+----
+MsgBox(WpfWindow("WPFApplication1").XamGrid("xamGrid1").GetCellData("{0}[Company]") )
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter is not formatted correctly.
+|The method’s parameter is not correctly formatted.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|====
+
+[[_GetSummaryText]]
+== _GetSummaryText_
+
+=== Description
+
+The `GetSummaryText` method returns all summaries texts for a specified xamGrid column.
+
+=== Details
+
+When replaying the method:
+
+[start=1]
+. The specified column header is validated
+[start=2]
+. A check is performed to verify that the summaries are enabled for the specified column
+[start=3]
+. All summaries texts for the column are concatenated
+[start=4]
+. The result of the concatenation is returned
+
+The method accepts as a parameter a column header.
+
+=== Parameters
+
+The following table maps the desired configuration to parameters settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the column which summaries texts are retrieved
+|sHeaderArg
+|The column header
+
+|====
+
+=== Example
+
+Displaying the summaries text for the  _ContactName_   column.
+
+[source,xaml]
+----
+MsgBox( WpfWindow("WPFApplication1").XamGrid("xamGrid1").GetSummaryText ("[ContactName]"))
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter is not format correctly.
+|The method’s parameter is not correctly formatted.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|No summaries were found for the supplied column.
+|No summaries operations were performed for the specified column and replaying the method fails.
+|No summaries operations were performed for the specified column.
+
+|Summaries are not allowed for the supplied column.
+|The summaries are not enabled for the specified column and replaying the method fails.
+|The summaries are not enabled for the specified column.
+
+|====
+
+[[_GetSummaryType]]
+== _GetSummaryType_
+
+=== Description
+
+The `GetSummaryType` method returns the summary type for a column in the xamGrid.
+
+=== Details
+
+When replaying the method:
+
+[start=1]
+. The specified column header is validated
+[start=2]
+. A check is performed to verify that the summaries are enabled for the specified column
+[start=3]
+. All summaries for the column are found
+[start=4]
+. The type of the summary with the specified index is returned
+
+The method accepts as parameters the column header and the index of a summary when multiple summaries are performed on a column.
+
+=== Parameters
+
+The following table maps the desired configuration to parameters settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the column which summary type is retrieved
+|sHeaderArg
+|The column header
+
+|Specify the index of summary type if several summaries are performed for the supplied column
+|iIndex
+|
+* The index of the summary type 
+
+or 
+
+* Empty (default value denoting the 0 index) 
+
+|====
+
+=== Example
+
+Performing summaries for count and maximum value on the  _ContactName_   column. After that – displaying the second summary type which is  _Max_  .
+
+[source,xaml]
+----
+WpfWindow("WPFApplication1").XamGrid("xamGrid1").OpenSummaryMenu "[ContactName]"  
+WpfWindow("WPFApplication1").WpfCheckBox("Count").Set "On"
+WpfWindow("WPFApplication1").WpfCheckBox("Maximum").Set "On"
+WpfWindow("WPFApplication1").WpfButton("OK").Click
+MsgBox( WpfWindow("WPFApplication1").XamGrid("xamGrid1").GetSummaryType ("[ContactName]", 1))
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter is not formatted correctly.
+|The method’s parameter is not correctly formatted.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|No summaries were found for the supplied column.
+|No summaries operations were performed for the specified column and replaying the method fails.
+|No summaries operations were performed for the specified column.
+
+|Summaries are not allowed for the supplied column.
+|The summaries are not enabled for the specified column and replaying the method fails.
+|The summaries are not enabled for the specified column.
+
+|====
+
+[[_GetSummaryValue]]
+== _GetSummaryValue_
+
+=== Description
+
+The `GetSummaryValue` method returns the summary value for a column in the xamGrid.
+
+When replaying the method:
+
+[start=1]
+. The specified column header is validated
+[start=2]
+. All summaries for the column are found
+[start=3]
+. The value of the summary with the specified index or string representation of the summary type is returned
+
+The method accepts as parameters the column header and an index or string representation of a summary type if multiple summaries are performed on a column.
+
+=== Parameters
+
+The following table maps the desired configuration to parameters settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this parameter:|And set it to:
+
+|Specify the column from which the summary value is retrieved
+|sHeaderArg
+|The column header
+
+|Specify which summary result to retrieve
+|oSummary
+|
+* Index of a summary 
+
+or 
+
+* String representation of a summary type 
+
+|====
+
+=== Example
+
+* Displaying the summary result of the first summary performed on the ContactName column using index.
+
+[source,xaml]
+----
+MsgBox( WpfWindow("WPFApplication1").XamGrid("xamGrid1").GetSummaryValue("[ContactName]", 0))
+----
+
+* Displaying the summary result of the first summary performed on the ContactName column using string representation of summary type.
+
+[source,xaml]
+----
+MsgBox( WpfWindow("WPFApplication1").XamGrid("xamGrid1").GetSummaryValue("[ContactName]", "Count"))
+----
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The argument is malformed.
+|The parameter is not formatted correctly.
+|The method’s parameter is not correctly formatted.
+
+|The following item was not found.
+|The specified item cannot be located when replaying the method.
+|The method’s parameter is not correct.
+
+|No summaries were found for the supplied column.
+|No summaries operations were performed for the specified column and replaying the method fails.
+|No summaries operations were performed for the specified column.
+
+|Summaries are not allowed for the supplied column.
+|The summaries are not enabled for the specified column and replaying the method fails.
+|The summaries are not enabled for the specified column.
+
+|====
+
+[[_Ref322527163]]
+== Related Content
+
+=== Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamgrid-testable-user-actions-and-elements.html[xamGrid - Testable User Actions and Elements]
+|This topic provides information about the user actions of the xamGrid control which you can test and the elements you can inspect.
+
+| link:xamgrid-recordable-methods.html[xamGrid - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamGrid control.
+
+| link:xamgrid-property-reference.html[xamGrid - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamGrid control.
+
+| link:xamgrid-api.html[xamGrid - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamGrid control.
+
+|====

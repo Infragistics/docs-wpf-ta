@@ -1,0 +1,38 @@
+﻿////
+
+|metadata|
+{
+    "name": "gauge-controls",
+    "controlName": [],
+    "tags": [],
+    "guid": "03a12be4-0dec-4752-b4f7-77c2c7cfaa96",  
+    "buildFlags": [],
+    "createdOn": "2013-11-20T21:17:47.4548829Z"
+}
+|metadata|
+////
+
+= Gauge Controls
+
+=== Introduction
+
+Use the following links for detail information on each WPF gauge control supported in {ProductName}.
+
+=== Topics
+
+This section contains topics covering implementation of action elements, methods and properties described in each topic respectively.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xambulletgraph-property-reference.html[xamBulletGraph - Property Reference]
+|This topic provides reference information about the _xamBulletGraph_ control’s test object properties.
+
+| link:xamlineargauge-property-reference.html[xamLinearGauge - Property Reference]
+|This topic provides reference information about the _xamLinearGauge_ control’s test object properties.
+
+| link:xamradialgauge-property-reference.html[xamRadialGauge - Property Reference]
+|This topic provides reference information about the _xamRadialGauge_ control’s test object properties.
+
+|====

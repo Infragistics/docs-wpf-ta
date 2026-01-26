@@ -1,0 +1,50 @@
+﻿////
+
+|metadata|
+{
+    "name": "working-with-test-automation-wpf",
+    "controlName": [],
+    "tags": [],
+    "guid": "65aebb60-3497-40fb-964d-6aaf5084e6df",  
+    "buildFlags": [],
+    "createdOn": "2012-06-26T17:15:25.8032537Z"
+}
+|metadata|
+////
+
+= Working with {ProductName}
+
+=== Introduction
+
+The topics in this group explain how to use various Test Automation features.
+
+=== Topics
+
+This section contains topics covering accessing  _Ultimate UI for WPF_   controls’ properties, performing mouse manipulations on controls, and performing panning and zooming on DataVisualization controls.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:accessing-controls-properties.html[Accessing Controls' Properties]
+|This topic outlines the methods for providing access to the properties and sub-properties of controls under test, which are helpful for gathering and verifying information, rather than emulating UI interactions.
+
+| link:emulating-the-mouse.html[Emulating the Mouse]
+|This topic details the mouse manipulation methods emulated in UFT on _Infragistics_ controls and their logical sub-parts (subitems).
+
+| link:inserting-standard-checkpoint.html[Inserting Table Checkpoint]
+|This topic demonstrates using QTP/UFT in WPF to insert a table checkpoint.
+
+| link:panning-and-zooming.html[Panning and Zooming]
+|This topic details the emulation of end-user pan and zoom actions on _Infragistics Data Visualization_ controls.
+
+| link:setting-focus.html[Setting the Focus of the Application]
+|This topic provides reference information about the methods for setting the application’s focus directly on a control (without emulating any mouse or key actions).
+
+| link:subitems-recording.html[Subitems Recording]
+|This topic provides reference information about the methods that get recorded for various sub items of the supported Infragistics controls.
+
+| link:custom-properties.html[Custom Properties]
+|The topics in this group provide information about the custom properties of all supported controls along with those that are control-specific.
+
+|====

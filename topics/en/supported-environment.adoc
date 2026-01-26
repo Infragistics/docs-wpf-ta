@@ -1,0 +1,142 @@
+﻿////
+|metadata|
+{
+    "name": "supported-environment",
+    "controlName": [],
+    "tags": [],
+    "guid": "a9bbb03a-731c-4a76-8976-3f0a06898e79",
+    "buildFlags": [],
+    "createdOn": "2012-01-18T07:31:01.0913918Z"
+}
+|metadata|
+////
+
+= Supported Environments and Product Versions
+
+== Topic Overview
+
+=== Purpose
+
+This topic describes the supported environment and QTP/UFT product versions supported by {ProductName}.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_QTP_Supported_Versions,Supported Versions>>
+* <<_Support_for_CLR4,Support for CLR4 and 64-Bit Applications>>
+* <<_Supported_Windows_Versions,Supported Windows Versions>>
+* <<_Related_Topics,Related Topics>>
+
+[[_QTP_Supported_Versions]]
+== Supported Versions
+
+=== Supported versions summary
+
+Ultimate UI for {ProductName} supports the following versions of the QuickTest Professional and Unified Functional Testing product.
+
+[options="header", cols="a,a"]
+|====
+|Product|Requirements
+
+|Unified Functional Testing 12.00 and higher
+|No install patch is required.
+
+|Unified Functional Testing 11.51
+|Install .Net Add-in and UFT 11.50 patch: 
+
+* UFT_00001 
+
+|QuickTest Professional 11
+|Install QTP .Net Add-in and QTP public patches: 
+
+* QTPNET_00113 
+
+* QTPNET_00114 
+
+|====
+
+[[_Support_for_CLR4]]
+== Support for CLR4 and 64-Bit Applications
+
+=== Support for CLR4 and 64-bit applications reference summary
+
+The following table shows how CLR4 and 64-bit applications are supported by QuickTest Professional and {ProductName}.
+
+[options="header", cols="a,a"]
+|====
+|*Support for*|*{ProductName} Unified Functional Testing*
+
+|*CLR4*
+|image::images/Yes.png[]
+
+|*64-bit applications*
+|image::images/Yes.png[] 
+
+*$$*$$ Minimum Requirements:*
+
+* *OS* : Windows 7
+
+* *QTP* : Version 11 with public patch QTP_00699 installed
+
+|====
+
+[[_Supported_Windows_Versions]]
+== Supported Windows Versions
+
+=== Supported Windows versions summary
+
+The following table lists the versions of Windows supported by QuickTest Professional and {ProductName}.
+
+[options="header", cols="a,a"]
+|====
+|*Support for*|*{ProductName} QuickTest Professional*
+
+|*Windows 10*
+|image::images/Yes.png[]
+
+|*Windows 8.1*
+|image::images/Yes.png[]
+
+|*Windows 8*
+|image::images/Yes.png[]
+
+|*Windows 7 32-Bit*
+|image::images/Yes.png[]
+
+|*Windows 7 64-Bit*
+|image::images/Yes.png[] 
+
+*$$*$$ Minimum Requirements:*
+
+* *QTP* : Version 11 with public patch QTP_00699 installed
+
+|*Windows Server 2008 32-Bit (SP2)*
+|image::images/Yes.png[]
+
+|*Windows Vista 32-Bit (SP2)*
+|image::images/Yes.png[]
+
+|*Windows XP (32bit)*
+|image::images/Yes.png[]
+
+|====
+
+[[_Related_Topics]]
+== Related Content
+
+=== Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:installing-configuring-removing-ta-wpf.html[Installing, Configuring and Removing {ProductName}]
+|This section contains information about installing, configuring the product, switching between different CLR versions and different product versions and removing the product
+
+| link:getting-help-for-test-automation-wpf.html[Getting Help for {ProductName}]
+|This topic explains the available options for getting help with your Infragistics product and how to prepare for contacting technical support.
+
+|====

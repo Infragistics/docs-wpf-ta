@@ -1,0 +1,58 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamdiagramtoolbox-enumerations-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "b74af46c-4d7d-4a65-8a9a-ad52325b4652",  
+    "buildFlags": [],
+    "createdOn": "2014-11-18T12:44:07.3415101Z"
+}
+|metadata|
+////
+
+= xamDiagramToolbox - Enumerations Reference
+
+== _XamDiagramToolbox_   Enumerations Reference
+
+=== Introduction
+
+This topic provides reference material on the common enumerations used for testing the  _XamDiagramToolbox_™ control.
+
+=== DiagramTboxSubItem
+
+This enumeration represents the sub item type.
+
+The following table summarizes the  _XamDiagramToolbox_   test object enumerations used in recordable methods.
+
+[options="header", cols="a,a"]
+|====
+|Enumeration|Description
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.diagramtboxsubitem.html[dtbCategory]
+|Value 1 – Represents a toolbox grouping category
+
+| link:infragisticswpf.test.xamdiagram~infragisticswpf.test.charts.diagramtboxsubitem.html[dtbItem]
+|Value 2 – Represents a toolbox item
+
+|====
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamdiagramtoolbox-recordable-actions.html[xamDiagramToolbox - Recordable Actions]
+|This topic provides information about recordable actions for testing the _XamDiagramToolbox_™ control.
+
+| link:xamdiagramtoolbox-properties-reference.html[xamDiagramToolbox - Properties Reference]
+|This topic provides reference information about the _XamDiagramToolbox_™ control’s test object properties.
+
+|====

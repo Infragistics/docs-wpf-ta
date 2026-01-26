@@ -1,0 +1,15 @@
+﻿////
+
+|metadata|
+{
+    "name": "tawpf-xamtabcontrolproxy-api-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "0aad65d1-85b0-4184-8663-4149b1c9448f",  
+    "buildFlags": [],
+    "createdOn": "2012-01-22T15:13:54.9998331Z"
+}
+|metadata|
+////
+
+= TAWPF XamTabControlProxy API Reference

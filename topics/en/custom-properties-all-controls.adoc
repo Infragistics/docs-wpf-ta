@@ -1,0 +1,75 @@
+﻿////
+
+|metadata|
+{
+    "name": "custom-properties-all-controls",
+    "controlName": [],
+    "tags": [],
+    "guid": "99f6f453-5c7c-4562-9e5a-50fa267479bc",  
+    "buildFlags": [],
+    "createdOn": "2014-04-30T19:25:25.0943094Z"
+}
+|metadata|
+////
+
+= Custom Properties - All Controls
+
+== _Proxybase_   Custom Properties Reference for All Controls
+
+=== Introduction
+
+This topic provides reference information about the  _Proxybase_   custom properties for all controls supported in the Ultimate UI for {ProductName}. Use the control property access methods to extend the custom properties from the object types referenced below (See link:accessing-controls-properties.html[Accessing Controls' Properties] for more details).
+
+=== Custom properties reference chart
+
+The following table summarizes the custom properties for all controls.
+
+[options="header", cols="a,a,a"]
+|====
+|Custom property|Applied Object Type|Returns...
+
+| _Type_ 
+|`System.Object`
+|The object’s type.
+
+| _ToString_ 
+|`System.Object`
+|The value of the _ToString_ method of the object.
+
+| _X_ 
+|`System.Windows.FrameworkElement`
+|The double value of the X location coordinate relative to the parent control.
+
+| _Y_ 
+|`System.Windows.FrameworkElement`
+|The double value of the Y location coordinate relative to the parent control.
+
+| _Height_ 
+|`System.Windows.FrameworkElement`
+|The double value of the height of the framework element.
+
+| _Width_ 
+|`System.Windows.FrameworkElement`
+|The double value of the width of the framework element.
+
+| _Rect_ 
+|`System.Windows.FrameworkElement`
+|The _Rect_ property’s value which represents the bounding rectangle of the framework element.
+
+| _Children_ 
+|`System.Windows.FrameworkElement`
+|An array of _DependencyObjects_ of the children of the framework element.
+
+| _ChildCount_ 
+|`System.Windows.FrameworkElement`
+|An integer count of _DependencyObject_ representing the children of the framework element.
+
+| _AncestralPath_ 
+|`System.Windows.FrameworkElement`
+|An array of _DependencyObjects_ starting with the immediate parent, then the parent's parent, until it reaches the top ancestry with the value of null.
+
+| _AncestralPathCount_ 
+|`System.Windows.FrameworkElement`
+|An integer count of the _DependencyObject_ ’s ancestral path.
+
+|====

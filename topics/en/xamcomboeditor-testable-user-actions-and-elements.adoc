@@ -1,0 +1,120 @@
+﻿////
+|metadata|
+{
+    "name": "xamcomboeditor-testable-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "32435be5-c834-412e-b5e7-fa7934b19e8b",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T16:52:02.7579342Z"
+}
+|metadata|
+////
+
+= xamComboEditor - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the user actions of the xamComboEditor™ control which you can test and the elements you can inspect.
+
+== xamComboEditor Testable User Actions
+
+=== Testable user actions chart
+
+The table below lists the testable user actions of the control and maps them to recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|*User action*|*Method*
+
+|Selecting an item from the combo editor's drop-down
+|link:{ApiPlatform}test.editors~infragisticswpf.test.editors.xamcomboeditorproxy~selectitem.html[SelectItem]
+
+|====
+
+== xamComboEditor Testable Elements
+
+=== Testable elements summary chart
+
+The following table lists the elements in the control that you can test, the information you can retrieve about them, and the properties and methods that manage the retrieve operations.
+
+Legend:
+
+image:images/spy.png[]
+– Identification property (Visible in object spy)
+
+image:images/checkpoint.png[]
+– Checkpoint property (Visible with checkpoints)
+
+image:images/script.png[]
+– Accessible in script
+
+[options="header", cols="a,a,a,a,a"]
+|====
+|*Tested element*|*Test deliverable*|*Member type*|*Test object member*|*Accessibility*
+
+|Selected text
+|The currently selected text
+|property
+|_selectedtext_
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|The length of the currently selected text in number of characters
+|property
+|_selectionlength_
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|The starting location of the current text selection
+|property
+|_selectionstart_
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|The length of the current text in the editor
+|property
+|_textlength_
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|Selected item
+|The item that is currently selected from the Items source
+|property
+|_selecteditem_
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|Selected index
+|The index of the item that is currently selected from Items source
+|property
+|_selectedindex_
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+|====
+
+== Related Topics
+
+=== Related topics summary chart
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamcomboeditor-recordable-methods.html[xamComboEditor - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamComboEditor™ control.
+
+| link:xamcomboeditor-property-reference.html[xamComboEditor - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamComboEditor™ control.
+
+| link:xamcomboeditor-api.html[xamComboEditor - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamComboEditor™ control in Micro Focus Unified Functional Testing software.
+
+|====

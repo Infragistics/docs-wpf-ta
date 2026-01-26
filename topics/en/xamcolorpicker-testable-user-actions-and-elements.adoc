@@ -1,0 +1,101 @@
+﻿////
+|metadata|
+{
+    "name": "xamcolorpicker-testable-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "84c950fe-e13f-4590-b65f-76ce1b17b47d",
+    "buildFlags": [],
+    "createdOn": "2012-01-26T11:49:59.6677681Z"
+}
+|metadata|
+////
+
+= xamColorPicker - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the user actions of the xamColorPicker™ control which you can test and the elements you can inspect.
+
+== xamColorPicker Testable User Actions
+
+=== Testable user actions chart
+
+The table below lists the testable user actions of the control and maps them to recordable and replay-only methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|*User action*|*Method*
+
+|Setting a color to the xamColorPicker
+|_ link:xamcolorpicker-recordable-methods.html#_SetColor[SetColor]_
+
+|Opening the xamColorPicker drop-down menu
+| link:xamcolorpicker-replay-only-methods.html#_OpenPicker_Method[ _OpenPicker_ ]
+
+|Closing the xamColorPicker drop-down menu
+| link:xamcolorpicker-replay-only-methods.html#_ClosePicker_Method[ _ClosePicker_ ]
+
+|====
+
+== xamColorPicker Testable Elements
+
+=== Testable elements summary chart
+
+The following table lists the elements in the control that you can test, the information you can retrieve about them, and the properties and methods that manage the retrieve operations.
+
+Legend:
+
+image::images/spy.png[]
+
+ – Identification property (Visible in object spy)
+
+image::images/checkpoint.png[]
+
+ – Checkpoint property (Visible with checkpoints)
+
+image::images/script.png[]
+
+ – Accessible in script
+
+[options="header", cols="a,a,a,a,a"]
+|====
+|*Test element*|*Test deliverable*|*Member type*|*Test object member*|*Accessibility*
+
+|xamColorPicker selected color
+|The current selected color
+|property
+| link:xamcolorpicker-property-reference.html#_SelectedColor[ _selectedcolor_ ]
+|image::images/checkpoint.png[] 
+
+image::images/spy.png[] 
+
+image::images/script.png[]
+
+|====
+
+== Related Topics
+
+=== Related topics summary chart
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamcolorpicker-recordable-methods.html[xamColorPicker - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamColorPicker™ control.
+
+| link:xamcolorpicker-replay-only-methods.html[xamColorPicker - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the xamColorPicker™ control.
+
+| link:xamcolorpicker-property-reference.html[xamColorPicker - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamColorPicker™ control.
+
+| link:xamcolorpicker-api.html[xamColorPicker - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamColorPicker™ control in Micro Focus Unified Functional Testing software.
+
+|====

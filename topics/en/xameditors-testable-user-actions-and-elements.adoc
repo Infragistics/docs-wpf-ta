@@ -1,0 +1,201 @@
+﻿////
+|metadata|
+{
+    "name": "xameditors-testable-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "e9a2101a-6b17-4b82-ad4b-a111174c56a4",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T15:43:16.841365Z"
+}
+|metadata|
+////
+
+= xamEditors - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the user actions of the xamEditors controls which you can test and the elements you can inspect. For information about the editor-specific user actions and inspectable elements for a particular editor, see its respective topic. 
+
+== Related Topics
+
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref314755562,Supported editor controls>>
+* <<_Ref315947158,xamEditors Common Testable User Actions>>
+* <<_Ref315947379,xamEditors Common Testable Elements>>
+* <<_Ref315953103,Related Topics>>
+
+[[_Ref314755562]]
+
+=== Supported editor controls
+
+The methods covered in this topic apply to the following controls:
+
+* xamCheckEditor™
+* xamComboEditor™
+* xamCurrencyEditor™
+* xamDateTimeEditor™
+* xamMaskedEditor™
+* xamNumericEditor™
+* xamTextEditor™
+
+[[_Ref315947158]]
+== xamEditors Common Testable User Actions
+
+[[_Ref315947258]]
+
+=== Testable user actions chart
+
+The table below lists the testable user actions of the control and maps them to recordable and replay-only methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|*User action*|*Method*
+
+|Clearing the editor text
+|_Clear_
+
+|Closing of the editor drop-down list
+|_CloseUp_
+
+|Opening of the editor drop-down list
+|_DropDown_
+
+|Selecting all of the editor text
+|_SelectAll_
+
+|Setting an editor value
+|_Set_
+
+|Cursor positioning
+|_SetCaretPos_
+
+|Selecting all of the text in the editor
+|_SetSelection_
+
+|Adding text in the editor
+|_SetText_
+
+|====
+
+[[_Ref315947379]]
+== xamEditors Common Testable Elements
+
+=== Testable elements summary chart
+
+The following table lists the elements in the control that you can test, the information you can retrieve about them, and the properties and methods that manage the retrieve operations.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a,a,a"]
+|====
+|*Tested element*|*Test deliverable*|*Member* *type*|*Test* *object* *member*|*Accessibility*
+
+|Editor
+|whether editing is allowed.
+|property
+|_iseditingallowed_
+|image:images/spy.png[]
+
+|
+|whether the editor is in edit mode.
+|property
+|_isineditmode_
+|image:images/spy.png[]
+
+|
+|whether the editor accepts null values.
+|property
+|_isnullable_
+|image:images/spy.png[]
+
+|
+|whether the editor is read-only.
+|property
+|_isreadonly_
+|image:images/spy.png[]
+
+|Editor text
+|the editor display text.
+|property
+|_displaytext_
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|displayed text that in case the value is null.
+|property
+|_nulltext_
+|image:images/spy.png[]
+
+|Editor value
+|whether the editor value is changed.
+|property
+|_hasvaluechanged_
+|image:images/spy.png[]
+
+|
+|whether the current value is valid.
+|property
+|_isvaluevalid_
+|image:images/spy.png[]
+
+|
+|the value of the editor as text.
+|property
+|_text_
+|image:images/spy.png[] 
+image:images/checkpoint.png[] 
+image:images/script.png[]
+
+|
+|the editor value.
+|property
+|_value_
+|image:images/spy.png[] 
+image:images/checkpoint.png[] 
+image:images/script.png[]
+
+|
+|the type the editor expects as value.
+|property
+|_valuetypename_
+|image:images/spy.png[]
+
+|Editor drop-down
+|whether the editor has drop-down.
+|property
+|_hasdropdown_
+|image::images/spy.png[]
+
+|
+|whether the drop-down is open.
+|property
+|_Isdroppeddown_
+|image::images/spy.png[]
+
+|====
+
+[[_Ref315953103]]
+== Related Topics
+
+=== Related topics summary chart
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamcomboeditor-testable-user-actions-and-elements.html[xamComboEditor - Testable User Actions and Elements]
+|This topic provides information about the user actions of the xamComboEditor™ control which you can test and the elements you can inspect.
+
+| link:xammonthcalendar-testable-user-actions-and-elements.html[xamMonthCalendar - Testable User Actions and Elements]
+|This topic provides information about the user actions of the xamMonthCalendar™ control which you can test and the elements you can inspect.
+
+|====

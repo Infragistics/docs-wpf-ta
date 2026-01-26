@@ -1,0 +1,156 @@
+﻿////
+|metadata|
+{
+    "name": "olapviewmodel-testable-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "834c2845-9451-44eb-8bc0-3c7c67ab57e3",
+    "buildFlags": [],
+    "createdOn": "2012-10-29T21:23:32.133123Z"
+}
+|metadata|
+////
+
+= OlapViewModel - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the testable user actions and elements of the controls using the  _OlapViewModel_  .
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref338260068,OlapViewModel Testable User Actions>>
+* <<_Ref338880752,OlapViewModel Testable Elements>>
+* <<_Ref337132389,Related Content>>
+
+[[_Ref338260068]]
+== _OlapViewModel_  Testable User Actions
+
+=== Testable user action chart
+
+The following table summarizes the control’s user actions and maps them to the recordable methods emulating them.
+
+[options="header", cols="a,a"]
+|====
+|User action|Method
+
+|Adding the pivot item to the control’s target area at the specified target index.
+| link:olapviewmodel-manipulating-data-at-runtime.html#_Ref338271984[AddPivotItem]
+
+|Moving the pivot item from the control’s source area to the target area at the specified target index. This action only allows movement of pivot items between pivot areas (Filters, Rows, Columns, and Measures).
+| link:olapviewmodel-manipulating-data-at-runtime.html#_Ref338277352[MovePivotItem]
+
+|Removing the pivot item from the control’s source area.
+| link:olapviewmodel-manipulating-data-at-runtime.html#_Ref338679928[RemovePivotItem]
+
+|Opening the pivot item’s filter dialog in the control’s source area by clicking on the filter icon, as shown below: 
+
+image::images/OlapViewModel_User_Actions_and_Elements_1.png[] 
+
+| link:olapviewmodel-manipulating-data-at-runtime.html#_Ref338794040[OpenFilterDialog]
+
+|Closing the pivot item’s filter dialog in the control’s source area by clicking on either the, “OK” or “Cancel” button.
+| link:olapviewmodel-manipulating-data-at-runtime.html#_Ref338794055[CloseFilterDialog]
+
+|====
+
+[[_Ref338880752]]
+== OlapViewModel Testable Elements
+
+=== Testable elements summary chart
+
+The table below summarizes the control’s test object properties and tools with which you can inspect them.
+
+==== Legend:
+
+image::images/spy.png[]
+
+ – Identification property
+
+image::images/checkpoint.png[]
+
+ – Checkpoint property
+
+image::images/script.png[]
+
+ – Accessible in script
+
+[options="header", cols="a,a,a,a,a"]
+|====
+|Tested element|Test deliverable|Member type|Test object member|Accessibility
+
+|Measures item
+|Returns the headers of all items in the control’s _Measures_ area. 
+
+Default value is empty string.
+|Property
+|MeasuresItemHeaders
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|Filters item
+|Returns the headers of all items in the control’s _Filters_ area. 
+
+Default value is empty string.
+|Property
+|FiltersItemHeaders
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|Rows item
+|Returns the headers of all items in the control’s _Rows_ area. 
+
+Default value is empty string.
+|Property
+|RowsItemHeaders
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|Columns item
+|Returns the headers of all items in the control’s _Columns_ area. 
+
+Default value is empty string.
+|Property
+|ColumnsItemHeaders
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:olapviewmodel-property-refreence.html[OlapViewModel - Property Reference]
+|This topic provides reference information about the test object properties of the controls that use _OlapViewModel_ .
+
+| link:olapviewmodel-manipulating-data-at-runtime.html[OlapViewModel - Manipulating Data at Runtime]
+|This topic provides conceptual overview on how the controls that use _OlapViewModel_, manipulate data at runtime.
+
+| link:olapviewmodel-enumeration-reference.html[OlapViewModel - Enumeration Reference]
+|This topic provides reference information about the common enumerations in the _OlapViewModel_ proxy.
+
+|====

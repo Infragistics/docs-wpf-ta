@@ -1,0 +1,42 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamsyntaxeditor-enumeration-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "cb941d7b-007b-4949-ac21-05245f738ec8",  
+    "buildFlags": [],
+    "createdOn": "2012-10-29T20:59:46.137123Z"
+}
+|metadata|
+////
+
+= xamSyntaxEditor - Enumeration Reference
+
+== _xamSyntaxEditor_   Test Object Enumerations
+
+=== Introduction
+
+This topic provides reference information about the common enumerations used in testing the  _xamSyntaxEditor_™ control.
+
+[[_Ref338529542]]
+
+=== Enumerations reference chart
+
+The following table summarizes the purpose of the  _xamSyntaxEditor_   test object enumerations that are used most often, in recordable methods, to define which  _xamSyntaxEditor_   item, upon which an End-User interaction is performed.
+
+[options="header", cols="a,a"]
+|====
+|Enumeration|Description
+
+| link:{ApiPlatform}test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.syedviewlocation.html[syedViewLocation]
+|This enumeration represents the location of a document pane within the syntax editor’s view.
+
+| link:{ApiPlatform}test.shared~infragisticswpf.test.shared.igorientation.html[IGOrientation]
+|This enumeration represents the document’s orientation in the view pane of the syntax editor.
+
+| link:{ApiPlatform}test.shared~infragisticswpf.test.shared.igeditorupdatemode.html[IGEditorUpdateMode]
+|This enumeration specifies how new text should be applied to an Editor.
+
+|====

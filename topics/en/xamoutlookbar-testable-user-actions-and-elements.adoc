@@ -1,0 +1,196 @@
+﻿////
+|metadata|
+{
+    "name": "xamoutlookbar-testable-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "53aa3e80-9239-4987-b798-30070d5c1e4c",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T12:34:03.1340467Z"
+}
+|metadata|
+////
+
+= xamOutlookBar - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the user actions of the xamOutlookBar™ control which you can test and the elements you can inspect.
+
+== xamOutlookBar Testable User Actions
+
+=== Testable user actions chart
+
+The table below lists the testable user actions of the control and maps them to recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|*User action*|*Method*
+
+|Selecting the xamOutlookBar control group
+|_link:xamoutlookbar-recordable-methods.html#_SelectGroup[SelectGroup]_
+
+|Maximizing the xamOutlookBar
+|_link:xamoutlookbar-recordable-methods.html#_MaximizeOutlookBar[MaximizeOutlookBar_]
+
+|Minimizing the xamOutlookBar
+|_link:xamoutlookbar-recordable-methods.html#_MinimizeOutlookBar[ MinimizeOutlookBar_ ]
+
+|Displaying the content of the selected group
+|_link:xamoutlookbar-recordable-methods.html#_ShowSelectedGroupContent[ ShowSelectedGroupContent_ ]
+
+|Hiding the content of the selected group
+|_link:xamoutlookbar-recordable-methods.html#_HideSelectedGroupContent[ HideSelectedGroupContent_ ]
+
+|Opening the configuration overflow context menu
+|_link:xamoutlookbar-recordable-methods.html#_ShowOverflowContextMenu[ ShowOverflowContextMenu_ ]
+
+|Closing the configuration overflow context menu
+|_link:xamoutlookbar-recordable-methods.html#_HideOverflowContextMenu[ HideOverflowContextMenu_ ]
+
+|Resizing the xamOutlookBar control
+|_link:xamoutlookbar-recordable-methods.html#_ResizeOutlookBar[ ResizeOutlookBar_ ]
+
+|Resizing the selected group content
+|_link:xamoutlookbar-recordable-methods.html#_ResizeGroupContent[ ResizeGroupContent_ ]
+
+|Resizing the xamOutlookBar navigation area
+|_link:xamoutlookbar-recordable-methods.html#_SetNavAreaMaxGroups[ SetNavAreaMaxGroups_ ]
+
+|Clicking on a xamOutlookBar sub-item
+|_link:xamoutlookbar-replay-only-methods.html#_ClickSubItem[ClickSubItem]_
+
+|====
+
+== xamOutlookBar Testable Elements
+
+=== Testable elements summary chart
+
+The following table lists the elements in the control that you can test, the information you can retrieve about them, and the properties and methods that manage the retrieve operations.
+
+Legend:
+
+image:images/spy.png[]
+– Identification property (Visible in object spy)
+
+image:images/checkpoint.png[]
+– Checkpoint property (Visible with checkpoints)
+
+image:images/script.png[]
+– Accessible in script
+
+[options="header", cols="a,a,a,a,a"]
+|====
+|*Tested element*|*Test deliverable*|*Member type*|*Test object member*|*Accessibility*
+
+|xamOutlookBar
+|The size state of the xamOutlookBar (minimized / not minimized)
+|property
+|link:xamoutlookbar-property-reference.html#PropRef[isoutlookbarminimized]
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|Group
+|The count of all visible groups
+|property
+|link:xamoutlookbar-property-reference.html#PropRef[totalgroupscount]
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|The count of the visible groups in the navigation area
+|property
+|link:xamoutlookbar-property-reference.html#PropRef[navareagroupscount]
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|The count of the visible groups in the overflow area
+|property
+|link:xamoutlookbar-property-reference.html#PropRef[overflowareagroupscount]
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|The count of the visible groups in the overflow menu
+|property
+|link:xamoutlookbar-property-reference.html#PropRef[overflowcontextmenugroupscount]
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|The location of the selected group
+|property
+|link:xamoutlookbar-property-reference.html#PropRef[selectedgrouplocation]
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|The maximum number of groups in the navigation area
+|property
+|link:xamoutlookbar-property-reference.html#PropRef[navareamaxgroupscount]
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|Group Header
+|A list of the headers of all visible groups
+|property
+|link:xamoutlookbar-property-reference.html#PropRef[totalgroupheaders]
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|A list of the headers of the groups in the navigation area
+|property
+|link:xamoutlookbar-property-reference.html#PropRef[navareagroupheaders]
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|A list of the headers of the groups in the overflow area
+|property
+|link:xamoutlookbar-property-reference.html#PropRef[overflowareagroupheaders]
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|A list of the headers of the groups in the overflow menu
+|property
+|link:xamoutlookbar-property-reference.html#PropRef[overflowcontextmenugroupheaders]
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|
+|The header of the currently selected group
+|property
+|link:xamoutlookbar-property-reference.html#PropRef[selectedgroupheader]
+|image:images/spy.png[] 
+image:images/checkpoint.png[]
+
+|====
+
+== Related Topics
+
+=== Related topics summary chart
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamoutlookbar-recordable-methods.html[xamOutlookBar - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamOutlookBar™ control.
+
+| link:xamoutlookbar-replay-only-methods.html[xamOutlookBar - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the xamOutlookBar™ control.
+
+| link:xamoutlookbar-property-reference.html[xamOutlookBar - Properties Reference]
+|This topic provides reference information about the test object properties of the xamOutlookBar™ control that can be inspected.
+
+| link:xamoutlookbar-api.html[xamOutlookBar - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamOutlookBar™ control in Micro Focus Unified Functional Testing software.
+
+|====

@@ -1,0 +1,82 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamsparkline-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "a0c5ef7e-751d-4fd1-ae88-b9eef7345b70",  
+    "buildFlags": [],
+    "createdOn": "2014-05-03T19:31:14.9261068Z"
+}
+|metadata|
+////
+
+= xamSparkline - Property Reference
+
+== _XamSparkline_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the  _xamSparkine_™ control’s test object properties.
+
+=== Properties reference chart
+
+The table below summarizes the control’s test method parameters and the tools for inspecting them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+| _link:infragisticswpf.test.sparkline~infragisticswpf.test.sparkline.xamsparklineproxy~charttype.html[ChartType]_ 
+|Returns a string representing the Chart type of the _xamSparkline_ control. 
+
+Default value is empty string.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:infragisticswpf.test.sparkline~infragisticswpf.test.sparkline.xamsparklineproxy~allvalues.html[AllValues]_ 
+|Returns a string of all the non-null and non-NaN values of the _xamSparkline_ control.Default value is empty string.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:infragisticswpf.test.sparkline~infragisticswpf.test.sparkline.xamsparklineproxy~firstvalue.html[FirstValue]_ 
+|Returns the first non-null and non-NaN value among all the values of the _xamSparkline_ control.Default value is null.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:infragisticswpf.test.sparkline~infragisticswpf.test.sparkline.xamsparklineproxy~lastvalue.html[LastValue]_ 
+|Returns the last non-null and non-NaN value among all the values of the _xamSparkline_ control.Default value is null.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:infragisticswpf.test.sparkline~infragisticswpf.test.sparkline.xamsparklineproxy~highvalue.html[HighValue]_ 
+|Returns the highest non-null and non-NaN value among all the values of the _xamSparkline_ control.Default value is null.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:infragisticswpf.test.sparkline~infragisticswpf.test.sparkline.xamsparklineproxy~lowvalue.html[LowValue]_ 
+|Returns the lowest non-null and non-NaN value among all the values of the _xamSparkline_ control.Default value is null.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====

@@ -1,0 +1,108 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamsyntaxeditor-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "ca96c524-0879-44ae-b9a4-1c1111bcab9e",  
+    "buildFlags": [],
+    "createdOn": "2012-10-29T19:59:02.1001264Z"
+}
+|metadata|
+////
+
+= xamSyntaxEditor - Property Reference
+
+== _xamSyntaxEditor_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the  _xamSyntaxEditor_™ control’s test object properties.
+
+[[_Ref337672876]]
+
+=== Properties reference chart
+
+The following table defines the  _xamSyntaxEditor’s_   properties and elements along with their key characteristics.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+| link:infragisticswpf.test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~firstvisibleline.html[FirstVisibleLine]
+|This property consists of an integer value, representing the first visible line number, indexed from 1. This value can be set through the code script.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| link:infragisticswpf.test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~length.html[Length]
+|This property consists of an integer value, representing the overall number of characters contained within the loaded document. Returns zero if no document is loaded.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| link:infragisticswpf.test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~linecount.html[LineCount]
+|This property consists of an integer value, representing the overall number of lines of the loaded document. Returns zero if no document is loaded.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| link:infragisticswpf.test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~selectedtext.html[SelectedText]
+|This property returns the selected text as a string. Returns an empty string in the event there is no selected text.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| link:infragisticswpf.test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~selectionstart.html[SelectionStart]
+|This property returns a string, representing the two dimensional array identifier of the text location of the start of the selection. 
+
+The first value is an integer value representing the line index number, indexed from 0. The second value is an integer value representing the character index number, indexed from 0. 
+
+Example: `ARRAY (12, 2)` represents line 13, character 3.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| link:infragisticswpf.test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~selectionend.html[SelectionEnd]
+|This property returns a string, representing the two dimensional array identifier of the text location of the end of the selection. 
+
+The first value is an integer value representing the line index number, indexed from 0. The second value an integer value representing the character index number, indexed from 0. 
+
+Example: `ARRAY (12, 2)` represents line 13, character 3.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| link:infragisticswpf.test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~selectionlength.html[SelectionLength]
+|This property represents the length, measured in characters, of the currently selected text as an integer value. Returns zero if no selection is made
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| link:infragisticswpf.test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~caretlocation.html[CaretLocation]
+|This property returns a string, representing the two dimensional array identifying the current location of the caret within the displayed text. 
+
+The first value is an integer value representing the line index number, indexed form 0. The second value a zero-based integer represents the character index. 
+
+Example: `ARRAY (12, 2)` represents the line 13, character 3.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+| link:infragisticswpf.test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~filename.html[FileName]
+|This property returns the currently loaded document’s file name.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+|====

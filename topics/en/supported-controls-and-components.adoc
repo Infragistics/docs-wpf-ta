@@ -1,0 +1,328 @@
+﻿////
+|metadata|
+{
+    "name": "supported-controls-and-components",
+    "controlName": [],
+    "tags": [],
+    "guid": "7374d5bd-8231-470f-9891-d6aaea5dc90c",
+    "buildFlags": [],
+    "createdOn": "2012-04-17T14:07:23.0776753Z"
+}
+|metadata|
+////
+
+= Supported Controls and Components
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the supported Ultimate UI for WPF controls and components and corresponding {ProductName} Unified Functional Testing software libraries.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref322439528, Supported Ultimate UI for WPF Controls >>
+** <<_Ref322439535,Introduction>>
+** <<_Ref322439540,Supported controls summary>>
+
+* <<_Ref321910749, Related Content >>
+
+[[_Ref322439528]]
+== Supported Ultimate UI for WPF Controls
+
+[[_Ref322439535]]
+
+=== Introduction
+
+The {ProductName} Unified Functional Testing software provides support for all WPF controls and components in the corresponding Ultimate UI for WPF release.
+
+[[_Ref322439540]]
+
+=== Supported controls summary
+
+The following table summarizes the supported controls of the {ProductName}.
+
+[options="header", cols="a,a,a"]
+|====
+|Product|Supported control/component|Corresponding namespace
+
+|Ultimate UI for WPF Data Visualization
+|xamBarcode™
+| link:{ApiPlatform}test.controls.barcodes~infragisticswpf.test.controls.barcodes-namespace.html[{ApiPlatform}Test.Controls.Barcodes]
+
+|
+|xamBulletGraph™
+| link:{ApiPlatform}test.controls.gauges~infragisticswpf.test.controls.gauges-namespace.html[{ApiPlatform}Test.Controls.Gauges]
+
+|
+|xamDataChart™
+| link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart-namespace.html[{ApiPlatform}Test.Charts.DataChart]
+
+|
+|xamDiagram™
+| link:{ApiPlatform}test.xamdiagram~infragisticswpf.test.charts-namespace.html[{ApiPlatform}Test.Charts]
+
+|
+|xamDoughnutChart™ (part of xamDataChart)
+| link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.charts.datachart-namespace.html[{ApiPlatform}Test.Charts.DataChart]
+
+|
+|xamGauge™
+| link:{ApiPlatform}test.gauge~infragisticswpf.test.gauge-namespace.html[{ApiPlatform}Test.Gauge]
+
+|
+|xamGeographicMap™
+| link:{ApiPlatform}test.geographicmap~infragisticswpf.test.geomap-namespace.html[{ApiPlatform}Test.GeographicMap]
+
+|
+|xamLinearGauge™
+| link:{ApiPlatform}test.controls.gauges~infragisticswpf.test.controls.gauges-namespace.html[{ApiPlatform}Test.Controls.Gauges]
+
+|
+|xamMap™
+| link:{ApiPlatform}test.map~infragisticswpf.test.map-namespace.html[{ApiPlatform}Test.Map]
+
+|
+|xamNetworkNode™
+| link:{ApiPlatform}test.networknode~infragisticswpf.test.networknode-namespace.html[{ApiPlatform}Test.NetworkNode]
+
+|
+|xamOrgChart™
+| link:{ApiPlatform}test.orgchart~infragisticswpf.test.orgchart-namespace.html[{ApiPlatform}Test.OrgChart]
+
+|
+|xamPieChart™
+| link:{ApiPlatform}test.charts.xamdatachart~infragisticswpf.test.piechart-namespace.html[{ApiPlatform}Test.PieChart]
+
+|
+|xamPivotGrid™
+| link:{ApiPlatform}test.controls.grids.xampivotgrid~infragisticswpf.test.controls.grids-namespace.html[{ApiPlatform}Test.Controls.Grids]
+
+|
+|xamRadialGauge™
+| link:{ApiPlatform}test.controls.gauges~infragisticswpf.test.controls.gauges-namespace.html[{ApiPlatform}Test.Controls.Gauges]
+
+|
+|xamRadialMenu™
+| link:{ApiPlatform}test.controls.menus.xamradialmenu~infragisticswpf.test.controls.menus-namespace.html[{ApiPlatform}Test.Controls.Menus]
+
+|
+|xamSparkline™
+| link:{ApiPlatform}test.sparkline~infragisticswpf.test.sparkline-namespace.html[{ApiPlatform}Test.Sparkline]
+
+|
+|xamTimeline™
+| link:{ApiPlatform}test.timeline~infragisticswpf.test.timeline-namespace.html[{ApiPlatform}Test.Timeline]
+
+|
+|xamTreemap™
+| link:{ApiPlatform}test.treemap~infragisticswpf.test.treemap-namespace.html[{ApiPlatform}Test.Treemap]
+
+|
+|xamZoombar™
+| link:{ApiPlatform}test.datavisualization~infragisticswpf.test.zoombar-namespace.html[{ApiPlatform}Test.Zoombar]
+
+|Ultimate UI for WPF Line of Business
+|xamCalculationManager™
+|None
+
+|
+|xamCalendar™
+| link:{ApiPlatform}test.editors.xamcalendar~infragisticswpf.test.editors.calendar-namespace.html[{ApiPlatform}Test.Editors.Calendar]
+
+|
+|xamCarouselListBox™
+| link:{ApiPlatform}test~infragisticswpf.test.controls-namespace.html[{ApiPlatform}Test.Controls]
+
+|
+|xamCarouselPanel™
+| link:{ApiPlatform}test~infragisticswpf.test.controls-namespace.html[{ApiPlatform}Test.Controls]
+
+|
+|xamCheckEditor™
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors-namespace.html[{ApiPlatform}Test.Editors]
+
+|
+|xamColorPicker™
+| link:{ApiPlatform}test.editors.xamcolorpicker~infragisticswpf.test.editors.colorpicker-namespace.html[{ApiPlatform}Test.Editors.ColorPicker]
+
+|
+|xamComboEditor™
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors-namespace.html[{ApiPlatform}Test.Editors]
+
+|
+|xamComboEditor™
+| link:{ApiPlatform}test.editors.xamcomboeditor~infragisticswpf.test.editors.comboeditor-namespace.html[{ApiPlatform}Test.Editors.ComboEditor]
+
+|
+|xamContextMenu™
+| link:{ApiPlatform}test.menu~infragisticswpf.test.menu-namespace.html[{ApiPlatform}Test.Menu]
+
+|
+|xamCurrencyEditor™
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors-namespace.html[{ApiPlatform}Test.Editors]
+
+|
+|xamCurrenyInput™
+| link:{ApiPlatform}test.editors.xammaskedinput~infragisticswpf.test.editors.maskedinput-namespace.html[{ApiPlatform}Test.Editors.MaskedInput]
+
+|
+|xamDataCards™
+| link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter-namespace.html[{ApiPlatform}Test.DataPresenter]
+
+|
+|xamDataCarousel™
+| link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter-namespace.html[{ApiPlatform}Test.DataPresenter]
+
+|
+|xamDataGrid™
+| link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter-namespace.html[{ApiPlatform}Test.DataPresenter]
+
+|
+|xamDataPresenter™
+| link:{ApiPlatform}test.datapresenter~infragisticswpf.test.datapresenter-namespace.html[{ApiPlatform}Test.DataPresenter]
+
+|
+|xamDataTree™
+| link:{ApiPlatform}test.datatree~infragisticswpf.test.datatree-namespace.html[{ApiPlatform}Test.DataTree]
+
+|
+|xamDateNavigator™ (part of xamSchedule™)
+| link:{ApiPlatform}test.schedules~infragisticswpf.test.schedules-namespace.html[{ApiPlatform}Test.Schedules]
+
+|
+|xamDateTimeEditor™
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors-namespace.html[{ApiPlatform}Test.Editors]
+
+|
+|xamDateTimeInput™
+| link:{ApiPlatform}test.editors.xamdatetimeinput~infragisticswpf.test.editors.datetimeinput-namespace.html[{ApiPlatform}Test.Editors.DateTimeInput]
+
+|
+|xamDialogWindow™
+| link:{ApiPlatform}test.dialogwindow~infragisticswpf.test.dialogwindow-namespace.html[{ApiPlatform}Test.DialogWindow]
+
+|
+|xamDockManager™
+| link:{ApiPlatform}test.dockmanager~infragisticswpf.test.dockmanager-namespace.html[{ApiPlatform}Test.DockManager]
+
+|
+|xamFormulaEditor™
+| link:{ApiPlatform}test.formulaeditor~infragisticswpf.test.formulaeditor-namespace.html[{ApiPlatform}Test.FormulaEditor]
+
+|
+|xamGantt™
+| link:{ApiPlatform}test.controls.schedules.xamgantt~infragisticswpf.test.controls.schedules-namespace.html[{ApiPlatform}Test.Controls.Schedules.XamGantt]
+
+|
+|xamGrid™
+| link:{ApiPlatform}test.controls.grids.xamgrid~infragisticswpf.test.controls.grids-namespace.html[{ApiPlatform}Test.Controls.Grids]
+
+|
+|xamMaskedEditor™
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors-namespace.html[{ApiPlatform}Test.Editors]
+
+|
+|xamMaskedInput™
+| link:{ApiPlatform}test.editors.xammaskedinput~infragisticswpf.test.editors.maskedinput-namespace.html[{ApiPlatform}Test.Editors.MaskedInput]
+
+|
+|xamMenu™
+| link:{ApiPlatform}test.menu~infragisticswpf.test.menu-namespace.html[{ApiPlatform}Test.Menu]
+
+|
+|xamMonthCalendar™
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors-namespace.html[{ApiPlatform}Test.Editors]
+
+|
+|xamMultiColumnComboEditor™
+| link:{ApiPlatform}test.editors.xamcomboeditor~infragisticswpf.test.editors.comboeditor-namespace.html[{ApiPlatform}Test.Editors.ComboEditor]
+
+|
+|xamNumericEditor™
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors-namespace.html[{ApiPlatform}Test.Editors]
+
+|
+|xamNumericInput™
+| link:{ApiPlatform}test.editors.xammaskedinput~infragisticswpf.test.editors.maskedinput-namespace.html[{ApiPlatform}Test.Editors.MaskedInput]
+
+|
+|xamOutlookBar™
+| link:{ApiPlatform}test.outlookbar~infragisticswpf.test.outlookbar-namespace.html[{ApiPlatform}Test.OutlookBar]
+
+|
+|xamPropertyGrid™
+| link:{ApiPlatform}test.controls.editors.xampropertygrid~infragisticswpf.test.controls.editors-namespace.html[{ApiPlatform}Test.Controls.Editors.XamPropertyGrid]
+
+|
+|xamReportPreview™
+| link:{ApiPlatform}test.reporting~infragisticswpf.test.reporting-namespace.html[{ApiPlatform}Test.Reporting]
+
+|
+|xamRibbon™
+| link:{ApiPlatform}test.ribbon~infragisticswpf.test.ribbon-namespace.html[{ApiPlatform}Test.Ribbon]
+
+|
+|xamRichTextEditor™
+| link:{ApiPlatform}test.controls.editors.xamrichtexteditor~infragisticswpf.test.controls.editors-namespace.html[{ApiPlatform}Test.Controls.Editors.XamRichTextEditor]
+
+|
+|xamSchedule™
+| link:{ApiPlatform}test.schedules~infragisticswpf.test.schedules-namespace.html[{ApiPlatform}Test.Schedules]
+
+|
+|xamSlider™
+| link:{ApiPlatform}test.editors.xamslider~infragisticswpf.test.editors.xamslider-namespace.html[{ApiPlatform}Test.Editors.XamSlider]
+
+|
+|xamSpreadsheet™
+| link:{ApiPlatform}test.controls.grids.xamspreadsheet~infragisticswpf.test.controls.grids-namespace.html[{ApiPlatform}Test.Controls.Grids]
+
+|
+|xamSyntaxEditor™
+| link:{ApiPlatform}test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors-namespace.html[{ApiPlatform}Test.Controls.Editors.XamSyntaxEditor]
+
+|
+|xamTabControl™
+| link:{ApiPlatform}test~infragisticswpf.test.controls-namespace.html[{ApiPlatform}Test.Controls]
+
+|
+|xamTagCloud™
+| link:{ApiPlatform}test.tagcloud~infragisticswpf.test.tagcloud-namespace.html[{ApiPlatform}Test.TagCloud]
+
+|
+|xamTextEditor™
+| link:{ApiPlatform}test.editors~infragisticswpf.test.editors-namespace.html[{ApiPlatform}Test.Editors]
+
+|
+|xamTileManager™
+| link:{ApiPlatform}test.xamtilemanager~infragisticswpf.test.tilemanager-namespace.html[{ApiPlatform}Test.XamTileManager]
+
+|====
+
+[[_Ref321910749]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:supported-environment.html[Supported Environments and Product Versions]
+|This topic describes the supported environment and QTP/UFT product versions supported by {ProductName}.
+
+| link:installing-configuring-removing-ta-wpf.html[Installing, Configuring and Removing of {ProductName}]
+|This section explains the installing, configuring and removing the {ProductName} product.
+
+| link:accessing-the-sample-test-applications-and-scripts.html[Accessing the Sample Test Applications and Scripts]
+|This topic provides information about the sample WPF test applications and scripts provided for Ultimate UI for WPF controls.
+
+| link:getting-help-for-test-automation-wpf.html[Getting Help for {ProductName}]
+|This topic explains the available options for getting help with your Infragistics product and how to prepare for contacting technical support.
+
+|====

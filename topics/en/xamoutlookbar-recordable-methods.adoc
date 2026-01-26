@@ -1,0 +1,513 @@
+﻿////
+|metadata|
+{
+    "name": "xamoutlookbar-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "6dc59305-8bec-49c9-836d-75a39239b5d5",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T11:20:21.9710692Z"
+}
+|metadata|
+////
+
+= xamOutlookBar - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the recordable user methods for testing the xamOutlookBar™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_summary,xamOutlookBar Test Object Recordable Methods Summary>>
+
+** <<_HideOverflowContextMenu, _HideOverflowContextMenu_   Method>>
+** <<_HideSelectedGroupContent, _HideSelectedGroupContent_   Method>>
+** <<_MaximizeOutlookBar, _MaximizeOutlookBar_   Method>>
+** <<_MinimizeOutlookBar, _MinimizeOutlookBar_   Method>>
+** <<_ResizeGroupContent, _ResizeGroupContent_   Method>>
+** <<_ResizeOutlookBar, _ResizeOutlookBar_   Method>>
+** <<_SelectGroup, _SelectGroup_   Method>>
+** <<_SetNavAreaMaxGroups, _SetNavAreaMaxGroups_   Method>>
+** <<_ShowOverflowContextMenu, _ShowOverflowContextMenu_   Method>>
+** <<_ShowSelectedGroupContent, _ShowSelectedGroupContent_   Method>>
+
+* <<_ref1,Related Topics>>
+
+[[_summary]]
+== xamOutlookBar Test Object Recordable Methods Summary
+
+=== Recordable methods summary chart
+
+The following table briefly explains the recordable methods for testing the control. Detailed information about the methods is provided in the text blocks following the table.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|*Description*
+
+|_link:{ApiPlatform}test.outlookbar~infragisticswpf.test.outlookbar.xamoutlookbarproxy~hideoverflowcontextmenu.html[HideOverflowContextMenu]_
+|Clicks on the overflow area button to close the configuration overflow menu.
+
+|_link:{ApiPlatform}test.outlookbar~infragisticswpf.test.outlookbar.xamoutlookbarproxy~hideselectedgroupcontent.html[HideSelectedGroupContent]_
+|Clicks on the navigation pane toggle button to hide the content of the selected group.
+
+|_link:{ApiPlatform}test.outlookbar~infragisticswpf.test.outlookbar.xamoutlookbarproxy~maximizeoutlookbar.html[MaximizeOutlookBar]_
+|Clicks on the toggle button to maximize the control.
+
+|_link:{ApiPlatform}test.outlookbar~infragisticswpf.test.outlookbar.xamoutlookbarproxy~minimizeoutlookbar.html[MinimizeOutlookBar]_
+|Clicks on the toggle button to minimize the control.
+
+|_link:{ApiPlatform}test.outlookbar~infragisticswpf.test.outlookbar.xamoutlookbarproxy~resizegroupcontent.html[ResizeGroupContent]_
+|Sets new height and width to the popup window that displays the group content.
+
+|_link:{ApiPlatform}test.outlookbar~infragisticswpf.test.outlookbar.xamoutlookbarproxy~resizeoutlookbar.html[ResizeOutlookBar]_
+|Sets new width of the xamOutlookBar.
+
+|_link:{ApiPlatform}test.outlookbar~infragisticswpf.test.outlookbar.xamoutlookbarproxy~selectgroup.html[SelectGroup]_
+|Selects the clicked xamOutlookBar group.
+
+|_link:{ApiPlatform}test.outlookbar~infragisticswpf.test.outlookbar.xamoutlookbarproxy~setnavareamaxgroups.html[SetNavAreaMaxGroups]_
+|Sets the xamOutlookBar NavigationAreaMaxGroups property. The navigation area is resized accordingly. The effect is similar to the effect of the horizontal splitter drag operation.
+
+|_link:{ApiPlatform}test.outlookbar~infragisticswpf.test.outlookbar.xamoutlookbarproxy~showoverflowcontextmenu.html[ShowOverflowContextMenu]_
+|Clicks on the overflow area button to open the configuration overflow menu.
+
+|_link:{ApiPlatform}test.outlookbar~infragisticswpf.test.outlookbar.xamoutlookbarproxy~showselectedgroupcontent.html[ShowSelectedGroupContent]_
+|Clicks on the navigation pane toggle button to display the content of the selected group.
+
+|====
+
+[[_HideOverflowContextMenu]]
+== _HideOverflowContextMenu_  Method
+
+=== Description
+
+This method records and replays the closing of the configuration overflow context menu in the xamOutlookBar overflow area.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+No parameters are used with this method.
+
+*Example*
+
+Closing of the overflow context menu:
+
+WpfWindow("MainWindow").XamOutlookBar("xamOutlookBar").HideOverflowContextMenu
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+No known exceptions.
+
+[[_HideSelectedGroupContent]]
+== _HideSelectedGroupContent_  Method
+
+=== Description
+
+This method records and replays the hiding of the popup window with the content of the currently selected group when the xamOutlookBar is minimized.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+No parameters are used with this method.
+
+*Example*
+
+Hiding the popup window with selected group content in xamOutlookBar:
+
+WpfWindow("MainWindow").XamOutlookBar("xamOutlookBar").HideSelectedGroupContent
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|Cannot perform the specified action ["since either the OutlookBar is not minimized or not allowed to minimize"].
+|The xamOutlookBar popup window can’t be hidden when replaying the method.
+|The xamOutlookBar AllowMinimized property is set to False.
+
+|====
+
+[[_MaximizeOutlookBar]]
+== _MaximizeOutlookBar_  Method
+
+=== Description
+
+This method records and replays the maximizing action performed by the user on the xamOutlookBar control.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+No parameters are used with this method.
+
+*Example*
+
+Expanding the xamOutlookBar navigation pane:
+
+WpfWindow("MainWindow").XamOutlookBar("xamOutlookBar").MaximizeOutlookBar
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+No known exceptions.
+
+[[_MinimizeOutlookBar]]
+== _MinimizeOutlookBar_  Method
+
+=== Description
+
+This method records and replays the minimizing action performed by the user on the xamOutlookBar control.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+No parameters are used with this method.
+
+*Example*
+
+Minimizing the xamOutlookBar navigation pane:
+
+WpfWindow("MainWindow").XamOutlookBar("xamOutlookBar").MinimizeOutlookBar
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|Cannot perform the specified action ["since OutlookBar is not allowed to minimize"].
+|The xamOutlookBar can’t be minimized when replaying the method.
+|The xamOutlookBar AllowMinimized property is set to False.
+
+|====
+
+[[_ResizeGroupContent]]
+== _ResizeGroupContent_  Method
+
+=== Description
+
+This method records and replays the resizing of the popup window with the content of the currently selected group when the xamOutlookBar is minimized.
+
+=== Details
+
+The event of dragging the popup resizer bar is recorded after the drag is completed. This action is recorded only if the height/width of the popup has changed.
+
+The replay is executed with setting the new recorded width and height to the popup window.
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameters*|*Description*
+
+|• The new height _(default)_ 
+
+• The new width _(default)_
+|*Example* 
+
+Resizing the popup window’s height to 290 and its width to 340: 
+
+WpfWindow("MainWindow").XamOutlookBar("xamOutlookBar").ResizeGroupContent 290, 340
+
+|====
+
+=== Default setting
+
+This action is recorded with the new height and width of the content popup window as parameters.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|Cannot perform the specified action.
+|Replaying the method throws an exception because the xamOutlookBar is not minimized or the minimizing is not allowed.
+|
+* The xamOutlookBar AllowMinimized property is set to False 
+
+* The xamOutlookBar is not minimized. 
+
+* Unable to set the new height and width of the content popup window 
+
+|====
+
+[[_ResizeOutlookBar]]
+== _ResizeOutlookBar_  Method
+
+=== Description
+
+This method records and replays the resizing the width of the xamOutlookBar control.
+
+=== Details
+
+The event of dragging the vertical splitter is recorded after the drag is completed. The replay is executed with setting the new recorded width to the xamOutlookBar control.
+
+=== Parameters
+
+The following table explains the method’s parameter along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameter*|*Description*
+
+|The new xamOutlookBar width _(default)_
+|*Example* 
+
+Resizing the width of the xamOutlookBar: 
+
+WpfWindow("MainWindow").XamOutlookBar("xamOutlookBar").ResizeOutlookBar 260
+
+|====
+
+=== Default setting
+
+This action is recorded with the new width of the xamOutlookBar as a parameter.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|"Vertical Splitter" is not visible
+|If the xamOutlookBar property IsVerticalSplitterVisible is set to _False_, the control resizing cannot be performed.
+|• The xamOutlookBar vertical splitter is not visible
+
+|====
+
+[[_SelectGroup]]
+== _SelectGroup_  Method
+
+=== Description
+
+The  _Selec_  _Group_  _t_  method selects the clicked group. It records and replays the group selection action performed by the user.
+
+=== Details
+
+When the group selection is recorded, the method takes as a parameter either the group header text or the group index, depending on whether there are duplicating group headers’ texts. The following selection logic applies:
+
+* If the header text is unique, the group header text is used as a parameter.
+* If the header text is not unique, the group index is used for every duplicating header text.
+
+=== Parameters
+
+The following table explains the method’s parameters together with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameter*|*Description*
+
+|Group header text 
+
+_(default)_
+|Used if the header text is unique or it is the first occurrence of a duplicated header text (i.e. the first group with a non-unique header). 
+
+*Example*
+
+Selecting the first group with header “Mail” and index 0 in the xamOutlookBar: 
+
+WpfWindow("MainWindow").XamOutlookBar("xamOutlookBar").SelectGroup "Mail"
+
+|Group index
+|Used if the header text is not unique after the first occurrence of the non-unique header text (i.e. for all groups with non-unique headers after the first one). 
+
+*Example*
+
+WpfWindow("MainWindow").XamOutlookBar("xamOutlookBar").SelectGroup 0
+
+|====
+
+=== Default setting
+
+The group selection action is recorded with the group header text passed as a parameter.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception* *name*|*Exception description*|*Possible reasons*
+
+|The following OutlookBar Item was not found.
+|The selected group cannot be located when replaying the method.
+|
+* The group has been removed, collapsed or hidden 
+
+* The group is in the closed overflow context menu and is still invisible. 
+
+* The xamOutlookBar is minimized and the group is in the overflow area is therefore still invisible. 
+
+|====
+
+[[_SetNavAreaMaxGroups]]
+== _SetNavAreaMaxGroups_  Method
+
+=== Description
+
+This method records and replays the dragging of the xamOutlookBar horizontal splitter and resizing the navigation area by adjusting the count of visible groups in it. This action also changes the number of groups in the context menu and oveflow area.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+The following table explains the method’s parameter along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method Parameter*|*Description*
+
+|The maximum number of groups visible in the navigation area _(default)_
+|*Example* 
+
+Resizing the xamOutlookBar navigation area to 3 visible groups: 
+
+WpfWindow("MainWindow").XamOutlookBar("xamOutlookBar").SetNavAreaMaxGroups 3
+
+|====
+
+=== Default setting
+
+This action is recorded with the new maximum count of visible groups in the navigation area as a parameter.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|Cannot perform the specified action.
+|Replaying the method throws an exception.
+|Unable to set the NavigationAreaMaxGroups property.
+
+|====
+
+[[_ShowOverflowContextMenu]]
+== _ShowOverflowContextMenu_  Method
+
+=== Description
+
+This method records and replays the opening of the configuration overflow context menu in the xamOutlookBar overflow area.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+No parameters are used with this method.
+
+*Example*
+
+Opening of the overflow context menu:
+
+WpfWindow("MainWindow").XamOutlookBar("xamOutlookBar").ShowOverflowContextMenu
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+No known exceptions.
+
+[[_ShowSelectedGroupContent]]
+== _ShowSelectedGroupContent_  Method
+
+=== Description
+
+This method records and replays the opening of the popup window with the content of the currently selected group.
+
+=== Details
+
+No additional details.
+
+=== Parameters
+
+No parameters are used with this method.
+
+*Example*
+
+Expanding the hidden group content in xamOutlookBar:
+
+WpfWindow("MainWindow").XamOutlookBar("xamOutlookBar").ShowSelectedGroupContent
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+No known exceptions.
+
+[[_ref1]]
+== Related Topics
+
+=== Related topics summary chart
+
+The following table lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamoutlookbar-testable-user-actions-and-elements.html[xamOutlookBar Testable User Actions and Objects]
+|This topic provides information about the user actions of the xamOutlookBar™ control which you can test and the elements you can inspect.
+
+| link:xamoutlookbar-replay-only-methods.html[xamOutlookBar - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the xamOutlookBar™ control.
+
+| link:xamoutlookbar-property-reference.html[xamOutlookBar - Properties Reference]
+|This topic provides reference information about the test object properties of the xamOutlookBar™ control that can be inspected.
+
+| link:xamoutlookbar-api.html[xamOutlookBar - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamOutlookBar™ control in Micro Focus Unified Functional Testing software.
+
+|====

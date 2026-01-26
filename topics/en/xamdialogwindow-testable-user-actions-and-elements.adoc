@@ -1,0 +1,71 @@
+﻿////
+|metadata|
+{
+    "name": "xamdialogwindow-testable-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "0de75fbb-b247-472f-8b1e-9e022c3e0556",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T13:51:43.501065Z"
+}
+|metadata|
+////
+
+= xamDialogWindow - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the user actions of the  _xamDialogWindow_™ control which you can test and the elements you can inspect.
+
+== _xamDialogWindow_   Testable User Actions
+
+=== Testable user actions chart
+
+The table below lists the testable user actions of the control and maps them to recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|*User action*|*Method*
+
+|Moving the xamDialogWindow
+|_link:{ApiPlatform}test.dialogwindow~infragisticswpf.test.dialogwindow.xamdialogwindowproxy~move.html[Move]_
+
+|Resizing the xamDialogWindow
+|_link:{ApiPlatform}test.dialogwindow~infragisticswpf.test.dialogwindow.xamdialogwindowproxy~resize.html[Resize]_
+
+|Maximizing the xamDialogWindow
+|_link:{ApiPlatform}test.dialogwindow~infragisticswpf.test.dialogwindow.xamdialogwindowproxy~maximize.html[Maximize]_
+
+|Minimizing the xamDialogWindow
+|_link:{ApiPlatform}test.dialogwindow~infragisticswpf.test.dialogwindow.xamdialogwindowproxy~minimize.html[Minimize]_
+
+|Restoring the normal state of the xamDialogWindow
+|_link:{ApiPlatform}test.dialogwindow~infragisticswpf.test.dialogwindow.xamdialogwindowproxy~restore.html[Restore]_
+
+|Closing the xamDialogWindow
+|_link:{ApiPlatform}test.dialogwindow~infragisticswpf.test.dialogwindow.xamdialogwindowproxy~close.html[Close]_
+
+|====
+
+== Related Content
+
+=== Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamdialogwindow-recordable-methods.html[xamDialogWindow - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamDialogWindow™ control.
+
+| link:xamdialogwindow-property-reference.html[xamDialogWindow - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamDialogWindow™ control.
+
+| link:xamdialogwindow-api.html[xamDialogWindow - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamDialogWindow™ control in Micro Focus Unified Functional Testing software.
+
+|====

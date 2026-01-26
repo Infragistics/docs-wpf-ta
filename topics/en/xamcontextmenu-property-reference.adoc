@@ -1,0 +1,48 @@
+﻿////
+|metadata|
+{
+    "name": "xamcontextmenu-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "cc4b894a-e6ce-48f4-bca7-3874a11d6080",
+    "buildFlags": [],
+    "createdOn": "2012-02-01T07:56:33.518257Z"
+}
+|metadata|
+////
+
+= xamContextMenu - Property Reference
+
+== _xamContextMenu_   Test Object Properties Reference
+
+=== Purpose
+
+This topic provides reference information about the inspectable test object properties of the  _xamContextMenu_™ control.
+
+=== Properties reference chart
+
+The table below summarizes the control’s test object properties and the tools with which you can inspect them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+|_link:{ApiPlatform}test.menu~infragisticswpf.test.menu.xammenubaseproxy~childmenuitems.html[ChildMenuItems]_
+|A list of headers of all visible sub-menu items of the selected menu. 
+
+If the item has no header, an empty string is returned. 
+
+If the item’s _Visibility_ property is set to _Hidden_, the text _Hidden_ is returned. 
+
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+|_link:{ApiPlatform}test.menu~infragisticswpf.test.menu.xammenubaseproxy~childmenuitemscount.html[ChildMenuItemsCount]_
+|The number of the visible sub-menu items of the selected menu.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[]
+
+|====

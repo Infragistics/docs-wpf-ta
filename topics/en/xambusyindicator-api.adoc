@@ -1,0 +1,41 @@
+﻿////
+|metadata|
+{
+    "name": "xambusyindicator-api",
+    "controlName": [],
+    "tags": [],
+    "guid": "bd32ba05-8c8e-48a8-84e8-4134cf7c2ad9",
+    "buildFlags": [],
+    "createdOn": "2015-09-18T08:22:35.4109158Z"
+}
+|metadata|
+////
+
+= xamBusyIndicator - API Reference
+
+== _xamBusyIndicator_   Test Object API Reference
+
+=== Introduction
+
+This topic provides reference information about the proxy class that supports the testing of the xamBusyIndicator™ control in Micro Focus Unified Functional Testing software.
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|*Proxy Class Name*|*Namespace*|*Inherits From*|*Additional Notes*
+
+|_link:infragisticswpf.test~infragisticswpf4.test.controls.xambusyindicatorproxy.html[XamBusyIndicatorProxy]_
+|InfragisticsWPF4.Test.Controls
+|
+* _RecordReplayProxyBase_ 
+
+* _IXamBusyIndicatorReplay_ 
+
+* _IXamBusyIndicatorIDProps_ 
+
+|N/A
+
+|====

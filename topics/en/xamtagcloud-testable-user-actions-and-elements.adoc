@@ -1,0 +1,60 @@
+﻿////
+|metadata|
+{
+    "name": "xamtagcloud-testable-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "8c367415-cf73-4bb8-a9d1-6290d919b19b",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T07:26:24.2712745Z"
+}
+|metadata|
+////
+
+= xamTagCloud - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the user actions of the  _xamTagCloud_™ control which you can test and the elements you can inspect.
+
+== _xamTagCloud_   Testable User Actions
+
+=== Testable user actions chart
+
+The table below lists the testable user actions of the control and maps them to recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|*User action*|*Method*
+
+|[[_Hlk300329001]] 
+
+[[_Hlk312173770]] 
+
+Clicking the xamTagCloud item
+|_ link:{ApiPlatform}test.tagcloud~infragisticswpf.test.tagcloud.xamtagcloudproxy~clickclouditem.html[ClickCloudItem]_
+
+|====
+
+== Related Topics
+
+=== Related topics summary chart
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamtagcloud-recordable-methods.html[xamTagCloud - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the xamTagCloud™ control.
+
+| link:xamtagcloud-property-reference.html[xamTagCloud - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the xamTagCloud™ control.
+
+| link:xamtagcloud-api.html[xamTagCloud - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the xamTagCloud™ control in Micro Focus Unified Functional Testing software.
+
+|====

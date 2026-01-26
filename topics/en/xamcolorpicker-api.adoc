@@ -1,0 +1,41 @@
+﻿////
+|metadata|
+{
+    "name": "xamcolorpicker-api",
+    "controlName": [],
+    "tags": [],
+    "guid": "df02d74d-8c31-4b2f-929d-cbb1fbd75e49",
+    "buildFlags": [],
+    "createdOn": "2012-01-26T13:36:12.2789655Z"
+}
+|metadata|
+////
+
+= xamColorPicker - API Reference
+
+== _xamColorPicker_   Test Object API Reference
+
+=== Introduction
+
+This topic provides reference information about the proxy class that supports the testing of the xamColorPicker™ control in Micro Focus Unified Functional Testing software.
+
+=== API reference chart
+
+The table below summarizes the control’s proxy class API details.
+
+[options="header", cols="a,a,a,a"]
+|====
+|*Proxy Class Name*|*Namespace*|*Inherits From*|*Additional Notes*
+
+|_link:{ApiPlatform}test.editors.xamcolorpicker~infragisticswpf.test.editors.colorpicker.xamcolorpickerproxy.html[XamColorPickerProxy]_
+|InfragisticsWPF.Test.Editors.ColorPicker
+|
+* _RecordReplayProxyBase_ 
+
+* _IXamColorPickerReplay_ 
+
+* _IXamColorPickerIDProps_ 
+
+|N/A
+
+|====

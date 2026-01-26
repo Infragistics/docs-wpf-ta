@@ -1,0 +1,436 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamgantt-recordable-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "bf5e2b48-6dfb-4980-9bc4-2b352e6d57d5",  
+    "buildFlags": [],
+    "createdOn": "2012-10-29T20:47:34.316123Z"
+}
+|metadata|
+////
+
+= xamGantt - Recordable Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the  _xamGantt_™ control’s testable user recordable methods.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref338265452, xamGantt   Test Object Recordable Methods >>
+
+** <<_Ref338271984, _ExpandTaskCell_  >>
+** <<_Ref339036139, _CollapseTaskCell_  >>
+** <<_Ref339036148, _MoveTask_  >>
+** <<_Ref339036158, _ResizeTask_  >>
+** <<_Ref339036172, _SetTaskPercent_  >>
+** <<_Ref339036182, _SetTaskDeadline_  >>
+** <<_Ref339036194, _SetSplitter_  >>
+** <<_Ref339036217, _DeleteSelectedTasks_  >>
+
+* <<_Ref337132389, Related Content >>
+
+[[_Ref338265452]]
+== _xamGantt_  Test Object Recordable Methods Summary
+
+=== Recordable methods summary chart
+
+The following table briefly explains the various recordable methods for testing the control. Detailed information about the methods follows the table.
+
+[options="header", cols="a,a"]
+|====
+|Method|Description
+
+| link:{ApiPlatform}test.controls.schedules.xamgantt~infragisticswpf.test.controls.schedules.xamganttproxy~expandtaskcell.html[ExpandTaskCell]
+|Expands the supplied cell's task.
+
+| link:{ApiPlatform}test.controls.schedules.xamgantt~infragisticswpf.test.controls.schedules.xamganttproxy~collapsetaskcell.html[CollapseTaskCell]
+|Collapses the supplied cell's task.
+
+| link:{ApiPlatform}test.controls.schedules.xamgantt~infragisticswpf.test.controls.schedules.xamganttproxy~movetask.html[MoveTask]
+|Moves the supplied task to a new date. Can be applied to tasks with StartOnly, FinishOnly, Milestone or full tasks.
+
+| link:{ApiPlatform}test.controls.schedules.xamgantt~infragisticswpf.test.controls.schedules.xamganttproxy~resizetask.html[ResizeTask]
+|Resizes the supplied task to a new size.
+
+| link:{ApiPlatform}test.controls.schedules.xamgantt~infragisticswpf.test.controls.schedules.xamganttproxy~setsplitter.html[SetSplitter]
+|Splits the view, or sets the splitter’s location or both.
+
+| link:{ApiPlatform}test.controls.schedules.xamgantt~infragisticswpf.test.controls.schedules.xamganttproxy~settaskpercent.html[SetTaskPercent]
+|Sets the task completed through percent complete.
+
+| link:{ApiPlatform}test.controls.schedules.xamgantt~infragisticswpf.test.controls.schedules.xamganttproxy~settaskdeadline.html[SetTaskDeadline]
+|Moves the deadline to of the task to the date supplied.
+
+| link:{ApiPlatform}test.controls.schedules.xamgantt~infragisticswpf.test.controls.schedules.xamganttproxy~deleteselectedtasks.html[DeleteSelectedTasks]
+|Deletes the selected task.
+
+|====
+
+[[_Ref338271984]]
+== _ExpandTaskCell_
+
+=== Description
+
+This method allows expanding the project task with a mouse click on the task’s expansion indicator, located in the grid cell, which contains child tasks.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`sCellTaskArg`
+|Task argument resides in a grid cell.
+
+|====
+
+=== Example
+
+Expanding the first task to show its child tasks if the children exist are not showing.
+
+[source,csharp]
+----
+XamGantt("Identifier").ExpandTaskCell "{0}[TaskName]"
+----
+
+=== Possible exceptions
+
+The cell, in index [{0}], is the wrong column type to expand.
+
+[[_Ref339036139]]
+== _CollapseTaskCell_
+
+=== Description
+
+This method allows collapsing the project task with a mouse click on the task’s expansion indicator, located in the grid cell, which displays the child task’s expanded content.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`sCellTaskArg`
+|Task argument residing in a grid cell.
+
+|====
+
+=== Example
+
+Collapsing the first task that has its child tasks expanded.
+
+[source,csharp]
+----
+XamGantt("Identifier").CollapseTaskCell "{0}[TaskName]"
+----
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to the method and the likely reason causing them.
+
+* The cell, in index [{0}], is the wrong column type to expand
+* The specified task expansion indicator for cell [{1}] is not visible
+
+[[_Ref339036148]]
+== _MoveTask_
+
+=== Description
+
+This method allows moving the task to another time cell. With mouse dragging from the center of a timeline project task, which triggers the  _TaskBarDragCompleted_   event, moving the whole task will change the date of the scheduled task.
+
+The the following flags can be applied to the moving tasks:
+
+* StartOnly – Represents a task with only a start time setting
+* FinishOnly – Represents a task with only a finished time setting
+* Milestone – Defined with True or False value indicates that the task is set as a special project
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oTaskArg`
+|Task argument with key information about the task.
+
+|`dtNewDate`
+|New date argument of the task after moving it.
+
+|====
+
+=== Example
+
+Moves the task named “Planning” to date 9/14/2012 8:00AM.
+
+[source,csharp]
+----
+XamGantt("Identifier"). MoveTask "Planning”, #9/14/2012 8:00AM#
+----
+
+Moves the third (index=2) visible task to date 9/14/2012 8:00AM.
+
+[source,csharp]
+----
+XamGantt("Identifier"). MoveTask 2, #9/14/2012 8:00AM#
+----
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to the method and the likely reason causing them.
+
+* The specified project task index [{1}] is out of range
+* Cannot find the following project task [{1}]
+* The  _xamGantt's_   project is read-only
+* The project milestone cannot be dragged
+* The project task cannot be dragged
+
+[[_Ref339036158]]
+== _ResizeTask_
+
+=== Description
+
+This method allows changing the task’s size by increasing or decreasing, using the mouse to drag the timeline project task’s end, which triggers the  _TaskBarDragCompleted_   event, only moving the end of the task. In turn changes the task’s duration.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oTaskArg`
+|Task argument with key information about the task.
+
+|`oNewSize`
+|New size argument of the resized task.
+
+|====
+
+=== Example
+
+Resizes the task named “Planning” to a final date of 9/14/2012 8:00AM.
+
+[source,csharp]
+----
+XamGantt("Identifier"). ResizeTask "Planning”, #9/14/2012 8:00AM#
+----
+
+Resizes the task named “Planning” to 3-day duration.
+
+[source,csharp]
+----
+XamGantt("Identifier").ResizeTask  “Planning”, “3 days”
+----
+
+Resizes the task named “Planning” to a size of 200% more than its current length.
+
+[source,csharp]
+----
+XamGantt("Identifier").ResizeTask  “Planning”, 200
+----
+
+=== Possible exceptions
+
+The following table lists the possible exceptions to the method and the likely reason causing them.
+
+* The specified project task index [{1}] is out of range
+* Cannot find the following project task [{1}]
+* The  _xamGantt's_   project is read-only
+* Cannot drag the project task resize endpoint
+* The supplied argument [{0}] is not one of the expected type(s): String duration (such as 1 day or 8 hours, etc.), Decimal percent value, or DateTime such as #05/01/2012 9:00AM#
+
+[[_Ref339036172]]
+== _SetTaskPercent_
+
+=== Description
+
+This method allows setting the task as completed through percent, using the mouse to drag the end of a timeline project task, triggering the  _TaskBarDragCompleted_   event, which only moves the end of the task.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oTaskArg`
+|Task argument with key information about the task.
+
+|`oNewPercent`
+|New percent argument of the task after task moving is completed.
+
+|====
+
+=== Example
+
+Sets the task named “Planning” to a completed through date of 9/14/2012 8:00AM.
+
+[source,csharp]
+----
+XamGantt("Identifier").SetTaskPercent "Planning”, #9/14/2012 8:00AM#
+----
+
+Sets task named “Planning” to a completed through of a total of 3 days.
+
+[source,csharp]
+----
+XamGantt("Identifier"). SetTaskPercent “Planning”, “3 days”
+----
+
+Sets the task named “Planning” to a 50%percent complete.
+
+[source,csharp]
+----
+XamGantt("Identifier"). SetTaskPercent “Planning”, 50
+----
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to the method and the likely reason causing them.
+
+* The specified project task index [{1}] is out of range
+* Cannot find the following project task [{1}]
+* The  _xamGantt's_   project is read-only
+* Cannot drag the task percent
+* The supplied argument [{0}] is not one of the expected type(s): String duration (such as 1 day or 8 hours, etc.), Decimal percent value, or DateTime such as #05/01/2012 9:00AM#
+
+[[_Ref339036182]]
+== _SetTaskDeadline_
+
+=== Description
+
+This method allows moving the task’s deadline to the supplied date, using the mouse to drag a timeline from its center, triggering the  _TaskBarDragCompleted_   event, which moves the task’s deadline.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`oTaskArg`
+|Task argument with key information about the task.
+
+|`dtNewDate`
+|New date as the task’s argument after completing the task’s deadline move.
+
+|====
+
+=== Example
+
+Setting the deadline of the task named “Planning” to date of 9/14/2012 8:00AM.
+
+[source,csharp]
+----
+XamGantt("Identifier").SetTaskDeadline "Planning”, #9/14/2012 8:00AM#
+----
+
+Setting the deadline of the third visible task to date 9/14/2012 8:00AM.
+
+[source,csharp]
+----
+XamGantt("Identifier"). SetTaskDeadline 2, #9/14/2012 8:00AM#
+----
+
+=== Possible exceptions
+
+The following list contains the possible exceptions to the method and the likely reason causing them.
+
+* The specified project task index [{1}] is out of range
+* Cannot find the following project task [{1}]
+* The  _xamGantt's_   project is read-only
+* Cannot drag the project milestone
+* Cannot drag the project task
+
+[[_Ref339036194]]
+== _SetSplitter_
+
+=== Description
+
+This method allows setting the task’s splitter e in grid view, using the mouse to drag the splitter positioned between the grid and timeline. This triggers the  _DragCompleted_   event on the splitter thumb element.
+
+=== Parameters
+
+The following table explains the method’s parameter followed by a code example.
+
+[options="header", cols="a,a"]
+|====
+|Method parameter|Description
+
+|`iSplitterLoc`
+|Splitter location argument containing key information about the splitter Such as the width (measured by pixels) of the splitter’s current position.
+
+|====
+
+=== Example
+
+Moves the splitter to set the view’s grid side to a width of 300 pixels.
+
+[source,csharp]
+----
+XamGantt("Identifier").SetSplitter 300
+----
+
+=== Possible exceptions
+
+None (outside of invalid or excluded parameters thrown by UFT).
+
+[[_Ref339036217]]
+== _DeleteSelectedTasks_
+
+=== Description
+
+This method deletes the selected tasks. On  _PreviewKeyDown_   event when mapping a key to the  _DeleteTask_   command, executes the `Delete` key operation, and in turn, the  _xamGantt_   processes it as a valid task deletion time.
+
+=== Parameters
+
+None
+
+=== Example
+
+Deleting the selected tasks.
+
+[source,csharp]
+----
+XamGantt("Identifier").DeleteSelectedTasks
+----
+
+=== Possible exceptions
+
+N/A
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamgantt-testable-user-actions-and-elements.html[xamGantt - Testable User Actions and Elements]
+|This topic provides information about the _xamGantt_ control’s testable user actions and elements.
+
+| link:xamgantt-replay-only-methods.html[xamGantt - Replay-Only Methods]
+|This topic provides information about the _xamGantt_ control’s testable user replay-only methods.
+
+|====

@@ -1,0 +1,71 @@
+﻿////
+|metadata|
+{
+    "name": "xamdatatree-testable-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "33050ac2-a00c-44e7-9b09-4723938c6c82",
+    "buildFlags": [],
+    "createdOn": "2012-01-27T14:14:36.1693322Z"
+}
+|metadata|
+////
+
+= xamDataTree - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the user actions of the  _xamDataTree_™ control which you can test and the elements you can inspect.
+
+== _xamDataTree_   Testable User Actions
+
+=== Testable user actions chart
+
+The table below lists the testable user actions of the control and maps them to recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|*User action*|*Method*
+
+|Selecting a node in the xamDataTree control
+|_link:{ApiPlatform}test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~select.html[Select]_
+
+|Activating a node
+|_link:{ApiPlatform}test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~activate.html[Activate]_
+
+|Editing a node header text
+|_link:{ApiPlatform}test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~settext.html[SetText]_
+
+|Checking/unchecking a node
+|_link:{ApiPlatform}test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~setnodestate.html[SetNodeState]_
+
+|Expanding the xamDataTree control
+|_link:{ApiPlatform}test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~expand.html[Expand]_
+
+|Collapsing the xamDataTree control
+|_link:{ApiPlatform}test.datatree~infragisticswpf.test.datatree.xamdatatreeproxy~collapse.html[Collapse]_
+
+|====
+
+== Related Content
+
+=== Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xamdatatree-recordable-methods.html[xamDataTree - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamDataTree_ control.
+
+| link:xamdatatree-property-reference.html[xamDataTree - Properties Reference]
+|This topic provides reference information about the inspectable test object properties of the _xamDataTree_ control.
+
+| link:xamdatatree-api.html[xamDataTree - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamDataTree_ control in Micro Focus Unified Functional Testing software.
+
+|====

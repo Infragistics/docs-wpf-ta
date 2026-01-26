@@ -1,0 +1,41 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamsurfacechart-xamsurfacechart",
+    "controlName": [],
+    "tags": [],
+    "guid": "20308c41-6b6c-4240-8e7d-a8c056703f89",  
+    "buildFlags": [],
+    "createdOn": "2016-04-14T17:03:36.5332985Z"
+}
+|metadata|
+////
+
+= xamSurfaceChart
+
+=== Introduction
+
+The topic below provides reference information about link:infragisticswpf.test.controls.charts.xamsurfacechart3d~infragisticswpf.test.charts.xamsurfacechart3d.xamscattersurface3dproxy.html[XamScatterSurface3DProxy] object in {ProductName}.
+
+=== Topics
+
+The topic contained in this section covers reference information about the  _xamSurfaceChart™_   control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamsurfacechart-testable-user-actions-and-elements.html[xamSurfaceChart3D - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamSurfaceChart_ control which you can test and the elements you can inspect.
+
+| link:xamsurfacechart-recordable-methods.html[xamSurfaceChart3D - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamSurfaceChart_ control.
+
+| link:xamsurfacechart-property-reference.html[xamSurfaceChart3D - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the _xamSurfaceChart_ control.
+
+| link:xamsurfacechart-api.html[xamSurfaceChart3D - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamSurfaceChart_ control in Micro Focus Unified Functional Testing software.
+
+|====

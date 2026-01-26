@@ -1,0 +1,44 @@
+﻿////
+
+|metadata|
+{
+    "name": "xameditors",
+    "controlName": [],
+    "tags": [],
+    "guid": "478bc34f-d1e1-4b66-81f1-53cfc91e7f16",  
+    "buildFlags": [],
+    "createdOn": "2012-01-23T07:25:15.9302993Z"
+}
+|metadata|
+////
+
+= xamEditors
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test.editors~infragisticswpf.test.editors-namespace.html[Editor] control proxies in {ProductName}.
+
+=== Topics
+
+The topics contained in this section cover implementing action elements, methods and properties within the  _xamEditors™_   control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xameditors-testable-user-actions-and-elements.html[xamEditors - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamEditors_ controls which you can test and the elements you can inspect.
+
+| link:xameditors-recordable-methods.html[xamEditors - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamEditors_ that are common to all these editors.
+
+| link:xameditors-replay-only-methods.html[xamEditors - Replay-Only Methods]
+|This topic provides reference information about the replay-only user methods for testing the _xamEditors_ that are common to all these editors.
+
+| link:xameditors-property-reference.html[xamEditors - Property Reference]
+|This topic provides reference information about the test object properties of the _xamEditors_ that are common to all these editors.
+
+| link:xameditors-api.html[xamEditors - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamEditors_ controls in Micro Focus Unified Functional Testing software.
+
+|====

@@ -1,0 +1,290 @@
+﻿////
+|metadata|
+{
+    "name": "accessing-the-sample-test-applications-and-scripts",
+    "controlName": [],
+    "tags": [],
+    "guid": "4d1cb870-2d54-45ef-a095-d580cfa80a26",
+    "buildFlags": [],
+    "createdOn": "2012-02-03T10:23:21.8036913Z"
+}
+|metadata|
+////
+
+= Accessing the Sample Test Applications and Scripts
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the sample WPF test applications and scripts provided for Ultimate UI for WPF controls.
+
+=== In this topic
+
+This document contains the following sections:
+
+* <<_overview,Sample Applications and Scripts Overview>>
+
+** <<_Introduction,Introduction>>
+** <<_overview_chart,Samples overview chart>>
+
+* <<_Running_Sample_Scripts,Running the Sample Scripts>>
+
+** <<_Prerequisites,Prerequisites>>
+** <<_Overview,Overview>>
+** <<_Steps,Steps>>
+
+* <<_Related_Topics,Related Content>>
+
+'''
+
+[[_overview]]
+== Sample Applications and Scripts Overview
+
+'''
+
+[[_Introduction]]
+
+=== Introduction
+
+The sample test applications and scripts of {ProductName} provide a quick overview of the important user actions that can be automated and reproduced. The tests invoke the corresponding WPF application to perform the automated test.
+
+The tests are installed by default in the Samples folder. Their default location is C:\Users\Public\Documents\Infragistics\{ProductName} UFT {ProductVersion}\Samples\CLR4.0\Scripts\.
+
+Each script is set up to automatically load its sample application from the Samples\Bin folder prior to running.
+
+'''
+
+[[_overview_chart]]
+
+=== Samples overview chart
+
+The table below briefly explains the samples available with the {ProductName}.
+
+[options="header", cols="a,a,a"]
+|====
+|*Test script*|*Application*|*Description*
+
+|xamDataChartCLR4
+|xamDataChartCLR4.exe
+|The script tests the following actions: 
+
+* click on a control 
+
+* right mouse click 
+
+Check point is added for: 
+
+* chart data points 
+
+* chart series count 
+
+*Related Topic*
+
+link:xamdatachart.html[xamDataChart – Testing and Reference Information]
+
+|xamDataGridCLR4
+|xamDataGridCLR4.exe
+|The script tests the following actions: 
+
+* sorting 
+
+* filtering 
+
+* cell editing 
+
+* cell selection 
+
+* record selection 
+
+* summaries 
+
+* grouping 
+
+Check points are added for: 
+
+* active cell 
+
+* active record 
+
+* activefield 
+
+* selected content 
+
+* selected content type 
+
+*Related Topic*
+
+link:xamdatapresenter.html[xamDataPresenter – Testing and Reference Information]
+
+|xamDataTreeCLR4
+|xamDataTreeCLR4.exe
+|The script tests the following actions: 
+
+* activation/selection of a node 
+
+* checking/unchecking a node checkbox 
+
+* editing the node text 
+
+* expanding/collapsing parent nodes 
+
+Check points are added for: 
+
+* active node 
+
+* root nodes 
+
+*Related Topic*
+
+link:xamdatatree.html[xamDataTree – Testing and Reference Information]
+
+|xamEditorsCLR4
+|xamEditorsCLR4.exe
+|The script tests setting value to the following editors: 
+
+* text editors 
+
+* numeric editors 
+
+* mask editors 
+
+* check editors 
+
+Check points are added for: 
+
+* display text 
+
+* editor value 
+
+* selected text 
+
+*Related Topic*
+
+link:xameditors.html[xamEditors – Testing and Reference Information]
+
+|xamMonthCalendarCLR4
+|xamMonthCalendarCLR4.exe
+|The script tests the following actions: 
+
+* scrolling to specified date 
+
+* changing dates selection 
+
+* clicking on a calendar item 
+
+* zooming in and out the calendar 
+
+Check points are added for: 
+
+* active date 
+
+* selected dates 
+
+*Related Topic*
+
+link:xammonthcalendar.html[xamMonthCalendar – Testing and Reference Information]
+
+|xamOutlookBarCLR4
+|xamOutlookBarCLR4.exe
+|The script tests the following actions: 
+
+* selecting a group 
+
+* maximizing/minimizing the outlook bar 
+
+* resizing of the outlook bar 
+
+* showing/hiding the overflow menu 
+
+Check points are added for: 
+
+* the state of the outlook bar (minimized or not) 
+
+* the count of different areas groups 
+
+* the headers of different areas groups 
+
+*Related Topic*
+
+link:xamoutlookbar.html[xamOutlookBar – Testing and Reference Information]
+
+|xamTabControlCLR4
+|xamTabControlCLR4.exe
+|The script tests selecting the tab item. 
+
+*Related Topic*
+
+link:xamtabcontrol.html[xamTabControl – Testing and Reference Information]
+
+|====
+
+'''
+
+[[_Running_Sample_Scripts]]
+== Running the Sample Scripts
+
+'''
+
+[[_Prerequisites]]
+
+=== Prerequisites
+
+To be able to perform the procedure, you need the following:
+
+* .NET and WPF extensions enabled on the Micro Focus Unified Functional Testing software
+* The version of Test Automation must match the version of Infragistics
+
+'''
+
+[[_Overview]]
+
+=== Overview
+
+With the Micro Focus Unified Functional Testing software running, open and run the script to open the sample application, and perform a test on the application’s interface.
+
+'''
+
+[[_Steps]]
+
+=== Steps
+
+To run a script:
+
+[start=1]
+. Start the Micro Focus Unified Functional Testing application
+[start=2]
+. Run the test.
+
+a. Open the test. In the application, *from the* *_File*_ *menu**, choose* _*Open_* and then browse the folders structure to open the test’s QuickTest file. The test script loads in the Micro Focus Unified Functional Testing Expert View editor.
+
+b. Start the test. In the test’s interface, *click the* *_Run_* *button* to start the execution of the automated test.  The execution of the automated test begins.
+
+
+[start=3]
+. Verify the result. After successful execution of the test, *check the result in the UFT Run Results Viewer* .
+
+*Note:* The tests reside in the following folder: C:\Users\Public\Documents\Infragistics\{ProductName} UFT {ProductVersion}\Samples\CLR4.0\Scripts\
+
+
+[[_Related_Topics]]
+== Related Content
+
+=== Topics
+
+The table below lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:supported-environment.html[Supported Environments and Product Versions]
+|This topic describes the supported environment and product versions supported by {ProductName}.
+
+| link:installing-configuring-removing-ta-wpf.html[Installing, Configuring and Removing {ProductName}]
+|This section explains the installing, configuring and removing the {ProductName} product.
+
+| link:getting-help-for-test-automation-wpf.html[Getting Help for {ProductName}]
+|This topic explains the available options for getting help with your Infragistics product and how to prepare for contacting technical support.
+
+|====

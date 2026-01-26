@@ -1,0 +1,455 @@
+﻿////
+|metadata|
+{
+    "name": "xammenu-replay-only-methods",
+    "controlName": [],
+    "tags": [],
+    "guid": "2700e5a0-3e35-40fc-802b-c1baee0f5e2e",
+    "buildFlags": [],
+    "createdOn": "2012-01-31T21:22:51.6198882Z"
+}
+|metadata|
+////
+
+= xamMenu - Replay-Only Methods
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides reference information about the replay-only user methods for testing the  _xamMenu_™ control.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_summary,xamMenu Test Object Replay-Only Methods>>
+
+** <<_CloseUp,CloseUp>>
+** <<_DropDown,DropDown>>
+** <<_GetChildrenCountOfMenuItem,GetChildrenCountOfMenuItem>>
+** <<_GetChildrenOfMenuItem,GetChildrenOfMenuItem>>
+
+* <<_Rel,Related Content>>
+
+[[_summary]]
+== xamMenu Test Object Replay-Only Methods
+
+=== Replay-only methods summary chart
+
+The following table briefly explains the replay-only methods for testing the control. Detailed information about the methods is provided below the table.
+
+[options="header", cols="a,a"]
+|====
+|*Method*|*Description*
+
+|_CloseUp_
+|Closes the sub-menu of the specified menu item.
+
+|_DropDown_
+|Opens the sub-menu of the specified menu item.
+
+|_GetChildrenCountOfMenuItem_
+|Returns the number of the sub-menu items of the specified menu item.
+
+|_GetChildrenOfMenuItem_
+|Returns a new-line-delimited list with the headers of the sub-menu items of specified menu item.
+
+|====
+
+[[_CloseUp]]
+== _CloseUp_
+
+=== Description
+
+The  _CloseUp_  method replays the collapsing of the submenu of the specified menu item.
+
+=== Details
+
+The method takes the menu item identifier as parameter. The identifier is a path to the menu item which submenu is to be collapsed.
+
+This path may consist of:
+
+* headers
+* indexes
+* combination of headers and indexes
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Header identifier
+|The unique menu item header identifier is: 
+
+* for root menu items: the header 
+
+* for sub-menu items: the path to the item consisting of the headers of the parent items pointing to the item, stored in an array 
+
+*Note:* The menu items are listed in hierarchically downward order, i.e. root item, sub-item, sub-sub-item (see the example). 
+
+*Example*1*
+
+Collapsing the submenu of the _Recent_ menu item which is a child item of the _File_ menu item: 
+
+WpfWindow("MainWindow").XamMenu("xamMenu1").CloseUp Array("File", "Recent") 
+
+*Example*2*
+
+Collapsing the submenu of the root item _File_ : 
+
+WpfWindow("MainWindow").XamMenu("xamMenu1").CloseUp "File"
+
+|Index identifier
+|The unique menu item index identifier is: 
+
+* for root menu items: the index 
+
+* for sub-menu items: the path to the item consisting of the indexes of the parent items pointing to the item, stored in an array 
+
+*Note:* The menu items are listed in hierarchically downward order, i.e. root item, sub-item, sub-sub-item (see the example). 
+
+*Example*1*
+
+Collapsing the submenu of the sub menu item with index 0: 
+
+WpfWindow("MainWindow").XamMenu("xamMenu1").CloseUp Array(0, 0) 
+
+*Example*2*
+
+Collapsing the submenu of the root item with index 0: 
+
+WpfWindow("MainWindow").XamMenu("xamMenu1").CloseUp 0
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|Cannot perform the specified action [" since the menu item has no submenu"].
+|The method cannot be replayed because the specified menu item has no submenu to be collapsed.
+|The specified menu item has no sub item.
+
+|The following item was not found.
+|The xamMenu item with the specified header text cannot be found.
+|The method parameter is not correct.
+
+|The specified index is out of range.
+|The xamMenu item with the specified index cannot be found.
+|The method parameter is not within the valid range of item indexes.
+
+|====
+
+[[_DropDown]]
+== _DropDown_
+
+=== Description
+
+The  _DropDown_  method replays the opening of the submenu of the specified menu item.
+
+=== Details
+
+The method takes the menu item identifier as parameter. The identifier is a path to the menu item whose submenu is to be expanded.
+
+This path may consist of:
+
+* headers
+* indexes
+* combination of headers and indexes
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Header identifier
+|The unique menu item header identifier is: 
+
+* for root menu items: the header 
+
+* for sub-menu items: the path to the item consisting of the headers of the parent items pointing to the item, stored in an array 
+
+*Note:* The menu items are listed in hierarchically downward order, i.e. root item, sub-item, sub-sub-item (see the example). 
+
+*Example 1*
+
+Opening of the submenu of the root item _File_ : 
+
+WpfWindow("MainWindow").XamMenu("xamMenu1").DropDown "File" 
+
+*Example 2*
+
+Opening of the submenu of the _Recent_ menu item which is a child item of _File_ sub menu item. 
+
+WpfWindow("Test Automation Samples").XamMenu("xamMenu1").DropDown Array("File", "Recent")
+
+|Index identifier
+|The unique menu item index identifier is: 
+
+* for root menu items: the index 
+
+* for sub-menu items: the path to the item consisting of the indexes of the parent items pointing to the item, stored in an array 
+
+*Note:* The menu items are listed in hierarchically downward order, i.e. root item, sub-item, sub-sub-item (see the example). 
+
+*Example 1*
+
+Opening of the submenu of the root item with index _0_ : 
+
+WpfWindow("MainWindow").XamMenu("xamMenu1").DropDown 0 
+
+*Example 2*
+
+Opening of the submenu of the sub-menu item with index _0_ : 
+
+WpfWindow("MainWindow").XamMenu("xamMenu1").DropDown Array(0, 0)
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|Cannot perform the specified action [" since the menu item has no submenu"].
+|The method cannot be replayed because the specified menu item has no sub item to be expanded.
+|The specified menu item has no sub item.
+
+|The following item was not found.
+|The xamMenu item with the specified header text cannot be found.
+|The method parameter is not correct.
+
+|The specified index is out of range.
+|The xamMenu item with the specified index cannot be found.
+|The method parameter is not within the valid range of item indexes.
+
+|====
+
+[[_GetChildrenCountOfMenuItem]]
+== _GetChildrenCountOfMenuItem_
+
+=== Description
+
+The  _GetChildrenCountOfMenuItem_  method returns the number of the children of the specified menu item.
+
+=== Details
+
+The method takes the menu item identifier as a parameter. The identifier is a path to the menu item the children count you want to retrieve.
+
+This path may consist of:
+
+* headers
+* indexes
+* combination of headers and indexes
+
+=== Parameters
+
+The following table explains the method’s parameters together with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Header identifier
+|The unique menu item header identifier is: 
+
+* for root menu items: the header 
+
+* for sub-menu items: the path to the item consisting of the headers of the parent items pointing to the item, stored in an array 
+
+*Note:* The menu items are listed in hierarchically downward order, i.e. root item, sub-item, sub-sub-item (see the example). 
+
+*Example 1*
+
+Displaying a message box showing the number of the children of the _File_ menu item: 
+
+msgbox(WpfWindow("MainWindow").XamMenu("xamMenu1").GetChildrenOfMenuItem ("File")) 
+
+*Example 2*
+
+Displaying a message box showing the number of the children of the _Recent_ menu item. _Recent_ menu item is a child item of the root item _File_ : 
+
+msgbox(WpfWindow("MainWindow").XamMenu("xamMenu1").GetChildrenOfMenuItem (Array("File", “Recent”)))
+
+|Index identifier
+|The unique menu item index identifier is: 
+
+* for root menu items: the index 
+
+* for sub-menu items: the path to the item consisting of the indexes of the parent items pointing to the item, stored in an array 
+
+*Note:* The menu items are listed in hierarchically downward order, i.e. root item, sub-item, sub-sub-item (see the example). 
+
+*Example 1*
+
+Displaying a message box showing the number of the children of the root item with index _0_ : 
+
+msgbox(WpfWindow("MainWindow").XamMenu("xamMenu1").GetChildrenOfMenuItem (0)) 
+
+*Example 2*
+
+Displaying a message box showing the number of the children of the submenu item with index _0_ which is under root item with index _0_ : 
+
+msgbox(WpfWindow("MainWindow").XamMenu("xamMenu1").GetChildrenOfMenuItem (Array(0, 0)))
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following item was not found.
+|The menu item with the specified header text cannot be found.
+|The method parameter is not correct.
+
+|The specified index is out of range.
+|The menu item with the specified index cannot be found.
+|The method parameter is not within the valid range of item indexes.
+
+|====
+
+[[_GetChildrenOfMenuItem]]
+== _GetChildrenOfMenuItem_
+
+=== Description
+
+The  _GetChildrenOfMenuItem_  method returns a new-line-delimited list with the headers of the children of the specified menu item.
+
+=== Details
+
+The method takes the menu item identifier as parameter. The identifier is a path to the menu item the children list you want to retrieve.
+
+This path may consist of:
+
+* headers
+* indexes
+* combination of headers and indexes
+
+=== Parameters
+
+The following table explains the method’s parameters along with some sample code.
+
+[options="header", cols="a,a"]
+|====
+|*Method parameter*|*Description*
+
+|Header identifier
+|The unique menu item header identifier is: 
+
+* for root menu items: the header 
+
+* for sub-menu items: the path to the item consisting of the headers of the parent items pointing to the item, stored in an array 
+
+*Note:* The menu items are listed in hierarchically downward order, i.e. root item, sub-item, sub-sub-item (see the example). 
+
+*Example 1*
+
+Displaying a message box showing the list with headers (if any) of the children of the _File_ menu item: 
+
+msgbox(WpfWindow("MainWindow").XamMenu("xamMenu1").GetChildrenOfMenuItem ("File")) 
+
+*Example 2*
+
+Displaying a message box showing the list with headers (if any) of the children of the _Recent_ menu item. _Recent_ menu item is a child item of the root item _File_ : 
+
+msgbox(WpfWindow("MainWindow").XamMenu("xamMenu1").GetChildrenOfMenuItem (Array("File", “Recent”)))
+
+|Index identifier
+|The unique menu item index identifier is: 
+
+* for root menu items: the index 
+
+* for sub-menu items: the path to the item consisting of the indexes of the parent items pointing to the item, stored in an array 
+
+*Note:* The menu items are listed in hierarchically downward order, i.e. root item, sub-item, sub-sub-item (see the example). 
+
+*Example 1*
+
+Displaying a message box showing the list with headers (if any) of the children of the root item with index 0: 
+
+msgbox(WpfWindow("MainWindow").XamMenu("xamMenu1").GetChildrenOfMenuItem (0)) 
+
+*Example 2*
+
+Displaying a message box showing the list with headers (if any) of the children of the submenu item with index 0 which is under root item with index 0: 
+
+msgbox(WpfWindow("MainWindow").XamMenu("xamMenu1").GetChildrenOfMenuItem (Array(0, 0)))
+
+|====
+
+=== Default setting
+
+No default setting.
+
+=== Possible exceptions
+
+The following table lists the possible exceptions for the method and the reason that is likely to be causing them.
+
+[options="header", cols="a,a,a"]
+|====
+|*Exception name*|*Exception description*|*Possible reasons*
+
+|The following item was not found.
+|The menu item with the specified header text cannot be found.
+|The method parameter is not correct.
+
+|The specified index is out of range.
+|The menu item with the specified index cannot be found.
+|The method parameter is not within the valid range of item indexes.
+
+|====
+
+[[_Rel]]
+== Related Content
+
+=== Topics
+
+The following table lists other topics you may find useful.
+
+[options="header", cols="a,a"]
+|====
+|*Topic*|*Purpose*
+
+| link:xammenu-testable-user-actions-and-elements.html[xamMenu - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamMenu_ control which you can test and the elements you can inspect.
+
+| link:xammenu-recordable-methods.html[xamMenu - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamMenu_ control.
+
+| link:xammenu-property-reference.html[xamMenu - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the _xamMenu_ control.
+
+| link:xammenu-api.html[xamMenu - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamMenu_ control in Micro Focus Unified Functional Testing software.
+
+|====

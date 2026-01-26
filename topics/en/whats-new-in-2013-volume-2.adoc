@@ -1,0 +1,85 @@
+﻿////
+
+|metadata|
+{
+    "name": "whats-new-in-2013-volume-2",
+    "controlName": [],
+    "tags": [],
+    "guid": "5557d374-dc67-4be8-9b65-6ae655cabf8a",  
+    "buildFlags": [],
+    "createdOn": "2013-11-20T20:32:48.675023Z"
+}
+|metadata|
+////
+
+= What's New in 2013 Volume 2
+
+== What’s New Summary
+
+=== What’s new summary chart
+
+This topic summarizes the new and enhanced features for the 2013.2 volume release of the Infragistics® {ProductName} ( _Unified Functional Testing_  ).
+
+=== _xamRichTextEditor_
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|Added new _xamRichTextEditor_ control proxy
+|Added a new proxy `XamRichTextEditorProxy`. It encapsulates actions like manipulating, formatting, updating, deleting, selecting, cutting, copying and pasting content command actions in addition to positioning the cursor and providing methods for searching and selecting content. 
+
+==== Related Links 
+
+* link:xamrichtexteditor.html[xamRichTextEditor] 
+
+|====
+
+=== Gauge Controls
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|Added new control proxies
+|Added three new control proxies to the list of supported controls in {ProductName} in this release. Use the related links below for more details about each control. 
+
+==== Related Links 
+
+* link:xambulletgraph-property-reference.html[xamBulletGraph - Property Reference] 
+
+* link:xamlineargauge-property-reference.html[xamLinearGauge - Property Reference] 
+
+* link:xamradialgauge-property-reference.html[xamRadialGauge - Property Reference] 
+
+|====
+
+=== _xamGeographicMap_
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|Added support for two new series types
+|Added two new series types to the `XamGeographicMapProxy`, “Geographic Proportional Symbol” and “Geographic High Density Scatter”. The new series types facilitate getting data via Standard Table Checkpoints. 
+
+==== Related Links 
+
+* link:xamgeographicmap.html[xamGeographicMap] 
+
+|====
+
+=== _xamDataChart_
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|Added new test object properties
+|Added new test object properties to the `XamDataChartProxy` supporting things like Title, Subtitle and Axis Titles. 
+
+==== Related Links 
+
+* link:xamdatachart.html[xamDataChart] 
+
+|====

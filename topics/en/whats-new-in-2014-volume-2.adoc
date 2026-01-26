@@ -1,0 +1,83 @@
+﻿////
+|metadata|
+{
+    "name": "whats-new-in-2014-volume-2",
+    "controlName": [],
+    "tags": [],
+    "guid": "3c6f1349-b908-4628-b936-a20153280d0e",
+    "buildFlags": [],
+    "createdOn": "2014-10-23T19:20:14.7500633Z"
+}
+|metadata|
+////
+
+= What's New in 2014 Volume 2
+
+== What’s New Summary
+
+=== What’s new summary chart
+
+This topic summarizes the new and enhanced features for the 2014.2 volume release of the Infragistics® {ProductName} ( _Unified Functional Testing_  ).
+
+==== _xamDiagram_
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|New control
+|{ProductName} supports the _xamDiagram_ control as part of the Ultimate UI for WPF product in the 2014.2 release. A detailed explanation of the Test Automation with this control is available in the related topic below.
+
+
+==== Related topic: 
+
+link:xamdiagram.html[xamDiagram]
+
+|====
+
+==== _xamDiagramToolbox_
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|New control
+|{ProductName} supports the _xamDiagramToolbox_ control as part of the Ultimate UI for WPF product in the 2014.2 release. A detailed explanation of the Test Automation with this control is available in the related topic below.
+
+==== Related topic: 
+
+link:xamdiagramtoolbox.html[xamDiagramToolbox]
+
+|====
+
+==== _xamPropertyGrid_
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|New control
+|{ProductName} supports the _xamPropertyGrid_ control as part of the Ultimate UI for WPF product in the 2014.2 release. A detailed explanation of the Test Automation with this control is available in the related topic below.
+
+
+==== Related topic: 
+
+link:xampropertygrid.html[xamPropertyGrid]
+
+|====
+
+==== _xamSpreadsheet_
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|New control
+|{ProductName} supports the _xamSpreadsheet_ control as part of the Ultimate UI for WPF product in the 2014.2 release. A detailed explanation of the Test Automation with this control is available in the related topic below.
+
+
+==== Related topic: 
+
+link:xamspreadsheet.html[xamSpreadsheet]
+
+|====

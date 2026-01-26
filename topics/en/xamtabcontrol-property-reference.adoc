@@ -1,0 +1,58 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamtabcontrol-property-reference",
+    "controlName": [],
+    "tags": [],
+    "guid": "eac6cca9-b101-49e9-97c5-c0acdae8ac41",  
+    "buildFlags": [],
+    "createdOn": "2012-01-20T12:44:41.6755483Z"
+}
+|metadata|
+////
+
+= xamTabControl - Properties Reference
+
+== _xamTabControl_   Test Object Properties Reference
+
+=== Introduction
+
+This topic provides reference information about the inspectable test object properties of the xamTabControl™.
+
+[[_Ref337672876]]
+
+=== Properties reference chart
+
+The table below summarizes the control’s test method parameters and the tools for inspecting them.
+include::shared-legend.adoc[]
+
+[options="header", cols="a,a,a"]
+|====
+|Property name|Description|Accessibility
+
+| _link:{ApiPlatform}test~infragisticswpf.test.controls.xamtabcontrolproxy~content.html[Content]_ 
+|A list of the header text of all visible tabs.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:infragisticswpf.test~infragisticswpf.test.controls.xamtabcontrolproxy~selectedtab.html[SelectedTab]_ 
+|The header text of the selected tab.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+| _link:infragisticswpf.test~infragisticswpf.test.controls.xamtabcontrolproxy~tabcount.html[TabCount]_ 
+|The total count of the visible tabs.
+|image::images/spy.png[] 
+
+image::images/checkpoint.png[] 
+
+image::images/script.png[]
+
+|====

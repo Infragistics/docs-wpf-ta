@@ -1,0 +1,41 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamdialogwindow",
+    "controlName": [],
+    "tags": [],
+    "guid": "f13adc30-e9d0-43c9-a6da-8a9ed2abdd8f",  
+    "buildFlags": [],
+    "createdOn": "2012-01-26T11:30:02.1139448Z"
+}
+|metadata|
+////
+
+= xamDialogWindow
+
+=== Introduction
+
+The topics below provide reference information about link:{ApiPlatform}test.dialogwindow~infragisticswpf.test.dialogwindow.xamdialogwindowproxy.html[XamDialogWindowProxy] object in {ProductName}.
+
+=== Topics
+
+The topics contained in this section cover implementing action elements, methods and properties within the  _xamDialogWindow™_   control proxy.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamdialogwindow-testable-user-actions-and-elements.html[xamDialogWindow - Testable User Actions and Elements]
+|This topic provides information about the user actions of the _xamDialogWindow_ control which you can test and the elements you can inspect.
+
+| link:xamdialogwindow-recordable-methods.html[xamDialogWindow - Recordable Methods]
+|This topic provides reference information about the recordable user methods for testing the _xamDialogWindow_ control.
+
+| link:xamdialogwindow-property-reference.html[xamDialogWindow - Property Reference]
+|This topic provides reference information about the inspectable test object properties of the _xamDialogWindow_ control.
+
+| link:xamdialogwindow-api.html[xamDialogWindow - API Reference]
+|This topic provides reference information about the proxy class that supports the testing of the _xamDialogWindow_ control in Micro Focus Unified Functional Testing software.
+
+|====

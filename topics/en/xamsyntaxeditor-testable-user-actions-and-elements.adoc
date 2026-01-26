@@ -1,0 +1,159 @@
+﻿////
+
+|metadata|
+{
+    "name": "xamsyntaxeditor-testable-user-actions-and-elements",
+    "controlName": [],
+    "tags": [],
+    "guid": "e85a677c-4ea5-4f69-b4f7-d9497f7d317f",  
+    "buildFlags": [],
+    "createdOn": "2012-10-29T20:58:33.148123Z"
+}
+|metadata|
+////
+
+= xamSyntaxEditor - Testable User Actions and Elements
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides information about the  _xamSyntaxEditor_™ control’s testable user actions and elements.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Ref338260068, _xamSyntaxEditor_   User Actions>>
+* <<_Ref338260076, _xamSyntaxEditor_   Testable Elements>>
+* <<_Ref337132389,Related Content>>
+
+[[_Ref338260068]]
+== _xamSyntaxEditor_   User Actions
+
+=== Testable user action chart
+
+The following table summarizes the control’s user actions, and maps to the recordable methods that emulate them.
+
+[options="header", cols="a,a"]
+|====
+|User action|Method
+
+|Pressing the keyboard’s `Backspace` key, any number of times, erasing the currently selected text, starting at the cursor and extending one character towards begin for each time you press the `Backspace` key.
+| link:{ApiPlatform}test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~backspacexcharacters.html[BackspaceXCharacters]
+
+|1. Selecting a text or a series of texts, then pressing the `Delete` key and typing some text. 
+
+2. Pressing the `Delete` key any number of times without typing.
+| link:{ApiPlatform}test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~deletexcharacters.html[DeleteXCharacters]
+
+|1. H __olding down the__ `Shift` key and Clicking on another location within the text. 
+
+2. Holding the `Shift` while using the arrow keys to move away from the current caret location. 
+
+3. Moving the mouse down and dragging it over a range of characters.
+| link:{ApiPlatform}test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~selecttolocation.html[SelectToLocation]
+
+|Typing or Pasting in any series of characters in _xamSyntaxEditor’s_ editor.
+| link:{ApiPlatform}test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~sendstring.html[SendString]
+
+|Clicking on the x _amSyntaxEditor_ control’s view.
+| link:{ApiPlatform}test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~setactiveview.html[SetActiveView]
+
+|Moving the caret position either via the mouse or arrow keys.
+| link:{ApiPlatform}test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~setcaretlocation.html[SetCaretLocation]
+
+|1. Dragging an existing splitter from one position to another. 
+
+2. Dragging an existing splitter off the syntax editor’s view towards the left or top. 
+
+3. Dragging a Mini-splitter to a position creating a new one.
+| link:{ApiPlatform}test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~setsplitter.html[SetSplitter]
+
+|Pressing down the keyboard’s `Insert` key.
+| link:{ApiPlatform}test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~setupdatemode.html[SetUpdateMode]
+
+|Return an array object with the coordinates of the offset location.
+| link:{ApiPlatform}test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~getlocationfromoffset.html[GetLocationFromOffset]
+
+|Return an integer value of the character location.
+| link:{ApiPlatform}test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~getoffsetfromlocation.html[GetOffsetFromLocation]
+
+|For recording action perform keyboard commands such as: `Ctrl+``C`(Copy), `Ctrl+X`(Cut) or `Ctrl+V`(Paste).
+| link:{ApiPlatform}test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~executecommand.html[ExecuteCommand]
+
+|For replaying action execute _SyntaxEditor_ command such as: `seydCopy`, `seydCut` or `seydPaste`.
+| link:{ApiPlatform}test.controls.editors.xamsyntaxeditor~infragisticswpf.test.controls.editors.xamsyntaxeditorproxy~executecommand.html[ExecuteCommand]
+
+|====
+
+[[_Ref338260076]]
+== _xamSyntaxEditor_   Testable Elements
+
+=== Testable elements summary chart
+
+The following table lists the elements in the control that you can test and retrieve information about them.
+
+[options="header", cols="a,a,a,a,a"]
+|====
+|Testable elements|Test deliverable|Member type|Test object member|Accessibility
+
+|Visible Line
+|Verifiable table content for visible line.
+|Verifiable table content
+|
+|image::images/script.png[]
+
+|Selected text
+|Copying the text to the clipboard.
+|Command
+|_seydCopy_
+|image::images/spy.png[] 
+
+image::images/script.png[]
+
+|Selected text
+|Cutting the text to the clipboard.
+|Command
+|_seydCut_
+|image::images/spy.png[] 
+
+image::images/script.png[]
+
+|Selected text
+|Pasting the text from the clipboard to the xamSyntaxEditor.
+|Command
+|_seydPaste_
+|image::images/spy.png[] 
+
+image::images/script.png[]
+
+|====
+
+[[_Ref337132389]]
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:xamsyntaxeditor-recordable-methods.html[xamSyntaxEditor - Recordable Methods]
+|This topic provides information about the _xamSyntaxEditor_ control’s testable user recordable methods.
+
+| link:xamsyntaxeditor-replay-only-methods.html[xamSyntaxEditor - Replay-Only Methods]
+|This topic provides information about the _xamSyntaxEditor_ control’s testable user replay-only methods.
+
+| link:xamsyntaxeditor-property-reference.html[xamSyntaxEditor - Property Reference]
+|This topic provides reference information about of the _xamSyntaxEditor_ control’s test object properties.
+
+| link:xamsyntaxeditor-enumeration-reference.html[xamSyntaxEditor - Enumeration Reference]
+|This topic provides reference information about the common enumerations used in testing the _xamSyntaxEditor_ control.
+
+| link:xamsyntaxeditor-limitations.html[xamSyntaxEditor - Limitations]
+|This topic summarizes the _xamSyntaxEditor_ ’s limitations.
+
+|====
