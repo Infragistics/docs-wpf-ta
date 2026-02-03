@@ -7,10 +7,11 @@
 
 # Infragistics Docs for WPF Test Advantage
 
-Welcome to the help topics repository for Infragistics WPF Test Advantage.
+Welcome to the help topics repository for Infragistics WPF Test Advantage components. By interacting with the content in this repository, you can learn how to use these components. Also you have an opportunity to interface directly with the Infragistics product teams to help build better product documentation. Pull requests, comments and issues are all welcome!
 
+<!-- 
 ## Topics Ported from IG DevOps Repositories
 
 The following Azure DevOps repositories were ported to [topics](./topics/) folder:
 
-https://infragistics.visualstudio.com/NetAdvantage/_git/wpf-ta-docs-en
+https://infragistics.visualstudio.com/NetAdvantage/_git/wpf-ta-docs-en -->
