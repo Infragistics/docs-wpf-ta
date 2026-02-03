@@ -1,0 +1,10 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "Infragistics WPF TA Docs",
+  "description": "Docs repository for Infragistics WPF TestAdvantage components.",
+  "folders": [],
+  "excludeFolders": [ "topics/ja" ],
+  "excludeFiles": [],
+  "rules": ["Use repository to get information on how to use Infragistics WPF TestAdvantage components."],
+  "previousVersions": []
+}
